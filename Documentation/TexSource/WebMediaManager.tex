@@ -29,14 +29,20 @@
 \usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage[francais]{babel}
 % These packages are all incorporated in the memoir class to one degree or another...
 
 %%% HEADERS & FOOTERS
 \usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
 \pagestyle{fancy} % options: empty , plain , fancy
-\renewcommand{\headrulewidth}{0pt} % customise the layout...
-\lhead{}\chead{}\rhead{}
-\lfoot{}\cfoot{\thepage}\rfoot{}
+\renewcommand{\headrulewidth}{1pt} % customise the layout...
+\lhead{WebMedia Manager}\chead{}\rhead{\leftmark}
+\renewcommand{\footrulewidth}{1pt} % customise the layout...
+\lfoot{Jean-Philippe Froelicher}\cfoot{\thepage}\rfoot{\today}
+
+% other preamble stuff...
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
 
 %%% SECTION TITLE APPEARANCE
 \usepackage{sectsty}
@@ -66,6 +72,69 @@
 \chapter{Introduction}
 
 \chapter{Cahier des charges}
+	\section{Titre du projet}
+	WebMedia Manager
+
+	\section{Objectifs du projet}
+	Création d’une application permettant l’utilisation des différents services proposé par les sites de vidéos et de diffusion de flux vidéo en direct.
+	Les fonctions de bases liées au services en question sont intégrées génériquement dans l’application.
+	Des fonctions ajoutées par moi-mêmes y sont également ajoutée.
+	L’application a pour but de faciliter l’utilisation de ses services pour les utilisateurs ayant une fréquentation régulière de ceux-ci.
+
+	\section{Description détaillée}
+	L’application propose un certains nombre de service lié à la plateforme d’hébergement et de diffusion des vidéos. En effet, plusieurs sites vidéo comme Youtube, Dailymotion, Twitch etc. propose des services de bases pour leurs utilisateurs.
+	Elle reprend si possible dynamiquement les différentes fonctions de chaque site et les proposes dans une interface crée à cet effet.
+
+	Les fonctions de bases que l’application propose pour chaque site :
+	\begin{itemize}
+		\item Connexion avec un compte lié au site, donc créer auparavant ;
+		\item Modification des différents paramètres de comptes ;
+		\item Recherches de flux vidéos suivant différents critères : Nom d’un flux vidéo, nom du jeux, nom d’une chaîne, nom d’un utilisateur etc ;
+		\item Affichage d’une vidéo ou d’une diffusion en direct ;
+		\item La fonction "Suivre" ou "S’abonner" qui consiste à être mis au courant des nouvelles vidéos / diffusion ;
+		\item Affichage détaillé d’un utilisateur : Accès à ses informations publique, ses vidéos etc ;
+		\item Affichage des vidéos / diffusions en direct les plus populaires ;
+		\item Affichage de l’espace communautaire : Commentaire vidéos, Chat sur une diffusion en direct
+	\end{itemize}
+	
+	Les fonctions ci-dessus sont celle de base pour chaque sites à quelques exception près.
+	
+	Ci-dessous, les fonctions ajoutée par moi-même dans l’application :
+	\begin{itemize}
+		\item Système de notification lorsqu’une vidéo sort ou qu’une diffusion en direct commence ;
+		\item Création de catégorie pour organiser les différents flux vidéos suivis, les catégories sont inter-services, c’est-à-dire que l’on peut mélanger les différents contenu des sites.
+		\item Création de playlist pour lire plusieurs vidéos à la suite, également inter-services. Par contre cela ne s’applique uniquement sur les vidéos, onne peut pas créer de playlist de diffusion en direct.
+	\end{itemize}
+
+	Pour la réalisation de cette application j’utilise le langage C\#.
+
+	\section{Inventaire des étapes}
+	Début : Lundi 13/04/2015 \\
+	Reddition intermédiaire (doc + poster) : Vendredi 30/04/2015 \\
+	Reddition finale : Lundi 01/06/2015
+	
+	\section{Inventaire du matériel}
+	PC + 2 écrans
+
+	\section{Inventaire des logiciels}
+	Visual Studio 2013 Professionnal
+	
+	\section{Délivrables (documents à restituer)}
+	\begin{itemize}
+		\item 1 journal de bord (format A5)
+		\item 1 poster A2
+		\item 2 exemplaires papier de la documentation technique
+		\item 2 exemplaires papier du mode d'emploi (si besoin)
+		\item 1 CD/DVD ROM contenant tous les fichiers (sources + documentation + poster)
+		\item Une démonstration fonctionnelle du projet, une solution parmi :
+		\begin{itemize}
+			\item live CD, live USB
+			\item machine virtuelle (VirtualBox) pré-configurée
+		\end{itemize}
+	\end{itemize}
+
+	\section{Éléments mesurables (servant à l'évaluation)}
+	Réalisation des objectifs, mesurées selon la grille d'évaluation.
 
 \chapter{Étude d'opportunité}
 \newpage
@@ -76,17 +145,104 @@
 		 Aujourd'hui, les sites comme Youtube, Dailymotion, Twitch qui propose du contenu vidéos sont de plus en plus visités. Ses sites, ont tous un point commun, d'autres personnes mettent des vidéos en ligne pour divertir les spectateurs. Le phénomène a prit une tel ampleur que certain "créateur de contenu audiovisuel" sont même 	payé par ses sites par rapport à leur popularité. De plus en plus de personnes, surtout les jeunes, passent leurs temps devant des vidéos sur le web que sur la télévision.
 			\subsubsection{Direct}
 			Les vidéos en direct sont de plus en plus présent sur le web. En effet, grâce en grande partie aux jeux vidéos, le phénomène des personnes créant du contenu audiovisuel c'est également répandu sur du contenu en direct. Des sites comme Twitch ou Dailymotion propose à ses utilisateurs de diffuser du flux vidéo en direct. La plus part du temps c'est pour les jeux vidéos, les diffuseurs jouent sur leurs ordinateurs / consoles puit retransmet l'image sur le site. Ainsi, des personnes du monde entier ont la possibilité de regarder la partie de jeu d'une personne. Les spectateurs ont même la possibilité de discuter avec les autres spectateurs et même des fois avec le diffuseur de contenu.
-Les diffuseurs sont payés grâce aux dons de leurs communauté, certain font ça à plein temps et donc sont contraint à entretenir une grande communauté.
+			Les diffuseurs sont payés grâce aux dons de leurs communauté, certain font ça à plein temps et donc sont contraint à entretenir une grande communauté.
 			\subsubsection{Différé}
 			Les vidéos "différé" sont depuis un petit moment déjà présente sur le web. En effet, le phénomène des vidéos sur le web n'est pas tout nouveau mais, ce n'est que depuis peu que le phénomène à prit une grande ampleur. Si un créateur de contenu à atteint une certaine popularité, il peut enfin prétendre à faire de l'argent avec ses vidéos. En effet, le premier site de vidéos du monde Youtube rémunère les créateurs de contenu.
 
 		\subsection{Pourquoi avoir choisi ce sujet ?}
-		J'ai choisi ce sujet car je porte un réel interêt au monde audiovisuel sur le web. En effet, je fais parti des jeunes qui a délaissé la télévision pour les vidéos sur internet. Il y a plusieurs site de vidéos et des fois il est difficile de s'y retrouver, l'application que j'ai pensé a pour but de facilité la vie des personnes comme moi qui utilise ses sites régulièrement. Le fait que le monde de l'audiovisuel est en plein boum sur le web me stimule encore plus à l'idée de créer une application dans ce domaine.
-	\section{Analyse de l'exsistant}
-		\subsection{Existant}
-		\subsection{Critique de l'existant}	
+		J'ai choisi ce sujet car je porte un réel intérêt au monde audiovisuel sur le web. En effet, je fais parti des jeunes qui a délaissé la télévision pour les vidéos sur internet. Il y a plusieurs site de vidéos et des fois il est difficile de s'y retrouver, l'application que j'ai pensé a pour but de facilité la vie des personnes comme moi qui utilise ses sites régulièrement. Le fait que le monde de l'audiovisuel est en plein boum sur le web me stimule encore plus à l'idée de créer une application dans ce domaine.
 
+	\section{Analyse de l'existant}
+	Il n'y a pas d'application similaire à celle que je vais réaliser. Tout de même, les différentes fonctions que je veux y intégrée sont déjà présente sur les différents sites.
+		\subsection{Existant}
+		Youtube.com : 
+		Twitch : 
+		\subsection{Critique de l'existant}	
+		
+		
 \chapter{Analyse fonctionnelle}
+	\section{Fonctions des services}
+		\subsection{Générique}
+		Tout les services proposent des fonctions "commune" de base :
+		\begin{itemize}
+			\item Affichage des dernières vidéos / diffusion en direct
+			\item Recherche une vidéo / diffusion en direct
+			\item Affichage d'une vidéo / diffusion en direct
+			\item Connexion au service en question
+			\item Modification des paramètres du compte connecté
+			\item Afficher les détails d'un utilisateur
+			\item Afficher les vidéos / diffusion en direct populaire
+			\item Gestion des notifications
+		\end{itemize}
+		
+		\subsection{Twitch}
+		Les fonctions spécifique à Twitch :
+		\begin{itemize}
+			\item \textit{Chat} : Discuter avec les autres spectateurs
+			\item Suivre une chaîne Twitch
+		\end{itemize}
+		
+		\subsection{Youtube}
+		Les fonctions spécifique à Youtube :
+		\begin{itemize}
+			\item Commentaires : Donner un avis / discuter avec les autres spectateurs
+			\item S'abonner à une chaîne Youtube
+		\end{itemize}
+	
+	
+	\section{Flux vidéo}
+	Afin d'afficher le flux vidéo des différentes vidéos ou des différente diffusion en direct, les sites ont leurs propre lecteur vidéo.
+	Ils se présentent généralement sous un format \textit{Flash player} ou HTML5.
+	
+	
+	\section{Outil communautaire}
+	Les différents sites de vidéos mettent à disposition des utilisateurs des outils afin de pouvoir communiquer avec d'autre membre du site ou directement s'adresser à l'auteur de la vidéo.
+		\subsection{Chat IRC}
+		Le \textit{chat} est utilisé le plus souvent lors de diffusion de flux vidéo en direct. Afin d'avoir un contact direct avec le diffuseur il faut avoir un support sur lequel le diffuseur peut lire rapidement.
+		
+		La plus part des \textit{chat} utilisé pour les diffusions de flux vidéo en direct sont des \textit{chats} IRC\footnote{Internet Relay Chat}.
+		
+		IRC est un protocole de communication textuelle, il sert à la communication instantanée sous la forme de discussions de groupe par l'intermédiaire de canaux de discussion. Il peut également être utilisé pour communiquer de un à un.
+		
+		
+		\subsection{Commentaires}
+		Les commentaires servent à discuter avec d'autre personne sur la vidéo en question. Ils servent également à communiquer avec l'auteur de la vidéo.
+		
+		
+	\section{Connexion}
+	Afin de se connecter aux différents services avec un compte personnel, ils utilisent le protocole OAuth2.
+		\subsection{OAuth2}
+		La plus part des grands sites utilisent le protocole OAuth2 pour l'authentification au compte personnel, en effet, ce protocole permet d'obtenir un accès limité à un service via HTTP par le biais d'une autorisation. 
+		La demande d'accès est demandée par le client, en l'occurrence WebMedia Manager.
+	
+		OAuth2 définit 4 rôles :
+		\begin{itemize}
+			\item Détenteur des données (L'utilisateur)
+			\item Serveur de ressources (Twitch, Youtube, Dailymotion ...)
+			\item Client (WebMedia Manager)
+			\item Serveur d'autorisation (Twitch, Youtube, Dailymotion ...)
+		\end{itemize}
+		
+			\subsubsection{Token (jeton)}
+			Lorsque le client fait une demande d'authentification, le serveur d'autorisation délivre un token. Un token permet au serveur de ressources d'autoriser la mise à disposition des données d'un utilisateur. Il a une durée de vie limité qui est définie par le serveur qui délivre les tokens.
+			Un token doit rester le plus confidentiel possible, même l'utilisateur ne voit pas son token attribué.
+			
+			\subsubsection{Scope (portée)}
+			Le scope est un paramètre qui sert à définir les droits sur un token. En effet, le serveur d'autorisation propose une liste de scope et lors de l'authentification, attribut ses droits sur le token.
+			
+			\subsubsection{Type d'autorisation}
+			Il existe deux types d'autorisation : Autorization Code Flow et Implicit Grant Flow. L'autorisation implicite s'utilise quand l'application se trouve côté client. La demande d'authentification se fait de la sorte :
+			\begin{enumerate}
+				\item L'application souhaite accéder aux données
+				\item Requête d'autorisation au serveur
+				\item Si l'accès est autorisé, le serveur d'autorisation délivre le token
+				\item Utilisation du token pour certaine requête 
+			\end{enumerate}
+			
+			[IMAGE DIAGRAMME A METTRE ICI]
+			
+			
+		
 	\section{Interface homme-machine}
 
 \chapter{Analyse organique}
@@ -97,11 +253,5 @@ Les diffuseurs sont payés grâce aux dons de leurs communauté, certain font ç
 \chapter{Conclusions}
 
 
-
-Your text goes here.
-
-\subsection{A subsection}
-
-More text.
 
 \end{document}
