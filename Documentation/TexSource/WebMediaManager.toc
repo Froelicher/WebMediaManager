@@ -1,0 +1,53 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}R\IeC {\'e}sum\IeC {\'e}s}{3}
+\contentsline {chapter}{\numberline {2}Introduction}{4}
+\contentsline {chapter}{\numberline {3}Cahier des charges}{5}
+\contentsline {section}{\numberline {3.1}Titre du projet}{5}
+\contentsline {section}{\numberline {3.2}Objectifs du projet}{5}
+\contentsline {section}{\numberline {3.3}Description d\IeC {\'e}taill\IeC {\'e}e}{5}
+\contentsline {section}{\numberline {3.4}Inventaire des \IeC {\'e}tapes}{6}
+\contentsline {section}{\numberline {3.5}Inventaire du mat\IeC {\'e}riel}{6}
+\contentsline {section}{\numberline {3.6}Inventaire des logiciels}{6}
+\contentsline {section}{\numberline {3.7}D\IeC {\'e}livrables (documents \IeC {\`a} restituer)}{6}
+\contentsline {section}{\numberline {3.8}\IeC {\'E}l\IeC {\'e}ments mesurables (servant \IeC {\`a} l'\IeC {\'e}valuation)}{7}
+\contentsline {chapter}{\numberline {4}\IeC {\'E}tude d'opportunit\IeC {\'e}}{8}
+\contentsline {section}{\numberline {4.1}Introduction au projet}{9}
+\contentsline {subsection}{\numberline {4.1.1}M\IeC {\'e}dias vid\IeC {\'e}o web}{9}
+\contentsline {subsubsection}{Direct}{9}
+\contentsline {subsubsection}{Diff\IeC {\'e}r\IeC {\'e}}{9}
+\contentsline {subsection}{\numberline {4.1.2}Pourquoi avoir choisi ce sujet ?}{9}
+\contentsline {section}{\numberline {4.2}Analyse de l'existant}{10}
+\contentsline {subsection}{\numberline {4.2.1}Existant}{10}
+\contentsline {subsection}{\numberline {4.2.2}Critique de l'existant}{10}
+\contentsline {chapter}{\numberline {5}Analyse fonctionnelle}{11}
+\contentsline {section}{\numberline {5.1}Description du fonctionnement}{11}
+\contentsline {subsection}{\numberline {5.1.1}Fonctions des sites}{11}
+\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}rique}{11}
+\contentsline {subsubsection}{Diffusion en direct}{11}
+\contentsline {subsubsection}{Vid\IeC {\'e}o en diff\IeC {\'e}r\IeC {\'e}}{11}
+\contentsline {subsection}{\numberline {5.1.2}Gestion des cat\IeC {\'e}gories}{12}
+\contentsline {subsection}{\numberline {5.1.3}Gestion des listes de lecture}{12}
+\contentsline {subsection}{\numberline {5.1.4}Notifications}{12}
+\contentsline {section}{\numberline {5.2}API}{12}
+\contentsline {subsection}{\numberline {5.2.1}API REST}{12}
+\contentsline {section}{\numberline {5.3}Lecteur vid\IeC {\'e}o}{13}
+\contentsline {subsection}{\numberline {5.3.1}Flash player}{13}
+\contentsline {subsection}{\numberline {5.3.2}HTML5}{14}
+\contentsline {section}{\numberline {5.4}Outil communautaire}{14}
+\contentsline {subsection}{\numberline {5.4.1}Chat IRC}{14}
+\contentsline {subsection}{\numberline {5.4.2}Commentaires}{14}
+\contentsline {section}{\numberline {5.5}Connexion}{14}
+\contentsline {subsection}{\numberline {5.5.1}OAuth2}{15}
+\contentsline {subsubsection}{Token (jeton)}{15}
+\contentsline {subsubsection}{Scope (port\IeC {\'e}e)}{15}
+\contentsline {subsubsection}{Type d'autorisation}{15}
+\contentsline {section}{\numberline {5.6}Interface homme-machine}{15}
+\contentsline {chapter}{\numberline {6}Analyse organique}{17}
+\contentsline {chapter}{\numberline {7}Tests}{18}
+\contentsline {section}{\numberline {7.1}Tests fonctionnel}{18}
+\contentsline {section}{\numberline {7.2}Tests unitaire}{18}
+\contentsline {chapter}{\numberline {8}Conclusions}{19}
+\contentsline {chapter}{\numberline {9}Annexes}{20}
+\contentsline {section}{\numberline {9.1}Planning}{20}
+\contentsline {subsection}{\numberline {9.1.1}Initial}{20}
+\contentsline {subsection}{\numberline {9.1.2}Final}{20}
