@@ -41,13 +41,16 @@
 \contentsline {subsubsection}{Token (jeton)}{15}
 \contentsline {subsubsection}{Scope (port\IeC {\'e}e)}{15}
 \contentsline {subsubsection}{Type d'autorisation}{15}
-\contentsline {section}{\numberline {5.6}Interface homme-machine}{15}
-\contentsline {chapter}{\numberline {6}Analyse organique}{17}
-\contentsline {chapter}{\numberline {7}Tests}{18}
-\contentsline {section}{\numberline {7.1}Tests fonctionnel}{18}
-\contentsline {section}{\numberline {7.2}Tests unitaire}{18}
-\contentsline {chapter}{\numberline {8}Conclusions}{19}
-\contentsline {chapter}{\numberline {9}Annexes}{20}
-\contentsline {section}{\numberline {9.1}Planning}{20}
-\contentsline {subsection}{\numberline {9.1.1}Initial}{20}
-\contentsline {subsection}{\numberline {9.1.2}Final}{20}
+\contentsline {section}{\numberline {5.6}Interface homme-machine}{17}
+\contentsline {subsection}{\numberline {5.6.1}Interface personnelle}{17}
+\contentsline {subsection}{\numberline {5.6.2}Interface des sites}{18}
+\contentsline {subsection}{\numberline {5.6.3}Interface vid\IeC {\'e}o}{19}
+\contentsline {chapter}{\numberline {6}Analyse organique}{20}
+\contentsline {chapter}{\numberline {7}Tests}{21}
+\contentsline {section}{\numberline {7.1}Tests fonctionnel}{21}
+\contentsline {section}{\numberline {7.2}Tests unitaire}{21}
+\contentsline {chapter}{\numberline {8}Conclusions}{22}
+\contentsline {chapter}{\numberline {9}Annexes}{23}
+\contentsline {section}{\numberline {9.1}Planning}{23}
+\contentsline {subsection}{\numberline {9.1.1}Initial}{23}
+\contentsline {subsection}{\numberline {9.1.2}Final}{23}
