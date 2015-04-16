@@ -165,10 +165,13 @@
 		\subsection{Existant}
 		\begin{itemize}
 			\item Twitch now : Application Google Chrome
+			\item Dailymotion Games : Application Android
 		\end{itemize}			
 		\subsection{Critique de l'existant}	
 		\textbf{Twitch now} : Cette application permet à l'utilisateur de naviguer dans les différentes diffusion de flux vidéo en direct de Twitch. C'est une application Google Chrome, elle permet de naviguer sur Twitch sans aller sur le site. Le système de "suivis" est celui de Twitch, c'est-à-dire qu'il faut se connecter avec son propre compte Twitch.
 		
+		\textbf{Dailymotion Games} : Cette application permet aux utilisateurs de Dailymotion de naviguer entre les différentes diffusion de flux vidéo en direct. Par contre, on ne peut pas se connecter à son compte personnel pour avoir uniquement que les diffusions que l'on est abonné. Les différentes diffusion sont classé soit par vues, soit par jeux. Évidemment, les diffusions de flux vidéo peuvent être visionnée depuis l'application.
+		Dailymotion Games est une application officiel de Dailymotion.
 		
 		
 \chapter{Analyse fonctionnelle}
@@ -185,13 +188,13 @@
 				\item Afficher les détails d'un utilisateur
 				\item Afficher les vidéos / diffusion en direct populaire
 				\item Gestion des notifications
+				\item Suivre une chaîne / un utilisateur
 			\end{itemize}
 			
 			\subsubsection{Diffusion en direct}
 			Les fonctions spécifique aux sites qui proposes des diffusions en direct :
 			\begin{itemize}
 				\item \textit{Chat} : Discuter avec les autres spectateurs
-				\item Suivre une chaîne
 				\item Abonnement payant
 			\end{itemize}
 			Les utilisateurs ont le la possibilité de faire des donations mais pas par le biais des sites de diffusions.
@@ -200,7 +203,6 @@
 			Les fonctions spécifique aux sites qui proposes des vidéos en différé :
 			\begin{itemize}
 				\item Commentaires : Donner un avis / discuter avec les autres spectateurs
-				\item S'abonner à une chaîne
 			\end{itemize}
 	
 		\subsection{Gestion des catégories}
@@ -389,6 +391,29 @@
 			\item \textit{Chat} ou espace commentaires
 			\item Nombre de vues de la vidéo
 		\end{enumerate}
+		
+		\subsection{Interface modification de compte}
+		
+		\newpage
+		
+		\subsection{Interface détail d'un compte}
+		
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=1\textwidth]{../img/channelInterfacenum.png}
+			\caption{Interface d'une chaîne / utilisateur}
+			\label{interfacechannel}
+		\end{figure}
+		
+		\begin{enumerate}
+			\item Logo et bannière de la chaîne en question
+			\item Bouton pour afficher les suivis et suiveurs de la chaîne
+			\item Filtre sur les vidéos à afficher : Populaire, nouvelles etc ...
+			\item Liste des flux vidéos
+			\item Diverses informations concernant la chaîne
+		\end{enumerate}
+		
+		
 		
 \chapter{Analyse organique}
 

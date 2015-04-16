@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  15 APR 2015 15:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  16 APR 2015 11:20
 entering extended mode
 **WebMediaManager.tex
 
@@ -981,12 +981,12 @@ Chapitre 5.
 ] <../img/rest.png, id=50, 816.04875pt x 427.5975pt>
 File: ../img/rest.png Graphic file (type png)
  <use ../img/rest.png>
-Package pdftex.def Info: ../img/rest.png used on input line 249.
+Package pdftex.def Info: ../img/rest.png used on input line 252.
 (pdftex.def)             Requested size: 334.60422pt x 175.32915pt.
 
 [12] [13 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/im
 g/rest.png>]
-Overfull \hbox (17.12682pt too wide) in paragraph at lines 287--288
+Overfull \hbox (17.12682pt too wide) in paragraph at lines 290--291
 []\OT1/cmr/m/n/10.95 Les differents site de dif-fu-sion en di-rect uti-lise le
  client IRC "Ki-wiirc" concue specialement
  []
@@ -995,7 +995,7 @@ Overfull \hbox (17.12682pt too wide) in paragraph at lines 287--288
 File: ../img/SchemaOAuth2.png Graphic file (type png)
 
 <use ../img/SchemaOAuth2.png>
-Package pdftex.def Info: ../img/SchemaOAuth2.png used on input line 328.
+Package pdftex.def Info: ../img/SchemaOAuth2.png used on input line 331.
 (pdftex.def)             Requested size: 418.25368pt x 346.83986pt.
  [16 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Sc
 hemaOAuth2.png>]
@@ -1004,7 +1004,7 @@ File: ../img/personnalInterfacenum.png Graphic file (type png)
 
 <use ../img/personnalInterfacenum.png>
 Package pdftex.def Info: ../img/personnalInterfacenum.png used on input line 34
-0.
+3.
 (pdftex.def)             Requested size: 418.25368pt x 302.83965pt.
  [17 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/pe
 rsonnalInterfacenum.png>]
@@ -1012,7 +1012,7 @@ rsonnalInterfacenum.png>]
 File: ../img/serviceInterfacenum.png Graphic file (type png)
 
 <use ../img/serviceInterfacenum.png>
-Package pdftex.def Info: ../img/serviceInterfacenum.png used on input line 359.
+Package pdftex.def Info: ../img/serviceInterfacenum.png used on input line 362.
 
 (pdftex.def)             Requested size: 418.25368pt x 243.25891pt.
  [18 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/se
@@ -1021,33 +1021,42 @@ rviceInterfacenum.png>]
 File: ../img/videoInterfacenum.png Graphic file (type png)
 
 <use ../img/videoInterfacenum.png>
-Package pdftex.def Info: ../img/videoInterfacenum.png used on input line 378.
+Package pdftex.def Info: ../img/videoInterfacenum.png used on input line 381.
 (pdftex.def)             Requested size: 418.25368pt x 306.07562pt.
  [19 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/vi
 deoInterfacenum.png>]
-Chapitre 6.
-[20
+<../img/channelInterfacenum.png, id=90, 731.73375pt x 552.56438pt>
+File: ../img/channelInterfacenum.png Graphic file (type png)
 
-]
-Chapitre 7.
+<use ../img/channelInterfacenum.png>
+Package pdftex.def Info: ../img/channelInterfacenum.png used on input line 404.
+
+(pdftex.def)             Requested size: 418.25368pt x 315.84183pt.
+ [20 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/ch
+annelInterfacenum.png>]
+Chapitre 6.
 [21
 
 ]
-Chapitre 8.
+Chapitre 7.
 [22
 
 ]
-Chapitre 9.
+Chapitre 8.
 [23
+
+]
+Chapitre 9.
+[24
 
 ]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.aux) ) 
 Here is how much of TeX's memory you used:
- 16908 strings out of 493921
- 339300 string characters out of 3144861
- 395647 words of memory out of 3000000
- 19886 multiletter control sequences out of 15000+200000
+ 16914 strings out of 493921
+ 339480 string characters out of 3144861
+ 396647 words of memory out of 3000000
+ 19891 multiletter control sequences out of 15000+200000
  14278 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,13n,66p,849b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1062,9 +1071,9 @@ mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on WebMediaManager.pdf (24 pages, 287761 bytes).
+Output written on WebMediaManager.pdf (25 pages, 305391 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 142 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
