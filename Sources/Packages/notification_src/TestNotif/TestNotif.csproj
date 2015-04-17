@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBA12435-3994-43F5-AC20-47D48933A839}</ProjectGuid>
+    <ProjectGuid>{09E2362A-397B-4B08-A4DC-1DB0DA15628E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebMediaManager</RootNamespace>
-    <AssemblyName>WebMediaManager</AssemblyName>
+    <RootNamespace>TestNotif</RootNamespace>
+    <AssemblyName>TestNotif</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,16 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChatSharp">
-      <HintPath>..\..\Packages\ChatSharp-master\ChatSharp\bin\Debug\ChatSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NotificationWindow">
-      <HintPath>..\..\Packages\notification_src\NotificationWindow\bin\Debug\NotificationWindow.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,23 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Curl.cs" />
-    <Compile Include="Models\Notification.cs" />
-    <Compile Include="Models\Sites\Dailymotion.cs" />
-    <Compile Include="Models\Sites\Twitch.cs" />
-    <Compile Include="Models\Sites\Vimeo.cs" />
-    <Compile Include="Models\Sites\Youtube.cs" />
-    <Compile Include="Models\StreamingSite.cs" />
-    <Compile Include="Views\PersonalInterface.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\PersonalInterface.Designer.cs">
-      <DependentUpon>PersonalInterface.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\PersonalInterface.resx">
-      <DependentUpon>PersonalInterface.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,11 +78,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Structures\SDailymotion\" />
-    <Folder Include="Structures\STwitch\" />
-    <Folder Include="Structures\SVimeo\" />
-    <Folder Include="Structures\SYoutube\" />
+    <ProjectReference Include="..\NotificationWindow\NotificationWindow.csproj">
+      <Project>{605006EB-D4E6-4312-A293-3A43FAC43240}</Project>
+      <Name>NotificationWindow</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

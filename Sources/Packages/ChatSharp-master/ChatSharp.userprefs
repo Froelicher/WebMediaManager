@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="TestChatSharp/TestChatSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ChatSharp/IrcClient.Commands.cs">
+    <Files>
+      <File FileName="ChatSharp/IrcClient.cs" Line="32" Column="32" />
+      <File FileName="ChatSharp/IrcClient.Commands.cs" Line="10" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

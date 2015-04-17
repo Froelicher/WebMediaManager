@@ -1,1 +1,15 @@
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\WebMediaManager.exe.config
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\WebMediaManager.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\WebMediaManager.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\ChatSharp.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\NotificationWindow.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\ChatSharp.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\NotificationWindow.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.csprojResolveAssemblyReference.cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.PersonalInterface.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.Properties.Resources.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.csproj.GenerateResource.Cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.pdb

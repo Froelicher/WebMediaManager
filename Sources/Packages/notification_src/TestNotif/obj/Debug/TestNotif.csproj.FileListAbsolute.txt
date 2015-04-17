@@ -1,0 +1,11 @@
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.exe.config
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\NotificationWindow.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\NotificationWindow.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.csprojResolveAssemblyReference.cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.Form1.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.Properties.Resources.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.csproj.GenerateResource.Cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.pdb
