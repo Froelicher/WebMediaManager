@@ -416,7 +416,43 @@
 		
 		
 \chapter{Analyse organique}
+	\section{Généralité}
+		\subsection{Langage en environnement de développement}
+		L'application est développée en C\# sur Microsoft Visual Studio 2013. 
+		
+		\subsection{Format des fichiers et enregistrements}
+		L'application stocke sa configuration sous forme de fichier. En effet, l'application a besoin d'enregistrer les catégories, listes de lecture ainsi que tout leurs contenu. Elle à également besoin d'enregistrer quelques configurations. C'est pour ça que j'utilise le format de fichier INI\footnote{Fichier de configuration} car il est très facile à manipuler. 
+		
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.7\textwidth]{../img/inifile.png}
+			\caption{Exemple de fichier INI}
+			\label{inifile}
+		\end{figure}
+	
+	\section{Conception}
+		\subsection{Modèle}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=1\textwidth]{../img/Model.png}
+			\caption{Diagramme du modèle}
+			\label{model}
+		\end{figure}
 
+	
+	\section{Outil communautaire}
+		\subsection{IRC}
+		Comment j'ai mis en place un chat IRC
+		
+		\subsection{Commentaire}
+		la même
+	
+	\section{Récupération des données}
+		\subsection{Curl}
+		
+	
+	
+	
 \chapter{Tests}
 	\section{Tests fonctionnel}
 	\section{Tests unitaire}
@@ -445,5 +481,6 @@
 	
 	\subsection{Final}
 
+\listoffigures
 
 \end{document}

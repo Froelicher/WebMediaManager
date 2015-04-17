@@ -48,11 +48,16 @@
 \contentsline {subsection}{\numberline {5.6.4}Interface modification de compte}{19}
 \contentsline {subsection}{\numberline {5.6.5}Interface d\IeC {\'e}tail d'un compte}{20}
 \contentsline {chapter}{\numberline {6}Analyse organique}{21}
-\contentsline {chapter}{\numberline {7}Tests}{22}
-\contentsline {section}{\numberline {7.1}Tests fonctionnel}{22}
-\contentsline {section}{\numberline {7.2}Tests unitaire}{22}
-\contentsline {chapter}{\numberline {8}Conclusions}{23}
-\contentsline {chapter}{\numberline {9}Annexes}{24}
-\contentsline {section}{\numberline {9.1}Planning}{24}
-\contentsline {subsection}{\numberline {9.1.1}Initial}{24}
-\contentsline {subsection}{\numberline {9.1.2}Final}{24}
+\contentsline {section}{\numberline {6.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}}{21}
+\contentsline {subsection}{\numberline {6.1.1}Langage en environnement de d\IeC {\'e}veloppement}{21}
+\contentsline {subsection}{\numberline {6.1.2}Format des fichiers et enregistrements}{21}
+\contentsline {section}{\numberline {6.2}Conception}{21}
+\contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{21}
+\contentsline {chapter}{\numberline {7}Tests}{23}
+\contentsline {section}{\numberline {7.1}Tests fonctionnel}{23}
+\contentsline {section}{\numberline {7.2}Tests unitaire}{23}
+\contentsline {chapter}{\numberline {8}Conclusions}{24}
+\contentsline {chapter}{\numberline {9}Annexes}{25}
+\contentsline {section}{\numberline {9.1}Planning}{25}
+\contentsline {subsection}{\numberline {9.1.1}Initial}{25}
+\contentsline {subsection}{\numberline {9.1.2}Final}{25}
