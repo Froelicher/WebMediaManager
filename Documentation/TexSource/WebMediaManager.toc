@@ -53,6 +53,11 @@
 \contentsline {subsection}{\numberline {6.1.2}Format des fichiers et enregistrements}{21}
 \contentsline {section}{\numberline {6.2}Conception}{21}
 \contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{21}
+\contentsline {section}{\numberline {6.3}Outil communautaire}{21}
+\contentsline {subsection}{\numberline {6.3.1}IRC}{21}
+\contentsline {subsection}{\numberline {6.3.2}Commentaire}{22}
+\contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{22}
+\contentsline {subsection}{\numberline {6.4.1}Curl}{22}
 \contentsline {chapter}{\numberline {7}Tests}{23}
 \contentsline {section}{\numberline {7.1}Tests fonctionnel}{23}
 \contentsline {section}{\numberline {7.2}Tests unitaire}{23}

@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +62,48 @@
     <Compile Include="Models\Sites\Vimeo.cs" />
     <Compile Include="Models\Sites\Youtube.cs" />
     <Compile Include="Models\StreamingSite.cs" />
+    <Compile Include="Structures\SDailymotion\Activity.cs" />
+    <Compile Include="Structures\SDailymotion\Channels.cs" />
+    <Compile Include="Structures\SDailymotion\Videos.cs" />
+    <Compile Include="Structures\SDailymotion\Channel.cs" />
+    <Compile Include="Structures\SDailymotion\Comment.cs" />
+    <Compile Include="Structures\SDailymotion\Comments.cs" />
+    <Compile Include="Structures\SDailymotion\Game.cs" />
+    <Compile Include="Structures\SDailymotion\Games.cs" />
+    <Compile Include="Structures\SDailymotion\GenericResult.cs" />
+    <Compile Include="Structures\SDailymotion\GenericResults.cs" />
+    <Compile Include="Structures\SDailymotion\Strongtag.cs" />
+    <Compile Include="Structures\SDailymotion\Strongtags.cs" />
+    <Compile Include="Structures\SDailymotion\User.cs" />
+    <Compile Include="Structures\SDailymotion\Users.cs" />
+    <Compile Include="Structures\SDailymotion\Video.cs" />
+    <Compile Include="Structures\STwitch\Channel.cs" />
+    <Compile Include="Structures\STwitch\Featured.cs" />
+    <Compile Include="Structures\STwitch\Featureds.cs" />
+    <Compile Include="Structures\STwitch\Follow.cs" />
+    <Compile Include="Structures\STwitch\Follows.cs" />
+    <Compile Include="Structures\STwitch\Game.cs" />
+    <Compile Include="Structures\STwitch\Games.cs" />
+    <Compile Include="Structures\STwitch\Image.cs" />
+    <Compile Include="Structures\STwitch\SearchChannels.cs" />
+    <Compile Include="Structures\STwitch\SearchGames.cs" />
+    <Compile Include="Structures\STwitch\SearchStreams.cs" />
+    <Compile Include="Structures\STwitch\Stream.cs" />
+    <Compile Include="Structures\STwitch\Streams.cs" />
+    <Compile Include="Structures\STwitch\Subscription.cs" />
+    <Compile Include="Structures\STwitch\Subscriptions.cs" />
+    <Compile Include="Structures\STwitch\Summary.cs" />
+    <Compile Include="Structures\STwitch\Team.cs" />
+    <Compile Include="Structures\STwitch\Teams.cs" />
+    <Compile Include="Structures\STwitch\Users.cs" />
+    <Compile Include="Structures\STwitch\Video.cs" />
+    <Compile Include="Structures\STwitch\Videos.cs" />
+    <Compile Include="Structures\SYoutube\Activities.cs" />
+    <Compile Include="Structures\SYoutube\Captions.cs" />
+    <Compile Include="Structures\SYoutube\ChannelBanners.cs" />
+    <Compile Include="Structures\SYoutube\Channels.cs" />
+    <Compile Include="Structures\SYoutube\ResourceId.cs" />
+    <Compile Include="Structures\SYoutube\Thumbnails.cs" />
     <Compile Include="Views\PersonalInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,10 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Structures\SDailymotion\" />
-    <Folder Include="Structures\STwitch\" />
     <Folder Include="Structures\SVimeo\" />
-    <Folder Include="Structures\SYoutube\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
