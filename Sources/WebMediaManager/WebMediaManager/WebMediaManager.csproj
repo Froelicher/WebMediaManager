@@ -102,8 +102,20 @@
     <Compile Include="Structures\SYoutube\Captions.cs" />
     <Compile Include="Structures\SYoutube\ChannelBanners.cs" />
     <Compile Include="Structures\SYoutube\Channels.cs" />
+    <Compile Include="Structures\SYoutube\Comments.cs" />
+    <Compile Include="Structures\SYoutube\CommentThreads.cs" />
+    <Compile Include="Structures\SYoutube\GuideCategories.cs" />
+    <Compile Include="Structures\SYoutube\I18Languages.cs" />
+    <Compile Include="Structures\SYoutube\I18nRegions.cs" />
+    <Compile Include="Structures\SYoutube\PlaylistItems.cs" />
+    <Compile Include="Structures\SYoutube\Playlists.cs" />
     <Compile Include="Structures\SYoutube\ResourceId.cs" />
+    <Compile Include="Structures\SYoutube\Search.cs" />
+    <Compile Include="Structures\SYoutube\Subscriptions.cs" />
     <Compile Include="Structures\SYoutube\Thumbnails.cs" />
+    <Compile Include="Structures\SYoutube\VideoCategories.cs" />
+    <Compile Include="Structures\SYoutube\Videos.cs" />
+    <Compile Include="Structures\SYoutube\WaterMarks.cs" />
     <Compile Include="Views\PersonalInterface.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -42,6 +42,9 @@ namespace WebMediaManager.Structures.SYoutube
 
             [DataMember]
             public string groupId { get; set; }
+
+            [DataMember]
+            public Thumbnails thumbnails { get; set; }
         }
 
         [DataMember]
