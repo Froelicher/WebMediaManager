@@ -289,41 +289,97 @@ namespace WebMediaManager.Structures.SYoutube
         {
             [DataMember]
             public string processingStatus { get; set; }
+
+            [DataContract]
+            public class ProcessingProgress
+            {
+                [DataMember]
+                public long partsTotal { get; set; }
+
+                [DataMember]
+                public long partsProcessed { get; set; }
+
+                [DataMember]
+                public long timeLeftMs { get; set; }
+            }
+
+            [DataMember]
+            public ProcessingProgress processingProgress { get; set; }
+
+            [DataMember]
+            public string processingFailureReason { get; set; }
+
+            [DataMember]
+            public string fileDetailsAvailability { get; set; }
+
+            [DataMember]
+            public string processingIssueAvailability { get; set; }
+
+            [DataMember]
+            public string tagSuggestionsAvailability { get; set; }
+
+            [DataMember]
+            public string editorSuggestionsAvailability { get; set; }
+
+            [DataMember]
+            public string thumbnailsAvailability { get; set; }
         }
-        
+
+        [DataMember]
+        public ProcessingDetails processingDetails { get; set; }
+
         [DataContract]
-        public class ProcessingProgress
+        public class Suggestions
         {
             [DataMember]
-            public long partsTotal { get; set; }
+            public string[] processingErrors { get; set; }
 
             [DataMember]
-            public long partsProcessed { get; set; }
+            public string[] processingWarnings { get; set; }
 
             [DataMember]
-            public long timeLeftMs { get; set; }
+            public string[] processingHints { get; set; }
+
+            [DataContract]
+            public class TagSuggestions
+            {
+                [DataMember]
+                public string tag { get; set; }
+
+                [DataMember]
+                public string[] categoryRestricts { get; set; }
+            }
+
+            [DataMember]
+            public TagSuggestions[] tagSuggestions { get; set; }
+
+            [DataMember]
+            public string[] editorSuggestions { get; set; }
         }
 
         [DataMember]
-        public ProcessingProgress processingProgress { get; set; }
+        public Suggestions suggestions { get; set; }
+
+        [DataContract]
+        public class LiveStreamingDetails
+        {
+            [DataMember]
+            public DateTime actuelStartTime { get; set; }
+
+            [DataMember]
+            public DateTime actualEndTime { get; set; }
+
+            [DataMember]
+            public DateTime scheduledStartTime { get; set; }
+
+            [DataMember]
+            public DateTime scheduledEndTime { get; set; }
+
+            [DataMember]
+            public long concurrentViewers { get; set; }
+        }
 
         [DataMember]
-        public string processingFailureReason { get; set; }
-
-        [DataMember]
-        public string fileDetailsAvailability { get; set; }
-
-        [DataMember]
-        public string processingIssueAvailability { get; set; }
-
-        [DataMember]
-        public string tagSuggestionsAvailability { get; set; }
-
-        [DataMember]
-        public string editorSuggestionsAvailability { get; set; }
-
-        [DataMember]
-        public string thumbnailsAvailability { get; set; }
-
+        public LiveStreamingDetails liveStreamingDetails { get; set; }
     }
 }

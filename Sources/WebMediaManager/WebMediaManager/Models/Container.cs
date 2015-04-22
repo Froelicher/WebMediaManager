@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {
-    class Notification : StreamingSite
+    class Container
     {
     }
 }
