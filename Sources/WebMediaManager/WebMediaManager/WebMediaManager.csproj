@@ -86,6 +86,7 @@
     <Compile Include="Structures\STwitch\Game.cs" />
     <Compile Include="Structures\STwitch\Games.cs" />
     <Compile Include="Structures\STwitch\Image.cs" />
+    <Compile Include="Structures\STwitch\Panel.cs" />
     <Compile Include="Structures\STwitch\SearchChannels.cs" />
     <Compile Include="Structures\STwitch\SearchGames.cs" />
     <Compile Include="Structures\STwitch\SearchStreams.cs" />

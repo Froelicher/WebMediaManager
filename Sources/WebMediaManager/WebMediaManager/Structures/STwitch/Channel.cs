@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 
-namespace TwitchAlert.TwitchModels
+namespace WebMediaManager.Structures.STwitch
 {
     [DataContract]
     class Channel

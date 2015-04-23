@@ -10,8 +10,9 @@ namespace WebMediaManager.Models
     {
 
         #region STRUCTURES
-        public struct Video
+        public struct SVideo
         {
+            public string id;
             public string videoName;
             public string channelName;
             public int nbViews;
@@ -21,8 +22,9 @@ namespace WebMediaManager.Models
             public string createdAt;
         }
 
-        public struct Channel
+        public struct SChannel
         {
+            public string id;
             public string channelName;
             public string description;
             public string logoLink;
@@ -35,13 +37,44 @@ namespace WebMediaManager.Models
 
         #region PROPERTIES
 
+        private List<SVideo> _listLastVideos;
+        private string _accessToken;
+        private string _userName;
+
+        public string UserName
+        {
+            get { return _userName; }
+            set { _userName = value; }
+        }
+
+        public string AccessToken
+        {
+            get { return _accessToken; }
+            set { _accessToken = value; }
+        }
+
+        internal List<SVideo> ListLastVideos
+        {
+            get { return _listLastVideos; }
+            set { _listLastVideos = value; }
+        }
+
         #endregion
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public virtual void UpdateLastVideo()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Get the last video released
         /// </summary>
         /// <returns>list of last video</returns>
-        public virtual List<Video> GetNewVideos()
+        public virtual List<SVideo> GetNewVideos()
         {
             throw new NotImplementedException();
         }
@@ -50,7 +83,7 @@ namespace WebMediaManager.Models
         /// Get list of channel followed
         /// </summary>
         /// <returns></returns>
-        public virtual List<Channel> GetChannelFollowed()
+        public virtual List<SChannel> GetChannelFollowed()
         {
             throw new NotImplementedException();
         }
@@ -60,7 +93,7 @@ namespace WebMediaManager.Models
         /// </summary>
         /// <param name="request"></param>
         /// <returns>list of videos</returns>
-        public virtual List<Video> SearchVideos(string request)
+        public virtual List<SVideo> SearchVideos(string request)
         {
             throw new NotImplementedException();
         }
@@ -70,7 +103,7 @@ namespace WebMediaManager.Models
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public virtual List<Channel> SearchChannels(string request)
+        public virtual List<SChannel> SearchChannels(string request)
         {
             throw new NotImplementedException();
         }
@@ -115,7 +148,7 @@ namespace WebMediaManager.Models
         /// Get the popular videos
         /// </summary>
         /// <returns></returns>
-        public virtual List<Video> GetPopularVideos()
+        public virtual List<SVideo> GetPopularVideos()
         {
             throw new NotImplementedException();
         }
@@ -124,7 +157,7 @@ namespace WebMediaManager.Models
         /// Get the playlists
         /// </summary>
         /// <returns></returns>
-        public virtual List<Video> GetPlaylists()
+        public virtual List<SVideo> GetPlaylists()
         {
             throw new NotImplementedException();
         }      

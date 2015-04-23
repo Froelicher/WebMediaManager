@@ -8,9 +8,5 @@ namespace WebMediaManager.Models.Sites
 {
     class Youtube : StreamingSite
     {
-        public override void GetVideo()
-        {
-
-        }
     }
 }

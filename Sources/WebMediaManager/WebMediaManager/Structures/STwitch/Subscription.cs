@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using TwitchAlert.TwitchModels;
 
 namespace WebMediaManager.Structures.STwitch
 {

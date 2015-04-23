@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwitchAlert.TwitchModels
+namespace WebMediaManager.Structures.STwitch
 {
     [DataContract]
     class Team
