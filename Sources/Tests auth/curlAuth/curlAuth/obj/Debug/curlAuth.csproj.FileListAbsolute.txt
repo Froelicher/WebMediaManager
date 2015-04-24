@@ -1,0 +1,1 @@
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Tests auth\curlAuth\curlAuth\bin\Debug\curlAuth.exe.config

@@ -37,6 +37,7 @@ namespace WebMediaManager.Structures.STwitch
             [DataMember]
             public string self { get; set; }
         }
+
         [DataMember]
         public Image preview { get; set; }
 

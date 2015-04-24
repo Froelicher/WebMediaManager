@@ -58,6 +58,7 @@
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Curl.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Sites\Dailymotion.cs" />
     <Compile Include="Models\Sites\Twitch.cs" />
     <Compile Include="Models\Sites\Vimeo.cs" />

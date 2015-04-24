@@ -20,6 +20,7 @@ namespace WebMediaManager.Models
             public string preview;
             public string playerLink;
             public string createdAt;
+            public string link;
         }
 
         public struct SChannel

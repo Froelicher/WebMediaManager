@@ -50,6 +50,24 @@ namespace WebMediaManager.Models
             this.ListSite.Add(twitch);
         }
 
+        /// <summary>
+        /// Open file categorie
+        /// </summary>
+        private void OpenFileCategories()
+        {
+            //TO DO : Ouvrir le fichier et remplir les categories
+
+
+        }
+
+        /// <summary>
+        /// Open file playlists
+        /// </summary>
+        private void OpenFilePlaylists()
+        {
+            //TO DO : Ouvrir le fichier et remplis les playlists
+        }
+
         public List<List<StreamingSite.SVideo>> CheckNotifications()
         {
             List<List<StreamingSite.SVideo>> listDiff = new List<List<StreamingSite.SVideo>>();

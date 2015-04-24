@@ -12,6 +12,7 @@ namespace WebMediaManager.Models.Sites
         #region CONSTS
         private const string GET_METHOD = "GET";
         private const string URL_API = "https://api.twitch.tv/kraken/";
+        private const string URL_SITE = "https://twitch.tv/";
         #endregion
 
         /// <summary>
@@ -30,6 +31,7 @@ namespace WebMediaManager.Models.Sites
             video.nbViews = stream.viewers;
             video.preview = stream.preview.medium;
             video.playerLink = "https://www.twitch.tv/" + stream.channel.name + "/popout";
+            video.link = URL_SITE + stream.channel.name;
             return video;
         }
 
