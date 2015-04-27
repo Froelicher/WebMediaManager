@@ -7,12 +7,13 @@ using WebMediaManager.Structures.STwitch;
 
 namespace WebMediaManager.Models.Sites
 {
-    class Twitch : StreamingSite
+    public class Twitch : StreamingSite
     {
         #region CONSTS
         private const string GET_METHOD = "GET";
         private const string URL_API = "https://api.twitch.tv/kraken/";
         private const string URL_SITE = "https://twitch.tv/";
+        private const string ACCEPT_HTTP_HEADER = "application/vnd.twitchtv.v3+json";
         #endregion
 
         /// <summary>
@@ -62,9 +63,9 @@ namespace WebMediaManager.Models.Sites
         /// <returns>description</returns>
         private string CreateChannelDescription(string channelName)
         {
-            Panel[] panels = Curl.SendRequest<Panel[]>("https://api.twitch.tv/api/channels/"+channelName+"/panels", GET_METHOD);
+            Panel[] panels = Curl.Deserialize<Panel[]>(Curl.SendRequest("https://api.twitch.tv/api/channels/"+channelName+"/panels", GET_METHOD, ACCEPT_HTTP_HEADER));
             
-            //SOUPE POUR FAIRE LA DESCRIPTION
+            //TODO : SOUPE POUR FAIRE LA DESCRIPTION
 
             return "";
         }
@@ -83,7 +84,9 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override List<SVideo> GetNewVideos()
         {
-            Streams streamsOnlineFollowed = Curl.SendRequest<Streams>(URL_API + "streams/followed", GET_METHOD, this.AccessToken);
+
+            Streams streamsOnlineFollowed = Curl.Deserialize<Streams>(Curl.SendRequest(URL_API + "streams/followed", GET_METHOD, this.AccessToken, ACCEPT_HTTP_HEADER));
+
             List<SVideo> listVideos = new List<SVideo>();
 
             for (int i = 0; i < streamsOnlineFollowed.streams.Count(); i++)
@@ -101,7 +104,8 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override List<SChannel> GetChannelFollowed()
         {
-            Follows channelFollowed = Curl.SendRequest<Follows>(URL_API + "users/" + this.UserName + "/follows/channels", GET_METHOD);
+            Follows channelFollowed = Curl.Deserialize<Follows>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels", GET_METHOD, ACCEPT_HTTP_HEADER));
+
             List<SChannel> listChannels = new List<SChannel>();
 
             for (int i = 0; i < channelFollowed.follows.Count(); i++)
@@ -120,7 +124,8 @@ namespace WebMediaManager.Models.Sites
         /// <returns>video list</returns>
         public override List<SVideo> SearchVideos(string request)
         {
-            SearchStreams searchStreams = Curl.SendRequest<SearchStreams>(URL_API + "search/streams?q=" + request, GET_METHOD);
+            SearchStreams searchStreams = Curl.Deserialize<SearchStreams>(Curl.SendRequest(URL_API + "search/streams?q=" + request, GET_METHOD, ACCEPT_HTTP_HEADER));
+
             List<SVideo> listVideos = new List<SVideo>();
 
             for (int i = 0; i < searchStreams.streams.Count(); i++)
@@ -139,7 +144,8 @@ namespace WebMediaManager.Models.Sites
         /// <returns>channel list</returns>
         public override List<SChannel> SearchChannels(string request)
         {
-            SearchChannels searchChannels = Curl.SendRequest<SearchChannels>(URL_API + "search/channels?q=" + request, GET_METHOD);
+            SearchChannels searchChannels = Curl.Deserialize<SearchChannels>(Curl.SendRequest(URL_API + "search/channels?q=" + request, GET_METHOD, ACCEPT_HTTP_HEADER));
+
             List<SChannel> listChannels = new List<SChannel>();
 
             for (int i = 0; i < searchChannels.channels.Count(); i++)
@@ -156,7 +162,7 @@ namespace WebMediaManager.Models.Sites
         /// <param name="channelName">channel name</param>
         public override void FollowChannel(string channelName)
         {
-            Curl.SendRequest<Follow>(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "PUT", this.AccessToken);
+            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "PUT", this.AccessToken, ACCEPT_HTTP_HEADER));
             this.UpdateLastVideo();
         }
 
@@ -166,7 +172,8 @@ namespace WebMediaManager.Models.Sites
         /// <param name="channelName">channel name</param>
         public override void UnFollowChannel(string channelName)
         {
-            Curl.SendRequest<Follow>(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "DELETE", this.AccessToken);
+            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "DELETE", this.AccessToken, ACCEPT_HTTP_HEADER));
+            this.UpdateLastVideo();
         }
 
         /// <summary>
@@ -175,7 +182,8 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override List<SVideo> GetPopularVideos()
         {
-            Streams streams = Curl.SendRequest<Streams>(URL_API + "streams/", "GET");
+            Streams streams = Curl.Deserialize<Streams>(Curl.SendRequest(URL_API + "streams/", GET_METHOD, ACCEPT_HTTP_HEADER));
+
             List<SVideo> listVideos = new List<SVideo>();
 
             for (int i = 0; i < streams.streams.Count(); i++)
@@ -186,8 +194,5 @@ namespace WebMediaManager.Models.Sites
 
             return listVideos;
         }
-
-
-
     }
 }
