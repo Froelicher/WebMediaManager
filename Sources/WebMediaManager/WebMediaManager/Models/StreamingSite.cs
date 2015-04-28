@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {
-    class StreamingSite
+    public class StreamingSite
     {
 
         #region STRUCTURES
@@ -19,7 +19,7 @@ namespace WebMediaManager.Models
             public string description;
             public string preview;
             public string playerLink;
-            public string createdAt;
+            public DateTime createdAt;
             public string link;
         }
 
@@ -32,7 +32,7 @@ namespace WebMediaManager.Models
             public string headerLink;
             public int nbTotalViews;
             public int nbFollowers;
-            public string createdAt;
+            public DateTime createdAt;
         }
         #endregion
 

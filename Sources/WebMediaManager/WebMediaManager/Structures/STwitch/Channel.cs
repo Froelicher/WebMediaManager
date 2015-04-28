@@ -35,10 +35,10 @@ namespace WebMediaManager.Structures.STwitch
         public string name { get; set; }
 
         [DataMember]
-        public string created_at { get; set; }
+        public DateTime created_at { get; set; }
 
         [DataMember]
-        public string updated_at { get; set; }
+        public DateTime updated_at { get; set; }
 
         [DataMember]
         public string logo { get; set; }

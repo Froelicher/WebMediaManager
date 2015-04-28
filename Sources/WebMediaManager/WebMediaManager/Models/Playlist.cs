@@ -16,6 +16,12 @@ namespace WebMediaManager.Models
             set { _indexCurrentVideo = value; }
         }
 
+
+        public Playlist(string name) : base(name)
+        {
+            this.IndexCurrentVideo = 0;
+        }
+
         /// <summary>
         /// Next video
         /// </summary>

@@ -26,7 +26,7 @@ namespace WebMediaManager.Structures.STwitch
         public int video_height { get; set; }
 
         [DataMember]
-        public string created_at { get; set; }
+        public DateTime created_at { get; set; }
 
         [DataMember]
         public StreamLinks _links { get; set; }

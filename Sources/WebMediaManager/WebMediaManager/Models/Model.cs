@@ -37,6 +37,44 @@ namespace WebMediaManager.Models
             this.InitSite();
         }
 
+        /// <summary>
+        /// Get lasts videos of all site
+        /// </summary>
+        /// <returns>list of last video</returns>
+        public List<WebMediaManager.Models.StreamingSite.SVideo> GetAllLastVideos()
+        {
+            List<WebMediaManager.Models.StreamingSite.SVideo> listLastVideos = new List<WebMediaManager.Models.StreamingSite.SVideo>();
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
+                {
+                    listLastVideos.Add(this.ListSite[i].ListLastVideos[j]);
+                }
+            }
+
+            return listLastVideos;
+        }
+
+        public WebMediaManager.Models.StreamingSite.SVideo[] SortVideos(List<WebMediaManager.Models.StreamingSite.SVideo> listVideos)
+        {
+            WebMediaManager.Models.StreamingSite.SVideo[] listResult = new WebMediaManager.Models.StreamingSite.SVideo[listVideos.Count];
+            listResult[0] = listVideos[0];
+
+            for (int i = 1; i < listVideos.Count; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (DateTime.Compare(listResult[j].createdAt, listVideos[i].createdAt) < 0)
+                    {
+                        listResult[i] = listVideos[j];
+                    }
+                }
+
+            }
+
+            return null;
+        }
+
         private void InitSite()
         {
             Youtube youtube = new Youtube();

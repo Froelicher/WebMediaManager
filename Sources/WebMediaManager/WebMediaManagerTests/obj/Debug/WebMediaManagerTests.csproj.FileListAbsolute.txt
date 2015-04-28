@@ -1,0 +1,9 @@
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.csprojResolveAssemblyReference.cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\WebMediaManagerTests.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\WebMediaManagerTests.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\WebMediaManager.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\WebMediaManager.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.pdb

@@ -1,0 +1,5 @@
+﻿{
+	"testInt" :	1234,
+	"testString" : "test string with int 192",
+	"testInc" : {"testIncString" : "inc string test", "testIncLong" : 23993945}
+}

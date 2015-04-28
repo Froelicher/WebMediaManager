@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {
-    static class Curl
+    public static class Curl
     {
         /// <summary>
         /// Send request and get response html
@@ -19,7 +19,7 @@ namespace WebMediaManager.Models
         /// <param name="p_access_token">user access token</param>
         /// <param name="acceptHeader">the accept header html</param>
         /// <returns>HttpWebResponse</returns>
-        public static HttpWebResponse SendRequest(string urlRequest, string p_method, string p_access_token, string acceptHeader)
+        public static Stream SendRequest(string urlRequest, string p_method, string p_access_token, string acceptHeader)
         {
             //Create a new http request
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(urlRequest);
@@ -33,7 +33,7 @@ namespace WebMediaManager.Models
                 httpWebRequest.ContentLength = 0;
 
              //Create a http response
-             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+             Stream httpResponse = httpWebRequest.GetResponse().GetResponseStream();
 
              return httpResponse;
         }
@@ -45,7 +45,7 @@ namespace WebMediaManager.Models
         /// <param name="p_method">method to use</param>
         /// <param name="acceptHeader">the accept header html</param>
         /// <returns>HttpWebResponse</returns>
-        public static HttpWebResponse SendRequest(string urlRequest, string p_method, string acceptHeader)
+        public static Stream SendRequest(string urlRequest, string p_method, string acceptHeader)
         {
             //Create a new http request
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(urlRequest);
@@ -56,7 +56,7 @@ namespace WebMediaManager.Models
             httpWebRequest.Method = p_method;
 
             //Create a http response
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            var httpResponse = httpWebRequest.GetResponse().GetResponseStream();
 
             return httpResponse;
         }
@@ -67,17 +67,32 @@ namespace WebMediaManager.Models
         /// <typeparam name="T">Generic type</typeparam>
         /// <param name="jsonContent">content json</param>
         /// <returns>the object deserialized</returns>
-        public static T Deserialize<T>(HttpWebResponse jsonContent)
+        public static T Deserialize<T>(Stream jsonContent)
         {
             var httpResponse = jsonContent;
 
             //Read the response
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            using (var streamReader = new StreamReader(httpResponse))
             {
                 //Add to the generics variable the result
                 T answer = JsonConvert.DeserializeObject<T>(streamReader.ReadToEnd());
                 return answer;
             }
+        }
+
+        /// <summary>
+        /// Generate a stream from string
+        /// </summary>
+        /// <param name="s">string</param>
+        /// <returns>stream</returns>
+        public static Stream GenerateStreamFromString(string s)
+        {
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(s);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
         }
     }
 }

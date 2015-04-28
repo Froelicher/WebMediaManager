@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {
-    class Container
+    public class Container
     {
         #region CONST
 
@@ -41,7 +41,16 @@ namespace WebMediaManager.Models
         public Container(string name)
         {
             this.Name = name;
-            this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Container.ini");
+        }
+
+        public void SetPathCategory()
+        {
+            this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
+        }
+
+        public void SetPathPlaylist()
+        {
+            this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
         }
 
         /// <summary>
