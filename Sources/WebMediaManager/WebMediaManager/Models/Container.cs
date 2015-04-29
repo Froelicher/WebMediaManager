@@ -52,6 +52,81 @@ namespace WebMediaManager.Models
         {
             this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
         }
+        
+
+        public void FillListVideos(List<StreamingSite.SVideo> videos)
+        {
+
+        }
+
+        /// <summary>
+        /// Add container in file
+        /// </summary>
+        public void AddContainer()
+        {
+            if (File.Exists(this.FilePath))
+            {
+                using(System.IO.StreamWriter file = new System.IO.StreamWriter(this.FilePath, true))
+                {
+                    if (!CheckExistContainer())
+                    {
+                        file.WriteLine("[" + this.Name + "]");
+                        file.WriteLine("link=");
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Check if the container exist
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckExistContainer()
+        {
+            if (File.Exists(this.FilePath))
+            {
+                string[] allVideos = File.ReadAllLines(this.FilePath);
+
+                for (int i = 0; i < allVideos.Length; i++)
+                {
+                    if (allVideos[i] == "[" + this.Name + "]")
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Get video of container
+        /// </summary>
+        /// <returns>List of videos</returns>
+        public string[] GetVideos()
+        {
+            string[] videos = null;
+
+            if (File.Exists(this.FilePath))
+            {
+                string[] allVideos = File.ReadAllLines(this.FilePath);
+                string stringVideos = "";
+
+                for (int i = 0; i < allVideos.Length; i++)
+                {
+                    if (allVideos[i] == "[" + this.Name + "]")
+                    {
+                        stringVideos = allVideos[i + 1];
+                        break;
+                    }
+                }
+
+                stringVideos = stringVideos.Substring(0, "link=".Length);
+
+                videos = stringVideos.Split(';');
+            }
+            return videos;
+        }
 
         /// <summary>
         /// Add a video in list and in ini file

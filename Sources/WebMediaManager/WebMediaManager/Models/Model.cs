@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,9 +42,9 @@ namespace WebMediaManager.Models
         /// Get lasts videos of all site
         /// </summary>
         /// <returns>list of last video</returns>
-        public List<WebMediaManager.Models.StreamingSite.SVideo> GetAllLastVideos()
+        public List<StreamingSite.SVideo> GetAllLastVideos()
         {
-            List<WebMediaManager.Models.StreamingSite.SVideo> listLastVideos = new List<WebMediaManager.Models.StreamingSite.SVideo>();
+            List<StreamingSite.SVideo> listLastVideos = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
                 for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
@@ -55,26 +56,23 @@ namespace WebMediaManager.Models
             return listLastVideos;
         }
 
-        public WebMediaManager.Models.StreamingSite.SVideo[] SortVideos(List<WebMediaManager.Models.StreamingSite.SVideo> listVideos)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="listVideos"></param>
+        /// <returns></returns>
+        public List<StreamingSite.SVideo> SortVideos(List<StreamingSite.SVideo> listVideos)
         {
-            WebMediaManager.Models.StreamingSite.SVideo[] listResult = new WebMediaManager.Models.StreamingSite.SVideo[listVideos.Count];
-            listResult[0] = listVideos[0];
+            StreamingSite.SVideo[] listResult = new StreamingSite.SVideo[listVideos.Count];
 
-            for (int i = 1; i < listVideos.Count; i++)
-            {
-                for (int j = 0; j < i; j++)
-                {
-                    if (DateTime.Compare(listResult[j].createdAt, listVideos[i].createdAt) < 0)
-                    {
-                        listResult[i] = listVideos[j];
-                    }
-                }
+            listVideos.Sort((x, y) => DateTime.Compare(x.createdAt, y.createdAt));
 
-            }
-
-            return null;
+            return listVideos;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void InitSite()
         {
             Youtube youtube = new Youtube();
@@ -88,14 +86,52 @@ namespace WebMediaManager.Models
             this.ListSite.Add(twitch);
         }
 
+
+
         /// <summary>
         /// Open file categorie
         /// </summary>
         private void OpenFileCategories()
         {
-            //TO DO : Ouvrir le fichier et remplir les categories
+            string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
+            string[] videosLink = null;
+            List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
+            string nameCategory = "";
+            int pFrom = 0;
+            int pTo = 0;
 
+            if (File.Exists(pathFile))
+            {
+                string[] allVideos = File.ReadAllLines(pathFile);
 
+                for (int i = 0; i < allVideos.Length; i++)
+                {
+                    if(allVideos[i][0] == '[')
+                    {
+                        pFrom = allVideos[i].IndexOf('[') + "[".Length;
+                        pTo = allVideos[i].LastIndexOf(']');
+
+                        nameCategory = allVideos[i].Substring(pFrom, pTo - pFrom);
+
+                        Container category = new Container(nameCategory);
+                        category.SetPathCategory();
+                        videosLink = category.GetVideos();
+
+                        for (int j = 0; j < this.ListSite.Count; j++)
+                        {
+                            for (int x = 0; x < videosLink.Count(); x++)
+                            {
+                                if (this.ListSite[j].GetIdVideoByLink(videosLink[x]) != null)
+                                    videos[x] = this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x]));
+                            }
+                        }
+
+                        category.FillListVideos(videos);
+                        this.ListContainer.Add(category);
+                    }
+                }
+
+            }
         }
 
         /// <summary>
@@ -103,9 +139,52 @@ namespace WebMediaManager.Models
         /// </summary>
         private void OpenFilePlaylists()
         {
-            //TO DO : Ouvrir le fichier et remplis les playlists
+            string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
+            string[] videosLink = null;
+            List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
+            string namePlaylist = "";
+            int pFrom = 0;
+            int pTo = 0;
+
+            if (File.Exists(pathFile))
+            {
+                string[] allVideos = File.ReadAllLines(pathFile);
+
+                for (int i = 0; i < allVideos.Length; i++)
+                {
+                    if (allVideos[i][0] == '[')
+                    {
+                        pFrom = allVideos[i].IndexOf('[') + "[".Length;
+                        pTo = allVideos[i].LastIndexOf(']');
+
+                        namePlaylist = allVideos[i].Substring(pFrom, pTo - pFrom);
+
+                        Playlist playlist = new Playlist(namePlaylist);
+                        playlist.SetPathPlaylist();
+                        videosLink = playlist.GetVideos();
+
+                        for (int j = 0; j < this.ListSite.Count; j++)
+                        {
+                            for (int x = 0; x < videosLink.Count(); x++)
+                            {
+                                if (this.ListSite[j].GetIdVideoByLink(videosLink[x]) != null)
+                                    videos[x] = this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x]));
+                            }
+                        }
+
+                        playlist.FillListVideos(videos);
+                        this.ListContainer.Add(playlist);
+                    }
+                }
+
+            }
+
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<List<StreamingSite.SVideo>> CheckNotifications()
         {
             List<List<StreamingSite.SVideo>> listDiff = new List<List<StreamingSite.SVideo>>();

@@ -62,6 +62,27 @@ namespace WebMediaManager.Models
 
         #endregion
 
+        
+        public virtual SVideo CreateVideo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual SVideo GetVideoById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get video ID by a video link
+        /// </summary>
+        /// <param name="link"></param>
+        /// <returns></returns>
+        public virtual string GetIdVideoByLink(string link)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 
         /// </summary>
