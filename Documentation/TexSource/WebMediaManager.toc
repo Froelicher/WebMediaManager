@@ -57,12 +57,16 @@
 \contentsline {subsection}{\numberline {6.3.1}IRC}{21}
 \contentsline {subsection}{\numberline {6.3.2}Commentaire}{22}
 \contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{22}
-\contentsline {subsection}{\numberline {6.4.1}Curl}{22}
-\contentsline {chapter}{\numberline {7}Tests}{23}
-\contentsline {section}{\numberline {7.1}Tests fonctionnel}{23}
-\contentsline {section}{\numberline {7.2}Tests unitaire}{23}
-\contentsline {chapter}{\numberline {8}Conclusions}{24}
-\contentsline {chapter}{\numberline {9}Annexes}{25}
-\contentsline {section}{\numberline {9.1}Planning}{25}
-\contentsline {subsection}{\numberline {9.1.1}Initial}{25}
-\contentsline {subsection}{\numberline {9.1.2}Final}{25}
+\contentsline {subsection}{\numberline {6.4.1}Classes structure}{22}
+\contentsline {subsection}{\numberline {6.4.2}Curl}{22}
+\contentsline {section}{\numberline {6.5}SVideo \& SChannel}{23}
+\contentsline {section}{\numberline {6.6}Affichage}{23}
+\contentsline {subsection}{\numberline {6.6.1}Flux vid\IeC {\'e}o}{23}
+\contentsline {chapter}{\numberline {7}Tests}{24}
+\contentsline {section}{\numberline {7.1}Tests fonctionnel}{24}
+\contentsline {section}{\numberline {7.2}Tests unitaire}{24}
+\contentsline {chapter}{\numberline {8}Conclusions}{25}
+\contentsline {chapter}{\numberline {9}Annexes}{26}
+\contentsline {section}{\numberline {9.1}Planning}{26}
+\contentsline {subsection}{\numberline {9.1.1}Initial}{26}
+\contentsline {subsection}{\numberline {9.1.2}Final}{26}

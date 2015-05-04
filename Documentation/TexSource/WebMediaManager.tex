@@ -60,7 +60,7 @@
 
 %%% The "real" document content comes below...
 
-\title{WebMedia Manager}
+\title{Web Media Manager}
 \author{The Author}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
@@ -448,10 +448,44 @@
 		la même
 	
 	\section{Récupération des données}
-		\subsection{Curl}
+		\subsection{Classes structure}
+		Afin de récupérer les données reçues grâce aux API, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
 		
+		Pour spécifié que se sont des classes "structures" il faut spécifié la classe en \textit{\[DataContract\]} et les propriétés en \textit{\[DataMember\]}.
+		
+		TODO : Image des structures
+		
+		\subsection{Curl}
+		Client URL Request Library est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
+		
+		TODO : Exemple de commande cURL
+		
+		Il y a plusieurs type de requêtes :
+		\begin{itemize}
+			\item GET
+			\item POST
+			\item PUT
+			\item DELETE
+		\end{itemize}
+		
+		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe fournie par le Framework .NET 4.5 \textbf{httpWebRequest}.		
+		J'ai créé une fonction qui permet de récupérer la réponse d'une requête HTML :
+		
+		TODO : Mettre code de la fonction
+		
+		Il faut ensuite désérialiser cette réponse. Afin d’avoir une méthode qui renvoie le bon type suivant la ressource demandée, j’ai utilisé le type générique de C\#. C'est lors de l'appel de la méthode que l'on spécifie de quel type est la valeur de retour.
+		
+		TODO : Mettre code désérialisation 
+		
+			
+	\section{SVideo \& SChannel}
+		Afin d'avoir un format générique pour les vidéos et chaînes des différents services j'ai créer deux structures.
+		Ces structures me permettent d'afficher les vidéos et leurs informations génériquement.
 	
 	
+	\section{Affichage}
+		\subsection{Flux vidéo}
+		
 	
 \chapter{Tests}
 	\section{Tests fonctionnel}

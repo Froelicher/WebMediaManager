@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  22 APR 2015 10:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  4 MAY 2015 16:01
 entering extended mode
 **WebMediaManager.tex
 
@@ -1054,23 +1054,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/inifil
 e.png>] [22 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation
-/img/Model.png>]
+/img/Model.png>] [23]
 Chapitre 7.
-[23
-
-]
-Chapitre 8.
 [24
 
 ]
-Chapitre 9.
+Chapitre 8.
 [25
+
+]
+Chapitre 9.
+[26
 
 ]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.lof)
 \tf@lof=\write5
- [26
+ [27
 
 ]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
@@ -1078,7 +1078,7 @@ ebMediaManager.aux) )
 Here is how much of TeX's memory you used:
  16929 strings out of 493921
  339886 string characters out of 3144861
- 396647 words of memory out of 3000000
+ 395647 words of memory out of 3000000
  19901 multiletter control sequences out of 15000+200000
  14278 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1086,17 +1086,18 @@ Here is how much of TeX's memory you used:
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on WebMediaManager.pdf (27 pages, 331532 bytes).
+s/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on WebMediaManager.pdf (28 pages, 345314 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
+ 159 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
