@@ -21,7 +21,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        public override SVideo CreateVideo(Stream stream)
+        private SVideo CreateVideo(Stream stream)
         {
             SVideo video = new SVideo();
             video.videoName = stream.channel.status;
@@ -41,7 +41,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="channelFollowed"></param>
         /// <returns></returns>
-        public override SChannel CreateChannel(WebMediaManager.Structures.STwitch.Channel channelFollowed)
+        private SChannel CreateChannel(WebMediaManager.Structures.STwitch.Channel channelFollowed)
         {
             SChannel channel = new SChannel();
             channel.channelName = channelFollowed.display_name;

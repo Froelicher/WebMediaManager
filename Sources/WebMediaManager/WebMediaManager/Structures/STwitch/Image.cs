@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WebMediaManager.Structures.STwitch
 {
     [DataContract]
-    class Image
+    public class Image
     {
       [DataMember]
       public string large { get; set; }

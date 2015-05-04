@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebMediaManager.Structures.STwitch;
 
 namespace WebMediaManager.Models
 {
@@ -61,12 +62,6 @@ namespace WebMediaManager.Models
         }
 
         #endregion
-
-        
-        public virtual SVideo CreateVideo()
-        {
-            throw new NotImplementedException();
-        }
 
         public virtual SVideo GetVideoById(string id)
         {

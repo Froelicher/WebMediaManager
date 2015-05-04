@@ -103,6 +103,7 @@
     <Compile Include="Structures\STwitch\Users.cs" />
     <Compile Include="Structures\STwitch\Video.cs" />
     <Compile Include="Structures\STwitch\Videos.cs" />
+    <Compile Include="Structures\AuthResponse.cs" />
     <Compile Include="Structures\SYoutube\Activities.cs" />
     <Compile Include="Structures\SYoutube\Captions.cs" />
     <Compile Include="Structures\SYoutube\ChannelBanners.cs" />

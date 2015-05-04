@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 namespace WebMediaManager.Structures.STwitch
 {
     [DataContract]
-    class Channel
+    public class Channel
     {
         [DataMember]
         public string mature { get; set; }

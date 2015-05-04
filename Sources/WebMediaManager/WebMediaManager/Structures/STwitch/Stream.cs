@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace WebMediaManager.Structures.STwitch
 {
     [DataContract]
-    class Stream
+    public class Stream
     {
         [DataMember]
         public long _id { get; set; }
