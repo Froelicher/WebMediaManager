@@ -413,6 +413,7 @@
 			\item Diverses informations concernant la chaîne
 		\end{enumerate}
 		
+		\subsection{Interface de connexion}
 		
 		
 \chapter{Analyse organique}
@@ -429,6 +430,14 @@
 			\caption{Exemple de fichier INI}
 			\label{inifile}
 		\end{figure}
+		
+		Pour plus de facilitée dans l'enregistrement des données, je crée deux fichiers INI : Category.ini et Playlist.ini
+			
+		\subsection{SVideo \& SChannel}
+			J'ai crée des formats génériques pour les vidéos des différents services. En effet, c'est pour pouvoir traiter toutes les vidéos de la même manière et ainsi pouvoir par exemple afficher toutes les miniatures grâce à la même méthode.
+			
+			SVideo : Structure pour les vidéos\\
+			SChannel : Structure pour les chaînes (utilisateur)
 	
 	\section{Conception}
 		\subsection{Modèle}
@@ -468,7 +477,7 @@
 			\item DELETE
 		\end{itemize}
 		
-		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe fournie par le Framework .NET 4.5 \textbf{httpWebRequest}.		
+		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe fournie par le Framework .NET 4.5 \textbf{httpWebRequest}.\\		
 		J'ai créé une fonction qui permet de récupérer la réponse d'une requête HTML :
 		
 		TODO : Mettre code de la fonction
@@ -477,14 +486,37 @@
 		
 		TODO : Mettre code désérialisation 
 		
-			
-	\section{SVideo \& SChannel}
-		Afin d'avoir un format générique pour les vidéos et chaînes des différents services j'ai créer deux structures.
-		Ces structures me permettent d'afficher les vidéos et leurs informations génériquement.
+	
+	\section{Authentification}
+	L'authentification se fait grâce au protocole OAuth2[AJOUTER REFERENCE]. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.
+	
+	C'est pour cela que j'ai créé une classe permettant la connexion implicite ainsi que la connexion par autorisation de flux.
+	
+	\subsection{Générique}
+	Je rencontre un problème pour la connexion générique, en effet, afin de pouvoir utiliser le protocole OAuth2, il faut que j'utilise ASP.NET. 
+	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API.
+	
+	Je procède de cette manière :
+	
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.7\textwidth]{../img/auth.png}
+				\caption{Authentification}
+				\label{authentification}
+			\end{figure}
+	
+	
+	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter sur une application ainsi que de l'autoriser.
+	
+	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve le jeton d'accès.
+	\section{Notification}
+	
 	
 	
 	\section{Affichage}
 		\subsection{Flux vidéo}
+		
+		\subsection{Notification}
 		
 	
 \chapter{Tests}

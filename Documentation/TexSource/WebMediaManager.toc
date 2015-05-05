@@ -47,26 +47,31 @@
 \contentsline {subsection}{\numberline {5.6.3}Interface vid\IeC {\'e}o}{19}
 \contentsline {subsection}{\numberline {5.6.4}Interface modification de compte}{19}
 \contentsline {subsection}{\numberline {5.6.5}Interface d\IeC {\'e}tail d'un compte}{20}
+\contentsline {subsection}{\numberline {5.6.6}Interface de connexion}{20}
 \contentsline {chapter}{\numberline {6}Analyse organique}{21}
 \contentsline {section}{\numberline {6.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}}{21}
 \contentsline {subsection}{\numberline {6.1.1}Langage en environnement de d\IeC {\'e}veloppement}{21}
 \contentsline {subsection}{\numberline {6.1.2}Format des fichiers et enregistrements}{21}
-\contentsline {section}{\numberline {6.2}Conception}{21}
-\contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{21}
-\contentsline {section}{\numberline {6.3}Outil communautaire}{21}
-\contentsline {subsection}{\numberline {6.3.1}IRC}{21}
+\contentsline {subsection}{\numberline {6.1.3}SVideo \& SChannel}{21}
+\contentsline {section}{\numberline {6.2}Conception}{22}
+\contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{22}
+\contentsline {section}{\numberline {6.3}Outil communautaire}{22}
+\contentsline {subsection}{\numberline {6.3.1}IRC}{22}
 \contentsline {subsection}{\numberline {6.3.2}Commentaire}{22}
 \contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{22}
 \contentsline {subsection}{\numberline {6.4.1}Classes structure}{22}
-\contentsline {subsection}{\numberline {6.4.2}Curl}{22}
-\contentsline {section}{\numberline {6.5}SVideo \& SChannel}{23}
-\contentsline {section}{\numberline {6.6}Affichage}{23}
-\contentsline {subsection}{\numberline {6.6.1}Flux vid\IeC {\'e}o}{23}
-\contentsline {chapter}{\numberline {7}Tests}{24}
-\contentsline {section}{\numberline {7.1}Tests fonctionnel}{24}
-\contentsline {section}{\numberline {7.2}Tests unitaire}{24}
-\contentsline {chapter}{\numberline {8}Conclusions}{25}
-\contentsline {chapter}{\numberline {9}Annexes}{26}
-\contentsline {section}{\numberline {9.1}Planning}{26}
-\contentsline {subsection}{\numberline {9.1.1}Initial}{26}
-\contentsline {subsection}{\numberline {9.1.2}Final}{26}
+\contentsline {subsection}{\numberline {6.4.2}Curl}{23}
+\contentsline {section}{\numberline {6.5}Authentification}{23}
+\contentsline {subsection}{\numberline {6.5.1}G\IeC {\'e}n\IeC {\'e}rique}{23}
+\contentsline {section}{\numberline {6.6}Notification}{24}
+\contentsline {section}{\numberline {6.7}Affichage}{24}
+\contentsline {subsection}{\numberline {6.7.1}Flux vid\IeC {\'e}o}{24}
+\contentsline {subsection}{\numberline {6.7.2}Notification}{24}
+\contentsline {chapter}{\numberline {7}Tests}{25}
+\contentsline {section}{\numberline {7.1}Tests fonctionnel}{25}
+\contentsline {section}{\numberline {7.2}Tests unitaire}{25}
+\contentsline {chapter}{\numberline {8}Conclusions}{26}
+\contentsline {chapter}{\numberline {9}Annexes}{27}
+\contentsline {section}{\numberline {9.1}Planning}{27}
+\contentsline {subsection}{\numberline {9.1.1}Initial}{27}
+\contentsline {subsection}{\numberline {9.1.2}Final}{27}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  4 MAY 2015 16:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  5 MAY 2015 16:03
 entering extended mode
 **WebMediaManager.tex
 
@@ -1038,48 +1038,56 @@ Chapitre 6.
 <../img/inifile.png, id=94, 328.22626pt x 77.53969pt>
 File: ../img/inifile.png Graphic file (type png)
  <use ../img/inifile.png>
-Package pdftex.def Info: ../img/inifile.png used on input line 428.
+Package pdftex.def Info: ../img/inifile.png used on input line 429.
 (pdftex.def)             Requested size: 292.77629pt x 69.16626pt.
-
-<../img/Model.png, id=95, 774.895pt x 277.035pt>
-File: ../img/Model.png Graphic file (type png)
- <use ../img/Model.png>
-Package pdftex.def Info: ../img/Model.png used on input line 437.
-(pdftex.def)             Requested size: 418.25368pt x 149.53325pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21
 
  <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/inifil
-e.png>] [22 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation
-/img/Model.png>] [23]
-Chapitre 7.
-[24
+e.png>] <../img/Model.png, id=99, 774.895pt x 277.035pt>
+File: ../img/Model.png Graphic file (type png)
 
-]
-Chapitre 8.
+<use ../img/Model.png>
+Package pdftex.def Info: ../img/Model.png used on input line 446.
+(pdftex.def)             Requested size: 418.25368pt x 149.53325pt.
+ [22 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Mo
+del.png>]
+<../img/auth.png, id=105, 523.9575pt x 273.02pt>
+File: ../img/auth.png Graphic file (type png)
+ <use ../img/auth.png>
+Package pdftex.def Info: ../img/auth.png used on input line 503.
+(pdftex.def)             Requested size: 292.77629pt x 152.56104pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23] [24 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/im
+g/auth.png>]
+Chapitre 7.
 [25
 
 ]
-Chapitre 9.
+Chapitre 8.
 [26
+
+]
+Chapitre 9.
+[27
 
 ]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.lof)
 \tf@lof=\write5
- [27
+ [28
 
 ]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.aux) ) 
 Here is how much of TeX's memory you used:
- 16929 strings out of 493921
- 339886 string characters out of 3144861
- 395647 words of memory out of 3000000
- 19901 multiletter control sequences out of 15000+200000
+ 16935 strings out of 493921
+ 339991 string characters out of 3144861
+ 396647 words of memory out of 3000000
+ 19906 multiletter control sequences out of 15000+200000
  14278 words of font info for 49 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,13n,66p,849b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1095,9 +1103,9 @@ C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on WebMediaManager.pdf (28 pages, 345314 bytes).
+Output written on WebMediaManager.pdf (29 pages, 359848 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
+ 164 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
