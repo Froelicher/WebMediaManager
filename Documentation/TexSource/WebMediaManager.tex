@@ -7,6 +7,7 @@
 \documentclass[11pt]{report} % use larger type; default would be 10pt
 
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage[T1]{fontenc}
 
 %%% Examples of Article customizations
 % These packages are optional, depending whether you want the features they provide.
@@ -66,6 +67,7 @@
          % otherwise the current date is printed 
 
 \begin{document}
+	
 \maketitle
 \newpage
 
@@ -441,20 +443,23 @@
 	
 	\section{Conception}
 		\subsection{Modèle}
-		\begin{figure}[h]
-			\center
-			\includegraphics[width=1\textwidth]{../img/Model.png}
-			\caption{Diagramme du modèle}
-			\label{model}
-		\end{figure}
-
+			\subsubsection{StreamingSite}
+			Pour pouvoir traiter les différents sites de la même manière, j'ai créer une classe de base qui sert de "modèle" aux classes des sites.
+			Les classes de sites doivent contenir les mêmes méthodes que la classe de base.
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=1\textwidth]{../img/StreamingSite.png}
+				\caption{Diagramme StreamingSite}
+				\label{streaming site}
+			\end{figure}
+			
+			Pour ajouter d'autres sites il faut juste créer une classe qui respecte la classe de base.
 	
 	\section{Outil communautaire}
 		\subsection{IRC}
 		Comment j'ai mis en place un chat IRC
 		
-		\subsection{Commentaire}
-		la même
 	
 	\section{Récupération des données}
 		\subsection{Classes structure}
@@ -506,12 +511,19 @@
 			\end{figure}
 	
 	
-	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter sur une application ainsi que de l'autoriser.
+	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter à son compte sur une application ainsi que de l'autoriser.
 	
-	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve le jeton d'accès.
+	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve en paramètre le jeton d'accès délivré par le serveur d'autorisation.
+
+	
 	\section{Notification}
 	
-	
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.8\textwidth]{../img/notification.png}
+		\caption{Notification}
+		\label{checkNotif}
+	\end{figure}
 	
 	\section{Affichage}
 		\subsection{Flux vidéo}
