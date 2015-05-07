@@ -22,6 +22,7 @@ namespace WebMediaManager.Models
             public string playerLink;
             public DateTime createdAt;
             public string link;
+            public bool live;
         }
 
         public struct SChannel
@@ -40,6 +41,7 @@ namespace WebMediaManager.Models
         #region PROPERTIES
 
         private List<SVideo> _listLastVideos;
+        private List<SVideo> _listOnlineStreams;
         private string _accessToken;
         private string _userName;
 
@@ -61,7 +63,18 @@ namespace WebMediaManager.Models
             set { _listLastVideos = value; }
         }
 
+        public List<SVideo> ListOnlineStreams
+        {
+            get { return _listOnlineStreams; }
+            set { _listOnlineStreams = value; }
+        }
+
         #endregion
+
+        public StreamingSite()
+        {
+            this.ListLastVideos = new List<SVideo>();
+        }
 
         public virtual SVideo GetVideoById(string id)
         {

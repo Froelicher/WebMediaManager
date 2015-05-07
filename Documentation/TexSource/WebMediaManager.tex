@@ -57,6 +57,9 @@
 \renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
 \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
+\input{./inc_lst_csharp.tex}
+
+
 %%% END Article customizations
 
 %%% The "real" document content comes below...
@@ -82,9 +85,9 @@
 	WebMedia Manager
 
 	\section{Objectifs du projet}
-	Création d’une application permettant l’utilisation des différents services proposé par les sites de vidéos et de diffusion de flux vidéo en direct.
+	Création d’une application permettant l’utilisation des différents services proposés par les sites de vidéos et de diffusion de flux vidéo en direct.
 	Les fonctions de bases liées au services en question sont intégrées génériquement dans l’application.
-	Des fonctions ajoutées par moi-mêmes y sont également ajoutée.
+	Des fonctions ajoutées par moi-même y sont également ajoutées.
 	L’application a pour but de faciliter l’utilisation de ses services pour les utilisateurs ayant une fréquentation régulière de ceux-ci.
 
 	\section{Description détaillée}
@@ -465,14 +468,28 @@
 		\subsection{Classes structure}
 		Afin de récupérer les données reçues grâce aux API, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
 		
-		Pour spécifié que se sont des classes "structures" il faut spécifié la classe en \textit{\[DataContract\]} et les propriétés en \textit{\[DataMember\]}.
+		Pour spécifié que se sont des classes "structures" il faut spécifié la classe en \textit{[DataContract]} et les propriétés en \textit{[DataMember]}.
 		
-		TODO : Image des structures
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.3\textwidth]{../img/STwitch.png}
+			\caption{Classes Twitch}
+			\label{Twitch class}
+		\end{figure}
+		
+		Ci-dessus, les classes "structures" du site Twitch. Il y a une liste de classes pour chaque site intégré à l'application. On peut trouver les différentes classes "structures" dans la documentation des différentes API.
 		
 		\subsection{Curl}
 		Client URL Request Library est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
 		
-		TODO : Exemple de commande cURL
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=1\textwidth]{../img/curl.png}
+			\caption{Exemple de commande cURL}
+			\label{cURL command}
+		\end{figure}
+		
+		Ci-dessus, un exemple de récupération de données sur le site Twitch. La ressource désignée est "https://api.twitch.tv/kraken/channel".\\
 		
 		Il y a plusieurs type de requêtes :
 		\begin{itemize}
@@ -515,6 +532,10 @@
 	
 	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve en paramètre le jeton d'accès délivré par le serveur d'autorisation.
 
+	\subsection{Connexion automatique}
+	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le faits de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
+	
+	Le navigateur intégrer dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique mais l'utilisateur passe moins de temps à se connecter car les identifiants sont déjà enregistré, il suffit juste de cliquer sur un bouton pour valider la connexion.
 	
 	\section{Notification}
 	

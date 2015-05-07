@@ -16,6 +16,15 @@ namespace WebMediaManager.Models.Sites
         private const string ACCEPT_HTTP_HEADER = "application/vnd.twitchtv.v3+json";
         #endregion
 
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public Twitch() : base()
+        {
+            this.ListOnlineStreams = new List<SVideo>();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -33,6 +42,7 @@ namespace WebMediaManager.Models.Sites
             video.preview = stream.preview.medium;
             video.playerLink = "https://www.twitch.tv/" + stream.channel.name + "/popout";
             video.link = URL_SITE + stream.channel.name;
+            video.live = true;
             return video;
         }
 

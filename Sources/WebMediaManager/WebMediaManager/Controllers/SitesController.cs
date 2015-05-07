@@ -32,7 +32,7 @@ namespace WebMediaManager.Controllers
 
         public List<WebMediaManager.Models.StreamingSite.SVideo> GetLastVideos()
         {
-            return this.Model.GetAllLastVideos();
+            return this.Model.GetLastVideos();
         }
 
     }

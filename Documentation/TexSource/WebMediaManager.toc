@@ -58,16 +58,16 @@
 \contentsline {subsubsection}{StreamingSite}{22}
 \contentsline {section}{\numberline {6.3}Outil communautaire}{22}
 \contentsline {subsection}{\numberline {6.3.1}IRC}{22}
-\contentsline {subsection}{\numberline {6.3.2}Commentaire}{22}
 \contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{22}
 \contentsline {subsection}{\numberline {6.4.1}Classes structure}{22}
 \contentsline {subsection}{\numberline {6.4.2}Curl}{23}
-\contentsline {section}{\numberline {6.5}Authentification}{23}
-\contentsline {subsection}{\numberline {6.5.1}G\IeC {\'e}n\IeC {\'e}rique}{23}
-\contentsline {section}{\numberline {6.6}Notification}{24}
-\contentsline {section}{\numberline {6.7}Affichage}{24}
-\contentsline {subsection}{\numberline {6.7.1}Flux vid\IeC {\'e}o}{24}
-\contentsline {subsection}{\numberline {6.7.2}Notification}{24}
+\contentsline {section}{\numberline {6.5}Authentification}{24}
+\contentsline {subsection}{\numberline {6.5.1}G\IeC {\'e}n\IeC {\'e}rique}{24}
+\contentsline {subsection}{\numberline {6.5.2}Connexion automatique}{24}
+\contentsline {section}{\numberline {6.6}Notification}{25}
+\contentsline {section}{\numberline {6.7}Affichage}{25}
+\contentsline {subsection}{\numberline {6.7.1}Flux vid\IeC {\'e}o}{25}
+\contentsline {subsection}{\numberline {6.7.2}Notification}{25}
 \contentsline {chapter}{\numberline {7}Tests}{26}
 \contentsline {section}{\numberline {7.1}Tests fonctionnel}{26}
 \contentsline {section}{\numberline {7.2}Tests unitaire}{26}

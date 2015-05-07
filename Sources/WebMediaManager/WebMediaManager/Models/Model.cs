@@ -42,7 +42,7 @@ namespace WebMediaManager.Models
         /// Get lasts videos of all site
         /// </summary>
         /// <returns>list of last video</returns>
-        public List<StreamingSite.SVideo> GetAllLastVideos()
+        public List<StreamingSite.SVideo> GetLastVideos()
         {
             List<StreamingSite.SVideo> listLastVideos = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
@@ -54,6 +54,25 @@ namespace WebMediaManager.Models
             }
 
             return listLastVideos;
+        }
+
+        /// <summary>
+        /// Get the new streams
+        /// </summary>
+        /// <returns></returns>
+        public List<StreamingSite.SVideo> GetNewStreams()
+        {
+            List<StreamingSite.SVideo> listLastStreams = new List<StreamingSite.SVideo>();
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
+                {
+                    if (this.ListSite[i].ListLastVideos[j].live)
+                        listLastStreams.Add(this.ListSite[i].ListLastVideos[j]);
+                }
+            }
+
+            return listLastStreams;
         }
 
         /// <summary>
