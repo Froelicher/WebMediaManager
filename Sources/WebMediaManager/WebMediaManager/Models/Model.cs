@@ -60,15 +60,15 @@ namespace WebMediaManager.Models
         /// Get the new streams
         /// </summary>
         /// <returns></returns>
-        public List<StreamingSite.SVideo> GetNewStreams()
+        public List<StreamingSite.SVideo> GetOnlineStreams()
         {
             List<StreamingSite.SVideo> listLastStreams = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
+                for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
                 {
-                    if (this.ListSite[i].ListLastVideos[j].live)
-                        listLastStreams.Add(this.ListSite[i].ListLastVideos[j]);
+                    if (this.ListSite[i].ListOnlineStreams[j].live)
+                        listLastStreams.Add(this.ListSite[i].ListOnlineStreams[j]);
                 }
             }
 

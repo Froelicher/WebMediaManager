@@ -110,6 +110,15 @@ namespace WebMediaManager.Models
         }
 
         /// <summary>
+        /// Get the online streams
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<SVideo> GetOnlineStreams()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Get list of channel followed
         /// </summary>
         /// <returns></returns>

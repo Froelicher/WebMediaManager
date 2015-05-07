@@ -35,5 +35,10 @@ namespace WebMediaManager.Controllers
             return this.Model.GetLastVideos();
         }
 
+        public List<StreamingSite.SVideo> GetOnlineStreams()
+        {
+            return this.Model.GetOnlineStreams();
+        }
+
     }
 }

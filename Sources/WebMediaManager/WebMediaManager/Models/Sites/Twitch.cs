@@ -88,13 +88,26 @@ namespace WebMediaManager.Models.Sites
             this.ListLastVideos = this.GetNewVideos();
         }
 
+        public override void UpdateOnlineStream()
+        {
+            this.ListOnlineStreams = this.GetOnlineStreams();
+        }
+
         /// <summary>
-        /// Get the online stream
+        /// Get the last video
         /// </summary>
         /// <returns></returns>
         public override List<SVideo> GetNewVideos()
         {
+            return null;
+        }
 
+        /// <summary>
+        /// Get the online stream
+        /// </summary>
+        /// <returns></returns>
+        public override List<StreamingSite.SVideo> GetOnlineStreams()
+        {
             Streams streamsOnlineFollowed = Curl.Deserialize<Streams>(Curl.SendRequest(URL_API + "streams/followed", GET_METHOD, this.AccessToken, ACCEPT_HTTP_HEADER));
 
             List<SVideo> listVideos = new List<SVideo>();
