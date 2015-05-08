@@ -23,7 +23,7 @@ namespace WebMediaManager.Structures.STwitch
         public string game { get; set; }
         
         [DataMember]
-        public int delay { get; set; }
+        public string delay { get; set; }
 
         [DataMember]
         public string language { get; set; }

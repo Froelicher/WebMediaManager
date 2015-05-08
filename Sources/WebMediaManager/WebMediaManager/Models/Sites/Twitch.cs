@@ -40,7 +40,7 @@ namespace WebMediaManager.Models.Sites
             video.id = stream._id.ToString();
             video.nbViews = stream.viewers;
             video.preview = stream.preview.medium;
-            video.playerLink = "https://www.twitch.tv/" + stream.channel.name + "/popout";
+            video.playerLink = URL_SITE + stream.channel.name + "/popout";
             video.link = URL_SITE + stream.channel.name;
             video.live = true;
             return video;
@@ -88,6 +88,9 @@ namespace WebMediaManager.Models.Sites
             this.ListLastVideos = this.GetNewVideos();
         }
 
+        /// <summary>
+        /// Update the online streams
+        /// </summary>
         public override void UpdateOnlineStream()
         {
             this.ListOnlineStreams = this.GetOnlineStreams();

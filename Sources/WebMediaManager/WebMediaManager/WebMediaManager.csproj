@@ -130,7 +130,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ViewUtils.cs" />
+    <Compile Include="ViewUtils.cs" />
     <EmbeddedResource Include="Views\PersonalInterface.resx">
       <DependentUpon>PersonalInterface.cs</DependentUpon>
     </EmbeddedResource>

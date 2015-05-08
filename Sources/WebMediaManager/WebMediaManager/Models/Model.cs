@@ -65,10 +65,13 @@ namespace WebMediaManager.Models
             List<StreamingSite.SVideo> listLastStreams = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
+                if (this.ListSite[i].ListOnlineStreams != null)
                 {
-                    if (this.ListSite[i].ListOnlineStreams[j].live)
-                        listLastStreams.Add(this.ListSite[i].ListOnlineStreams[j]);
+                    for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
+                    {
+                        if (this.ListSite[i].ListOnlineStreams[j].live)
+                            listLastStreams.Add(this.ListSite[i].ListOnlineStreams[j]);
+                    }
                 }
             }
 
@@ -94,10 +97,15 @@ namespace WebMediaManager.Models
         /// </summary>
         private void InitSite()
         {
+            this.ListSite = new List<StreamingSite>();
+
             Youtube youtube = new Youtube();
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
+            twitch.AccessToken = "v2ojron2xzc5x8e2bgtupzh2q9f61y";
+
+            twitch.UpdateOnlineStream();
 
             this.ListSite.Add(youtube);
             this.ListSite.Add(dailymotion);

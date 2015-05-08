@@ -100,6 +100,11 @@ namespace WebMediaManager.Models
             throw new NotImplementedException();
         }
 
+        public virtual void UpdateOnlineStream()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Get the last video released
         /// </summary>

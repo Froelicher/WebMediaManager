@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebMediaManager.Controllers;
 using WebMediaManager.Models;
+using WebMediaManager.Views;
 
 namespace WebMediaManager
 {
@@ -26,6 +27,9 @@ namespace WebMediaManager
         {
             InitializeComponent();
             this.SitesController = new SitesController(this ,new Models.Model());
+            this.pnlStreams.HorizontalScroll.Enabled = true;
+            this.pnlStreams.HorizontalScroll.Visible = true;
+            DisplayOnlineStreams();
         }
 
         public void DisplayOnlineStreams()
@@ -34,11 +38,8 @@ namespace WebMediaManager
 
             for (int i = 0; i < onlineStreams.Count; i++)
             {
-                
+                ViewUtils.CreatePreview(this.pnlStreams, onlineStreams[i], i);
             }
         }
-
-        
-
     }
 }

@@ -3,10 +3,182 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebMediaManager.Structures.SYoutube;
 
 namespace WebMediaManager.Models.Sites
 {
     class Youtube : StreamingSite
     {
+        private const string URL_API = "https://www.googleapis.com/youtube/v3/";
+        private const string URL_SITE = "https://youtube.com/";
+        private const string ACCEPT_HTTP_HEADER = "application/json";
+
+        public Youtube()
+        {
+            this.ListOnlineStreams = null;
+        }
+
+        private SVideo CreateVideo(Videos videos)
+        {
+            SVideo video = new SVideo();
+            video.videoName = videos.snippet.title;
+            video.channelName = videos.snippet.channelTitle;
+            video.description = "";
+            video.createdAt = videos.snippet.publisedAt;
+            video.id = videos.id;
+            video.nbViews = Convert.ToInt32(videos.statistics.viewCount);
+            video.preview = videos.snippet.thumbnails.medium.url;
+            video.playerLink = URL_SITE + "embed/" + videos.id +"?"+"autoplay=1";
+            video.link = URL_SITE + "watch?v=" + videos.id;
+            video.live = false;
+            return video;
+        }
+
+
+        private SChannel CreateChannel(Channels channels)
+        {
+            SChannel channel = new SChannel();
+            channel.channelName = channels.snippet.title;
+            channel.createdAt = channels.snippet.publishedAt;
+            channel.description = channels.snippet.description;
+            channel.headerLink = channels.snippet.thumbnails.Default.url;
+            channel.id = channels.id;
+            channel.logoLink = channels.snippet.thumbnails.Default.url;
+            channel.nbFollowers = (int)channels.statistics.subscriberCount;
+            channel.nbTotalViews = (int)channels.statistics.viewCount;
+
+            return channel;
+        }
+
+        public virtual SVideo GetVideoById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get video ID by a video link
+        /// </summary>
+        /// <param name="link"></param>
+        /// <returns></returns>
+        public virtual string GetIdVideoByLink(string link)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public virtual void UpdateLastVideo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void UpdateOnlineStream()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get the last video released
+        /// </summary>
+        /// <returns>list of last video</returns>
+        public virtual List<SVideo> GetNewVideos()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get the online streams
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<SVideo> GetOnlineStreams()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get list of channel followed
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<SChannel> GetChannelFollowed()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Search videos
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns>list of videos</returns>
+        public virtual List<SVideo> SearchVideos(string request)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Search channels
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public virtual List<SChannel> SearchChannels(string request)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Follow channel
+        /// </summary>
+        /// <param name="channelName"></param>
+        public virtual void FollowChannel(string channelName)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Unfollow channel
+        /// </summary>
+        /// <param name="channelName"></param>
+        public virtual void UnFollowChannel(string channelName)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Connect to account
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool Connect()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Disconnect the account
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool Disconnect()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get the popular videos
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<SVideo> GetPopularVideos()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get the playlists
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<SVideo> GetPlaylists()
+        {
+            throw new NotImplementedException();
+        }  
+
     }
 }
