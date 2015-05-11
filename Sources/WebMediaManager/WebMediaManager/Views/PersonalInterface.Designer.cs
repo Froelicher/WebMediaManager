@@ -37,22 +37,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlVideos = new System.Windows.Forms.Panel();
             this.pnlStreams = new System.Windows.Forms.Panel();
+            this.pnlSite = new System.Windows.Forms.Panel();
+            this.pnlContainers = new System.Windows.Forms.Panel();
+            this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
             // 
+            this.pnlLeft.Controls.Add(this.pnlContainers);
+            this.pnlLeft.Controls.Add(this.pnlSite);
             this.pnlLeft.Location = new System.Drawing.Point(12, 12);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(136, 701);
+            this.pnlLeft.Size = new System.Drawing.Size(191, 701);
             this.pnlLeft.TabIndex = 0;
             // 
             // pnlHeader
             // 
             this.pnlHeader.Controls.Add(this.btnSearch);
             this.pnlHeader.Controls.Add(this.tbxSearch);
-            this.pnlHeader.Location = new System.Drawing.Point(154, 12);
+            this.pnlHeader.Location = new System.Drawing.Point(209, 12);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(828, 43);
             this.pnlHeader.TabIndex = 1;
@@ -82,7 +87,7 @@
             this.pnlContent.Controls.Add(this.label1);
             this.pnlContent.Controls.Add(this.pnlVideos);
             this.pnlContent.Controls.Add(this.pnlStreams);
-            this.pnlContent.Location = new System.Drawing.Point(154, 61);
+            this.pnlContent.Location = new System.Drawing.Point(209, 61);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(828, 652);
             this.pnlContent.TabIndex = 2;
@@ -121,12 +126,26 @@
             this.pnlStreams.Size = new System.Drawing.Size(796, 195);
             this.pnlStreams.TabIndex = 0;
             // 
+            // pnlSite
+            // 
+            this.pnlSite.Location = new System.Drawing.Point(3, 3);
+            this.pnlSite.Name = "pnlSite";
+            this.pnlSite.Size = new System.Drawing.Size(185, 92);
+            this.pnlSite.TabIndex = 0;
+            // 
+            // pnlContainers
+            // 
+            this.pnlContainers.Location = new System.Drawing.Point(3, 98);
+            this.pnlContainers.Name = "pnlContainers";
+            this.pnlContainers.Size = new System.Drawing.Size(185, 92);
+            this.pnlContainers.TabIndex = 1;
+            // 
             // PersonalInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 725);
+            this.ClientSize = new System.Drawing.Size(1045, 725);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlLeft);
@@ -134,6 +153,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PersonalInterface";
             this.Text = "Form1";
+            this.pnlLeft.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.pnlContent.ResumeLayout(false);
@@ -153,6 +173,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlVideos;
         private System.Windows.Forms.Panel pnlStreams;
+        private System.Windows.Forms.Panel pnlContainers;
+        private System.Windows.Forms.Panel pnlSite;
     }
 }
 

@@ -16,9 +16,10 @@ namespace WebMediaManager.Models.Sites
         public Youtube()
         {
             this.ListOnlineStreams = null;
+            this.Name = "Youtube";
         }
 
-        private SVideo CreateVideo(Videos videos)
+        private SVideo CreateVideo(Video videos)
         {
             SVideo video = new SVideo();
             video.videoName = videos.snippet.title;
@@ -52,7 +53,9 @@ namespace WebMediaManager.Models.Sites
 
         public virtual SVideo GetVideoById(string id)
         {
-            throw new NotImplementedException();
+            Videos videos = Curl.Deserialize<Videos>(Curl.SendRequest(URL_API + "videos?part=snippet&id="+id+"&key="+this.Auth.Client_secret , "GET", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+
+            return this.CreateVideo(videos.items[0]);
         }
 
         /// <summary>
@@ -62,7 +65,36 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public virtual string GetIdVideoByLink(string link)
         {
-            throw new NotImplementedException();
+            string checkSite = link.Substring(0, URL_SITE.Length);
+            StringBuilder result = null;
+
+            if (String.Compare(checkSite, URL_SITE) == 0)
+            {
+
+                bool inId = false;
+                result = new StringBuilder();
+
+                for (int i = 0; i < link.Length; i++)
+                {
+                    if (inId)
+                    {
+                        if (link[i] != '&')
+                        {
+                            result.Append(link[i]);
+                        }
+                        else
+                        {
+                            break;
+                        }
+
+                        if (link[i] == '=')
+                        {
+                            inId = true;
+                        }
+                    }
+                }
+            }
+            return result.ToString();
         }
 
         /// <summary>

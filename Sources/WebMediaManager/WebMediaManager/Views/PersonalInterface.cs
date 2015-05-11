@@ -29,6 +29,7 @@ namespace WebMediaManager
             this.SitesController = new SitesController(this ,new Models.Model());
             this.pnlStreams.HorizontalScroll.Enabled = true;
             this.pnlStreams.HorizontalScroll.Visible = true;
+            DisplayButtonsSite();
             DisplayOnlineStreams();
         }
 
@@ -40,6 +41,16 @@ namespace WebMediaManager
             {
                 ViewUtils.CreatePreview(this.pnlStreams, onlineStreams[i], i);
             }
+        }
+
+        private void DisplayButtonsSite()
+        {
+            string[] nameSites = this.SitesController.GetNameSites();
+
+            for (int i = 0; i < nameSites.Length-1; i++)
+			{
+			    ViewUtils.CreateButtonSite(this.pnlSite, nameSites[i], i);
+			}
         }
     }
 }

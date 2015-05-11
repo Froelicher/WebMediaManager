@@ -8,5 +8,9 @@ namespace WebMediaManager.Models.Sites
 {
     class Vimeo : StreamingSite
     {
+        public Vimeo()
+        {
+            this.Name = "Vimeo";
+        }
     }
 }

@@ -15,6 +15,13 @@ namespace WebMediaManager.Models
         private string _url_auth;
         private string _client_id;
         private string _client_secret;
+        private string _access_token;
+
+        public string Access_token
+        {
+            get { return _access_token; }
+            set { _access_token = value; }
+        }
 
         public string Client_secret
         {
@@ -38,6 +45,11 @@ namespace WebMediaManager.Models
         {
             get { return _scopes; }
             set { _scopes = value; }
+        }
+
+        public Authentification()
+        {
+
         }
 
         /// <summary>

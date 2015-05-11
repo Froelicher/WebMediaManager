@@ -120,6 +120,7 @@
     <Compile Include="Structures\SYoutube\Subscriptions.cs" />
     <Compile Include="Structures\SYoutube\Thumbnails.cs" />
     <Compile Include="Structures\SYoutube\VideoCategories.cs" />
+    <Compile Include="Structures\SYoutube\Video.cs" />
     <Compile Include="Structures\SYoutube\Videos.cs" />
     <Compile Include="Structures\SYoutube\WaterMarks.cs" />
     <Compile Include="Views\PersonalInterface.cs">

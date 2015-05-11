@@ -42,19 +42,26 @@ namespace WebMediaManager.Models
 
         private List<SVideo> _listLastVideos;
         private List<SVideo> _listOnlineStreams;
-        private string _accessToken;
         private string _userName;
+        private Authentification _auth;
+        private string _name;
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        internal Authentification Auth
+        {
+            get { return _auth; }
+            set { _auth = value; }
+        }
 
         public string UserName
         {
             get { return _userName; }
             set { _userName = value; }
-        }
-
-        public string AccessToken
-        {
-            get { return _accessToken; }
-            set { _accessToken = value; }
         }
 
         internal List<SVideo> ListLastVideos
@@ -74,6 +81,8 @@ namespace WebMediaManager.Models
         public StreamingSite()
         {
             this.ListLastVideos = new List<SVideo>();
+            this.Auth = new Authentification();
+           
         }
 
         public virtual SVideo GetVideoById(string id)

@@ -103,9 +103,12 @@ namespace WebMediaManager.Models
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
-            twitch.AccessToken = "v2ojron2xzc5x8e2bgtupzh2q9f61y";
-
+            twitch.Auth.Access_token = "v2ojron2xzc5x8e2bgtupzh2q9f61y";
             twitch.UpdateOnlineStream();
+
+            youtube.Auth.Access_token = "ya29.cAH9H18MT0oknFls3Q-_439JfBvG5tP9eIwciBif8mHSvP-mtp_9jAioIgHHfIS8DN3Ja7GBzps01A";
+
+
 
             this.ListSite.Add(youtube);
             this.ListSite.Add(dailymotion);
@@ -254,6 +257,18 @@ namespace WebMediaManager.Models
             }
 
             return listDiff;
+        }
+
+        public string[] GetNameSites()
+        {
+            string[] nameSites = new string[this.ListSite.Count];
+
+            for (int i = 0; i < ListSite.Count-1; i++)
+            {
+                nameSites[i] = this.ListSite[i].Name;
+            }
+
+            return nameSites;
         }
     }
 }

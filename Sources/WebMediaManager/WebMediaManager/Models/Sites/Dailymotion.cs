@@ -8,5 +8,9 @@ namespace WebMediaManager.Models.Sites
 {
     class Dailymotion : StreamingSite
     {
+        public Dailymotion()
+        {
+            this.Name = "Dailymotion";
+        }
     }
 }

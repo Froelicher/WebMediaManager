@@ -40,5 +40,9 @@ namespace WebMediaManager.Controllers
             return this.Model.GetOnlineStreams();
         }
 
+        public string[] GetNameSites()
+        {
+            return this.Model.GetNameSites();
+        }
     }
 }

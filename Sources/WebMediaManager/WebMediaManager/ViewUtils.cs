@@ -55,5 +55,15 @@ namespace WebMediaManager.Views
 
             return mainPanel;
         }
+
+        public static Button CreateButtonSite(Panel pnlSite, string nameSite, int index_btn)
+        {
+            Button btnSite = new Button();
+            btnSite.Size = new Size(pnlSite.Width, 50);
+            btnSite.Location = new Point((50 * index_btn) + 10, 0);
+            btnSite.FlatStyle = FlatStyle.Flat;
+            btnSite.Text = nameSite;
+            return btnSite;
+        }
     }
 }

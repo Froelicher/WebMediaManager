@@ -23,6 +23,7 @@ namespace WebMediaManager.Models.Sites
         public Twitch() : base()
         {
             this.ListOnlineStreams = new List<SVideo>();
+            this.Name = "Twitch";
         }
 
         /// <summary>
@@ -111,7 +112,7 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override List<StreamingSite.SVideo> GetOnlineStreams()
         {
-            Streams streamsOnlineFollowed = Curl.Deserialize<Streams>(Curl.SendRequest(URL_API + "streams/followed", GET_METHOD, this.AccessToken, ACCEPT_HTTP_HEADER));
+            Streams streamsOnlineFollowed = Curl.Deserialize<Streams>(Curl.SendRequest(URL_API + "streams/followed", GET_METHOD, this.Auth.Access_token, ACCEPT_HTTP_HEADER));
 
             List<SVideo> listVideos = new List<SVideo>();
 
@@ -188,7 +189,7 @@ namespace WebMediaManager.Models.Sites
         /// <param name="channelName">channel name</param>
         public override void FollowChannel(string channelName)
         {
-            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "PUT", this.AccessToken, ACCEPT_HTTP_HEADER));
+            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "PUT", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
             this.UpdateLastVideo();
         }
 
@@ -198,7 +199,7 @@ namespace WebMediaManager.Models.Sites
         /// <param name="channelName">channel name</param>
         public override void UnFollowChannel(string channelName)
         {
-            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "DELETE", this.AccessToken, ACCEPT_HTTP_HEADER));
+            Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
             this.UpdateLastVideo();
         }
 
