@@ -31,7 +31,8 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="stream"></param>
         /// <returns></returns>
-        private SVideo CreateVideo(Stream stream)
+        private SVideo CreateVideoStream
+            (Stream stream)
         {
             SVideo video = new SVideo();
             video.videoName = stream.channel.status;
@@ -45,6 +46,22 @@ namespace WebMediaManager.Models.Sites
             video.link = URL_SITE + stream.channel.name;
             video.live = true;
             return video;
+        }
+
+        private SVideo CreateVideo(Video video)
+        {
+            SVideo sVideo = new SVideo();
+            sVideo.videoName = video.title;
+            sVideo.channelName = video.channel.display_name;
+            sVideo.description = video.description;
+            sVideo.createdAt = video.recroded_at;
+            sVideo.id = video._id;
+            sVideo.nbViews = video.view;
+            sVideo.preview = video.preview;
+            sVideo.playerLink = URL_SITE + stream.channel.name + "/popout";
+            sVideo.link = URL_SITE + stream.channel.name;
+            sVideo.live = true;
+            return sVideo;
         }
 
         /// <summary>
@@ -79,6 +96,26 @@ namespace WebMediaManager.Models.Sites
             //TODO : SOUPE POUR FAIRE LA DESCRIPTION
 
             return "";
+        }
+
+
+        public override SVideo GetVideoById(string id)
+        {
+            Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos"+id, "GET", ACCEPT_HTTP_HEADER);
+
+
+        }
+
+        /// <summary>
+        /// Get video ID by a video link
+        /// </summary>
+        /// <param name="link"></param>
+        /// <returns></returns>
+        public override string GetIdVideoByLink(string link)
+        {
+            string[] split = link.Split('/');
+
+            return split[3];
         }
 
         /// <summary>
@@ -118,7 +155,7 @@ namespace WebMediaManager.Models.Sites
 
             for (int i = 0; i < streamsOnlineFollowed.streams.Count(); i++)
             {
-                SVideo video = this.CreateVideo(streamsOnlineFollowed.streams[i]);
+                SVideo video = this.CreateVideoStream(streamsOnlineFollowed.streams[i]);
                 listVideos.Add(video);
             }
 
@@ -157,7 +194,7 @@ namespace WebMediaManager.Models.Sites
 
             for (int i = 0; i < searchStreams.streams.Count(); i++)
             {
-                SVideo video = this.CreateVideo(searchStreams.streams[i]);
+                SVideo video = this.CreateVideoStream(searchStreams.streams[i]);
                 listVideos.Add(video);
             }
 
@@ -215,7 +252,7 @@ namespace WebMediaManager.Models.Sites
 
             for (int i = 0; i < streams.streams.Count(); i++)
             {
-                SVideo video = this.CreateVideo(streams.streams[i]);
+                SVideo video = this.CreateVideoStream(streams.streams[i]);
                 listVideos.Add(video);
             }
 

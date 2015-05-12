@@ -121,9 +121,12 @@ namespace WebMediaManager.Models
                     }
                 }
 
-                stringVideos = stringVideos.Substring(0, "link=".Length);
+                stringVideos = stringVideos.Substring("link=".Length);
 
                 videos = stringVideos.Split(';');
+                if(videos[videos.Count()-1] == "")
+                    videos = videos.Take(videos.Count() - 1).ToArray();
+
             }
             return videos;
         }

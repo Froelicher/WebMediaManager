@@ -26,6 +26,9 @@ namespace WebMediaManager.Structures.STwitch
         public string tag_list { get; set; }
 
         [DataMember]
+        public DateTime recroded_at { get; set; }
+
+        [DataMember]
         public string _id { get; set; }
 
         [DataMember]

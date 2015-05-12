@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.pnlContainers = new System.Windows.Forms.Panel();
+            this.pnlSite = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlVideos = new System.Windows.Forms.Panel();
             this.pnlStreams = new System.Windows.Forms.Panel();
-            this.pnlSite = new System.Windows.Forms.Panel();
-            this.pnlContainers = new System.Windows.Forms.Panel();
             this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -52,6 +52,20 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(191, 701);
             this.pnlLeft.TabIndex = 0;
+            // 
+            // pnlContainers
+            // 
+            this.pnlContainers.Location = new System.Drawing.Point(3, 49);
+            this.pnlContainers.Name = "pnlContainers";
+            this.pnlContainers.Size = new System.Drawing.Size(185, 46);
+            this.pnlContainers.TabIndex = 1;
+            // 
+            // pnlSite
+            // 
+            this.pnlSite.Location = new System.Drawing.Point(3, 3);
+            this.pnlSite.Name = "pnlSite";
+            this.pnlSite.Size = new System.Drawing.Size(185, 40);
+            this.pnlSite.TabIndex = 0;
             // 
             // pnlHeader
             // 
@@ -125,20 +139,6 @@
             this.pnlStreams.Name = "pnlStreams";
             this.pnlStreams.Size = new System.Drawing.Size(796, 195);
             this.pnlStreams.TabIndex = 0;
-            // 
-            // pnlSite
-            // 
-            this.pnlSite.Location = new System.Drawing.Point(3, 3);
-            this.pnlSite.Name = "pnlSite";
-            this.pnlSite.Size = new System.Drawing.Size(185, 92);
-            this.pnlSite.TabIndex = 0;
-            // 
-            // pnlContainers
-            // 
-            this.pnlContainers.Location = new System.Drawing.Point(3, 98);
-            this.pnlContainers.Name = "pnlContainers";
-            this.pnlContainers.Size = new System.Drawing.Size(185, 92);
-            this.pnlContainers.TabIndex = 1;
             // 
             // PersonalInterface
             // 

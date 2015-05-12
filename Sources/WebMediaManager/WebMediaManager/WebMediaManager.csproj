@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ContainersController.cs" />
     <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Models\Authentification.cs" />
     <Compile Include="Models\Container.cs" />

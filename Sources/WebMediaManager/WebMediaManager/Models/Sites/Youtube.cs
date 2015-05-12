@@ -10,7 +10,7 @@ namespace WebMediaManager.Models.Sites
     class Youtube : StreamingSite
     {
         private const string URL_API = "https://www.googleapis.com/youtube/v3/";
-        private const string URL_SITE = "https://youtube.com/";
+        private const string URL_SITE = "https://www.youtube.com/";
         private const string ACCEPT_HTTP_HEADER = "application/json";
 
         public Youtube()
@@ -51,9 +51,9 @@ namespace WebMediaManager.Models.Sites
             return channel;
         }
 
-        public virtual SVideo GetVideoById(string id)
+        public override SVideo GetVideoById(string id)
         {
-            Videos videos = Curl.Deserialize<Videos>(Curl.SendRequest(URL_API + "videos?part=snippet&id="+id+"&key="+this.Auth.Client_secret , "GET", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+            Videos videos = Curl.Deserialize<Videos>(Curl.SendRequest(URL_API + "videos?part=snippet,statistics&id="+id+"&key="+this.Auth.Client_secret , "GET", ACCEPT_HTTP_HEADER));
 
             return this.CreateVideo(videos.items[0]);
         }
@@ -63,7 +63,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="link"></param>
         /// <returns></returns>
-        public virtual string GetIdVideoByLink(string link)
+        public override string GetIdVideoByLink(string link)
         {
             string checkSite = link.Substring(0, URL_SITE.Length);
             StringBuilder result = null;
@@ -86,11 +86,10 @@ namespace WebMediaManager.Models.Sites
                         {
                             break;
                         }
-
-                        if (link[i] == '=')
-                        {
-                            inId = true;
-                        }
+                    }
+                    if (link[i] == '=')
+                    {
+                        inId = true;
                     }
                 }
             }
@@ -101,12 +100,12 @@ namespace WebMediaManager.Models.Sites
         /// 
         /// </summary>
         /// <returns></returns>
-        public virtual void UpdateLastVideo()
+        public override void UpdateLastVideo()
         {
             throw new NotImplementedException();
         }
 
-        public virtual void UpdateOnlineStream()
+        public override void UpdateOnlineStream()
         {
             throw new NotImplementedException();
         }
@@ -115,7 +114,7 @@ namespace WebMediaManager.Models.Sites
         /// Get the last video released
         /// </summary>
         /// <returns>list of last video</returns>
-        public virtual List<SVideo> GetNewVideos()
+        public override List<SVideo> GetNewVideos()
         {
             throw new NotImplementedException();
         }
@@ -124,7 +123,7 @@ namespace WebMediaManager.Models.Sites
         /// Get the online streams
         /// </summary>
         /// <returns></returns>
-        public virtual List<SVideo> GetOnlineStreams()
+        public override List<SVideo> GetOnlineStreams()
         {
             throw new NotImplementedException();
         }
@@ -133,7 +132,7 @@ namespace WebMediaManager.Models.Sites
         /// Get list of channel followed
         /// </summary>
         /// <returns></returns>
-        public virtual List<SChannel> GetChannelFollowed()
+        public override List<SChannel> GetChannelFollowed()
         {
             throw new NotImplementedException();
         }
@@ -143,7 +142,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="request"></param>
         /// <returns>list of videos</returns>
-        public virtual List<SVideo> SearchVideos(string request)
+        public override List<SVideo> SearchVideos(string request)
         {
             throw new NotImplementedException();
         }
@@ -153,7 +152,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public virtual List<SChannel> SearchChannels(string request)
+        public override List<SChannel> SearchChannels(string request)
         {
             throw new NotImplementedException();
         }
@@ -162,7 +161,7 @@ namespace WebMediaManager.Models.Sites
         /// Follow channel
         /// </summary>
         /// <param name="channelName"></param>
-        public virtual void FollowChannel(string channelName)
+        public override void FollowChannel(string channelName)
         {
             throw new NotImplementedException();
         }
@@ -171,7 +170,7 @@ namespace WebMediaManager.Models.Sites
         /// Unfollow channel
         /// </summary>
         /// <param name="channelName"></param>
-        public virtual void UnFollowChannel(string channelName)
+        public override void UnFollowChannel(string channelName)
         {
             throw new NotImplementedException();
         }
@@ -180,7 +179,7 @@ namespace WebMediaManager.Models.Sites
         /// Connect to account
         /// </summary>
         /// <returns></returns>
-        public virtual bool Connect()
+        public override bool Connect()
         {
             throw new NotImplementedException();
         }
@@ -189,7 +188,7 @@ namespace WebMediaManager.Models.Sites
         /// Disconnect the account
         /// </summary>
         /// <returns></returns>
-        public virtual bool Disconnect()
+        public override bool Disconnect()
         {
             throw new NotImplementedException();
         }
@@ -198,7 +197,7 @@ namespace WebMediaManager.Models.Sites
         /// Get the popular videos
         /// </summary>
         /// <returns></returns>
-        public virtual List<SVideo> GetPopularVideos()
+        public override List<SVideo> GetPopularVideos()
         {
             throw new NotImplementedException();
         }
@@ -207,7 +206,7 @@ namespace WebMediaManager.Models.Sites
         /// Get the playlists
         /// </summary>
         /// <returns></returns>
-        public virtual List<SVideo> GetPlaylists()
+        public override List<SVideo> GetPlaylists()
         {
             throw new NotImplementedException();
         }  

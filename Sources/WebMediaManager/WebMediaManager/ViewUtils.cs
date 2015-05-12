@@ -59,11 +59,34 @@ namespace WebMediaManager.Views
         public static Button CreateButtonSite(Panel pnlSite, string nameSite, int index_btn)
         {
             Button btnSite = new Button();
-            btnSite.Size = new Size(pnlSite.Width, 50);
-            btnSite.Location = new Point((50 * index_btn) + 10, 0);
+            btnSite.Size = new Size(pnlSite.Width-20, 25);
+            btnSite.Location = new Point(0, (30 * index_btn));
             btnSite.FlatStyle = FlatStyle.Flat;
             btnSite.Text = nameSite;
+            pnlSite.Controls.Add(btnSite);
+            pnlSite.Size = new Size(pnlSite.Width, pnlSite.Size.Height + 30);
             return btnSite;
         }
+
+        public static void CreateLinkCategory(Panel pnlContainers, string name, int index_cont)
+        {
+            Label lblCategory = new Label();
+            lblCategory.AutoSize = true;
+            lblCategory.Text = name;
+            lblCategory.Location = new Point(0, (15 * index_cont)+20);
+            pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 10);
+            pnlContainers.Controls.Add(lblCategory);
+        }
+
+        public static void CreateLinkPlaylist(Panel pnlContainers, string name, int index_play)
+        {
+            Label lblPlaylist = new Label();
+            lblPlaylist.AutoSize = true;
+            lblPlaylist.Text = name;
+            lblPlaylist.Location = new Point(0, pnlContainers.Size.Height + (1*index_play));
+            pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + lblPlaylist.Height);
+            pnlContainers.Controls.Add(lblPlaylist);
+        }
+
     }
 }

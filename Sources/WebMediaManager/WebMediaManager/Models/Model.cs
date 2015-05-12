@@ -36,6 +36,7 @@ namespace WebMediaManager.Models
         public Model()
         {
             this.InitSite();
+            this.ListContainer = new List<Container>();
         }
 
         /// <summary>
@@ -103,17 +104,18 @@ namespace WebMediaManager.Models
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
-            twitch.Auth.Access_token = "v2ojron2xzc5x8e2bgtupzh2q9f61y";
+            twitch.Auth.Access_token = "bxfyayntlmzudwcb4yt2rb4mxvpolw";
+            youtube.Auth.Access_token = "ya29.cAGvoYFbMLJ0iD1c9fl1yTT8wmDaOrRqF4LFpLIuvQpyrX7FsmcZQ9aZIYB-uZP-Lrj0QLuHos7Ytg";
+            youtube.Auth.Client_secret = "AIzaSyAbVBeXvy6fNwosn4sqK0z9A0LQ14tXTAI";
+
             twitch.UpdateOnlineStream();
 
-            youtube.Auth.Access_token = "ya29.cAH9H18MT0oknFls3Q-_439JfBvG5tP9eIwciBif8mHSvP-mtp_9jAioIgHHfIS8DN3Ja7GBzps01A";
-
-
-
             this.ListSite.Add(youtube);
-            this.ListSite.Add(dailymotion);
-            this.ListSite.Add(vimeo);
             this.ListSite.Add(twitch);
+            /*
+            this.ListSite.Add(dailymotion);
+            this.ListSite.Add(vimeo);*/
+           
         }
 
 
@@ -121,7 +123,7 @@ namespace WebMediaManager.Models
         /// <summary>
         /// Open file categorie
         /// </summary>
-        private void OpenFileCategories()
+        public void OpenFileCategories()
         {
             string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
             string[] videosLink = null;
@@ -152,7 +154,7 @@ namespace WebMediaManager.Models
                             for (int x = 0; x < videosLink.Count(); x++)
                             {
                                 if (this.ListSite[j].GetIdVideoByLink(videosLink[x]) != null)
-                                    videos[x] = this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x]));
+                                    videos.Add(this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x])));
                             }
                         }
 
@@ -167,7 +169,7 @@ namespace WebMediaManager.Models
         /// <summary>
         /// Open file playlists
         /// </summary>
-        private void OpenFilePlaylists()
+        public void OpenFilePlaylists()
         {
             string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
             string[] videosLink = null;
@@ -198,7 +200,7 @@ namespace WebMediaManager.Models
                             for (int x = 0; x < videosLink.Count(); x++)
                             {
                                 if (this.ListSite[j].GetIdVideoByLink(videosLink[x]) != null)
-                                    videos[x] = this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x]));
+                                    videos.Add(this.ListSite[j].GetVideoById(this.ListSite[j].GetIdVideoByLink(videosLink[x])));
                             }
                         }
 
@@ -209,6 +211,30 @@ namespace WebMediaManager.Models
 
             }
 
+        }
+
+        /// <summary>
+        /// Create files of containers
+        /// </summary>
+        public void CreateFileContainers()
+        {
+            string pathCategory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
+            string pathPlaylist = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
+
+            if(!System.IO.Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager")))
+            {
+                Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager"));
+            }
+
+            if(!File.Exists(pathCategory))
+            {
+                File.Create(pathCategory);
+            }
+
+            if (!File.Exists(pathPlaylist))
+            {
+                File.Create(pathPlaylist);
+            }
         }
 
         /// <summary>
@@ -263,7 +289,7 @@ namespace WebMediaManager.Models
         {
             string[] nameSites = new string[this.ListSite.Count];
 
-            for (int i = 0; i < ListSite.Count-1; i++)
+            for (int i = 0; i < ListSite.Count; i++)
             {
                 nameSites[i] = this.ListSite[i].Name;
             }
