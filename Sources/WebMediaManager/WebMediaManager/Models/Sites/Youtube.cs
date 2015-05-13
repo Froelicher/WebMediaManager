@@ -114,7 +114,7 @@ namespace WebMediaManager.Models.Sites
         /// Get the last video released
         /// </summary>
         /// <returns>list of last video</returns>
-        public override List<SVideo> GetNewVideos()
+        public override List<SVideo> GetLastVideos()
         {
             throw new NotImplementedException();
         }

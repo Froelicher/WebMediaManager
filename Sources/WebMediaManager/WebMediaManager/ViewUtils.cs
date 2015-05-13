@@ -11,11 +11,12 @@ namespace WebMediaManager.Views
 {
     static class ViewUtils
     {
-        public static Panel CreatePreview(Panel mainPanel, StreamingSite.SVideo video, int index_video)
+        public static Panel CreatePreview(Panel mainPanel, StreamingSite.SVideo video, int id_video_line, int counter_for_line)
         {
             Panel gPanel = new Panel();
-            gPanel.Size = new Size(200, 220);
-            gPanel.Location = new Point((205 * index_video)+10, 0);
+            gPanel.Size = new Size(200, 200);
+            gPanel.Location = new Point((205 * id_video_line) + 10, gPanel.Size.Height*counter_for_line);
+
             gPanel.BackColor = Color.White;
 
             //Create the picture box
@@ -67,26 +68,5 @@ namespace WebMediaManager.Views
             pnlSite.Size = new Size(pnlSite.Width, pnlSite.Size.Height + 30);
             return btnSite;
         }
-
-        public static void CreateLinkCategory(Panel pnlContainers, string name, int index_cont)
-        {
-            Label lblCategory = new Label();
-            lblCategory.AutoSize = true;
-            lblCategory.Text = name;
-            lblCategory.Location = new Point(0, (15 * index_cont)+20);
-            pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 10);
-            pnlContainers.Controls.Add(lblCategory);
-        }
-
-        public static void CreateLinkPlaylist(Panel pnlContainers, string name, int index_play)
-        {
-            Label lblPlaylist = new Label();
-            lblPlaylist.AutoSize = true;
-            lblPlaylist.Text = name;
-            lblPlaylist.Location = new Point(0, pnlContainers.Size.Height + (1*index_play));
-            pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + lblPlaylist.Height);
-            pnlContainers.Controls.Add(lblPlaylist);
-        }
-
     }
 }

@@ -118,7 +118,7 @@ namespace WebMediaManager.Models
         /// Get the last video released
         /// </summary>
         /// <returns>list of last video</returns>
-        public virtual List<SVideo> GetNewVideos()
+        public virtual List<SVideo> GetLastVideos()
         {
             throw new NotImplementedException();
         }

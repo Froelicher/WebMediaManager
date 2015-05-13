@@ -12,7 +12,7 @@ namespace WebMediaManager.Models.Sites
         #region CONSTS
         private const string GET_METHOD = "GET";
         private const string URL_API = "https://api.twitch.tv/kraken/";
-        private const string URL_SITE = "https://twitch.tv/";
+        private const string URL_SITE = "http://www.twitch.tv/";
         private const string ACCEPT_HTTP_HEADER = "application/vnd.twitchtv.v3+json";
         #endregion
 
@@ -58,9 +58,9 @@ namespace WebMediaManager.Models.Sites
             sVideo.id = video._id;
             sVideo.nbViews = video.view;
             sVideo.preview = video.preview;
-            sVideo.playerLink = URL_SITE + stream.channel.name + "/popout";
-            sVideo.link = URL_SITE + stream.channel.name;
-            sVideo.live = true;
+            sVideo.playerLink = URL_SITE + video.channel.name + "/popout?videoId=" + video._id;
+            sVideo.link = URL_SITE + video.channel.name + "/" + video._id;
+            sVideo.live = false;
             return sVideo;
         }
 
@@ -101,9 +101,9 @@ namespace WebMediaManager.Models.Sites
 
         public override SVideo GetVideoById(string id)
         {
-            Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos"+id, "GET", ACCEPT_HTTP_HEADER);
-
-
+            Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos/v/"+id, "GET", ACCEPT_HTTP_HEADER));
+            
+            return this.CreateVideo(video);
         }
 
         /// <summary>
@@ -113,9 +113,14 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override string GetIdVideoByLink(string link)
         {
-            string[] split = link.Split('/');
-
-            return split[3];
+            string checkSite = link.Substring(0, URL_SITE.Length);
+            string[] split = null;
+            if (String.Compare(checkSite, URL_SITE) == 0)
+            {
+                split = link.Split('/');
+                return split[5];
+            }
+            return null;
         }
 
         /// <summary>
@@ -123,7 +128,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         public override void UpdateLastVideo()
         {
-            this.ListLastVideos = this.GetNewVideos();
+            this.ListLastVideos = this.GetLastVideos();
         }
 
         /// <summary>
@@ -138,9 +143,15 @@ namespace WebMediaManager.Models.Sites
         /// Get the last video
         /// </summary>
         /// <returns></returns>
-        public override List<SVideo> GetNewVideos()
+        public override List<SVideo> GetLastVideos()
         {
-            return null;
+            List<SVideo> result = new List<SVideo>();
+            Videos videos = Curl.Deserialize<Videos>(Curl.SendRequest(URL_API + "videos/followed", "GET", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+            for (int i = 0; i < videos.videos.Count(); i++)
+            {
+                result.Add(this.CreateVideo(videos.videos[i]));
+            }
+            return result;
         }
 
         /// <summary>

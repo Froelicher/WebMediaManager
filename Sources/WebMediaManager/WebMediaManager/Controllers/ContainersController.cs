@@ -70,5 +70,20 @@ namespace WebMediaManager.Controllers
             this.Model.OpenFileCategories();
             this.Model.OpenFilePlaylists();
         }
+
+        public List<StreamingSite.SVideo> GetVideosOfContainer(string name)
+        {
+            List<StreamingSite.SVideo> result = null;
+
+            for (int i = 0; i < this.Model.ListContainer.Count; i++)
+            {
+                if(this.Model.ListContainer[i].Name == name)
+                {
+                    result = this.Model.ListContainer[i].ListVideos;
+                }
+            }
+
+            return result;
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace WebMediaManager.Controllers
             this.View = personalView;
         }
 
-        public List<WebMediaManager.Models.StreamingSite.SVideo> GetLastVideos()
+        public List<StreamingSite.SVideo> GetLastVideos()
         {
             return this.Model.GetLastVideos();
         }

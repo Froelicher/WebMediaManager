@@ -56,7 +56,7 @@ namespace WebMediaManager.Models
 
         public void FillListVideos(List<StreamingSite.SVideo> videos)
         {
-
+            this.ListVideos = videos;
         }
 
         /// <summary>

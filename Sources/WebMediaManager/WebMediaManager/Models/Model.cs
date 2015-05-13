@@ -48,6 +48,7 @@ namespace WebMediaManager.Models
             List<StreamingSite.SVideo> listLastVideos = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
+                this.ListSite[i].UpdateLastVideo();
                 for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
                 {
                     listLastVideos.Add(this.ListSite[i].ListLastVideos[j]);
@@ -110,7 +111,7 @@ namespace WebMediaManager.Models
 
             twitch.UpdateOnlineStream();
 
-            this.ListSite.Add(youtube);
+            //this.ListSite.Add(youtube);
             this.ListSite.Add(twitch);
             /*
             this.ListSite.Add(dailymotion);
