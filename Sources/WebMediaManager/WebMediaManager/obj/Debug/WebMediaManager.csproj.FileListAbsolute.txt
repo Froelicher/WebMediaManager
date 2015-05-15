@@ -13,3 +13,4 @@ C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\Web
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.csproj.GenerateResource.Cache
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.exe
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.Views.VideoForm.resources

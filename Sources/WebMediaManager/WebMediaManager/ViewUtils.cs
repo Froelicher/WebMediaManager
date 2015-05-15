@@ -18,6 +18,7 @@ namespace WebMediaManager.Views
             gPanel.Location = new Point((205 * id_video_line) + 10, gPanel.Size.Height*counter_for_line);
 
             gPanel.BackColor = Color.White;
+            gPanel.Click += (sender, e) => OnClickVideo(sender, e, video);
 
             //Create the picture box
             PictureBox imgPreview = new PictureBox();
@@ -25,6 +26,7 @@ namespace WebMediaManager.Views
             imgPreview.SizeMode = PictureBoxSizeMode.StretchImage;
             imgPreview.Load(video.preview);
             imgPreview.Location = new Point(0, 0);
+            imgPreview.Click += (sender, e) => OnClickVideo(sender, e, video);
 
             //Create the label title
             Label title = new Label();
@@ -61,12 +63,24 @@ namespace WebMediaManager.Views
         {
             Button btnSite = new Button();
             btnSite.Size = new Size(pnlSite.Width-20, 25);
-            btnSite.Location = new Point(0, (30 * index_btn));
+            btnSite.Location = new Point(8, 30 * (index_btn));
             btnSite.FlatStyle = FlatStyle.Flat;
             btnSite.Text = nameSite;
             pnlSite.Controls.Add(btnSite);
-            pnlSite.Size = new Size(pnlSite.Width, pnlSite.Size.Height + 30);
+            if(index_btn != 0)
+                pnlSite.Size = new Size(pnlSite.Width, pnlSite.Size.Height + 20);
             return btnSite;
+        }
+
+        private static void OnClickVideo(object sender, EventArgs e, StreamingSite.SVideo video)
+        {
+            CreateFormVideo(video);
+        }
+
+        public static void CreateFormVideo(StreamingSite.SVideo video)
+        {
+            VideoForm videoForm = new VideoForm(video);
+            videoForm.Show();
         }
     }
 }

@@ -35,17 +35,13 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.lblLastVideos = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlVideos = new System.Windows.Forms.Panel();
-            this.pnlStreams = new System.Windows.Forms.Panel();
             this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
-            this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
             // 
+            this.pnlLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlLeft.Controls.Add(this.pnlContainers);
             this.pnlLeft.Controls.Add(this.pnlSite);
             this.pnlLeft.Location = new System.Drawing.Point(12, 12);
@@ -55,31 +51,32 @@
             // 
             // pnlContainers
             // 
-            this.pnlContainers.Location = new System.Drawing.Point(3, 49);
+            this.pnlContainers.Location = new System.Drawing.Point(-1, 75);
             this.pnlContainers.Name = "pnlContainers";
-            this.pnlContainers.Size = new System.Drawing.Size(185, 46);
+            this.pnlContainers.Size = new System.Drawing.Size(194, 46);
             this.pnlContainers.TabIndex = 1;
             // 
             // pnlSite
             // 
-            this.pnlSite.Location = new System.Drawing.Point(3, 3);
+            this.pnlSite.Location = new System.Drawing.Point(-1, 35);
             this.pnlSite.Name = "pnlSite";
-            this.pnlSite.Size = new System.Drawing.Size(185, 40);
+            this.pnlSite.Size = new System.Drawing.Size(191, 40);
             this.pnlSite.TabIndex = 0;
             // 
             // pnlHeader
             // 
+            this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlHeader.Controls.Add(this.btnSearch);
             this.pnlHeader.Controls.Add(this.tbxSearch);
-            this.pnlHeader.Location = new System.Drawing.Point(209, 12);
+            this.pnlHeader.Location = new System.Drawing.Point(202, 12);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(886, 43);
+            this.pnlHeader.Size = new System.Drawing.Size(893, 43);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnSearch
             // 
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(531, 8);
+            this.btnSearch.Location = new System.Drawing.Point(534, 8);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 27);
             this.btnSearch.TabIndex = 1;
@@ -89,7 +86,7 @@
             // tbxSearch
             // 
             this.tbxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxSearch.Location = new System.Drawing.Point(238, 8);
+            this.tbxSearch.Location = new System.Drawing.Point(241, 8);
             this.tbxSearch.Multiline = true;
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(287, 27);
@@ -98,48 +95,11 @@
             // pnlContent
             // 
             this.pnlContent.AutoScroll = true;
-            this.pnlContent.Controls.Add(this.lblLastVideos);
-            this.pnlContent.Controls.Add(this.label1);
-            this.pnlContent.Controls.Add(this.pnlVideos);
-            this.pnlContent.Controls.Add(this.pnlStreams);
-            this.pnlContent.Location = new System.Drawing.Point(209, 61);
+            this.pnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContent.Location = new System.Drawing.Point(202, 54);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(886, 652);
+            this.pnlContent.Size = new System.Drawing.Size(893, 659);
             this.pnlContent.TabIndex = 0;
-            // 
-            // lblLastVideos
-            // 
-            this.lblLastVideos.AutoSize = true;
-            this.lblLastVideos.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastVideos.Location = new System.Drawing.Point(9, 247);
-            this.lblLastVideos.Name = "lblLastVideos";
-            this.lblLastVideos.Size = new System.Drawing.Size(160, 37);
-            this.lblLastVideos.TabIndex = 3;
-            this.lblLastVideos.Text = "Last videos";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Online streams";
-            // 
-            // pnlVideos
-            // 
-            this.pnlVideos.Location = new System.Drawing.Point(16, 287);
-            this.pnlVideos.Name = "pnlVideos";
-            this.pnlVideos.Size = new System.Drawing.Size(849, 362);
-            this.pnlVideos.TabIndex = 1;
-            // 
-            // pnlStreams
-            // 
-            this.pnlStreams.Location = new System.Drawing.Point(16, 49);
-            this.pnlStreams.Name = "pnlStreams";
-            this.pnlStreams.Size = new System.Drawing.Size(849, 204);
-            this.pnlStreams.TabIndex = 2;
             // 
             // PersonalInterface
             // 
@@ -157,8 +117,6 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            this.pnlContent.ResumeLayout(false);
-            this.pnlContent.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -170,10 +128,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Panel pnlContent;
-        private System.Windows.Forms.Label lblLastVideos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlVideos;
-        private System.Windows.Forms.Panel pnlStreams;
         private System.Windows.Forms.Panel pnlContainers;
         private System.Windows.Forms.Panel pnlSite;
     }

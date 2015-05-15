@@ -23,6 +23,7 @@ namespace WebMediaManager.Models
             public DateTime createdAt;
             public string link;
             public bool live;
+            public string siteName;
         }
 
         public struct SChannel

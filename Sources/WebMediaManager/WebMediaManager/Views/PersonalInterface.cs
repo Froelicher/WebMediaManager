@@ -41,16 +41,17 @@ namespace WebMediaManager
             this.ContainersController.OpenFileContainers();
 
             DisplayButtonsSite();
-            DisplayOnlineStreams();
             DisplayLinkCategory();
             DisplayLinkPlaylist();
-            DisplayLastVideos();
+            CreateButtonHome();
+            DisplayHomePanel();
 
             if (!this.pnlContent.Focused)
                 this.pnlContent.Focus();
+
         }
 
-        public void DisplayOnlineStreams()
+        public void DisplayOnlineStreams(Panel pnl)
         {
             List<StreamingSite.SVideo> onlineStreams = this.SitesController.GetOnlineStreams();
             int j = 0;
@@ -62,9 +63,9 @@ namespace WebMediaManager
                 {
                     j = 0;
                     counter_for_line++;
-                    this.pnlStreams.Size = new Size(this.pnlStreams.Size.Width, this.pnlStreams.Size.Height + 200);
+                    pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
                 }
-                ViewUtils.CreatePreview(this.pnlStreams, onlineStreams[i], j, counter_for_line);
+                ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line);
                 j++;
             }
         }
@@ -86,6 +87,7 @@ namespace WebMediaManager
             lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
             lblTitle.Location = new Point(0, 0);
             lblTitle.Text = "Categories";
+            this.pnlContainers.Location = new Point(this.pnlContainers.Location.X, this.pnlSite.Size.Height + pnlSite.Location.Y);
             this.pnlContainers.Controls.Add(lblTitle);
 
             List<string> nameCategory = this.ContainersController.GetNamesCategory();
@@ -113,10 +115,8 @@ namespace WebMediaManager
             }
         }
 
-        private void DisplayLastVideos()
+        private void DisplayLastVideos(Panel pnl)
         {
-            this.lblLastVideos.Location = new Point(lblLastVideos.Location.X, this.pnlStreams.Height + lblLastVideos.Size.Height + 10);
-            this.pnlVideos.Location = new Point(pnlVideos.Location.X, this.lblLastVideos.Location.Y + lblLastVideos.Size.Height + 10);
             List<StreamingSite.SVideo> lastVideos = this.SitesController.GetLastVideos();
             int j = 0;
             int counter_for_line = 0;
@@ -126,11 +126,62 @@ namespace WebMediaManager
                 {
                     j = 0;
                     counter_for_line++;
-                    this.pnlVideos.Size = new Size(this.pnlVideos.Size.Width, this.pnlVideos.Size.Height + 120);
-                }   
-                ViewUtils.CreatePreview(this.pnlVideos, lastVideos[i], j, counter_for_line);
+                    pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
+                }
+                ViewUtils.CreatePreview(pnl, lastVideos[i], j, counter_for_line);
                 j++;
             }
+        }
+
+        private void DisplayHomePanel()
+        {
+            //TODO : Créer deux panels : Last videos et online stream
+            this.pnlContent.Controls.Clear();
+            Panel pnlOnlineStreams = new Panel();
+            Panel pnlLastVideos = new Panel();
+
+            Label lblOnline = new Label();
+            Label lblLast = new Label();
+
+            //STREAMS ONLINE
+            lblOnline.Text = "Online streams";      
+            lblOnline.AutoSize = true;
+            lblOnline.Location = new Point(10, 10);
+            lblOnline.Font = new Font("Arial", 18, FontStyle.Bold);
+
+            pnlOnlineStreams.Location = new Point(10, lblOnline.Location.Y + lblOnline.Height+10);
+            pnlOnlineStreams.Size = new Size(850, 200);
+
+            this.pnlContent.Controls.Add(lblOnline);
+            this.pnlContent.Controls.Add(pnlOnlineStreams);
+
+            DisplayOnlineStreams(pnlOnlineStreams);
+
+            //LAST VIDEO RELEASED
+            lblLast.Text = "Last videos";
+            lblLast.AutoSize = true;
+            lblLast.Location = new Point(10, pnlOnlineStreams.Size.Height + pnlOnlineStreams.Location.Y);
+            lblLast.Font = new Font("Arial", 18, FontStyle.Bold);
+
+            pnlLastVideos.Location = new Point(10, lblLast.Location.Y + lblLast.Size.Height + 10);
+            pnlLastVideos.Size = new Size(850, 200);
+
+            this.pnlContent.Controls.Add(lblLast);
+            this.pnlContent.Controls.Add(pnlLastVideos);
+
+            DisplayLastVideos(pnlLastVideos);
+
+        }
+
+        public void CreateButtonHome()
+        {
+            Button btnHome = new Button();
+            btnHome.Size = new Size(pnlSite.Width - 20, 25);
+            btnHome.Location = new Point(8, 5);
+            btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Text = "Personnal interface";
+            btnHome.Click += new EventHandler(OnClickButtonHome);
+            pnlLeft.Controls.Add(btnHome);
         }
 
         public void CreateLinkCategory(Panel pnlContainers, string name, int index_cont, Panel pnlContent)
@@ -142,7 +193,7 @@ namespace WebMediaManager
             lblCategory.Location = new Point(0, (15 * index_cont) + 20);
             lblCategory.MouseEnter += new EventHandler(MouseEnterLabel);
             lblCategory.MouseLeave += new EventHandler(MouseLeaveLabel);
-            lblCategory.Click += (sender, e) => OnClickLabel(sender, e, name);
+            lblCategory.Click += (sender, e) => OnClickLabel(sender, e);
             pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 10);
             pnlContainers.Controls.Add(lblCategory);
         }
@@ -156,7 +207,7 @@ namespace WebMediaManager
             lblPlaylist.Location = new Point(0, pnlContainers.Size.Height - 5);
             lblPlaylist.MouseEnter += new EventHandler(MouseEnterLabel);
             lblPlaylist.MouseLeave += new EventHandler(MouseLeaveLabel);
-            lblPlaylist.Click += (sender, e) => OnClickLabel(sender, e, name);
+            lblPlaylist.Click += (sender, e) => OnClickLabel(sender, e);
             pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 15);
             pnlContainers.Controls.Add(lblPlaylist);
         }
@@ -173,20 +224,35 @@ namespace WebMediaManager
             lbl.ForeColor = Color.Black;
         }
 
-        private void OnClickLabel(object sender, EventArgs e, string name)
+        private void OnClickLabel(object sender, EventArgs e)
         {
-            CreateFullPanelVideos(name);
+            Label lbl = sender as Label;
+            CreateFullPanelVideos(lbl.Text);
+        }
+
+        private void OnClickButtonHome(object sender, EventArgs e)
+        {
+            DisplayHomePanel();
         }
 
         public void CreateFullPanelVideos(string name)
         {
             List<StreamingSite.SVideo> listVideos = this.ContainersController.GetVideosOfContainer(name);
             Panel newPanel = new Panel();
-            this.pnlContent.Visible = false;
-            newPanel.Parent = pnlContent.Parent;
-            newPanel.Visible = true;
-            newPanel.Location = pnlContent.Location;
-            newPanel.Size = pnlContent.Size;
+            this.pnlContent.Controls.Clear();
+
+
+            newPanel.Size = new Size(this.pnlContent.Size.Width - 10, this.pnlContent.Height - 50);
+            newPanel.Location = new Point(10, 50);
+            pnlContent.Controls.Add(newPanel);
+
+            Label lblTitle = new Label();
+            lblTitle.Location = new Point(0, 15);
+            lblTitle.Font = new Font("Arial", 16, FontStyle.Bold);
+            lblTitle.Text = name;
+            lblTitle.AutoSize = true;
+
+            pnlContent.Controls.Add(lblTitle);
 
             int j = 0;
             int counter_for_line = 0;

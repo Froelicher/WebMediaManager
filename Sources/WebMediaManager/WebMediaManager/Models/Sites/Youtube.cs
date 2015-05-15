@@ -32,6 +32,7 @@ namespace WebMediaManager.Models.Sites
             video.playerLink = URL_SITE + "embed/" + videos.id +"?"+"autoplay=1";
             video.link = URL_SITE + "watch?v=" + videos.id;
             video.live = false;
+            video.siteName = "Youtube";
             return video;
         }
 

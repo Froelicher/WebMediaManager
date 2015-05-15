@@ -67,6 +67,7 @@ namespace WebMediaManager.Models
             List<StreamingSite.SVideo> listLastStreams = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
+                this.ListSite[i].UpdateOnlineStream();
                 if (this.ListSite[i].ListOnlineStreams != null)
                 {
                     for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
@@ -128,7 +129,6 @@ namespace WebMediaManager.Models
         {
             string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
             string[] videosLink = null;
-            List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
             string nameCategory = "";
             int pFrom = 0;
             int pTo = 0;
@@ -139,6 +139,7 @@ namespace WebMediaManager.Models
 
                 for (int i = 0; i < allVideos.Length; i++)
                 {
+                    List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
                     if(allVideos[i][0] == '[')
                     {
                         pFrom = allVideos[i].IndexOf('[') + "[".Length;
@@ -174,7 +175,6 @@ namespace WebMediaManager.Models
         {
             string pathFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
             string[] videosLink = null;
-            List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
             string namePlaylist = "";
             int pFrom = 0;
             int pTo = 0;
@@ -185,6 +185,7 @@ namespace WebMediaManager.Models
 
                 for (int i = 0; i < allVideos.Length; i++)
                 {
+                    List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
                     if (allVideos[i][0] == '[')
                     {
                         pFrom = allVideos[i].IndexOf('[') + "[".Length;

@@ -45,6 +45,7 @@ namespace WebMediaManager.Models.Sites
             video.playerLink = URL_SITE + stream.channel.name + "/popout";
             video.link = URL_SITE + stream.channel.name;
             video.live = true;
+            video.siteName = "Twitch";
             return video;
         }
 
@@ -101,7 +102,7 @@ namespace WebMediaManager.Models.Sites
 
         public override SVideo GetVideoById(string id)
         {
-            Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos/v/"+id, "GET", ACCEPT_HTTP_HEADER));
+            Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos/"+id, "GET", ACCEPT_HTTP_HEADER));
             
             return this.CreateVideo(video);
         }
@@ -115,12 +116,13 @@ namespace WebMediaManager.Models.Sites
         {
             string checkSite = link.Substring(0, URL_SITE.Length);
             string[] split = null;
+            string result = null;
             if (String.Compare(checkSite, URL_SITE) == 0)
             {
                 split = link.Split('/');
-                return split[5];
+                result = split[4] + split[5];
             }
-            return null;
+            return result;
         }
 
         /// <summary>
