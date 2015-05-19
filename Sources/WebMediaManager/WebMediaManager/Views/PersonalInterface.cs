@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,13 @@ namespace WebMediaManager
     {
         private SitesController _sitesController;
         private ContainersController _containersController;
+        private Model _model;
+
+        internal Model Model
+        {
+            get { return _model; }
+            set { _model = value; }
+        }
 
         internal ContainersController ContainersController
         {
@@ -33,9 +41,9 @@ namespace WebMediaManager
         public PersonalInterface()
         {
             InitializeComponent();
-            Model model = new Model();
-            this.SitesController = new SitesController(this, model);
-            this.ContainersController = new ContainersController(this, model);
+            this.Model = new Model();
+            this.SitesController = new SitesController(this, this.Model);
+            this.ContainersController = new ContainersController(this, this.Model);
 
             this.ContainersController.CreateFileContainers();
             this.ContainersController.OpenFileContainers();
@@ -65,7 +73,7 @@ namespace WebMediaManager
                     counter_for_line++;
                     pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
                 }
-                ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line);
+                ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line, this.Model);
                 j++;
             }
         }
@@ -128,7 +136,7 @@ namespace WebMediaManager
                     counter_for_line++;
                     pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
                 }
-                ViewUtils.CreatePreview(pnl, lastVideos[i], j, counter_for_line);
+                ViewUtils.CreatePreview(pnl, lastVideos[i], j, counter_for_line, this.Model);
                 j++;
             }
         }
@@ -264,7 +272,7 @@ namespace WebMediaManager
                     counter_for_line++;
                     newPanel.Size = new Size(newPanel.Size.Width, newPanel.Size.Height + 120);
                 }
-                ViewUtils.CreatePreview(newPanel, listVideos[i], j, counter_for_line);
+                ViewUtils.CreatePreview(newPanel, listVideos[i], j, counter_for_line, this.Model);
                 j++;
             }
         }

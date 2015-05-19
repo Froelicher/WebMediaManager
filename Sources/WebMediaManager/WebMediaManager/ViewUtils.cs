@@ -11,14 +11,14 @@ namespace WebMediaManager.Views
 {
     static class ViewUtils
     {
-        public static Panel CreatePreview(Panel mainPanel, StreamingSite.SVideo video, int id_video_line, int counter_for_line)
+        public static Panel CreatePreview(Panel mainPanel, StreamingSite.SVideo video, int id_video_line, int counter_for_line, Model model)
         {
             Panel gPanel = new Panel();
             gPanel.Size = new Size(200, 200);
             gPanel.Location = new Point((205 * id_video_line) + 10, gPanel.Size.Height*counter_for_line);
 
             gPanel.BackColor = Color.White;
-            gPanel.Click += (sender, e) => OnClickVideo(sender, e, video);
+            gPanel.Click += (sender, e) => OnClickVideo(sender, e, video, model);
 
             //Create the picture box
             PictureBox imgPreview = new PictureBox();
@@ -26,7 +26,7 @@ namespace WebMediaManager.Views
             imgPreview.SizeMode = PictureBoxSizeMode.StretchImage;
             imgPreview.Load(video.preview);
             imgPreview.Location = new Point(0, 0);
-            imgPreview.Click += (sender, e) => OnClickVideo(sender, e, video);
+            imgPreview.Click += (sender, e) =>  OnClickVideo(sender, e, video, model);
 
             //Create the label title
             Label title = new Label();
@@ -72,14 +72,14 @@ namespace WebMediaManager.Views
             return btnSite;
         }
 
-        private static void OnClickVideo(object sender, EventArgs e, StreamingSite.SVideo video)
+        private static void OnClickVideo(object sender, EventArgs e, StreamingSite.SVideo video, Model model)
         {
-            CreateFormVideo(video);
+            CreateFormVideo(video, model);
         }
 
-        public static void CreateFormVideo(StreamingSite.SVideo video)
+        public static void CreateFormVideo(StreamingSite.SVideo video, Model model)
         {
-            VideoForm videoForm = new VideoForm(video);
+            VidForm videoForm = new VidForm(video, model);
             videoForm.Show();
         }
 

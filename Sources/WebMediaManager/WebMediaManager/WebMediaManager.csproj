@@ -35,14 +35,6 @@
     <Reference Include="ChatSharp">
       <HintPath>..\..\Packages\ChatSharp-master\ChatSharp\bin\Debug\ChatSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Geckofx-Core, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Geckofx-Winforms-33.0-0.6\Geckofx-Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Geckofx-Winforms, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Packages\Geckofx-Winforms-33.0-0.6\Geckofx-Winforms.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -68,7 +60,6 @@
     <Compile Include="Models\Authentification.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Curl.cs" />
-    <Compile Include="Models\IrcChat.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Sites\Dailymotion.cs" />
@@ -141,11 +132,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\VideoForm.cs">
+    <Compile Include="Views\VidForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\VideoForm.Designer.cs">
-      <DependentUpon>VideoForm.cs</DependentUpon>
+    <Compile Include="Views\VidForm.Designer.cs">
+      <DependentUpon>VidForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewUtils.cs" />
     <EmbeddedResource Include="Views\PersonalInterface.resx">
@@ -160,8 +151,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\VideoForm.resx">
-      <DependentUpon>VideoForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\VidForm.resx">
+      <DependentUpon>VidForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

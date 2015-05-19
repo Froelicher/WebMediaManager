@@ -36,7 +36,7 @@ namespace WebMediaManager.Models.Sites
         {
             SVideo video = new SVideo();
             video.videoName = stream.channel.status;
-            video.channelName = stream.channel.display_name;
+            video.channelName = stream.channel.name;
             video.description = this.CreateChannelDescription(stream.channel.name);
             video.createdAt = stream.created_at;
             video.id = stream._id.ToString();
@@ -45,6 +45,7 @@ namespace WebMediaManager.Models.Sites
             video.playerLink = URL_SITE + stream.channel.name + "/popout";
             video.link = URL_SITE + stream.channel.name;
             video.live = true;
+            video.url_irc = "irc.twitch.tv";
             video.siteName = "Twitch";
             return video;
         }
@@ -62,6 +63,8 @@ namespace WebMediaManager.Models.Sites
             sVideo.playerLink = URL_SITE + video.channel.name + "/popout?videoId=" + video._id;
             sVideo.link = URL_SITE + video.channel.name + "/" + video._id;
             sVideo.live = false;
+            sVideo.url_irc = "irc.twitch.tv";
+            sVideo.siteName = "Twitch";
             return sVideo;
         }
 

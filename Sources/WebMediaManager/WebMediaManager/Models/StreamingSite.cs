@@ -24,6 +24,7 @@ namespace WebMediaManager.Models
             public string link;
             public bool live;
             public string siteName;
+            public string url_irc;
         }
 
         public struct SChannel

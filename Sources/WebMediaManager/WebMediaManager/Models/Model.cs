@@ -8,7 +8,7 @@ using WebMediaManager.Models.Sites;
 
 namespace WebMediaManager.Models
 {
-    class Model
+    public  class Model
     {
         #region CONSTANTES
 
@@ -106,9 +106,8 @@ namespace WebMediaManager.Models
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
-            twitch.Auth.Access_token = "bxfyayntlmzudwcb4yt2rb4mxvpolw";
-            youtube.Auth.Access_token = "ya29.cAGvoYFbMLJ0iD1c9fl1yTT8wmDaOrRqF4LFpLIuvQpyrX7FsmcZQ9aZIYB-uZP-Lrj0QLuHos7Ytg";
-            youtube.Auth.Client_secret = "AIzaSyAbVBeXvy6fNwosn4sqK0z9A0LQ14tXTAI";
+            twitch.Auth.Access_token = "1h0dt7ghhb5j4q8d8dmt76twhofqmr";
+            twitch.UserName = "grunghi";
 
             twitch.UpdateOnlineStream();
 
@@ -297,6 +296,32 @@ namespace WebMediaManager.Models
             }
 
             return nameSites;
+        }
+
+        public string GetUserName(string nameSite)
+        {
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                if(this.ListSite[i].Name == nameSite)
+                {
+                    return this.ListSite[i].UserName;
+                }
+            }
+
+            return null;
+        }
+
+        public string GetAccessToken(string nameSite)
+        {
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                if (this.ListSite[i].Name == nameSite)
+                {
+                    return this.ListSite[i].Auth.Access_token;
+                }
+            }
+
+            return null;
         }
     }
 }

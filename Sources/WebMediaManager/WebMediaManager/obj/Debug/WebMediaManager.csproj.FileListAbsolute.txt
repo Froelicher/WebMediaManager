@@ -13,8 +13,4 @@ C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\Web
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.csproj.GenerateResource.Cache
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.exe
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.pdb
-C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.Views.VideoForm.resources
-C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Geckofx-Core.dll
-C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Geckofx-Winforms.dll
-C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Geckofx-Core.pdb
-C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Debug\Geckofx-Winforms.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Debug\WebMediaManager.Views.vidForm.resources

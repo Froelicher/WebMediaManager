@@ -7,3 +7,5 @@ C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\Web
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.dll
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\ChatSharp.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\ChatSharp.pdb

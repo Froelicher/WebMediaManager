@@ -35,8 +35,10 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -96,10 +98,20 @@
             // 
             this.pnlContent.AutoScroll = true;
             this.pnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContent.Controls.Add(this.button1);
             this.pnlContent.Location = new System.Drawing.Point(202, 54);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(893, 659);
             this.pnlContent.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(168, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // PersonalInterface
             // 
@@ -117,6 +129,7 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.pnlContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -130,6 +143,7 @@
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel pnlContainers;
         private System.Windows.Forms.Panel pnlSite;
+        private System.Windows.Forms.Button button1;
     }
 }
 
