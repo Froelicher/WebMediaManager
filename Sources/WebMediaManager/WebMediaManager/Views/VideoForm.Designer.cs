@@ -36,6 +36,10 @@
             this.lblView = new System.Windows.Forms.Label();
             this.pnlDescription = new System.Windows.Forms.Panel();
             this.btnAddContainers = new System.Windows.Forms.Button();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pnlChat.SuspendLayout();
+            this.pnlDescription.SuspendLayout();
             this.SuspendLayout();
             // 
             // webBrowser1
@@ -43,14 +47,16 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 2);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScrollBarsEnabled = false;
             this.webBrowser1.Size = new System.Drawing.Size(707, 530);
             this.webBrowser1.TabIndex = 0;
             // 
             // pnlChat
             // 
+            this.pnlChat.Controls.Add(this.textBox1);
             this.pnlChat.Location = new System.Drawing.Point(716, 2);
             this.pnlChat.Name = "pnlChat";
-            this.pnlChat.Size = new System.Drawing.Size(231, 707);
+            this.pnlChat.Size = new System.Drawing.Size(259, 803);
             this.pnlChat.TabIndex = 1;
             // 
             // lblTitle
@@ -93,9 +99,10 @@
             // 
             // pnlDescription
             // 
+            this.pnlDescription.Controls.Add(this.webBrowser2);
             this.pnlDescription.Location = new System.Drawing.Point(12, 616);
             this.pnlDescription.Name = "pnlDescription";
-            this.pnlDescription.Size = new System.Drawing.Size(694, 93);
+            this.pnlDescription.Size = new System.Drawing.Size(698, 189);
             this.pnlDescription.TabIndex = 6;
             // 
             // btnAddContainers
@@ -110,12 +117,31 @@
             this.btnAddContainers.Text = "Add";
             this.btnAddContainers.UseVisualStyleBackColor = true;
             // 
+            // webBrowser2
+            // 
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(698, 189);
+            this.webBrowser2.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(253, 797);
+            this.textBox1.TabIndex = 0;
+            // 
             // VideoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(949, 710);
+            this.ClientSize = new System.Drawing.Size(975, 803);
             this.Controls.Add(this.btnAddContainers);
             this.Controls.Add(this.pnlDescription);
             this.Controls.Add(this.lblView);
@@ -127,6 +153,9 @@
             this.Name = "VideoForm";
             this.Text = "VideoForm";
             this.Load += new System.EventHandler(this.VideoForm_Load);
+            this.pnlChat.ResumeLayout(false);
+            this.pnlChat.PerformLayout();
+            this.pnlDescription.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +171,7 @@
         private System.Windows.Forms.Label lblView;
         private System.Windows.Forms.Panel pnlDescription;
         private System.Windows.Forms.Button btnAddContainers;
+        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

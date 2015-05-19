@@ -20,6 +20,7 @@ namespace WebMediaManager.Views
             this.webBrowser1.Url = new Uri(video.playerLink);
             this.lblTitle.Text = video.videoName;
             this.lblView.Text = video.nbViews.ToString();
+            this.webBrowser2.DocumentText = video.description;
 
         }
 

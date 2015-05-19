@@ -1,0 +1,11 @@
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\bin\Debug\TestChatIrc.exe.config
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\bin\Debug\TestChatIrc.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\bin\Debug\TestChatIrc.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\bin\Debug\ChatSharp.dll
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\bin\Debug\ChatSharp.pdb
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.csprojResolveAssemblyReference.cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.Form1.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.Properties.Resources.resources
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.csproj.GenerateResource.Cache
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.exe
+C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\TestChatIrc\TestChatIrc\TestChatIrc\obj\Debug\TestChatIrc.pdb

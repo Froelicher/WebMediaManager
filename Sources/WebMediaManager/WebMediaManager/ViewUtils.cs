@@ -82,5 +82,6 @@ namespace WebMediaManager.Views
             VideoForm videoForm = new VideoForm(video);
             videoForm.Show();
         }
+
     }
 }

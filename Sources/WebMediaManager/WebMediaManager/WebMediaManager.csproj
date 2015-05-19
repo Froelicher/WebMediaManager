@@ -35,15 +35,20 @@
     <Reference Include="ChatSharp">
       <HintPath>..\..\Packages\ChatSharp-master\ChatSharp\bin\Debug\ChatSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Geckofx-Core, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Geckofx-Winforms-33.0-0.6\Geckofx-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Geckofx-Winforms, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\Geckofx-Winforms-33.0-0.6\Geckofx-Winforms.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NotificationWindow">
       <HintPath>..\..\Packages\notification_src\NotificationWindow\bin\Debug\NotificationWindow.dll</HintPath>
-    </Reference>
-    <Reference Include="OpenWebKitSharp">
-      <HintPath>..\..\..\..\..\..\Downloads\OpenWebKitSharp 3.0.1.0023\open-webkit-sharp\WebKit\OpenWebKitSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,10 +61,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebKit.Interop">
-      <HintPath>..\..\Packages\OpenWebKitSharp\WebKit.Interop.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContainersController.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Models\Authentification.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Curl.cs" />
+    <Compile Include="Models\IrcChat.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Sites\Dailymotion.cs" />

@@ -37,7 +37,7 @@ namespace WebMediaManager.Models.Sites
             SVideo video = new SVideo();
             video.videoName = stream.channel.status;
             video.channelName = stream.channel.display_name;
-            video.description = "";
+            video.description = this.CreateChannelDescription(stream.channel.name);
             video.createdAt = stream.created_at;
             video.id = stream._id.ToString();
             video.nbViews = stream.viewers;
@@ -93,10 +93,16 @@ namespace WebMediaManager.Models.Sites
         private string CreateChannelDescription(string channelName)
         {
             Panel[] panels = Curl.Deserialize<Panel[]>(Curl.SendRequest("https://api.twitch.tv/api/channels/"+channelName+"/panels", GET_METHOD, ACCEPT_HTTP_HEADER));
-            
-            //TODO : SOUPE POUR FAIRE LA DESCRIPTION
+            StringBuilder result = new StringBuilder();
 
-            return "";
+            for (int i = 0; i < panels.Count(); i++)
+            {
+                result.Append("<h1>"+panels[i].data.title+"</h1>");
+                result.Append("<a href='" + panels[i].data.link + "'><img src='" + panels[i].data.image + "'/></a>");
+                result.Append("<p>"+panels[i].data.description+"</p>");
+            }
+
+            return result.ToString();
         }
 
 
