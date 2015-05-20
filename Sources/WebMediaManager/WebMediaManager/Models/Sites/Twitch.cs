@@ -23,6 +23,8 @@ namespace WebMediaManager.Models.Sites
         public Twitch() : base()
         {
             this.ListOnlineStreams = new List<SVideo>();
+            this.ListLastVideos = new List<SVideo>();
+            this.ListChannelsFollowed = new List<SChannel>();
             this.Name = "Twitch";
         }
 
@@ -46,7 +48,8 @@ namespace WebMediaManager.Models.Sites
             video.link = URL_SITE + stream.channel.name;
             video.live = true;
             video.url_irc = "irc.twitch.tv";
-            video.siteName = "Twitch";
+            video.siteName = this.Name;
+            video.channelIsFollowed = this.CheckChannelIsFollowed(stream.channel.name);
             return video;
         }
 
@@ -54,7 +57,7 @@ namespace WebMediaManager.Models.Sites
         {
             SVideo sVideo = new SVideo();
             sVideo.videoName = video.title;
-            sVideo.channelName = video.channel.display_name;
+            sVideo.channelName = video.channel.name;
             sVideo.description = video.description;
             sVideo.createdAt = video.recroded_at;
             sVideo.id = video._id;
@@ -64,7 +67,8 @@ namespace WebMediaManager.Models.Sites
             sVideo.link = URL_SITE + video.channel.name + "/" + video._id;
             sVideo.live = false;
             sVideo.url_irc = "irc.twitch.tv";
-            sVideo.siteName = "Twitch";
+            sVideo.siteName = this.Name;
+            sVideo.channelIsFollowed = this.CheckChannelIsFollowed(video.channel.name);
             return sVideo;
         }
 
@@ -76,7 +80,7 @@ namespace WebMediaManager.Models.Sites
         private SChannel CreateChannel(WebMediaManager.Structures.STwitch.Channel channelFollowed)
         {
             SChannel channel = new SChannel();
-            channel.channelName = channelFollowed.display_name;
+            channel.channelName = channelFollowed.name;
             channel.createdAt = channelFollowed.created_at;
             channel.description = this.CreateChannelDescription(channelFollowed.name);
             channel.headerLink = channelFollowed.profile_banner;
@@ -148,6 +152,14 @@ namespace WebMediaManager.Models.Sites
         public override void UpdateOnlineStream()
         {
             this.ListOnlineStreams = this.GetOnlineStreams();
+        }
+
+        /// <summary>
+        /// Update the channels followed
+        /// </summary>
+        public override void UpdateChannelsFollowed()
+        {
+            this.ListChannelsFollowed = this.GetChannelFollowed();
         }
 
         /// <summary>

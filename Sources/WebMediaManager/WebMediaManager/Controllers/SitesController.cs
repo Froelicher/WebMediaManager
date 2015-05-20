@@ -69,5 +69,23 @@ namespace WebMediaManager.Controllers
         {
             return this.Model.GetAccessToken(nameSite);
         }
+
+        public void Follow(string channelName, string siteName)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if (siteName == this.Model.ListSite[i].Name)
+                    this.Model.ListSite[i].FollowChannel(channelName);
+            }
+        }
+        
+        public void UnFollow(string channelName, string siteName)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if (siteName == this.Model.ListSite[i].Name)
+                    this.Model.ListSite[i]. UnFollowChannel(channelName);
+            }
+        }
     }
 }

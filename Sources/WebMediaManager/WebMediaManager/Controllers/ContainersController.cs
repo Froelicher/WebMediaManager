@@ -4,12 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebMediaManager.Models;
+using WebMediaManager.Views;
 
 namespace WebMediaManager.Controllers
 {
     class ContainersController
     {
         private PersonalInterface _view;
+        private VidForm _viewVideo;
+
+        public VidForm ViewVideo
+        {
+            get { return _viewVideo; }
+            set { _viewVideo = value; }
+        }
+
         private Model _model;
 
         internal Model Model
@@ -22,6 +31,12 @@ namespace WebMediaManager.Controllers
         {
             get { return _view; }
             set { _view = value; }
+        }
+
+        public ContainersController(VidForm view, Model model)
+        {
+            this.ViewVideo = view;
+            this.Model = model;
         }
 
         public ContainersController(PersonalInterface view, Model model)

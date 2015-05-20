@@ -60,6 +60,7 @@
     <Compile Include="Models\Authentification.cs" />
     <Compile Include="Models\Container.cs" />
     <Compile Include="Models\Curl.cs" />
+    <Compile Include="Models\IrcChat.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Sites\Dailymotion.cs" />

@@ -106,10 +106,11 @@ namespace WebMediaManager.Models
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
-            twitch.Auth.Access_token = "1h0dt7ghhb5j4q8d8dmt76twhofqmr";
+            twitch.Auth.Access_token = "uqig78npsebsa962nd47w39bjjigoa";
             twitch.UserName = "grunghi";
 
             twitch.UpdateOnlineStream();
+            twitch.UpdateChannelsFollowed();
 
             //this.ListSite.Add(youtube);
             this.ListSite.Add(twitch);

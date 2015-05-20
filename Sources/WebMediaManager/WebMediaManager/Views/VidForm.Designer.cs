@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.pnlChat = new System.Windows.Forms.Panel();
+            this.btnSendMsg = new System.Windows.Forms.Button();
+            this.tbxSendMsg = new System.Windows.Forms.TextBox();
             this.tbxChat = new System.Windows.Forms.TextBox();
             this.wbbPlayer = new System.Windows.Forms.WebBrowser();
             this.pnlDescription = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubscribes = new System.Windows.Forms.Button();
             this.wbbDescription = new System.Windows.Forms.WebBrowser();
             this.lblViews = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.tbxSendMsg = new System.Windows.Forms.TextBox();
-            this.btnSendMsg = new System.Windows.Forms.Button();
             this.pnlChat.SuspendLayout();
             this.pnlDescription.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,25 @@
             this.pnlChat.Name = "pnlChat";
             this.pnlChat.Size = new System.Drawing.Size(239, 789);
             this.pnlChat.TabIndex = 0;
+            // 
+            // btnSendMsg
+            // 
+            this.btnSendMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendMsg.Location = new System.Drawing.Point(211, 740);
+            this.btnSendMsg.Name = "btnSendMsg";
+            this.btnSendMsg.Size = new System.Drawing.Size(25, 38);
+            this.btnSendMsg.TabIndex = 2;
+            this.btnSendMsg.Text = ">>";
+            this.btnSendMsg.UseVisualStyleBackColor = true;
+            this.btnSendMsg.Click += new System.EventHandler(this.btnSendMsg_Click);
+            // 
+            // tbxSendMsg
+            // 
+            this.tbxSendMsg.Location = new System.Drawing.Point(4, 740);
+            this.tbxSendMsg.Multiline = true;
+            this.tbxSendMsg.Name = "tbxSendMsg";
+            this.tbxSendMsg.Size = new System.Drawing.Size(202, 38);
+            this.tbxSendMsg.TabIndex = 1;
             // 
             // tbxChat
             // 
@@ -77,7 +96,7 @@
             // 
             this.pnlDescription.Controls.Add(this.button2);
             this.pnlDescription.Controls.Add(this.comboBox1);
-            this.pnlDescription.Controls.Add(this.button1);
+            this.pnlDescription.Controls.Add(this.btnSubscribes);
             this.pnlDescription.Controls.Add(this.wbbDescription);
             this.pnlDescription.Controls.Add(this.lblViews);
             this.pnlDescription.Controls.Add(this.lblTitle);
@@ -88,7 +107,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(220, 58);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(276, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 23);
             this.button2.TabIndex = 5;
@@ -97,20 +117,23 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 61);
+            this.comboBox1.Location = new System.Drawing.Point(146, 60);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
             // 
-            // button1
+            // btnSubscribes
             // 
-            this.button1.Location = new System.Drawing.Point(12, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSubscribes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubscribes.Location = new System.Drawing.Point(12, 59);
+            this.btnSubscribes.Name = "btnSubscribes";
+            this.btnSubscribes.Size = new System.Drawing.Size(128, 23);
+            this.btnSubscribes.TabIndex = 3;
+            this.btnSubscribes.Text = "S\'abonner";
+            this.btnSubscribes.UseVisualStyleBackColor = true;
+            this.btnSubscribes.Click += new System.EventHandler(this.btnSubscribes_Click);
             // 
             // wbbDescription
             // 
@@ -139,25 +162,6 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "label1";
             // 
-            // tbxSendMsg
-            // 
-            this.tbxSendMsg.Location = new System.Drawing.Point(4, 740);
-            this.tbxSendMsg.Multiline = true;
-            this.tbxSendMsg.Name = "tbxSendMsg";
-            this.tbxSendMsg.Size = new System.Drawing.Size(202, 38);
-            this.tbxSendMsg.TabIndex = 1;
-            // 
-            // btnSendMsg
-            // 
-            this.btnSendMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendMsg.Location = new System.Drawing.Point(211, 740);
-            this.btnSendMsg.Name = "btnSendMsg";
-            this.btnSendMsg.Size = new System.Drawing.Size(25, 38);
-            this.btnSendMsg.TabIndex = 2;
-            this.btnSendMsg.Text = ">>";
-            this.btnSendMsg.UseVisualStyleBackColor = true;
-            this.btnSendMsg.Click += new System.EventHandler(this.btnSendMsg_Click);
-            // 
             // VidForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,7 +174,7 @@
             this.Name = "VidForm";
             this.Text = "VidForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VidForm_FormClosing);
-            this.Load += new System.EventHandler(this.VidForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VidForm_FormClosed);
             this.pnlChat.ResumeLayout(false);
             this.pnlChat.PerformLayout();
             this.pnlDescription.ResumeLayout(false);
@@ -188,7 +192,7 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubscribes;
         private System.Windows.Forms.WebBrowser wbbDescription;
         private System.Windows.Forms.TextBox tbxChat;
         private System.Windows.Forms.Button btnSendMsg;

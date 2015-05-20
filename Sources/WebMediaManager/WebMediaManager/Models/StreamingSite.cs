@@ -25,6 +25,7 @@ namespace WebMediaManager.Models
             public bool live;
             public string siteName;
             public string url_irc;
+            public bool channelIsFollowed;
         }
 
         public struct SChannel
@@ -47,6 +48,13 @@ namespace WebMediaManager.Models
         private string _userName;
         private Authentification _auth;
         private string _name;
+        private List<SChannel> _listChannelsFollowed;
+
+        public List<SChannel> ListChannelsFollowed
+        {
+            get { return _listChannelsFollowed; }
+            set { _listChannelsFollowed = value; }
+        }
 
         public string Name
         {
@@ -135,6 +143,14 @@ namespace WebMediaManager.Models
         }
 
         /// <summary>
+        /// Update the channels followed
+        /// </summary>
+        public virtual void UpdateChannelsFollowed()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Get list of channel followed
         /// </summary>
         /// <returns></returns>
@@ -215,6 +231,21 @@ namespace WebMediaManager.Models
         public virtual List<SVideo> GetPlaylists()
         {
             throw new NotImplementedException();
-        }      
+        }    
+        
+        /// <summary>
+        /// Check if the channel is followed
+        /// </summary>
+        /// <param name="channelName">channel name</param>
+        /// <returns>bool</returns>
+        public virtual bool CheckChannelIsFollowed(string channelName)
+        {
+            for (int i = 0; i < this.ListChannelsFollowed.Count; i++)
+            {
+                if (ListChannelsFollowed[i].channelName == channelName)
+                    return true;
+            }
+            return false;   
+        }
     }
 }
