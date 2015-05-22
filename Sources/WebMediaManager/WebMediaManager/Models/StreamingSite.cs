@@ -38,6 +38,7 @@ namespace WebMediaManager.Models
             public int nbTotalViews;
             public int nbFollowers;
             public DateTime createdAt;
+            public string siteName;
         }
         #endregion
 
@@ -92,7 +93,6 @@ namespace WebMediaManager.Models
         {
             this.ListLastVideos = new List<SVideo>();
             this.Auth = new Authentification();
-           
         }
 
         public virtual SVideo GetVideoById(string id)

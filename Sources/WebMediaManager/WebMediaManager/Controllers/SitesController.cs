@@ -42,7 +42,6 @@ namespace WebMediaManager.Controllers
         {
             this.Model = model;
             this.Vview = view;
-
         }
 
         public List<StreamingSite.SVideo> GetLastVideos()
@@ -93,9 +92,75 @@ namespace WebMediaManager.Controllers
             return this.Model.SearchVideos(request, limit);
         }
 
+        //public List<StreamingSite.SChannel> Get
+
         public List<List<StreamingSite.SVideo>> GetVideosBySite(List<StreamingSite.SVideo> videos)
         {
-            return this.Model.GetVideosBySite(videos);
+            List<List<StreamingSite.SVideo>> result = null;
+
+            if (videos.Count > 0)
+            {
+                result = new List<List<StreamingSite.SVideo>>();
+                result.Add(new List<StreamingSite.SVideo>());
+                result[0].Add(videos[0]);
+
+                for (int i = 0; i < videos.Count; i++)
+                {
+                    for (int j = 0; j < result.Count; j++)
+                    {
+                        if (videos[i].siteName == result[j][i].siteName)
+                        {
+                            result[j].Add(videos[i]);
+                        }
+                        else
+                        {
+                            result[j] = new List<StreamingSite.SVideo>();
+                            result[j].Add(videos[i]);
+                        }
+                    }
+                }
+
+                result[0].RemoveAt(0);
+                return result;
+            }
+
+            return result;
         }
+
+        public List<List<StreamingSite.SChannel>> GetChannelsFollowedBySite(List<StreamingSite.SChannel> channels)
+        {
+            List<List<StreamingSite.SChannel>> result = null;
+
+            if (channels.Count > 0)
+            {
+                result = new List<List<StreamingSite.SChannel>>();
+                result.Add(new List<StreamingSite.SChannel>());
+                result[0].Add(channels[0]);
+
+                for (int i = 0; i < channels.Count; i++)
+                {
+                    for (int j = 0; j < result.Count; j++)
+                    {
+                        if (channels[i].siteName == result[j][i].siteName)
+                        {
+                            result[j].Add(channels[i]);
+                        }
+                        else
+                        {
+                            result[j] = new List<StreamingSite.SChannel>();
+                            result[j].Add(channels[i]);
+                        }
+                    }
+                }
+
+                result[0].RemoveAt(0);
+                return result;
+            }
+
+            return result;
+        }
+
+
+
     }
 }

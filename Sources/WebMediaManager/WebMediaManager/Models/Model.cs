@@ -8,11 +8,11 @@ using WebMediaManager.Models.Sites;
 
 namespace WebMediaManager.Models
 {
-    public  class Model
+    public class Model
     {
         #region CONSTANTES
 
-        
+
 
         #endregion
         #region PROPERTIES
@@ -117,7 +117,7 @@ namespace WebMediaManager.Models
             /*
             this.ListSite.Add(dailymotion);
             this.ListSite.Add(vimeo);*/
-           
+
         }
 
 
@@ -140,7 +140,7 @@ namespace WebMediaManager.Models
                 for (int i = 0; i < allVideos.Length; i++)
                 {
                     List<StreamingSite.SVideo> videos = new List<StreamingSite.SVideo>();
-                    if(allVideos[i][0] == '[')
+                    if (allVideos[i][0] == '[')
                     {
                         pFrom = allVideos[i].IndexOf('[') + "[".Length;
                         pTo = allVideos[i].LastIndexOf(']');
@@ -223,12 +223,12 @@ namespace WebMediaManager.Models
             string pathCategory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
             string pathPlaylist = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
 
-            if(!System.IO.Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager")))
+            if (!System.IO.Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager")))
             {
                 Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager"));
             }
 
-            if(!File.Exists(pathCategory))
+            if (!File.Exists(pathCategory))
             {
                 File.Create(pathCategory);
             }
@@ -241,21 +241,21 @@ namespace WebMediaManager.Models
 
         public void AddContainer(string name, bool t_playlist)
         {
-            if(t_playlist)
+            if (t_playlist)
             {
                 Playlist playlist = new Playlist(name);
                 playlist.SetPathPlaylist();
-                if(playlist.AddContainer())
+                if (playlist.AddContainer())
                     this.ListContainer.Add(playlist);
             }
             else
             {
                 Container category = new Container(name);
                 category.SetPathCategory();
-                if(category.AddContainer())
+                if (category.AddContainer())
                     this.ListContainer.Add(category);
             }
-           
+
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace WebMediaManager.Models
             {
                 List<StreamingSite.SVideo> diff = null;
 
-                if(this.ListSite[i].ListLastVideos != null)
+                if (this.ListSite[i].ListLastVideos != null)
                 {
                     //create a new list with the current last videos
                     List<StreamingSite.SVideo> oldLastVideo = new List<StreamingSite.SVideo>(this.ListSite[i].ListLastVideos);
@@ -287,7 +287,7 @@ namespace WebMediaManager.Models
                     {
                         for (int y = 0; y < oldLastVideo.Count; y++)
                         {
-                            if(this.ListSite[i].ListLastVideos[x].id == oldLastVideo[y].id)
+                            if (this.ListSite[i].ListLastVideos[x].id == oldLastVideo[y].id)
                             {
                                 //remove if the current video is on the old list video
                                 diff.Remove(this.ListSite[i].ListLastVideos[x]);
@@ -322,7 +322,7 @@ namespace WebMediaManager.Models
         {
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                if(this.ListSite[i].Name == nameSite)
+                if (this.ListSite[i].Name == nameSite)
                 {
                     return this.ListSite[i].UserName;
                 }
@@ -360,34 +360,17 @@ namespace WebMediaManager.Models
             return result;
         }
 
-        public List<List<StreamingSite.SVideo>> GetVideosBySite(List<StreamingSite.SVideo> videos)
+        public List<StreamingSite.SChannel> GetChannelsFollowed()
         {
-            List<List<StreamingSite.SVideo>> result = null;
-            
-            if (videos.Count > 0)
+            List<StreamingSite.SChannel> result = new List<StreamingSite.SChannel>();
+            for (int i = 0; i < this.ListSite.Count; i++)
             {
-                result = new List<List<StreamingSite.SVideo>>();
-                result.Add(new List<StreamingSite.SVideo>());
-                result[0].Add(videos[0]);
+                List<StreamingSite.SChannel> listChannelsSite = this.ListSite[i].GetChannelFollowed();
 
-                for (int i = 0; i < videos.Count; i++)
+                for (int j = 0; j < listChannelsSite.Count; j++)
                 {
-                    for (int j = 0; j < result.Count; j++)
-                    {
-                        if (videos[i].siteName == result[j][i].siteName)
-                        {
-                            result[j].Add(videos[i]);
-                        }
-                        else
-                        {
-                            result[j] = new List<StreamingSite.SVideo>();
-                            result[j].Add(videos[i]);
-                        }
-                    }
+                    result.Add(listChannelsSite[j]);
                 }
-
-                result[0].RemoveAt(0);
-                return result;
             }
 
             return result;

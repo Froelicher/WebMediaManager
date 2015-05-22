@@ -84,15 +84,15 @@ namespace WebMediaManager
 
             for (int i = 0; i < nameSites.Length; i++)
 			{
-			    ViewUtils.CreateButtonSite(this.pnlSite, nameSites[i], i);
-                this.pnlContainers.Location = new Point(this.pnlContainers.Location.X, this.pnlContainers.Location.Y + 25);
+			    ViewUtils.CreateButtonSite(this.pnlLeftTop, nameSites[i], i);
+                this.pnlLeftMid.Location = new Point(this.pnlLeftMid.Location.X, this.pnlLeftMid.Location.Y + 25);
 			}
         }
 
         private void DisplayLinkCategory()
         {
-            this.pnlContainers.Controls.Clear();
-            this.pnlContainers.Size = new Size(194, 45);
+            this.pnlLeftMid.Controls.Clear();
+            this.pnlLeftMid.Size = new Size(194, 45);
             Label lblTitle = new Label();
             lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
             lblTitle.Location = new Point(0, 0);
@@ -110,16 +110,16 @@ namespace WebMediaManager
             btnAddCategory.Text = "Add";
             btnAddCategory.Click += (sender, e) => OnClickAddContainer(sender, e, tbxCategory.Text, false);
 
-            this.pnlContainers.Location = new Point(this.pnlContainers.Location.X, this.pnlSite.Size.Height + pnlSite.Location.Y);
-            this.pnlContainers.Controls.Add(btnAddCategory);
-            this.pnlContainers.Controls.Add(tbxCategory);
-            this.pnlContainers.Controls.Add(lblTitle);
+            this.pnlLeftMid.Location = new Point(this.pnlLeftMid.Location.X, this.pnlLeftTop.Size.Height + pnlLeftTop.Location.Y);
+            this.pnlLeftMid.Controls.Add(btnAddCategory);
+            this.pnlLeftMid.Controls.Add(tbxCategory);
+            this.pnlLeftMid.Controls.Add(lblTitle);
 
             List<string> nameCategory = this.ContainersController.GetNamesCategory();
 
             for (int i = 0; i < nameCategory.Count; i++)
             {
-                CreateLinkCategory(this.pnlContainers, nameCategory[i], i, this.pnlContent);
+                CreateLinkCategory(this.pnlLeftMid, nameCategory[i], i, this.pnlContent);
             }
         }
 
@@ -127,7 +127,7 @@ namespace WebMediaManager
         {
             Label lblTitle = new Label();
             lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
-            lblTitle.Location = new Point(0, this.pnlContainers.Height);
+            lblTitle.Location = new Point(0, this.pnlLeftMid.Height);
             lblTitle.Text = "Playlist";
 
             TextBox tbxPlaylist = new TextBox();
@@ -142,16 +142,16 @@ namespace WebMediaManager
             btnAddPlaylist.Text = "Add";
             btnAddPlaylist.Click += (sender, e) => OnClickAddContainer(sender, e, tbxPlaylist.Text, true);
 
-            this.pnlContainers.Size = new Size(this.pnlContainers.Size.Width, this.pnlContainers.Size.Height + 45);
-            this.pnlContainers.Controls.Add(tbxPlaylist);
-            this.pnlContainers.Controls.Add(btnAddPlaylist);
-            this.pnlContainers.Controls.Add(lblTitle);
+            this.pnlLeftMid.Size = new Size(this.pnlLeftMid.Size.Width, this.pnlLeftMid.Size.Height + 45);
+            this.pnlLeftMid.Controls.Add(tbxPlaylist);
+            this.pnlLeftMid.Controls.Add(btnAddPlaylist);
+            this.pnlLeftMid.Controls.Add(lblTitle);
 
             List<string> namePlaylist = this.ContainersController.GetNamesPlaylist();
 
             for (int i = 0; i < namePlaylist.Count; i++)
             {
-                CreateLinkPlaylist(this.pnlContainers, namePlaylist[i], i, this.pnlContent);
+                CreateLinkPlaylist(this.pnlLeftMid, namePlaylist[i], i, this.pnlContent);
             }
         }
 
@@ -224,6 +224,19 @@ namespace WebMediaManager
             }
         }
 
+        private void DisplaySubscribes()
+        {
+            this.pnlLeftBot.Visible = true;
+            this.pnlLeftBot.Controls.Clear();
+            this.pnlLeftBot.Size = new Size(194, 45);
+            Label lblTitle = new Label();
+            lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Text = "Abonnements";
+
+            List<List<StreamingSite.SChannel>> channelsSort = this.SitesController.GetChannelsFollowedBySite(this.)
+        }
+
         private void DisplayHomePanel()
         {
             //TODO : Créer deux panels : Last videos et online stream
@@ -267,7 +280,7 @@ namespace WebMediaManager
         public void CreateButtonHome()
         {
             Button btnHome = new Button();
-            btnHome.Size = new Size(pnlSite.Width - 20, 25);
+            btnHome.Size = new Size(pnlLeftTop.Width - 20, 25);
             btnHome.Location = new Point(8, 5);
             btnHome.FlatStyle = FlatStyle.Flat;
             btnHome.Text = "Personnal interface";
@@ -376,6 +389,32 @@ namespace WebMediaManager
         private void btnSearch_Click(object sender, EventArgs e)
         {
             this.DisplayResultSearch();
+        }
+
+        private void DisplayOptionAccount()
+        {
+            this.pnlLeftMid.Controls.Clear();
+            this.pnlLeftMid.Size = new Size(194, 45);
+            Label lblTitle = new Label();
+            lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Text = "Options";
+
+            CheckBox cbxNotif = new CheckBox();
+            cbxNotif.Font = new Font("Arial", 9);
+            cbxNotif.Location = new Point(0, lblTitle.Size.Height);
+            cbxNotif.Text = "Notification";
+
+            Label lblAccount = new Label();
+            lblAccount.Font = new Font("Arial", 9);
+            lblAccount.Location = new Point(0, cbxNotif.Location.Y + cbxNotif.Size.Height);
+            lblAccount.Text = "Account";
+
+            this.pnlLeftMid.Location = new Point(0, this.pnlLeftTop.Height);
+            this.pnlLeftMid.Size = new Size(this.pnlLeftMid.Size.Width, lblTitle.Size.Height + cbxNotif.Size.Height + lblAccount.Size.Height);
+            this.pnlLeftMid.Controls.Add(lblTitle);
+            this.pnlLeftMid.Controls.Add(cbxNotif);
+            this.pnlLeftMid.Controls.Add(lblAccount);
         }
 
 

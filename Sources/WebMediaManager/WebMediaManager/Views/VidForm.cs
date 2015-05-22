@@ -84,16 +84,17 @@ namespace WebMediaManager.Views
         {
             if (this.Video.channelIsFollowed)
             {
-                this.btnSubscribes.Text = "Désabonnement";
+                this.btnSubscribes.Text = "Désabonner";
                 this.btnSubscribes.BackColor = Color.Red;
                 this.btnSubscribes.Click += (s, e) => this.btnUnFollow(s, e);
             }
             else
             {
                 this.btnSubscribes.Text = "S'abonner";
-                this.btnSubscribes.BackColor = Color.Green;
+                this.btnSubscribes.BackColor = Color.DarkGreen;
                 this.btnSubscribes.Click += (s, e) => this.btnFollow(s, e);
             }
+
         }
 
         private void btnSendMsg_Click(object sender, EventArgs e)
@@ -119,11 +120,17 @@ namespace WebMediaManager.Views
 
         private void btnFollow(object sender, EventArgs e)
         {
+            Button newbtn = (Button)sender;
+            newbtn.Text = "Désabonner";
+            newbtn.BackColor = Color.Red;
             this.SiteController.Follow(this.Video.channelName, this.Video.siteName);
         }
 
         private void btnUnFollow(object sender, EventArgs e)
         {
+            Button newbtn = (Button)sender;
+            newbtn.Text = "S'abonner";
+            newbtn.BackColor = Color.DarkGreen;
             this.SiteController.UnFollow(this.Video.channelName, this.Video.siteName);
         }
 

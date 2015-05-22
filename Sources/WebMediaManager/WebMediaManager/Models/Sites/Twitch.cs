@@ -88,6 +88,7 @@ namespace WebMediaManager.Models.Sites
             channel.logoLink = channelFollowed.logo;
             channel.nbFollowers = channelFollowed.followers;
             channel.nbTotalViews = channelFollowed.views;
+            channel.siteName = this.Name;
 
             return channel;
         }
@@ -271,6 +272,7 @@ namespace WebMediaManager.Models.Sites
         {
             Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "PUT", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
             this.UpdateLastVideo();
+            this.UpdateChannelsFollowed();
         }
 
         /// <summary>
@@ -281,6 +283,7 @@ namespace WebMediaManager.Models.Sites
         {
             Curl.Deserialize<Follow>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels/" + channelName, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
             this.UpdateLastVideo();
+            this.UpdateChannelsFollowed();
         }
 
         /// <summary>
@@ -301,5 +304,7 @@ namespace WebMediaManager.Models.Sites
 
             return listVideos;
         }
+
+
     }
 }
