@@ -34,12 +34,14 @@
             this.tbxChat = new System.Windows.Forms.TextBox();
             this.wbbPlayer = new System.Windows.Forms.WebBrowser();
             this.pnlDescription = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAddCategory = new System.Windows.Forms.Button();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.btnSubscribes = new System.Windows.Forms.Button();
             this.wbbDescription = new System.Windows.Forms.WebBrowser();
             this.lblViews = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnAddPlaylist = new System.Windows.Forms.Button();
+            this.cbxPlaylist = new System.Windows.Forms.ComboBox();
             this.pnlChat.SuspendLayout();
             this.pnlDescription.SuspendLayout();
             this.SuspendLayout();
@@ -94,8 +96,10 @@
             // 
             // pnlDescription
             // 
-            this.pnlDescription.Controls.Add(this.button2);
-            this.pnlDescription.Controls.Add(this.comboBox1);
+            this.pnlDescription.Controls.Add(this.btnAddPlaylist);
+            this.pnlDescription.Controls.Add(this.cbxPlaylist);
+            this.pnlDescription.Controls.Add(this.btnAddCategory);
+            this.pnlDescription.Controls.Add(this.cbxCategory);
             this.pnlDescription.Controls.Add(this.btnSubscribes);
             this.pnlDescription.Controls.Add(this.wbbDescription);
             this.pnlDescription.Controls.Add(this.lblViews);
@@ -105,24 +109,26 @@
             this.pnlDescription.Size = new System.Drawing.Size(724, 297);
             this.pnlDescription.TabIndex = 2;
             // 
-            // button2
+            // btnAddCategory
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(276, 59);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategory.Location = new System.Drawing.Point(282, 59);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(28, 23);
+            this.btnAddCategory.TabIndex = 5;
+            this.btnAddCategory.Text = "+";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
-            // comboBox1
+            // cbxCategory
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 60);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(146, 60);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(131, 21);
+            this.cbxCategory.TabIndex = 4;
             // 
             // btnSubscribes
             // 
@@ -162,6 +168,27 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "label1";
             // 
+            // btnAddPlaylist
+            // 
+            this.btnAddPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPlaylist.Location = new System.Drawing.Point(452, 61);
+            this.btnAddPlaylist.Name = "btnAddPlaylist";
+            this.btnAddPlaylist.Size = new System.Drawing.Size(28, 23);
+            this.btnAddPlaylist.TabIndex = 7;
+            this.btnAddPlaylist.Text = "+";
+            this.btnAddPlaylist.UseVisualStyleBackColor = true;
+            this.btnAddPlaylist.Click += new System.EventHandler(this.btnAddPlaylist_Click);
+            // 
+            // cbxPlaylist
+            // 
+            this.cbxPlaylist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxPlaylist.FormattingEnabled = true;
+            this.cbxPlaylist.Location = new System.Drawing.Point(316, 62);
+            this.cbxPlaylist.Name = "cbxPlaylist";
+            this.cbxPlaylist.Size = new System.Drawing.Size(131, 21);
+            this.cbxPlaylist.TabIndex = 6;
+            // 
             // VidForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,12 +217,14 @@
         private System.Windows.Forms.Panel pnlDescription;
         private System.Windows.Forms.Label lblViews;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.Button btnSubscribes;
         private System.Windows.Forms.WebBrowser wbbDescription;
         private System.Windows.Forms.TextBox tbxChat;
         private System.Windows.Forms.Button btnSendMsg;
         private System.Windows.Forms.TextBox tbxSendMsg;
+        private System.Windows.Forms.Button btnAddPlaylist;
+        private System.Windows.Forms.ComboBox cbxPlaylist;
     }
 }

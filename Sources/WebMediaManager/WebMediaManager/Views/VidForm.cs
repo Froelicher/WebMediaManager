@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebMediaManager.Controllers;
@@ -61,6 +62,7 @@ namespace WebMediaManager.Views
         public VidForm(StreamingSite.SVideo video, Model model)
         {
             InitializeComponent();
+            Thread.Sleep(200);
             this.SiteController = new SitesController(this, model);
             this.ContainerController = new ContainersController(this, model);
             this.Video = video;
@@ -68,10 +70,14 @@ namespace WebMediaManager.Views
             this.wbbDescription.DocumentText = video.description;
             this.lblTitle.Text = video.videoName;
             this.lblViews.Text = video.nbViews.ToString();
+            if (this.Video.live)
+            {
+                this.Chat = new IrcChat(this.tbxChat, this.SiteController.GetUserName(this.Video.siteName), this.SiteController.GetUserName(this.Video.siteName), this.SiteController.GetAccessToken(this.Video.siteName), this.Video);
+                this.Chat.ConnectIrc();
+            }
 
-            this.Chat = new IrcChat(this.tbxChat, this.SiteController.GetUserName(this.Video.siteName), this.SiteController.GetUserName(this.Video.siteName), this.SiteController.GetAccessToken(this.Video.siteName), this.Video);
-            this.Chat.ConnectIrc();
             this.SetBtnSubscribe();
+            this.SetContainersList();
         }
 
         public void SetBtnSubscribe()
@@ -105,7 +111,10 @@ namespace WebMediaManager.Views
 
         private void VidForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Chat.Quit();
+            if(this.Video.live)
+                this.Chat.Quit();
+
+            this.Chat = null;
         }
 
         private void btnFollow(object sender, EventArgs e)
@@ -120,12 +129,43 @@ namespace WebMediaManager.Views
 
         private void SetContainersList()
         {
+           if (this.Video.live)
+           {
+               this.cbxCategory.Visible = false;
+               this.cbxPlaylist.Visible = false;
+               this.btnAddCategory.Visible = false;
+               this.btnAddPlaylist.Visible = false;
+           }
+           else
+           {
+               List<string> category = this.ContainerController.GetNamesCategory();
+               List<string> playlist = this.ContainerController.GetNamesPlaylist();
 
+               for (int i = 0; i < category.Count; i++)
+               {
+                   cbxCategory.Items.Add(category[i]);
+               }
+
+               for (int i = 0; i < playlist.Count; i++)
+               {
+                   cbxPlaylist.Items.Add(playlist[i]);
+               }
+           }
         }
 
         private void btnSubscribes_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            this.ContainerController.AddVideo(this.Video, this.cbxCategory.SelectedItem.ToString());
+        }
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            this.ContainerController.AddVideo(this.Video, this.cbxPlaylist.SelectedItem.ToString());
         }
     }
 }

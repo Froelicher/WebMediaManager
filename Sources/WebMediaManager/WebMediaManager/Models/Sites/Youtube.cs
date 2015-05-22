@@ -143,7 +143,7 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="request"></param>
         /// <returns>list of videos</returns>
-        public override List<SVideo> SearchVideos(string request)
+        public override List<SVideo> SearchVideos(string request, int limit)
         {
             throw new NotImplementedException();
         }

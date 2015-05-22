@@ -239,6 +239,25 @@ namespace WebMediaManager.Models
             }
         }
 
+        public void AddContainer(string name, bool t_playlist)
+        {
+            if(t_playlist)
+            {
+                Playlist playlist = new Playlist(name);
+                playlist.SetPathPlaylist();
+                if(playlist.AddContainer())
+                    this.ListContainer.Add(playlist);
+            }
+            else
+            {
+                Container category = new Container(name);
+                category.SetPathCategory();
+                if(category.AddContainer())
+                    this.ListContainer.Add(category);
+            }
+           
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -323,6 +342,55 @@ namespace WebMediaManager.Models
             }
 
             return null;
+        }
+
+        public List<StreamingSite.SVideo> SearchVideos(string request, int limit)
+        {
+            List<StreamingSite.SVideo> result = new List<StreamingSite.SVideo>();
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                List<StreamingSite.SVideo> listVideosSite = this.ListSite[i].SearchVideos(request, limit);
+
+                for (int j = 0; j < listVideosSite.Count; j++)
+                {
+                    result.Add(listVideosSite[j]);
+                }
+            }
+
+            return result;
+        }
+
+        public List<List<StreamingSite.SVideo>> GetVideosBySite(List<StreamingSite.SVideo> videos)
+        {
+            List<List<StreamingSite.SVideo>> result = null;
+            
+            if (videos.Count > 0)
+            {
+                result = new List<List<StreamingSite.SVideo>>();
+                result.Add(new List<StreamingSite.SVideo>());
+                result[0].Add(videos[0]);
+
+                for (int i = 0; i < videos.Count; i++)
+                {
+                    for (int j = 0; j < result.Count; j++)
+                    {
+                        if (videos[i].siteName == result[j][i].siteName)
+                        {
+                            result[j].Add(videos[i]);
+                        }
+                        else
+                        {
+                            result[j] = new List<StreamingSite.SVideo>();
+                            result[j].Add(videos[i]);
+                        }
+                    }
+                }
+
+                result[0].RemoveAt(0);
+                return result;
+            }
+
+            return result;
         }
     }
 }

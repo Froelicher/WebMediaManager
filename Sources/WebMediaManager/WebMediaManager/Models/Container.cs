@@ -62,19 +62,21 @@ namespace WebMediaManager.Models
         /// <summary>
         /// Add container in file
         /// </summary>
-        public void AddContainer()
+        public bool AddContainer()
         {
             if (File.Exists(this.FilePath))
             {
-                using(System.IO.StreamWriter file = new System.IO.StreamWriter(this.FilePath, true))
+                if (!CheckExistContainer())
                 {
-                    if (!CheckExistContainer())
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(this.FilePath, true))
                     {
                         file.WriteLine("[" + this.Name + "]");
                         file.WriteLine("link=");
                     }
+                    return true;
                 }
             }
+            return false;
         }
 
         /// <summary>

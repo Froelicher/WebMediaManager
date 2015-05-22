@@ -52,7 +52,7 @@ namespace WebMediaManager.Controllers
 
             for (int i = 0; i < this.Model.ListContainer.Count; i++)
             {
-                if(!Object.ReferenceEquals(test.GetType(), this.Model.ListContainer[i].GetType()))
+                if (!Object.ReferenceEquals(test.GetType(), this.Model.ListContainer[i].GetType()))
                 {
                     result.Add(this.Model.ListContainer[i].Name);
                 }
@@ -92,13 +92,29 @@ namespace WebMediaManager.Controllers
 
             for (int i = 0; i < this.Model.ListContainer.Count; i++)
             {
-                if(this.Model.ListContainer[i].Name == name)
+                if (this.Model.ListContainer[i].Name == name)
                 {
                     result = this.Model.ListContainer[i].ListVideos;
                 }
             }
 
             return result;
+        }
+
+        public void AddVideo(StreamingSite.SVideo video, string containerName)
+        {
+            for (int i = 0; i < this.Model.ListContainer.Count; i++)
+            {
+                if (containerName == this.Model.ListContainer[i].Name)
+                {
+                    this.Model.ListContainer[i].AddVideo(video);
+                }
+            }
+        }
+
+        public void AddContainer(string name, bool playlist)
+        {
+            this.Model.AddContainer(name, playlist);
         }
     }
 }

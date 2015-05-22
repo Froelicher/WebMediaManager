@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -113,7 +114,8 @@ namespace WebMediaManager.Models
             {
                 if (this.TbxChat != null && e.Message != "QUIT")
                 {
-                    this.TbxChat.Invoke(new MethodInvoker(delegate { BuildMessage(e.Message); }));
+                    if (this.TbxChat != null)
+                        this.TbxChat.Invoke(new MethodInvoker(delegate { BuildMessage(e.Message); }));
                 }
             }catch(ObjectDisposedException)
             { }
@@ -123,7 +125,8 @@ namespace WebMediaManager.Models
         {
             try
             {
-                this.TbxChat.Invoke(new MethodInvoker(delegate { this.TbxChat.AppendText("<" + e.PrivateMessage.User.Nick + ">" + " " + e.PrivateMessage.Message + "\n"); }));
+                if(this.TbxChat != null)
+                    this.TbxChat.Invoke(new MethodInvoker(delegate { this.TbxChat.AppendText("<" + e.PrivateMessage.User.Nick + ">" + " " + e.PrivateMessage.Message + "\n"); }));
             }
             catch (ObjectDisposedException)
             { }
@@ -133,7 +136,8 @@ namespace WebMediaManager.Models
         {
             try
             {
-                this.TbxChat.Invoke(new MethodInvoker(delegate { this.TbxChat.AppendText("Received topic for channel " + e.Channel.Name + ": " + e.Topic + "\n"); }));
+                if (this.TbxChat != null)
+                    this.TbxChat.Invoke(new MethodInvoker(delegate { this.TbxChat.AppendText("Received topic for channel " + e.Channel.Name + ": " + e.Topic + "\n"); }));
             }
             catch (ObjectDisposedException)
             { }
@@ -145,64 +149,69 @@ namespace WebMediaManager.Models
             this.User = new IrcUser(this.Username, this.Nickname, "oauth:" + this.Token);
             this.Client = new IrcClient(this.Video.url_irc, this.User);
 
-            this.Client.ConnectionComplete += (s, e) => this.Client.JoinChannel("#" + this.Video.channelName);
-
-            this.Client.NetworkError += (s, e) => this.NetWorkError(s,e);
-            this.Client.RawMessageRecieved += (s, e) => this.RawMessageRecieved(s, e);
-            this.Client.RawMessageSent += (s, e) => this.RawMessageSent(s, e);
-
-            this.Client.UserMessageRecieved += (s, e) =>
+            if (this.Client != null)
             {
-                if (e.PrivateMessage.Message.StartsWith(".join "))
+
+                this.Client.ConnectionComplete += (s, e) => this.Client.JoinChannel("#" + this.Video.channelName);
+
+                this.Client.NetworkError += (s, e) => this.NetWorkError(s, e);
+                this.Client.RawMessageRecieved += (s, e) => this.RawMessageRecieved(s, e);
+                this.Client.RawMessageSent += (s, e) => this.RawMessageSent(s, e);
+
+                this.Client.UserMessageRecieved += (s, e) =>
                 {
-                    this.Client.Channels.Join(e.PrivateMessage.Message.Substring(6));
-                }
-                else if (e.PrivateMessage.Message.StartsWith(".list "))
-                {
-                    var channel = this.Client.Channels[e.PrivateMessage.Message.Substring(6)];
-                    var list = channel.Users.Select(u => u.Nick).Aggregate((a, b) => a + "," + b);
-                    this.Client.SendMessage(list, e.PrivateMessage.User.Nick);
-                }
-                else if (e.PrivateMessage.Message.StartsWith(".whois "))
-                    this.Client.WhoIs(e.PrivateMessage.Message.Substring(7), null);
-                else if (e.PrivateMessage.Message.StartsWith(".raw "))
-                    this.Client.SendRawMessage(e.PrivateMessage.Message.Substring(5));
-                else if (e.PrivateMessage.Message.StartsWith(".mode "))
-                {
-                    var parts = e.PrivateMessage.Message.Split(' ');
-                    this.Client.ChangeMode(parts[1], parts[2]);
-                }
-                else if (e.PrivateMessage.Message.StartsWith(".topic "))
-                {
-                    string messageArgs = e.PrivateMessage.Message.Substring(7);
-                    if (messageArgs.Contains(" "))
+                    if (e.PrivateMessage.Message.StartsWith(".join "))
                     {
-                        string channel = messageArgs.Substring(0, messageArgs.IndexOf(" "));
-                        string topic = messageArgs.Substring(messageArgs.IndexOf(" ") + 1);
-                        this.Client.Channels[channel].SetTopic(topic);
+                        this.Client.Channels.Join(e.PrivateMessage.Message.Substring(6));
                     }
-                    else
+                    else if (e.PrivateMessage.Message.StartsWith(".list "))
                     {
-                        string channel = messageArgs.Substring(messageArgs.IndexOf("#"));
-                        this.Client.GetTopic(channel);
+                        var channel = this.Client.Channels[e.PrivateMessage.Message.Substring(6)];
+                        var list = channel.Users.Select(u => u.Nick).Aggregate((a, b) => a + "," + b);
+                        this.Client.SendMessage(list, e.PrivateMessage.User.Nick);
                     }
-                }
-            };
+                    else if (e.PrivateMessage.Message.StartsWith(".whois "))
+                        this.Client.WhoIs(e.PrivateMessage.Message.Substring(7), null);
+                    else if (e.PrivateMessage.Message.StartsWith(".raw "))
+                        this.Client.SendRawMessage(e.PrivateMessage.Message.Substring(5));
+                    else if (e.PrivateMessage.Message.StartsWith(".mode "))
+                    {
+                        var parts = e.PrivateMessage.Message.Split(' ');
+                        this.Client.ChangeMode(parts[1], parts[2]);
+                    }
+                    else if (e.PrivateMessage.Message.StartsWith(".topic "))
+                    {
+                        string messageArgs = e.PrivateMessage.Message.Substring(7);
+                        if (messageArgs.Contains(" "))
+                        {
+                            string channel = messageArgs.Substring(0, messageArgs.IndexOf(" "));
+                            string topic = messageArgs.Substring(messageArgs.IndexOf(" ") + 1);
+                            this.Client.Channels[channel].SetTopic(topic);
+                        }
+                        else
+                        {
+                            string channel = messageArgs.Substring(messageArgs.IndexOf("#"));
+                            this.Client.GetTopic(channel);
+                        }
+                    }
+                };
 
-            this.Client.ChannelMessageRecieved += (s, e) =>
-            {
-                this.ChannelMessageReceived(s, e);
-            };
-            this.Client.ChannelTopicReceived += (s, e) =>
-            {
-                this.ChannelTopicReceived(s, e);
-            };
+                this.Client.ChannelMessageRecieved += (s, e) =>
+                {
+                    this.ChannelMessageReceived(s, e);
+                };
+                this.Client.ChannelTopicReceived += (s, e) =>
+                {
+                    this.ChannelTopicReceived(s, e);
+                };
 
-            this.Client.ConnectAsync();
+                this.Client.ConnectAsync();
+            }
         }
 
         public void Quit()
         {
+            Thread.Sleep(100);
             this.Client.Quit();
             this.Client = null;
             this.TbxChat = null;

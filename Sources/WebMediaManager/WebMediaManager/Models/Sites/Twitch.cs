@@ -127,13 +127,22 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override string GetIdVideoByLink(string link)
         {
-            string checkSite = link.Substring(0, URL_SITE.Length);
-            string[] split = null;
             string result = null;
-            if (String.Compare(checkSite, URL_SITE) == 0)
+            if (link != "")
             {
-                split = link.Split('/');
-                result = split[4] + split[5];
+                string checkSite = link.Substring(0, URL_SITE.Length);
+                string[] split = null;
+                if (String.Compare(checkSite, URL_SITE) == 0)
+                {
+                    split = link.Split('/');
+                    if (split.Count() == 6)
+                        result = split[4] + split[5];
+                    else
+                        result = split[4];
+                }
+            }else
+            {
+                result = null;
             }
             return result;
         }
@@ -220,9 +229,9 @@ namespace WebMediaManager.Models.Sites
         /// </summary>
         /// <param name="request">request</param>
         /// <returns>video list</returns>
-        public override List<SVideo> SearchVideos(string request)
+        public override List<SVideo> SearchVideos(string request, int limit)
         {
-            SearchStreams searchStreams = Curl.Deserialize<SearchStreams>(Curl.SendRequest(URL_API + "search/streams?q=" + request, GET_METHOD, ACCEPT_HTTP_HEADER));
+            SearchStreams searchStreams = Curl.Deserialize<SearchStreams>(Curl.SendRequest(URL_API + "search/streams?q=" + request + "&limit="+limit.ToString(), GET_METHOD, ACCEPT_HTTP_HEADER));
 
             List<SVideo> listVideos = new List<SVideo>();
 

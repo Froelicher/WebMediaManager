@@ -87,5 +87,15 @@ namespace WebMediaManager.Controllers
                     this.Model.ListSite[i]. UnFollowChannel(channelName);
             }
         }
+
+        public List<StreamingSite.SVideo> SearchVideos(string request, int limit)
+        {
+            return this.Model.SearchVideos(request, limit);
+        }
+
+        public List<List<StreamingSite.SVideo>> GetVideosBySite(List<StreamingSite.SVideo> videos)
+        {
+            return this.Model.GetVideosBySite(videos);
+        }
     }
 }

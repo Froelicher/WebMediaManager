@@ -164,7 +164,7 @@ namespace WebMediaManager.Models
         /// </summary>
         /// <param name="request"></param>
         /// <returns>list of videos</returns>
-        public virtual List<SVideo> SearchVideos(string request)
+        public virtual List<SVideo> SearchVideos(string request, int limit)
         {
             throw new NotImplementedException();
         }
