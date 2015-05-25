@@ -160,7 +160,9 @@ namespace WebMediaManager.Controllers
             return result;
         }
 
-
-
+        public List<StreamingSite.SChannel> GetChannelFollowed()
+        {
+            return this.Model.GetChannelsFollowed();
+        }
     }
 }

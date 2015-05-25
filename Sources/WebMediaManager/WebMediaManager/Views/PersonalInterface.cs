@@ -127,7 +127,7 @@ namespace WebMediaManager
         {
             Label lblTitle = new Label();
             lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
-            lblTitle.Location = new Point(0, this.pnlLeftMid.Height);
+            lblTitle.Location = new Point(0, this.pnlLeftMid.Height + 2);
             lblTitle.Text = "Playlist";
 
             TextBox tbxPlaylist = new TextBox();
@@ -153,6 +153,8 @@ namespace WebMediaManager
             {
                 CreateLinkPlaylist(this.pnlLeftMid, namePlaylist[i], i, this.pnlContent);
             }
+
+            this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X, this.pnlLeftMid.Size.Height + this.pnlLeftMid.Location.Y);
         }
 
         private void DisplayLastVideos(Panel pnl)
@@ -224,7 +226,8 @@ namespace WebMediaManager
             }
         }
 
-        private void DisplaySubscribes()
+
+        private void DisplaySubscribes(string nameSite)
         {
             this.pnlLeftBot.Visible = true;
             this.pnlLeftBot.Controls.Clear();
@@ -234,7 +237,25 @@ namespace WebMediaManager
             lblTitle.Location = new Point(0, 0);
             lblTitle.Text = "Abonnements";
 
-            List<List<StreamingSite.SChannel>> channelsSort = this.SitesController.GetChannelsFollowedBySite(this.)
+            List<List<StreamingSite.SChannel>> channelsSort = this.SitesController.GetChannelsFollowedBySite(this.SitesController.GetChannelFollowed());
+
+            this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y);
+
+            if (channelsSort != null)
+            {
+                for (int i = 0; i < channelsSort.Count; i++)
+                {
+                    if (channelsSort[i][0].siteName == nameSite)
+                    {
+                        for (int j = 0; j < channelsSort[i].Count; j++)
+                        {
+                            Label lblChannel = new Label();
+                            lblChannel.Font = new Font("Arial", 9);
+                            lblChannel.Location = new Point(10, lblTitle.Size.Height + lblChannel.Location.Y);
+                        }
+                    }
+                }
+            }
         }
 
         private void DisplayHomePanel()
