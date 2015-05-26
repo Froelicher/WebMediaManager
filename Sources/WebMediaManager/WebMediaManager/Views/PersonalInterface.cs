@@ -84,9 +84,23 @@ namespace WebMediaManager
 
             for (int i = 0; i < nameSites.Length; i++)
 			{
-			    ViewUtils.CreateButtonSite(this.pnlLeftTop, nameSites[i], i);
+			    this.CreateButtonSite(nameSites[i], i);
                 this.pnlLeftMid.Location = new Point(this.pnlLeftMid.Location.X, this.pnlLeftMid.Location.Y + 25);
 			}
+        }
+
+        public Button CreateButtonSite(string nameSite, int index_btn)
+        {
+            Button btnSite = new Button();
+            btnSite.Size = new Size(this.pnlLeftTop.Width - 20, 25);
+            btnSite.Location = new Point(8, 30 * (index_btn));
+            btnSite.FlatStyle = FlatStyle.Flat;
+            btnSite.Text = nameSite;
+            btnSite.Click += (sender, e) => OnClickButtonSite(sender, e, nameSite);
+            this.pnlLeftTop.Controls.Add(btnSite);
+            if (index_btn != 0)
+                this.pnlLeftTop.Size = new Size(this.pnlLeftTop.Width, this.pnlLeftTop.Size.Height + 20);
+            return btnSite;
         }
 
         private void DisplayLinkCategory()
@@ -229,6 +243,8 @@ namespace WebMediaManager
 
         private void DisplaySubscribes(string nameSite)
         {
+            this.pnlLeftMid.Controls.Clear();
+            this.pnlLeftMid.Location = new Point(this.pnlLeftTop.Location.X, this.pnlLeftTop.Size.Height + this.pnlLeftTop.Location.Y);
             this.pnlLeftBot.Visible = true;
             this.pnlLeftBot.Controls.Clear();
             this.pnlLeftBot.Size = new Size(194, 45);
@@ -239,6 +255,7 @@ namespace WebMediaManager
 
             List<List<StreamingSite.SChannel>> channelsSort = this.SitesController.GetChannelsFollowedBySite(this.SitesController.GetChannelFollowed());
 
+            this.pnlLeftBot.Controls.Add(lblTitle);
             this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y);
 
             if (channelsSort != null)
@@ -251,7 +268,11 @@ namespace WebMediaManager
                         {
                             Label lblChannel = new Label();
                             lblChannel.Font = new Font("Arial", 9);
-                            lblChannel.Location = new Point(10, lblTitle.Size.Height + lblChannel.Location.Y);
+                            lblChannel.Text = channelsSort[i][j].channelName;
+                            lblChannel.Location = new Point(10, lblTitle.Size.Height + (lblChannel.Size.Height*j));
+
+                            this.pnlLeftBot.Controls.Add(lblChannel);
+                            this.pnlLeftBot.Size = new Size(this.pnlLeftBot.Size.Width, this.pnlLeftBot.Size.Height + lblChannel.Size.Height);
                         }
                     }
                 }
@@ -358,6 +379,12 @@ namespace WebMediaManager
         private void OnClickButtonHome(object sender, EventArgs e)
         {
             DisplayHomePanel();
+        }
+
+        private void OnClickButtonSite(object sender, EventArgs e, string nameSite)
+        {
+            this.DisplayOptionAccount();
+            this.DisplaySubscribes(nameSite);
         }
 
         private void OnClickAddContainer(object sender, EventArgs e, string name, bool playlist)

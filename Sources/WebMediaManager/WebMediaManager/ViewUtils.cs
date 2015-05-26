@@ -59,19 +59,6 @@ namespace WebMediaManager.Views
             return mainPanel;
         }
 
-        public static Button CreateButtonSite(Panel pnlSite, string nameSite, int index_btn)
-        {
-            Button btnSite = new Button();
-            btnSite.Size = new Size(pnlSite.Width-20, 25);
-            btnSite.Location = new Point(8, 30 * (index_btn));
-            btnSite.FlatStyle = FlatStyle.Flat;
-            btnSite.Text = nameSite;
-            pnlSite.Controls.Add(btnSite);
-            if(index_btn != 0)
-                pnlSite.Size = new Size(pnlSite.Width, pnlSite.Size.Height + 20);
-            return btnSite;
-        }
-
         private static void OnClickVideo(object sender, EventArgs e, StreamingSite.SVideo video, Model model)
         {
             CreateFormVideo(video, model);
