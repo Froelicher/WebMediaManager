@@ -292,8 +292,9 @@ namespace WebMediaManager
             lblTitle.Text = "Abonnements";
             lblTitle.AutoSize = true;
 
+            Console.WriteLine("Begin");
             List<StreamingSite.SChannel> channelsFollowed = this.SitesController.GetChannelFollowed();
-
+            Console.WriteLine("end");
             this.pnlLeftBot.Controls.Add(lblTitle);
             this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X + 5, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y + 10);
 

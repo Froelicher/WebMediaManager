@@ -340,6 +340,15 @@
 			\newpage
 	
 	\section{Interface homme-machine}
+		\subsection{Miniature}
+		
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.3\textwidth]{../img/Miniature.png}
+			\caption{Miniature}
+			\label{Miniature}
+		\end{figure}
+		
 		\subsection{Interface personnelle}
 		Si l'utilisateur de l'application n'est connecté à aucun compte, le contenu de cette interface ce désactive sauf la partie 1 qui permet à l'utilisateur de se connecter avec ses différents comptes.
 		\begin{figure}[h]
@@ -441,8 +450,23 @@
 		\subsection{SVideo \& SChannel}
 			J'ai crée des formats génériques pour les vidéos des différents services. En effet, c'est pour pouvoir traiter toutes les vidéos de la même manière et ainsi pouvoir par exemple afficher toutes les miniatures grâce à la même méthode.
 			
-			SVideo : Structure pour les vidéos\\
-			SChannel : Structure pour les chaînes (utilisateur)
+			SVideo : Structures pour les vidéos et vidéos en direct
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.4\textwidth]{../img/SVideo.png}
+				\caption{Structure SVideo}
+				\label{SVideo}
+			\end{figure}
+			
+			SChannel : Structure pour les chaînes
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.4\textwidth]{../img/SChannel.png}
+				\caption{Structure SChannel}
+				\label{SChanel}
+			\end{figure}
 	
 	\section{Conception}
 		\subsection{Modèle}
@@ -459,9 +483,42 @@
 			
 			Pour ajouter d'autres sites il faut juste créer une classe qui respecte la classe de base.
 	
+			\subsection{Catégorie et liste de lectures}
+			Pour différencier les catégories et les liste de lectures j'ai créer une classe de base \textit{Container} qui contient toute les méthodes concernant les deux types de containeur.
+			Étant donné que les liste de lectures sont des catégories avec une gestion de lecture en plus, j'ai crée une classe \textit{Playlist} qui contient uniquement les méthodes concernant les listes de lectures.
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.3\textwidth]{../img/Container.png}
+				\caption{Diagramme Container}
+				\label{Container}
+			\end{figure}
+		
+		
+	\subsection{Global}
+	
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=1\textwidth]{../img/Model.png}
+			\caption{Diagramme global}
+			\label{Global}
+		\end{figure}
+			
 	\section{Outil communautaire}
 		\subsection{IRC}
-		Comment j'ai mis en place un chat IRC
+		Le chat IRC a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
+		
+		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. 
+		
+		Ci-dessous les étapes d'une connexion à un chat IRC
+		
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{../img/IrcChat.png}
+			\caption{Étape de connexion à un chat IRC}
+			\label{IrcChat}
+		\end{figure}
+		
 		
 	
 	\section{Récupération des données}
@@ -490,8 +547,6 @@
 		\end{figure}
 		
 		Ci-dessus, un exemple de récupération de données sur le site Twitch. La ressource désignée est "https://api.twitch.tv/kraken/channel".\\
-		
-		
 		
 		Il y a plusieurs type de requêtes :
 		\begin{itemize}
@@ -539,6 +594,10 @@
 	
 	Le navigateur intégrer dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique mais l'utilisateur passe moins de temps à se connecter car les identifiants sont déjà enregistré, il suffit juste de cliquer sur un bouton pour valider la connexion.
 	
+	\section{Catégorie et liste de lecture}
+	 
+	
+	
 	\section{Notification}
 	
 	\begin{figure}[h]
@@ -551,7 +610,9 @@
 	\section{Affichage}
 		\subsection{Flux vidéo}
 		
+		
 		\subsection{Notification}
+		
 		
 	
 \chapter{Tests}

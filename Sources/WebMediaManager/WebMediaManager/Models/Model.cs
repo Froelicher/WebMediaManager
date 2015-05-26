@@ -362,18 +362,13 @@ namespace WebMediaManager.Models
 
         public List<StreamingSite.SChannel> GetChannelsFollowed()
         {
-            List<StreamingSite.SChannel> result = new List<StreamingSite.SChannel>();
+            List<StreamingSite.SChannel> listChannelsSite = null;
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                List<StreamingSite.SChannel> listChannelsSite = this.ListSite[i].GetChannelFollowed();
-
-                for (int j = 0; j < listChannelsSite.Count; j++)
-                {
-                    result.Add(listChannelsSite[j]);
-                }
+                listChannelsSite = this.ListSite[i].GetChannelFollowed();
             }
 
-            return result;
+            return listChannelsSite;
         }
 
 

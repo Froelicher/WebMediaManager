@@ -99,7 +99,7 @@ namespace WebMediaManager.Models
             { }
         }
 
-        private void RawMessageRecieved(object sender, RawMessageEventArgs e)
+        private void RawMessageReceived(object sender, RawMessageEventArgs e)
         {
             try{
                 if(this.TbxChat != null)
@@ -155,7 +155,7 @@ namespace WebMediaManager.Models
                 this.Client.ConnectionComplete += (s, e) => this.Client.JoinChannel("#" + this.Video.channelName);
 
                 this.Client.NetworkError += (s, e) => this.NetWorkError(s, e);
-                this.Client.RawMessageRecieved += (s, e) => this.RawMessageRecieved(s, e);
+                this.Client.RawMessageRecieved += (s, e) => this.RawMessageReceived(s, e);
                 this.Client.RawMessageSent += (s, e) => this.RawMessageSent(s, e);
 
                 this.Client.UserMessageRecieved += (s, e) =>
@@ -213,7 +213,7 @@ namespace WebMediaManager.Models
         {
             //Unsubscribes client from three chat events
             this.Client.NetworkError -= (s, e) => this.NetWorkError(s, e);
-            this.Client.RawMessageRecieved -= (s, e) => this.RawMessageRecieved(s, e);
+            this.Client.RawMessageRecieved -= (s, e) => this.RawMessageReceived(s, e);
             this.Client.RawMessageSent -= (s, e) => this.RawMessageSent(s, e);
 
             this.Client.Quit();
