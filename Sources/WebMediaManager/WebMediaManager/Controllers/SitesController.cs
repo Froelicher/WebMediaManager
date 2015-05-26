@@ -164,5 +164,47 @@ namespace WebMediaManager.Controllers
         {
             return this.Model.GetChannelsFollowed();
         }
+
+        public List<StreamingSite.SVideo> GetOnlineStreamBySite(string siteName)
+        {
+            List<StreamingSite.SVideo> allOnlineStreams = this.GetOnlineStreams();
+            List<StreamingSite.SVideo> result = new List<StreamingSite.SVideo>();
+
+            if (allOnlineStreams.Count > 0)
+            {
+                for (int i = 0; i < allOnlineStreams.Count; i++)
+                {
+                    if(allOnlineStreams[i].siteName == siteName)
+                    {
+                        result.Add(allOnlineStreams[i]);
+                    }
+                }
+
+                return result;
+            }
+
+            return null;
+        }
+
+        public List<StreamingSite.SVideo> GetLastVideosBySite(string siteName)
+        {
+            List<StreamingSite.SVideo> allLastVideos = this.GetLastVideos();
+            List<StreamingSite.SVideo> result = new List<StreamingSite.SVideo>();
+
+            if(allLastVideos.Count > 0)
+            {
+                for (int i = 0; i < allLastVideos.Count; i++)
+                {
+                    if(allLastVideos[i].siteName == siteName)
+                    {
+                        result.Add(allLastVideos[i]);
+                    }
+                }
+
+                return result;
+            }
+
+            return null;
+        }
     }
 }

@@ -211,7 +211,11 @@ namespace WebMediaManager.Models
 
         public void Quit()
         {
-            Thread.Sleep(100);
+            //Unsubscribes client from three chat events
+            this.Client.NetworkError -= (s, e) => this.NetWorkError(s, e);
+            this.Client.RawMessageRecieved -= (s, e) => this.RawMessageRecieved(s, e);
+            this.Client.RawMessageSent -= (s, e) => this.RawMessageSent(s, e);
+
             this.Client.Quit();
             this.Client = null;
             this.TbxChat = null;

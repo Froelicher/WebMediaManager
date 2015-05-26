@@ -78,6 +78,25 @@ namespace WebMediaManager
             }
         }
 
+        public void DisplayOnlineStreamsBySite(Panel pnl, string siteName)
+        {
+            List<StreamingSite.SVideo> onlineStreams = this.SitesController.GetOnlineStreamBySite(siteName);
+            int j = 0;
+            int counter_for_line = 0;
+
+            for (int i = 0; i < onlineStreams.Count; i++)
+            {
+                if (j % 4 == 0 && j != 0)
+                {
+                    j = 0;
+                    counter_for_line++;
+                    pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
+                }
+                ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line, this.Model);
+                j++;
+            }
+        }
+
         private void DisplayButtonsSite()
         {
             string[] nameSites = this.SitesController.GetNameSites();
@@ -105,6 +124,7 @@ namespace WebMediaManager
 
         private void DisplayLinkCategory()
         {
+            this.pnlLeftBot.Controls.Clear();
             this.pnlLeftMid.Controls.Clear();
             this.pnlLeftMid.Size = new Size(194, 45);
             Label lblTitle = new Label();
@@ -189,6 +209,24 @@ namespace WebMediaManager
             }
         }
 
+        private void DisplayLastVideosBySite(Panel pnl, string siteName)
+        {
+            List<StreamingSite.SVideo> lastVideos = this.SitesController.GetLastVideosBySite(siteName);
+            int j = 0;
+            int counter_for_line = 0;
+            for (int i = 0; i < lastVideos.Count; i++)
+            {
+                if (j % 4 == 0 && j != 0)
+                {
+                    j = 0;
+                    counter_for_line++;
+                    pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
+                }
+                ViewUtils.CreatePreview(pnl, lastVideos[i], j, counter_for_line, this.Model);
+                j++;
+            }
+        }
+
         private void DisplayResultSearch()
         {
             if (this.tbxSearch.Text != "")
@@ -243,41 +281,90 @@ namespace WebMediaManager
 
         private void DisplaySubscribes(string nameSite)
         {
-            this.pnlLeftMid.Controls.Clear();
-            this.pnlLeftMid.Location = new Point(this.pnlLeftTop.Location.X, this.pnlLeftTop.Size.Height + this.pnlLeftTop.Location.Y);
+            int j = 0;
+            this.pnlLeftMid.Location = new Point(this.pnlLeftTop.Location.X + 5, this.pnlLeftTop.Size.Height + this.pnlLeftTop.Location.Y);
             this.pnlLeftBot.Visible = true;
             this.pnlLeftBot.Controls.Clear();
-            this.pnlLeftBot.Size = new Size(194, 45);
+            this.pnlLeftBot.Size = new Size(185, 45);
             Label lblTitle = new Label();
             lblTitle.Font = new Font("Arial", 12, FontStyle.Bold);
             lblTitle.Location = new Point(0, 0);
             lblTitle.Text = "Abonnements";
+            lblTitle.AutoSize = true;
 
-            List<List<StreamingSite.SChannel>> channelsSort = this.SitesController.GetChannelsFollowedBySite(this.SitesController.GetChannelFollowed());
+            List<StreamingSite.SChannel> channelsFollowed = this.SitesController.GetChannelFollowed();
 
             this.pnlLeftBot.Controls.Add(lblTitle);
-            this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y);
+            this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X + 5, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y + 10);
 
-            if (channelsSort != null)
+            if (channelsFollowed != null)
             {
-                for (int i = 0; i < channelsSort.Count; i++)
+                for (int i = 0; i < channelsFollowed.Count; i++)
                 {
-                    if (channelsSort[i][0].siteName == nameSite)
+                    if (channelsFollowed[i].siteName == nameSite)
                     {
-                        for (int j = 0; j < channelsSort[i].Count; j++)
-                        {
                             Label lblChannel = new Label();
                             lblChannel.Font = new Font("Arial", 9);
-                            lblChannel.Text = channelsSort[i][j].channelName;
+                            lblChannel.Text = channelsFollowed[i].channelName;
                             lblChannel.Location = new Point(10, lblTitle.Size.Height + (lblChannel.Size.Height*j));
+                            lblChannel.MouseEnter += new EventHandler(MouseEnterLabel);
+                            lblChannel.MouseLeave += new EventHandler(MouseLeaveLabel);
+                            lblChannel.Click += (sender, e) => OnClickLabelContainer(sender, e);
 
                             this.pnlLeftBot.Controls.Add(lblChannel);
                             this.pnlLeftBot.Size = new Size(this.pnlLeftBot.Size.Width, this.pnlLeftBot.Size.Height + lblChannel.Size.Height);
-                        }
+                            j++;
                     }
                 }
             }
         }
+
+        private void DisplayChannel(string siteName)
+        {
+            this.pnlContent.Controls.Clear();
+            Panel pnlOnlineStreams = new Panel();
+        }
+
+        private void DisplaySitePanel(string siteName)
+        {
+            //TODO : Créer deux panels : Last videos et online stream
+            this.pnlContent.Controls.Clear();
+            Panel pnlOnlineStreams = new Panel();
+            Panel pnlLastVideos = new Panel();
+
+            Label lblOnline = new Label();
+            Label lblLast = new Label();
+
+            //STREAMS ONLINE
+            lblOnline.Text = "Online streams";
+            lblOnline.AutoSize = true;
+            lblOnline.Location = new Point(10, 10);
+            lblOnline.Font = new Font("Arial", 18, FontStyle.Bold);
+
+            pnlOnlineStreams.Location = new Point(10, lblOnline.Location.Y + lblOnline.Height + 10);
+            pnlOnlineStreams.Size = new Size(850, 200);
+
+            this.pnlContent.Controls.Add(lblOnline);
+            this.pnlContent.Controls.Add(pnlOnlineStreams);
+
+            DisplayOnlineStreamsBySite(pnlOnlineStreams, siteName);
+
+            //LAST VIDEO RELEASED
+            lblLast.Text = "Last videos";
+            lblLast.AutoSize = true;
+            lblLast.Location = new Point(10, pnlOnlineStreams.Size.Height + pnlOnlineStreams.Location.Y);
+            lblLast.Font = new Font("Arial", 18, FontStyle.Bold);
+
+            pnlLastVideos.Location = new Point(10, lblLast.Location.Y + lblLast.Size.Height + 10);
+            pnlLastVideos.Size = new Size(850, 200);
+
+            this.pnlContent.Controls.Add(lblLast);
+            this.pnlContent.Controls.Add(pnlLastVideos);
+
+            DisplayLastVideosBySite(pnlLastVideos, siteName);
+
+        }
+
 
         private void DisplayHomePanel()
         {
@@ -316,7 +403,6 @@ namespace WebMediaManager
             this.pnlContent.Controls.Add(pnlLastVideos);
 
             DisplayLastVideos(pnlLastVideos);
-
         }
 
         public void CreateButtonHome()
@@ -339,7 +425,7 @@ namespace WebMediaManager
             lblCategory.Location = new Point(10, (15 * index_cont) + 50);
             lblCategory.MouseEnter += new EventHandler(MouseEnterLabel);
             lblCategory.MouseLeave += new EventHandler(MouseLeaveLabel);
-            lblCategory.Click += (sender, e) => OnClickLabel(sender, e);
+            lblCategory.Click += (sender, e) => OnClickLabelContainer(sender, e);
             pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 16);
             pnlContainers.Controls.Add(lblCategory);
         }
@@ -353,7 +439,7 @@ namespace WebMediaManager
             lblPlaylist.Location = new Point(10, pnlContainers.Size.Height);
             lblPlaylist.MouseEnter += new EventHandler(MouseEnterLabel);
             lblPlaylist.MouseLeave += new EventHandler(MouseLeaveLabel);
-            lblPlaylist.Click += (sender, e) => OnClickLabel(sender, e);
+            lblPlaylist.Click += (sender, e) => OnClickLabelContainer(sender, e);
             pnlContainers.Size = new Size(pnlContainers.Size.Width, pnlContainers.Size.Height + 15);
             pnlContainers.Controls.Add(lblPlaylist);
         }
@@ -370,21 +456,32 @@ namespace WebMediaManager
             lbl.ForeColor = Color.Black;
         }
 
-        private void OnClickLabel(object sender, EventArgs e)
+        private void OnClickLabelContainer(object sender, EventArgs e)
         {
             Label lbl = sender as Label;
             CreateFullPanelVideos(lbl.Text);
         }
 
+        private void OnClickChannelFollowed(object sender, EventArgs e)
+        {
+            Label lbl = sender as Label;
+            this.DisplayChannel(lbl.Text);
+        }
+
         private void OnClickButtonHome(object sender, EventArgs e)
         {
+            this.pnlLeftBot.Visible = false;
+            DisplayLinkCategory();
+            DisplayLinkPlaylist();
             DisplayHomePanel();
         }
 
         private void OnClickButtonSite(object sender, EventArgs e, string nameSite)
         {
+            this.pnlLeftBot.Visible = true;
             this.DisplayOptionAccount();
             this.DisplaySubscribes(nameSite);
+            this.DisplaySitePanel(nameSite);
         }
 
         private void OnClickAddContainer(object sender, EventArgs e, string name, bool playlist)
@@ -450,15 +547,15 @@ namespace WebMediaManager
 
             CheckBox cbxNotif = new CheckBox();
             cbxNotif.Font = new Font("Arial", 9);
-            cbxNotif.Location = new Point(0, lblTitle.Size.Height);
+            cbxNotif.Location = new Point(10, lblTitle.Size.Height);
             cbxNotif.Text = "Notification";
 
             Label lblAccount = new Label();
             lblAccount.Font = new Font("Arial", 9);
-            lblAccount.Location = new Point(0, cbxNotif.Location.Y + cbxNotif.Size.Height);
+            lblAccount.Location = new Point(10, cbxNotif.Location.Y + cbxNotif.Size.Height);
             lblAccount.Text = "Account";
 
-            this.pnlLeftMid.Location = new Point(0, this.pnlLeftTop.Height);
+            this.pnlLeftMid.Location = new Point(5, this.pnlLeftTop.Height);
             this.pnlLeftMid.Size = new Size(this.pnlLeftMid.Size.Width, lblTitle.Size.Height + cbxNotif.Size.Height + lblAccount.Size.Height);
             this.pnlLeftMid.Controls.Add(lblTitle);
             this.pnlLeftMid.Controls.Add(cbxNotif);

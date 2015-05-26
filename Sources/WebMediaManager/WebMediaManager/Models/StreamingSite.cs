@@ -159,6 +159,16 @@ namespace WebMediaManager.Models
             throw new NotImplementedException();
         }
 
+        public virtual List<SVideo> GetVideosByChannel(string channelName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual List<SVideo> GetStreamsByChannel(string channelName)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Search videos
         /// </summary>

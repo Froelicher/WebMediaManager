@@ -52,7 +52,6 @@
             // 
             // pnlLeftMid
             // 
-            this.pnlLeftMid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlLeftMid.Location = new System.Drawing.Point(-1, 75);
             this.pnlLeftMid.Name = "pnlLeftMid";
             this.pnlLeftMid.Size = new System.Drawing.Size(191, 45);
@@ -106,7 +105,7 @@
             // 
             // pnlLeftBot
             // 
-            this.pnlLeftBot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLeftBot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlLeftBot.Location = new System.Drawing.Point(12, 133);
             this.pnlLeftBot.Name = "pnlLeftBot";
             this.pnlLeftBot.Size = new System.Drawing.Size(191, 45);
