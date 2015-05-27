@@ -7,22 +7,24 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces REST\relax }}{14}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Sch\IeC {\'e}ma OAuth2 : Droit implicite\relax }}{17}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Miniature\relax }}{18}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Interface personnel\relax }}{19}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Interface des sites\relax }}{20}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Interface d'une vid\IeC {\'e}o\relax }}{21}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Interface d'une cha\IeC {\^\i }ne / utilisateur\relax }}{22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Interface notification\relax }}{18}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Navigation de l'application\relax }}{18}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Interface personnel\relax }}{19}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Interface des sites\relax }}{20}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Interface d'une vid\IeC {\'e}o\relax }}{21}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Interface d'une cha\IeC {\^\i }ne / utilisateur\relax }}{22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Exemple de fichier INI\relax }}{23}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Structure SVideo\relax }}{24}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Structure SChannel\relax }}{24}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Diagramme StreamingSite\relax }}{25}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Diagramme Container\relax }}{25}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Diagramme global\relax }}{26}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces \IeC {\'E}tape de connexion \IeC {\`a} un chat IRC\relax }}{27}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Classes Twitch\relax }}{28}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Exemple de commande cURL\relax }}{28}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Authentification\relax }}{29}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Notification\relax }}{30}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Diagramme Container\relax }}{26}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Diagramme global\relax }}{27}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces \IeC {\'E}tape de connexion \IeC {\`a} un chat IRC\relax }}{28}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Classes Twitch\relax }}{29}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Exemple de commande cURL\relax }}{29}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Authentification\relax }}{31}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Notification\relax }}{33}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -126,7 +126,7 @@
 	PC + 2 écrans
 
 	\section{Inventaire des logiciels}
-	Visual Studio 2013 Professionnal
+	Visual Studio 2013 Professionnel
 	
 	\section{Délivrables (documents à restituer)}
 	\begin{itemize}
@@ -245,15 +245,17 @@
 		Lorsque un utilisateur suit un auteur de vidéo, il sera de toute façon notifié.
 		L'application donne la possibilité à l'utilisateur d'activé ou de désactiver les notifications.
 		
+		
+		
 	\section{API}
 	Les API des différents site permettent de faire des interrogations entre les bases de données et l'application.
 		\subsection{API REST}
-		Les API\footnote{Applciation Programming Interface} REST\footnote{Representational State Transfer} servent à accéder a une ressource par son URI grâce au protocole HTML pour procéder à diverses opérations : GET; POST; PUT; DELETE. \\		
+		Les API\footnote{Application Programming Interface} REST\footnote{Representational State Transfer} servent à accéder a une ressource par son URI grâce au protocole HTML pour procéder à diverses opérations : GET; POST; PUT; DELETE. \\		
 		Le format de représentation des données est libre, dans le cas des API que l'on utilise, le format est en JSON\footnote{JavaScript Object Notation}.
 		
 		\begin{figure}[h]
 			\center
-			\includegraphics[width=0.8\textwidth]{../img/rest.png}
+			\includegraphics[width=0.9\textwidth]{../img/rest.png}
 			\caption{REST}
 			\label{rest}
 		\end{figure}
@@ -297,7 +299,7 @@
 		Les commentaires servent à discuter avec d'autre personne sur la vidéo en question. Ils servent également à communiquer avec l'auteur de la vidéo.
 		Il n'y a pas de commentaire sur les diffusions de flux vidéo en direct.
 		
-		
+	\newpage
 	\section{Connexion}
 	Afin de se connecter aux différents services avec un compte personnel, ils utilisent le protocole OAuth2.
 		\subsection{OAuth2}
@@ -341,12 +343,31 @@
 	
 	\section{Interface homme-machine}
 		\subsection{Miniature}
+		Les miniatures des vidéos sont affiché sous cette forme
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.2\textwidth]{../img/Miniature.png}
+			\caption{Miniature}
+			\label{Miniature}
+		\end{figure}
+		
+		\subsection{Notification}
+		Les notifications sont affichée sous cette forme
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.4\textwidth]{../img/NotificationInterface.png}
+			\caption{Interface notification}
+			\label{notification}
+		\end{figure}
+		
+		\subsection{Navigation}
+		Les couleurs représentent les différentes fenêtres de l'application.
 		
 		\begin{figure}[h]
 			\center
-			\includegraphics[width=0.3\textwidth]{../img/Miniature.png}
-			\caption{Miniature}
-			\label{Miniature}
+			\includegraphics[width=0.8\textwidth]{../img/navigation.png}
+			\caption{Navigation de l'application}
+			\label{navigation}
 		\end{figure}
 		
 		\subsection{Interface personnelle}
@@ -405,8 +426,6 @@
 			\item \textit{Chat} ou espace commentaires
 			\item Nombre de vues de la vidéo
 		\end{enumerate}
-		
-		\subsection{Interface modification de compte}
 		
 		\newpage
 		
@@ -467,7 +486,8 @@
 				\caption{Structure SChannel}
 				\label{SChanel}
 			\end{figure}
-	
+			
+	\newpage
 	\section{Conception}
 		\subsection{Modèle}
 			\subsubsection{StreamingSite}
@@ -483,9 +503,13 @@
 			
 			Pour ajouter d'autres sites il faut juste créer une classe qui respecte la classe de base.
 	
+			TODO : Mettre une table de StreamingSite
+			
 			\subsection{Catégorie et liste de lectures}
 			Pour différencier les catégories et les liste de lectures j'ai créer une classe de base \textit{Container} qui contient toute les méthodes concernant les deux types de containeur.
 			Étant donné que les liste de lectures sont des catégories avec une gestion de lecture en plus, j'ai crée une classe \textit{Playlist} qui contient uniquement les méthodes concernant les listes de lectures.
+			
+			TODO : EXPLIQUER COMMENT JE RECUPERE UNE VIDEO DEPUIS UN LIEN
 			
 			\begin{figure}[h]
 				\center
@@ -504,6 +528,7 @@
 			\label{Global}
 		\end{figure}
 			
+	\newpage
 	\section{Outil communautaire}
 		\subsection{IRC}
 		Le chat IRC a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
@@ -518,9 +543,8 @@
 			\caption{Étape de connexion à un chat IRC}
 			\label{IrcChat}
 		\end{figure}
-		
-		
-	
+
+	\newpage
 	\section{Récupération des données}
 		\subsection{Classes structure}
 		Afin de récupérer les données reçues grâce aux API, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
@@ -535,6 +559,7 @@
 		\end{figure}
 		
 		Ci-dessus, les classes "structures" du site Twitch. Il y a une liste de classes pour chaque site intégré à l'application. On peut trouver les différentes classes "structures" dans la documentation des différentes API.
+		
 		
 		\subsection{Curl}
 		Client URL Request Library est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
@@ -559,22 +584,67 @@
 		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe fournie par le Framework .NET 4.5 \textbf{httpWebRequest}.\\		
 		J'ai créé une fonction qui permet de récupérer la réponse d'une requête HTML :
 		
-		TODO : Mettre code de la fonction
+		\begin{lstlisting}
+		        /// <summary>
+		        /// Send request and get response html
+		        /// </summary>
+		        /// <param name="urlRequest">request url</param>
+		        /// <param name="p_method">method to use</param>
+		        /// <param name="p_access_token">user access token</param>
+		        /// <param name="acceptHeader">the accept header html</param>
+		        /// <returns>HttpWebResponse</returns>
+		        public static Stream SendRequest(string urlRequest, string p_method, string p_access_token, string acceptHeader)
+		        {
+			        //Create a new http request
+			        var httpWebRequest = (HttpWebRequest)WebRequest.Create(urlRequest);
+			        
+			        //Init the http request
+			        httpWebRequest.ContentType = "application/json";
+			        httpWebRequest.Accept = acceptHeader;
+			        httpWebRequest.Method = p_method;
+			        httpWebRequest.Headers.Add("Authorization: OAuth " + p_access_token);
+			        
+			        if (p_method == "PUT")
+				        httpWebRequest.ContentLength = 0;
+			        
+			        //Create a http response
+			        Stream httpResponse = httpWebRequest.GetResponse().GetResponseStream();
+			        
+			        return httpResponse;
+		        }
+		\end{lstlisting}
 		
 		Il faut ensuite désérialiser cette réponse. Afin d’avoir une méthode qui renvoie le bon type suivant la ressource demandée, j’ai utilisé le type générique de C\#. C'est lors de l'appel de la méthode que l'on spécifie de quel type est la valeur de retour.
 		
-		TODO : Mettre code désérialisation 
+		\begin{lstlisting}
+		/// <summary>
+		/// Deserialize a http web response
+		/// </summary>
+		/// <typeparam name="T">Generic type</typeparam>
+		/// <param name="jsonContent">content json</param>
+		/// <returns>the object deserialized</returns>
+		public static T Deserialize<T>(Stream jsonContent)
+		{
+			var httpResponse = jsonContent;
+			
+			//Read the response
+			using (var streamReader = new StreamReader(httpResponse))
+			{
+				//Add to the generics variable the result
+				T answer = JsonConvert.DeserializeObject<T>(streamReader.ReadToEnd());
+				return answer;
+			}
+		}
+		\end{lstlisting}
 		
-	
+	\newpage
 	\section{Authentification}
-	L'authentification se fait grâce au protocole OAuth2[AJOUTER REFERENCE]. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.
-	
+	L'authentification se fait grâce au protocole OAuth2[AJOUTER REFERENCE]. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.\\
 	C'est pour cela que j'ai créé une classe permettant la connexion implicite ainsi que la connexion par autorisation de flux.
 	
 	\subsection{Générique}
 	Je rencontre un problème pour la connexion générique, en effet, afin de pouvoir utiliser le protocole OAuth2, il faut que j'utilise ASP.NET. 
-	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API.
-	
+	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API.\\
 	Je procède de cette manière :
 	
 			\begin{figure}[h]
@@ -587,18 +657,21 @@
 	
 	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter à son compte sur une application ainsi que de l'autoriser.
 	
+	TODO : EXPLIQUER EN DETAILS LA CREATION DURL + IMAGE ?
+	
 	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve en paramètre le jeton d'accès délivré par le serveur d'autorisation.
 
 	\subsection{Connexion automatique}
 	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le faits de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
 	
 	Le navigateur intégrer dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique mais l'utilisateur passe moins de temps à se connecter car les identifiants sont déjà enregistré, il suffit juste de cliquer sur un bouton pour valider la connexion.
-	
-	\section{Catégorie et liste de lecture}
-	 
-	
+
+	\newpage
 	
 	\section{Notification}
+	
+	Afin d'être notifié lorsqu'une vidéo sort ou lorsque une diffusion de flux vidéo en direct commence, je compare deux listes. La première contient les vidéos ACTUELLEMENT sorties et les diffusions en direct, la deuxième va récupérer depuis une requête la liste des vidéos sorties. \\
+	Chaque X secondes on compare les deux listes pour voir si il y a eu une vidéo qui est en plus dans la deuxième liste.
 	
 	\begin{figure}[h]
 		\center
@@ -607,17 +680,29 @@
 		\label{checkNotif}
 	\end{figure}
 	
+	\newpage
 	\section{Affichage}
 		\subsection{Flux vidéo}
+		Les flux vidéos sont affiché grâce au composant de base proposé par .NET : WebBrowser. En effet, tout les sites proposent un lien afin d'avoir uniquement le lecteur vidéo.
+		J'ai choisi cette solution car chaque lecteur est différent et ont donc certaine fonctionnalités le sont aussi.
 		
 		
 		\subsection{Notification}
+		Le composant externe "PopopNotifier" a été utilisé pour afficher un pop-up lorsqu’une nouvelle
+		diffusion commence. Ce composant vient du web : http://www.codeproject.com/Articles/
+		277584/Notification-Window.
 		
+		TODO : METTRE IMAGE
+		
+		Pour rendre le composant plus attrayant et adapté à mon interface homme-machine, j’ai modifié
+		certains éléments graphiques à l'interne du composant.
+		Les différentes informations affichées : Nom de la vidéo ; nom de la chaîne ; nombre de vues	
 		
 	
 \chapter{Tests}
 	\section{Tests fonctionnel}
 	\section{Tests unitaire}
+	
 \chapter{Conclusions}
 
 \chapter{Annexes}
