@@ -292,9 +292,8 @@ namespace WebMediaManager
             lblTitle.Text = "Abonnements";
             lblTitle.AutoSize = true;
 
-            Console.WriteLine("Begin");
             List<StreamingSite.SChannel> channelsFollowed = this.SitesController.GetChannelFollowed();
-            Console.WriteLine("end");
+
             this.pnlLeftBot.Controls.Add(lblTitle);
             this.pnlLeftBot.Location = new Point(this.pnlLeftBot.Location.X + 5, this.pnlLeftMid.Size.Height + pnlLeftMid.Location.Y + 10);
 
@@ -480,9 +479,18 @@ namespace WebMediaManager
         private void OnClickButtonSite(object sender, EventArgs e, string nameSite)
         {
             this.pnlLeftBot.Visible = true;
-            this.DisplayOptionAccount();
-            this.DisplaySubscribes(nameSite);
-            this.DisplaySitePanel(nameSite);
+
+            if(this.SitesController.SiteIsConnected(nameSite))
+            {
+                this.DisplayOptionAccount();
+                this.DisplaySubscribes(nameSite);
+                this.DisplaySitePanel(nameSite);
+            }
+            else
+            {
+                this.DisplayConnexionPage(nameSite);
+            }
+            
         }
 
         private void OnClickAddContainer(object sender, EventArgs e, string name, bool playlist)
@@ -561,6 +569,20 @@ namespace WebMediaManager
             this.pnlLeftMid.Controls.Add(lblTitle);
             this.pnlLeftMid.Controls.Add(cbxNotif);
             this.pnlLeftMid.Controls.Add(lblAccount);
+        }
+
+        private void DisplayConnexionPage(string siteName)
+        {
+            this.pnlContent.Controls.Clear();
+            this.DisplayButtonsSite();
+            this.DisplayLinkCategory();
+            this.DisplayLinkPlaylist();
+
+            WebBrowser connexionPage = new WebBrowser();
+            connexionPage.Dock = DockStyle.Fill;
+            connexionPage.Url = new Uri(this.SitesController.GetLinkConnexionPage(siteName));
+
+            this.pnlContent.Controls.Add(connexionPage);
         }
 
 

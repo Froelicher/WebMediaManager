@@ -92,7 +92,6 @@ namespace WebMediaManager.Models
         public StreamingSite()
         {
             this.ListLastVideos = new List<SVideo>();
-            this.Auth = new Authentification();
         }
 
         public virtual SVideo GetVideoById(string id)

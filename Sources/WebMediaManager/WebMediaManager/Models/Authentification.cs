@@ -9,13 +9,20 @@ namespace WebMediaManager.Models
 {
     class Authentification
     {
-        private const string REDIRECT_URI = "";
+        private const string REDIRECT_URI = "https://froelicher.github.io/WebMediaManager/WebSite/";
 
         private string[] _scopes;
         private string _url_auth;
         private string _client_id;
         private string _client_secret;
         private string _access_token;
+        private bool _isConnected;
+
+        public bool IsConnected
+        {
+            get { return _isConnected; }
+            set { _isConnected = value; }
+        }
 
         public string Access_token
         {
@@ -49,7 +56,7 @@ namespace WebMediaManager.Models
 
         public Authentification()
         {
-
+            this.IsConnected = false;
         }
 
         /// <summary>
@@ -107,6 +114,7 @@ namespace WebMediaManager.Models
                     }
                 }
             }
+            this.IsConnected = true;
             return result.ToString();
         }
 
@@ -131,10 +139,19 @@ namespace WebMediaManager.Models
             foreach(string value in array)
             {
                 builder.Append(value);
-                builder.Append(' ');
+                builder.Append('+');
             }
+
+            builder.Remove(builder.Length - 1, 1);
 
             return builder.ToString();
         }
+
+        public void timer_tick(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

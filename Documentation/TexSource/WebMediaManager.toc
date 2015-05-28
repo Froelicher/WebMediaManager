@@ -68,13 +68,12 @@
 \contentsline {subsection}{\numberline {6.4.2}Curl}{29}
 \contentsline {section}{\numberline {6.5}Authentification}{31}
 \contentsline {subsection}{\numberline {6.5.1}G\IeC {\'e}n\IeC {\'e}rique}{31}
-\contentsline {subsection}{\numberline {6.5.2}Connexion automatique}{31}
+\contentsline {subsection}{\numberline {6.5.2}Connexion automatique}{32}
 \contentsline {section}{\numberline {6.6}Notification}{33}
 \contentsline {section}{\numberline {6.7}Affichage}{34}
 \contentsline {subsection}{\numberline {6.7.1}Flux vid\IeC {\'e}o}{34}
-\contentsline {subsection}{\numberline {6.7.2}Authentification}{34}
-\contentsline {subsection}{\numberline {6.7.3}Chat IRC}{34}
-\contentsline {subsection}{\numberline {6.7.4}Notification}{34}
+\contentsline {subsection}{\numberline {6.7.2}Chat IRC}{34}
+\contentsline {subsection}{\numberline {6.7.3}Notification}{34}
 \contentsline {chapter}{\numberline {7}Tests}{35}
 \contentsline {section}{\numberline {7.1}Tests fonctionnel}{35}
 \contentsline {section}{\numberline {7.2}Tests unitaire}{35}

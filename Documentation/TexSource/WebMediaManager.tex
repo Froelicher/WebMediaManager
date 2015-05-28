@@ -525,6 +525,14 @@
 			\end{figure}
 		
 			\subsection{Authentification}
+			L'authentification se fait au niveau du site, elle est différente pour chaque site.
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.7\textwidth]{../img/authuml.png}
+				\caption{Authentification table uml}
+				\label{authuml}
+			\end{figure}
 			
 			
 	\newpage
@@ -543,8 +551,8 @@
 		Le chat IRC a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
 		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. \\
 		
-		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès qui permet de se connecter aux chats depuis l'extérieur.
-		Ci-dessous les étapes d'une connexion à un chat IRC
+		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès qui permet de se connecter aux chats depuis l'extérieur.\\
+		Ci-dessous les étapes d'une connexion à un chat IRC :
 		
 		\begin{figure}[h]
 			\center
@@ -592,7 +600,7 @@
 			\item DELETE
 		\end{itemize}
 		
-		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe fournie par le Framework .NET 4.5 \textbf{httpWebRequest}.\\		
+		En C\#, afin de récupérer les données d'une ressource, j'utilise la classe proposée par le Framework .NET 4.5 \textbf{httpWebRequest}.\\		
 		J'ai créé une fonction qui permet de récupérer la réponse d'une requête HTML :
 		
 		\begin{lstlisting}
@@ -667,9 +675,9 @@
 	
 	
 	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter à son compte sur une application ainsi que de l'autoriser.
-	
 	L'url de cette page Web est composée comme suit : \\
-	https://[url de l'api]/?response\_type=token\&client\_id="[id de l'application]\&redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"
+	
+	\textit{https://[url de l'api]?response\_type=token\&client\_id="[id de l'application]"\& redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"}\\
 	
 	Le client\_id est l'id que donne le service chez qui j'ai enregistrer mon application, il varie pour chaque site. 
 	La page de redirection sert uniquement à récupérer le jeton d'accès dans le lien, en effet si l'utilisateur saisi correctement ses identifiants il sera redirigé sur cette page. Il doit également accepter l'utilisation de son compte sur mon application.
@@ -694,13 +702,10 @@
 	\end{figure}
 	
 	\newpage
-	\section{Affichage}
+	\section{Affichage}	
 		\subsection{Flux vidéo}
 		Les flux vidéos sont affiché grâce au composant de base proposé par .NET : WebBrowser. En effet, tout les sites proposent un lien afin d'avoir uniquement le lecteur vidéo.
 		J'ai choisi cette solution car chaque lecteur est différent et ont donc certaine fonctionnalités le sont aussi.
-		
-		
-		\subsection{Authentification}
 		
 		\subsection{Chat IRC}
 		Comme dis plus haut, les messages du chat sont affichés dans un TextBox. Afin de pouvoir y afficher depuis un événements j'ai du créer un autre processus.

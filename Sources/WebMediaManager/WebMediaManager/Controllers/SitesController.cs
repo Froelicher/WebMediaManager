@@ -206,5 +206,32 @@ namespace WebMediaManager.Controllers
 
             return null;
         }
+
+
+        public string GetLinkConnexionPage(string siteName)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if(this.Model.ListSite[i].Name == siteName)
+                {
+                    return this.Model.ListSite[i].Auth.CreateUrlConnexion();
+                }
+            }
+
+            return null;
+        }
+
+        public bool SiteIsConnected(string siteName)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if(this.Model.ListSite[i].Name == siteName)
+                {
+                    return this.Model.ListSite[i].Auth.IsConnected;
+                }
+            }
+
+            return false;
+        }
     }
 }

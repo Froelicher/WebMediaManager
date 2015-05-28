@@ -13,7 +13,9 @@ namespace WebMediaManager.Models.Sites
         private const string GET_METHOD = "GET";
         private const string URL_API = "https://api.twitch.tv/kraken/";
         private const string URL_SITE = "http://www.twitch.tv/";
+        private const string URL_AUTH = "https://api.twitch.tv/kraken/oauth2/authorize";
         private const string ACCEPT_HTTP_HEADER = "application/vnd.twitchtv.v3+json";
+        private const string CLIENT_ID = "9jfbie2pedk3xzoj3s53268v7fb4zds";
         #endregion
 
 
@@ -26,6 +28,9 @@ namespace WebMediaManager.Models.Sites
             this.ListLastVideos = new List<SVideo>();
             this.ListChannelsFollowed = new List<SChannel>();
             this.Name = "Twitch";
+            string[] scopes = new string[3] {"user_read", "user_follows_edit", "chat_login" };
+            this.Auth = new Authentification(scopes, URL_AUTH, CLIENT_ID);
+
         }
 
         /// <summary>
