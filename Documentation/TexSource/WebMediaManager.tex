@@ -146,8 +146,6 @@
 	Réalisation des objectifs, mesurées selon la grille d'évaluation.
 
 \chapter{Étude d'opportunité}
-\newpage
-
 	\section{Introduction au projet}
 	Le but de ce projet est de réaliser une application permettant l'utilisation des différents services proposé par les sites de vidéos et de diffusion de flux vidéo en direct.
 		\subsection{Médias vidéo web}
@@ -466,8 +464,10 @@
 		
 		Pour plus de facilitée dans l'enregistrement des données, je crée deux fichiers INI : Category.ini et Playlist.ini
 			
+		\newpage
+		
 		\subsection{SVideo \& SChannel}
-			J'ai crée des formats génériques pour les vidéos des différents services. En effet, c'est pour pouvoir traiter toutes les vidéos de la même manière et ainsi pouvoir par exemple afficher toutes les miniatures grâce à la même méthode.
+			Afin d'avoir un type générique pour traiter les vidéos de touts les sites de la même manière, j'ai créé deux structures. Elles contiennent toutes les informations commune de touts sites.
 			
 			SVideo : Structures pour les vidéos et vidéos en direct
 			
@@ -502,15 +502,21 @@
 			\end{figure}
 			
 			Pour ajouter d'autres sites il faut juste créer une classe qui respecte la classe de base.
-	
-			TODO : Mettre une table de StreamingSite
+			Les méthodes commune à touts les sites sont virtuelles, en effet, étant donnée que pour chaque site les traitements ne sont pas les mêmes, il faut réécrire la méthode pour chaque site dans leurs classe respéctive.
+			
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=0.4\textwidth]{../img/streamingsiteuml.png}
+				\caption{StreamingSite table UML}
+				\label{streaming site uml}
+			\end{figure}
 			
 			\subsection{Catégorie et liste de lectures}
 			Pour différencier les catégories et les liste de lectures j'ai créer une classe de base \textit{Container} qui contient toute les méthodes concernant les deux types de containeur.
 			Étant donné que les liste de lectures sont des catégories avec une gestion de lecture en plus, j'ai crée une classe \textit{Playlist} qui contient uniquement les méthodes concernant les listes de lectures.
 			
-			TODO : EXPLIQUER COMMENT JE RECUPERE UNE VIDEO DEPUIS UN LIEN
-			
+			Les vidéos sont stockée sous forme de liens, cela me permet de reconnaître de quel site est la vidéo. Ainsi, je peux récupérer les informations d'une vidéo grâce à l'id de la vidéo qui se trouve dans son lien.
+				
 			\begin{figure}[h]
 				\center
 				\includegraphics[width=0.3\textwidth]{../img/Container.png}
@@ -518,7 +524,10 @@
 				\label{Container}
 			\end{figure}
 		
-		
+			\subsection{Authentification}
+			
+			
+	\newpage
 	\subsection{Global}
 	
 		\begin{figure}[h]
@@ -532,9 +541,9 @@
 	\section{Outil communautaire}
 		\subsection{IRC}
 		Le chat IRC a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
+		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. \\
 		
-		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. 
-		
+		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès qui permet de se connecter aux chats depuis l'extérieur.
 		Ci-dessous les étapes d'une connexion à un chat IRC
 		
 		\begin{figure}[h]
@@ -543,6 +552,8 @@
 			\caption{Étape de connexion à un chat IRC}
 			\label{IrcChat}
 		\end{figure}
+		
+		Les messages reçuent des événements sont affiché dans un TextBox.
 
 	\newpage
 	\section{Récupération des données}
@@ -560,7 +571,7 @@
 		
 		Ci-dessus, les classes "structures" du site Twitch. Il y a une liste de classes pour chaque site intégré à l'application. On peut trouver les différentes classes "structures" dans la documentation des différentes API.
 		
-		
+		\newpage
 		\subsection{Curl}
 		Client URL Request Library est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
 		
@@ -657,9 +668,11 @@
 	
 	La création de l'URL de connexion se fait par rapport au site sur lequel l'utilisateur veut se connecter. En effet, les services proposent une page Web permettant à un utilisateur de se connecter à son compte sur une application ainsi que de l'autoriser.
 	
-	TODO : EXPLIQUER EN DETAILS LA CREATION DURL + IMAGE ?
+	L'url de cette page Web est composée comme suit : \\
+	https://[url de l'api]/?response\_type=token\&client\_id="[id de l'application]\&redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"
 	
-	Une fois les identifiants saisie et l'autorisation d'utilisation du compte sur cette application accepté, la page web nous redirige vers un lien de redirection que nous avons spécifié auparavant. Dans ce lien, ce trouve en paramètre le jeton d'accès délivré par le serveur d'autorisation.
+	Le client\_id est l'id que donne le service chez qui j'ai enregistrer mon application, il varie pour chaque site. 
+	La page de redirection sert uniquement à récupérer le jeton d'accès dans le lien, en effet si l'utilisateur saisi correctement ses identifiants il sera redirigé sur cette page. Il doit également accepter l'utilisation de son compte sur mon application.
 
 	\subsection{Connexion automatique}
 	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le faits de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
@@ -685,6 +698,12 @@
 		\subsection{Flux vidéo}
 		Les flux vidéos sont affiché grâce au composant de base proposé par .NET : WebBrowser. En effet, tout les sites proposent un lien afin d'avoir uniquement le lecteur vidéo.
 		J'ai choisi cette solution car chaque lecteur est différent et ont donc certaine fonctionnalités le sont aussi.
+		
+		
+		\subsection{Authentification}
+		
+		\subsection{Chat IRC}
+		Comme dis plus haut, les messages du chat sont affichés dans un TextBox. Afin de pouvoir y afficher depuis un événements j'ai du créer un autre processus.
 		
 		
 		\subsection{Notification}

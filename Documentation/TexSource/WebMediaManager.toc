@@ -11,67 +11,70 @@
 \contentsline {section}{\numberline {3.7}D\IeC {\'e}livrables (documents \IeC {\`a} restituer)}{7}
 \contentsline {section}{\numberline {3.8}\IeC {\'E}l\IeC {\'e}ments mesurables (servant \IeC {\`a} l'\IeC {\'e}valuation)}{8}
 \contentsline {chapter}{\numberline {4}\IeC {\'E}tude d'opportunit\IeC {\'e}}{9}
-\contentsline {section}{\numberline {4.1}Introduction au projet}{10}
-\contentsline {subsection}{\numberline {4.1.1}M\IeC {\'e}dias vid\IeC {\'e}o web}{10}
-\contentsline {subsubsection}{Direct}{10}
+\contentsline {section}{\numberline {4.1}Introduction au projet}{9}
+\contentsline {subsection}{\numberline {4.1.1}M\IeC {\'e}dias vid\IeC {\'e}o web}{9}
+\contentsline {subsubsection}{Direct}{9}
 \contentsline {subsubsection}{Diff\IeC {\'e}r\IeC {\'e}}{10}
 \contentsline {subsection}{\numberline {4.1.2}Pourquoi avoir choisi ce sujet ?}{10}
-\contentsline {section}{\numberline {4.2}Analyse de l'existant}{11}
-\contentsline {subsection}{\numberline {4.2.1}Existant}{11}
-\contentsline {subsection}{\numberline {4.2.2}Critique de l'existant}{11}
-\contentsline {chapter}{\numberline {5}Analyse fonctionnelle}{12}
-\contentsline {section}{\numberline {5.1}Description du fonctionnement}{12}
-\contentsline {subsection}{\numberline {5.1.1}Fonctions des sites}{12}
-\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}rique}{12}
-\contentsline {subsubsection}{Diffusion en direct}{12}
-\contentsline {subsubsection}{Vid\IeC {\'e}o en diff\IeC {\'e}r\IeC {\'e}}{12}
-\contentsline {subsection}{\numberline {5.1.2}Gestion des cat\IeC {\'e}gories}{13}
-\contentsline {subsection}{\numberline {5.1.3}Gestion des listes de lecture}{13}
-\contentsline {subsection}{\numberline {5.1.4}Notifications}{13}
-\contentsline {section}{\numberline {5.2}API}{13}
-\contentsline {subsection}{\numberline {5.2.1}API REST}{13}
-\contentsline {section}{\numberline {5.3}Lecteur vid\IeC {\'e}o}{14}
-\contentsline {subsection}{\numberline {5.3.1}Flash player}{14}
-\contentsline {subsection}{\numberline {5.3.2}HTML5}{15}
-\contentsline {section}{\numberline {5.4}Outil communautaire}{15}
-\contentsline {subsection}{\numberline {5.4.1}Chat IRC}{15}
-\contentsline {subsection}{\numberline {5.4.2}Commentaires}{15}
-\contentsline {section}{\numberline {5.5}Connexion}{16}
-\contentsline {subsection}{\numberline {5.5.1}OAuth2}{16}
-\contentsline {subsubsection}{Token (jeton)}{16}
-\contentsline {subsubsection}{Scope (port\IeC {\'e}e)}{16}
-\contentsline {subsubsection}{Type d'autorisation}{16}
-\contentsline {section}{\numberline {5.6}Interface homme-machine}{18}
-\contentsline {subsection}{\numberline {5.6.1}Miniature}{18}
-\contentsline {subsection}{\numberline {5.6.2}Notification}{18}
-\contentsline {subsection}{\numberline {5.6.3}Navigation}{18}
-\contentsline {subsection}{\numberline {5.6.4}Interface personnelle}{19}
-\contentsline {subsection}{\numberline {5.6.5}Interface des sites}{20}
-\contentsline {subsection}{\numberline {5.6.6}Interface vid\IeC {\'e}o}{21}
-\contentsline {subsection}{\numberline {5.6.7}Interface d\IeC {\'e}tail d'un compte}{22}
-\contentsline {subsection}{\numberline {5.6.8}Interface de connexion}{22}
-\contentsline {chapter}{\numberline {6}Analyse organique}{23}
-\contentsline {section}{\numberline {6.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}}{23}
-\contentsline {subsection}{\numberline {6.1.1}Langage en environnement de d\IeC {\'e}veloppement}{23}
-\contentsline {subsection}{\numberline {6.1.2}Format des fichiers et enregistrements}{23}
+\contentsline {section}{\numberline {4.2}Analyse de l'existant}{10}
+\contentsline {subsection}{\numberline {4.2.1}Existant}{10}
+\contentsline {subsection}{\numberline {4.2.2}Critique de l'existant}{10}
+\contentsline {chapter}{\numberline {5}Analyse fonctionnelle}{11}
+\contentsline {section}{\numberline {5.1}Description du fonctionnement}{11}
+\contentsline {subsection}{\numberline {5.1.1}Fonctions des sites}{11}
+\contentsline {subsubsection}{G\IeC {\'e}n\IeC {\'e}rique}{11}
+\contentsline {subsubsection}{Diffusion en direct}{11}
+\contentsline {subsubsection}{Vid\IeC {\'e}o en diff\IeC {\'e}r\IeC {\'e}}{11}
+\contentsline {subsection}{\numberline {5.1.2}Gestion des cat\IeC {\'e}gories}{12}
+\contentsline {subsection}{\numberline {5.1.3}Gestion des listes de lecture}{12}
+\contentsline {subsection}{\numberline {5.1.4}Notifications}{12}
+\contentsline {section}{\numberline {5.2}API}{12}
+\contentsline {subsection}{\numberline {5.2.1}API REST}{12}
+\contentsline {section}{\numberline {5.3}Lecteur vid\IeC {\'e}o}{13}
+\contentsline {subsection}{\numberline {5.3.1}Flash player}{13}
+\contentsline {subsection}{\numberline {5.3.2}HTML5}{14}
+\contentsline {section}{\numberline {5.4}Outil communautaire}{14}
+\contentsline {subsection}{\numberline {5.4.1}Chat IRC}{14}
+\contentsline {subsection}{\numberline {5.4.2}Commentaires}{14}
+\contentsline {section}{\numberline {5.5}Connexion}{15}
+\contentsline {subsection}{\numberline {5.5.1}OAuth2}{15}
+\contentsline {subsubsection}{Token (jeton)}{15}
+\contentsline {subsubsection}{Scope (port\IeC {\'e}e)}{15}
+\contentsline {subsubsection}{Type d'autorisation}{15}
+\contentsline {section}{\numberline {5.6}Interface homme-machine}{17}
+\contentsline {subsection}{\numberline {5.6.1}Miniature}{17}
+\contentsline {subsection}{\numberline {5.6.2}Notification}{17}
+\contentsline {subsection}{\numberline {5.6.3}Navigation}{17}
+\contentsline {subsection}{\numberline {5.6.4}Interface personnelle}{18}
+\contentsline {subsection}{\numberline {5.6.5}Interface des sites}{19}
+\contentsline {subsection}{\numberline {5.6.6}Interface vid\IeC {\'e}o}{20}
+\contentsline {subsection}{\numberline {5.6.7}Interface d\IeC {\'e}tail d'un compte}{21}
+\contentsline {subsection}{\numberline {5.6.8}Interface de connexion}{21}
+\contentsline {chapter}{\numberline {6}Analyse organique}{22}
+\contentsline {section}{\numberline {6.1}G\IeC {\'e}n\IeC {\'e}ralit\IeC {\'e}}{22}
+\contentsline {subsection}{\numberline {6.1.1}Langage en environnement de d\IeC {\'e}veloppement}{22}
+\contentsline {subsection}{\numberline {6.1.2}Format des fichiers et enregistrements}{22}
 \contentsline {subsection}{\numberline {6.1.3}SVideo \& SChannel}{23}
-\contentsline {section}{\numberline {6.2}Conception}{25}
-\contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{25}
-\contentsline {subsubsection}{StreamingSite}{25}
+\contentsline {section}{\numberline {6.2}Conception}{24}
+\contentsline {subsection}{\numberline {6.2.1}Mod\IeC {\`e}le}{24}
+\contentsline {subsubsection}{StreamingSite}{24}
 \contentsline {subsection}{\numberline {6.2.2}Cat\IeC {\'e}gorie et liste de lectures}{25}
-\contentsline {subsection}{\numberline {6.2.3}Global}{25}
-\contentsline {section}{\numberline {6.3}Outil communautaire}{26}
-\contentsline {subsection}{\numberline {6.3.1}IRC}{26}
-\contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{27}
-\contentsline {subsection}{\numberline {6.4.1}Classes structure}{27}
-\contentsline {subsection}{\numberline {6.4.2}Curl}{27}
+\contentsline {subsection}{\numberline {6.2.3}Authentification}{25}
+\contentsline {subsection}{\numberline {6.2.4}Global}{26}
+\contentsline {section}{\numberline {6.3}Outil communautaire}{27}
+\contentsline {subsection}{\numberline {6.3.1}IRC}{27}
+\contentsline {section}{\numberline {6.4}R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{28}
+\contentsline {subsection}{\numberline {6.4.1}Classes structure}{28}
+\contentsline {subsection}{\numberline {6.4.2}Curl}{29}
 \contentsline {section}{\numberline {6.5}Authentification}{31}
 \contentsline {subsection}{\numberline {6.5.1}G\IeC {\'e}n\IeC {\'e}rique}{31}
 \contentsline {subsection}{\numberline {6.5.2}Connexion automatique}{31}
 \contentsline {section}{\numberline {6.6}Notification}{33}
 \contentsline {section}{\numberline {6.7}Affichage}{34}
 \contentsline {subsection}{\numberline {6.7.1}Flux vid\IeC {\'e}o}{34}
-\contentsline {subsection}{\numberline {6.7.2}Notification}{34}
+\contentsline {subsection}{\numberline {6.7.2}Authentification}{34}
+\contentsline {subsection}{\numberline {6.7.3}Chat IRC}{34}
+\contentsline {subsection}{\numberline {6.7.4}Notification}{34}
 \contentsline {chapter}{\numberline {7}Tests}{35}
 \contentsline {section}{\numberline {7.1}Tests fonctionnel}{35}
 \contentsline {section}{\numberline {7.2}Tests unitaire}{35}
