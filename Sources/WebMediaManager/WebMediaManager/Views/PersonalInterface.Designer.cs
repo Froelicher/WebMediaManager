@@ -37,6 +37,7 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.wbrConnexion = new System.Windows.Forms.WebBrowser();
             this.pnlLeftBot = new System.Windows.Forms.Panel();
+            this.Notif = new NotificationWindow.PopupNotifier();
             this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -124,6 +125,17 @@
             this.pnlLeftBot.TabIndex = 2;
             this.pnlLeftBot.Visible = false;
             // 
+            // Notif
+            // 
+            this.Notif.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.Notif.ContentText = null;
+            this.Notif.Delay = 10000;
+            this.Notif.Image = null;
+            this.Notif.OptionsMenu = null;
+            this.Notif.Size = new System.Drawing.Size(400, 100);
+            this.Notif.TitleFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Notif.TitleText = null;
+            // 
             // PersonalInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +169,7 @@
         private System.Windows.Forms.Panel pnlLeftTop;
         private System.Windows.Forms.Panel pnlLeftBot;
         private System.Windows.Forms.WebBrowser wbrConnexion;
+        private NotificationWindow.PopupNotifier Notif;
     }
 }
 

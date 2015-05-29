@@ -47,18 +47,26 @@ namespace WebMediaManager.Models
         /// <returns>HttpWebResponse</returns>
         public static Stream SendRequest(string urlRequest, string p_method, string acceptHeader)
         {
-            //Create a new http request
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(urlRequest);
+            try
+            {
+                //Create a new http request
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(urlRequest);
 
-            //Init the http request
-            httpWebRequest.ContentType = "application/json";
-            httpWebRequest.Accept = acceptHeader;
-            httpWebRequest.Method = p_method;
+                //Init the http request
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Accept = acceptHeader;
+                httpWebRequest.Method = p_method;
 
-            //Create a http response
-            var httpResponse = httpWebRequest.GetResponse().GetResponseStream();
+                //Create a http response
+                var httpResponse = httpWebRequest.GetResponse().GetResponseStream();
 
-            return httpResponse;
+                return httpResponse;
+            }
+            catch(Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message + " // " + e.Data);
+                return null;
+            }
         }
 
         /// <summary>
@@ -71,13 +79,18 @@ namespace WebMediaManager.Models
         {
             var httpResponse = jsonContent;
 
-            //Read the response
-            using (var streamReader = new StreamReader(httpResponse))
+            if (httpResponse != null)
             {
-                //Add to the generics variable the result
-                T answer = JsonConvert.DeserializeObject<T>(streamReader.ReadToEnd());
-                return answer;
+                //Read the response
+                using (var streamReader = new StreamReader(httpResponse))
+                {
+                    //Add to the generics variable the result
+                    T answer = JsonConvert.DeserializeObject<T>(streamReader.ReadToEnd());
+                    return answer;
+                }
             }
+
+            return default(T);
         }
 
         /// <summary>

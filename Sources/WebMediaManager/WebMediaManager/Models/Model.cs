@@ -39,6 +39,9 @@ namespace WebMediaManager.Models
             this.ListContainer = new List<Container>();
         }
 
+
+
+
         /// <summary>
         /// Get lasts videos of all site
         /// </summary>
@@ -48,10 +51,13 @@ namespace WebMediaManager.Models
             List<StreamingSite.SVideo> listLastVideos = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                this.ListSite[i].UpdateLastVideo();
-                for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
+                if (this.ListSite[i].Auth.IsConnected)
                 {
-                    listLastVideos.Add(this.ListSite[i].ListLastVideos[j]);
+                    this.ListSite[i].UpdateLastVideo();
+                    for (int j = 0; j < this.ListSite[i].ListLastVideos.Count; j++)
+                    {
+                        listLastVideos.Add(this.ListSite[i].ListLastVideos[j]);
+                    }
                 }
             }
 
@@ -67,13 +73,16 @@ namespace WebMediaManager.Models
             List<StreamingSite.SVideo> listLastStreams = new List<StreamingSite.SVideo>();
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                this.ListSite[i].UpdateOnlineStream();
-                if (this.ListSite[i].ListOnlineStreams != null)
+                if (this.ListSite[i].Auth.IsConnected)
                 {
-                    for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
+                    this.ListSite[i].UpdateOnlineStream();
+                    if (this.ListSite[i].ListOnlineStreams != null)
                     {
-                        if (this.ListSite[i].ListOnlineStreams[j].live)
-                            listLastStreams.Add(this.ListSite[i].ListOnlineStreams[j]);
+                        for (int j = 0; j < this.ListSite[i].ListOnlineStreams.Count; j++)
+                        {
+                            if (this.ListSite[i].ListOnlineStreams[j].live)
+                                listLastStreams.Add(this.ListSite[i].ListOnlineStreams[j]);
+                        }
                     }
                 }
             }
@@ -106,18 +115,7 @@ namespace WebMediaManager.Models
             Dailymotion dailymotion = new Dailymotion();
             Vimeo vimeo = new Vimeo();
             Twitch twitch = new Twitch();
-            twitch.Auth.Access_token = "uqig78npsebsa962nd47w39bjjigoa";
-            twitch.UserName = "grunghi";
-
-            twitch.UpdateOnlineStream();
-            twitch.UpdateChannelsFollowed();
-
-            //this.ListSite.Add(youtube);
             this.ListSite.Add(twitch);
-            /*
-            this.ListSite.Add(dailymotion);
-            this.ListSite.Add(vimeo);*/
-
         }
 
 
@@ -262,7 +260,7 @@ namespace WebMediaManager.Models
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<List<StreamingSite.SVideo>> CheckNotifications()
+        public List<List<StreamingSite.SVideo>> CheckNotificationsLastVideos()
         {
             List<List<StreamingSite.SVideo>> listDiff = new List<List<StreamingSite.SVideo>>();
 
@@ -299,12 +297,56 @@ namespace WebMediaManager.Models
                 {
                     this.ListSite[i].UpdateLastVideo();
                 }
-
                 listDiff.Add(diff);
             }
 
             return listDiff;
         }
+
+        public List<List<StreamingSite.SVideo>> CheckNotificationsOnlineStreams()
+        {
+            List<List<StreamingSite.SVideo>> listDiff = new List<List<StreamingSite.SVideo>>();
+
+            //for all site
+            for (int i = 0; i < this.ListSite.Count; i++)
+            {
+                List<StreamingSite.SVideo> diff = null;
+
+                if (this.ListSite[i].ListOnlineStreams != null)
+                {
+                    //create a new list with the current last videos
+                    List<StreamingSite.SVideo> oldLastVideo = new List<StreamingSite.SVideo>(this.ListSite[i].ListOnlineStreams);
+
+                    //Update the current list of last video
+                    this.ListSite[i].UpdateOnlineStream();
+
+                    //create a new list with the current last videos
+                    diff = new List<StreamingSite.SVideo>(this.ListSite[i].ListOnlineStreams);
+
+                    //Compare the two list
+                    for (int x = 0; x < this.ListSite[i].ListOnlineStreams.Count; x++)
+                    {
+                        for (int y = 0; y < oldLastVideo.Count; y++)
+                        {
+                            if (this.ListSite[i].ListOnlineStreams[x].id == oldLastVideo[y].id)
+                            {
+                                //remove if the current video is on the old list video
+                                diff.Remove(this.ListSite[i].ListOnlineStreams[x]);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    this.ListSite[i].UpdateOnlineStream();
+                }
+                listDiff.Add(diff);
+            }
+
+            return listDiff;
+        }
+
+
 
         public string[] GetNameSites()
         {
@@ -365,7 +407,8 @@ namespace WebMediaManager.Models
             List<StreamingSite.SChannel> listChannelsSite = null;
             for (int i = 0; i < this.ListSite.Count; i++)
             {
-                listChannelsSite = this.ListSite[i].GetChannelFollowed();
+                if(this.ListSite[i].Auth.IsConnected)
+                    listChannelsSite = this.ListSite[i].GetChannelFollowed();
             }
 
             return listChannelsSite;

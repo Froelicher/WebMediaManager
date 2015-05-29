@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using WebMediaManager.Controllers;
 using WebMediaManager.Models;
@@ -19,6 +23,13 @@ namespace WebMediaManager
         private SitesController _sitesController;
         private ContainersController _containersController;
         private Model _model;
+        private System.Timers.Timer _timerCheck;
+
+        public System.Timers.Timer TimerCheck
+        {
+            get { return _timerCheck; }
+            set { _timerCheck = value; }
+        }
 
         internal Model Model
         {
@@ -54,8 +65,95 @@ namespace WebMediaManager
             CreateButtonHome();
             DisplayHomePanel();
 
+            InitTimer();
+
             if (!this.pnlContent.Focused)
                 this.pnlContent.Focus();
+
+        }
+
+        private void InitTimer()
+        {
+            this.TimerCheck = new System.Timers.Timer();
+            this.TimerCheck.Enabled = true;
+            this.TimerCheck.Elapsed += new System.Timers.ElapsedEventHandler(OnTickCheck);
+            this.TimerCheck.Interval = 5000;
+        }
+
+        private void OnTickCheck(object sender, ElapsedEventArgs e)
+        {
+            if(this.SitesController.CountConnectedSite() > 0)
+            {
+                this.PopNotificationVideos();
+                this.PopNotificationStreams();
+            }
+        }
+
+        private void PopNotificationVideos()
+        {
+            List<List<StreamingSite.SVideo>> newVideos = this.SitesController.CheckNotificationsLastVideos();
+
+            for (int i = 0; i < newVideos.Count; i++)
+			{
+			    this.Invoke((MethodInvoker)delegate
+                {
+                    if (newVideos[i].Count > 0)
+                    {
+                        this.Notif.TitleText = newVideos[i][0].videoName;
+                        this.Notif.ContentText = newVideos[i][0].channelName + "\n" + newVideos[i][0].nbViews + "\n" + newVideos[i][0].siteName;
+                        this.Notif.ContentPadding = new Padding(1);
+                        this.Notif.TitlePadding = new Padding(1);
+
+                        WebClient wc = new WebClient();
+                        byte[] bytes = wc.DownloadData(newVideos[i][0].preview);
+                        MemoryStream ms = new MemoryStream(bytes);
+                        System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
+
+                        System.Drawing.Size sizeimg = new System.Drawing.Size(150, 82);
+
+                        this.Notif.Image = img;
+                        this.Notif.ImagePadding = new Padding(5);
+                        this.Notif.ImageSize = sizeimg;
+                        this.Notif.Click += (s, e) => { ViewUtils.CreateFormVideo(newVideos[i][0], this.Model); };
+                        this.Notif.Popup();
+                    }
+                }
+                );
+			}
+            
+       }
+
+        private void PopNotificationStreams()
+        {
+            List<List<StreamingSite.SVideo>> newVideos = this.SitesController.CheckNotificationsOnlineStreams();
+
+            for (int i = 0; i < newVideos.Count; i++)
+            {
+                this.Invoke((MethodInvoker)delegate
+                {
+                    if (newVideos[i].Count > 0)
+                    {
+                        this.Notif.TitleText = newVideos[i][0].videoName;
+                        this.Notif.ContentText = newVideos[i][0].channelName + "\n" + newVideos[i][0].nbViews + "\n" + newVideos[i][0].siteName;
+                        this.Notif.ContentPadding = new Padding(1);
+                        this.Notif.TitlePadding = new Padding(1);
+
+                        WebClient wc = new WebClient();
+                        byte[] bytes = wc.DownloadData(newVideos[i][0].preview);
+                        MemoryStream ms = new MemoryStream(bytes);
+                        System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
+
+                        System.Drawing.Size sizeimg = new System.Drawing.Size(150, 82);
+
+                        this.Notif.Image = img;
+                        this.Notif.ImagePadding = new Padding(5);
+                        this.Notif.ImageSize = sizeimg;
+                        this.Notif.Click += (s, e) => { ViewUtils.CreateFormVideo(newVideos[i][0], this.Model); };
+                        this.Notif.Popup();
+                    }
+                }
+                );
+            }
 
         }
 
@@ -329,6 +427,7 @@ namespace WebMediaManager
         {
             //TODO : Créer deux panels : Last videos et online stream
             this.pnlContent.Controls.Clear();
+
             Panel pnlOnlineStreams = new Panel();
             Panel pnlLastVideos = new Panel();
 
@@ -449,7 +548,7 @@ namespace WebMediaManager
             this.wbrConnexion.Navigated -= (s, ev) => this.OnChangeUrl(s, ev, nameSite);
             this.SitesController.Disconnect(nameSite);
             this.ClearCookies();
-            this.DisplayConnexionPage(nameSite);
+            this.wbrConnexion.AllowNavigation = false;
         }
 
         private void MouseEnterLabel(object sender, EventArgs e)
@@ -589,7 +688,9 @@ namespace WebMediaManager
 
         private void DisplayConnexionPage(string siteName)
         {
-            this.pnlContent.Controls.Clear(); 
+            this.pnlContent.Controls.Clear();
+            this.wbrConnexion.AllowNavigation = true;
+            this.wbrConnexion.Dock = DockStyle.Fill;
             this.wbrConnexion.Navigate(this.SitesController.GetLinkConnexionPage(siteName));
             this.pnlContent.Controls.Add(this.wbrConnexion);
         }
@@ -607,24 +708,15 @@ namespace WebMediaManager
                     this.DisplayOptionAccount(siteName);
                     this.DisplaySubscribes(siteName);
                 }
+
+                Console.WriteLine(this.wbrConnexion.Url);
             }
         }
 
         private void ClearCookies()
         {
-            string[] InterNetCache = System.IO.Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache));
-            foreach (string currentFile in InterNetCache)
-            {
-                try
-                {
-                    System.IO.File.Delete(currentFile);
-                }
+            this.wbrConnexion.Navigate("javascript:void((function(){var a,b,c,e,f;f=0;a=document.cookie.split('; ');for(e=0;e<a.length&&a[e];e++){f++;for(b='.'+location.host;b;b=b.replace(/^(?:%5C.|[^%5C.]+)/,'')){for(c=location.pathname;c;c=c.replace(/.$/,'')){document.cookie=(a[e]+'; domain='+b+'; path='+c+'; expires='+new Date((new Date()).getTime()-1e11).toGMTString());}}}})())");
 
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
         }
     }
 }

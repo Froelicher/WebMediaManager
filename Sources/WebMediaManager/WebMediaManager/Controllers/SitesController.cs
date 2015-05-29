@@ -260,5 +260,27 @@ namespace WebMediaManager.Controllers
                 }
             }
         }
+
+        public int CountConnectedSite()
+        {
+            int result = 0;
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if (this.Model.ListSite[i].Auth.IsConnected)
+                    result++;
+            }
+
+            return result;
+        }
+
+        public List<List<StreamingSite.SVideo>> CheckNotificationsLastVideos()
+        {
+            return this.Model.CheckNotificationsLastVideos();
+        }
+
+        public List<List<StreamingSite.SVideo>> CheckNotificationsOnlineStreams()
+        {
+            return this.Model.CheckNotificationsOnlineStreams();
+        }
     }
 }

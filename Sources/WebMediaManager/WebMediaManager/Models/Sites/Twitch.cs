@@ -218,7 +218,7 @@ namespace WebMediaManager.Models.Sites
         /// <returns></returns>
         public override List<SChannel> GetChannelFollowed()
         {
-            Follows channelFollowed = Curl.Deserialize<Follows>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels", GET_METHOD, ACCEPT_HTTP_HEADER));
+            Follows channelFollowed = Curl.Deserialize<Follows>(Curl.SendRequest(URL_API + "users/" + this.UserName + "/follows/channels", GET_METHOD, this.Auth.Access_token, ACCEPT_HTTP_HEADER));
 
             List<SChannel> listChannels = new List<SChannel>();
 
@@ -315,13 +315,18 @@ namespace WebMediaManager.Models.Sites
         {
             this.Auth.Access_token = access_token;
             this.Auth.IsConnected = true;
+            this.UpdateOnlineStream();
+            this.UpdateLastVideo();
+            Users user = Curl.Deserialize<Users>(Curl.SendRequest("https://api.twitch.tv/kraken/user", "GET", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+            this.UserName = user.name;
         }
 
         public override void Disconnect()
         {
-            Curl.Deserialize<AuthResponse>(Curl.SendRequest("https://api.twitch.tv/kraken/oauth2/authorization/"+this.Auth.Client_id, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+            //Curl.Deserialize<AuthResponse>(Curl.SendRequest("https://api.twitch.tv/kraken/oauth2/authorization/"+this.Auth.Client_id, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
             this.Auth.IsConnected = false;
             this.Auth.Access_token = "";
+            
         }
     }
 }
