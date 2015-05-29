@@ -371,6 +371,38 @@ namespace WebMediaManager.Models
             return listChannelsSite;
         }
 
+        /// <summary>
+        /// Get the access token in Url
+        /// </summary>
+        /// <returns></returns>
+        public string GetAccessTokenInUrl(string urlWithAccessToken)
+        {
+            bool inToken = false;
+            StringBuilder result = new StringBuilder();
 
+            for (int i = 0; i < urlWithAccessToken.Length; i++)
+            {
+                if (inToken)
+                {
+                    if (urlWithAccessToken[i] != '&')
+                    {
+                        result.Append(urlWithAccessToken[i]);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (urlWithAccessToken[i] == '=')
+                {
+                    inToken = true;
+                }
+            }
+            if (result.ToString() != "authorize")
+                return result.ToString();
+            else
+                return "";
+        }
     }
 }

@@ -180,7 +180,7 @@ namespace WebMediaManager.Models.Sites
         /// Connect to account
         /// </summary>
         /// <returns></returns>
-        public override bool Connect()
+        public override void Connect(string accessToken)
         {
             throw new NotImplementedException();
         }
@@ -189,7 +189,7 @@ namespace WebMediaManager.Models.Sites
         /// Disconnect the account
         /// </summary>
         /// <returns></returns>
-        public override bool Disconnect()
+        public override void Disconnect()
         {
             throw new NotImplementedException();
         }

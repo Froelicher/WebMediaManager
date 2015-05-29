@@ -210,7 +210,7 @@ namespace WebMediaManager.Models
         /// Connect to account
         /// </summary>
         /// <returns></returns>
-        public virtual bool Connect()
+        public virtual void Connect(string access_token)
         {
             throw new NotImplementedException();
         }
@@ -219,7 +219,7 @@ namespace WebMediaManager.Models
         /// Disconnect the account
         /// </summary>
         /// <returns></returns>
-        public virtual bool Disconnect()
+        public virtual void Disconnect()
         {
             throw new NotImplementedException();
         }

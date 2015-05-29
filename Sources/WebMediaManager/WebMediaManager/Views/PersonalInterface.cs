@@ -444,6 +444,14 @@ namespace WebMediaManager
             pnlContainers.Controls.Add(lblPlaylist);
         }
 
+        private void OnClickDisconnect(object sender, EventArgs e, string nameSite)
+        {
+            this.wbrConnexion.Navigated -= (s, ev) => this.OnChangeUrl(s, ev, nameSite);
+            this.SitesController.Disconnect(nameSite);
+            this.ClearCookies();
+            this.DisplayConnexionPage(nameSite);
+        }
+
         private void MouseEnterLabel(object sender, EventArgs e)
         {
             Label lbl = sender as Label;
@@ -482,12 +490,13 @@ namespace WebMediaManager
 
             if(this.SitesController.SiteIsConnected(nameSite))
             {
-                this.DisplayOptionAccount();
+                this.DisplayOptionAccount(nameSite);
                 this.DisplaySubscribes(nameSite);
                 this.DisplaySitePanel(nameSite);
             }
             else
             {
+                this.wbrConnexion.Navigated += (s, ev) => this.OnChangeUrl(s, ev, nameSite);
                 this.DisplayConnexionPage(nameSite);
             }
             
@@ -545,7 +554,7 @@ namespace WebMediaManager
             this.DisplayResultSearch();
         }
 
-        private void DisplayOptionAccount()
+        private void DisplayOptionAccount(string nameSite)
         {
             this.pnlLeftMid.Controls.Clear();
             this.pnlLeftMid.Size = new Size(194, 45);
@@ -564,27 +573,58 @@ namespace WebMediaManager
             lblAccount.Location = new Point(10, cbxNotif.Location.Y + cbxNotif.Size.Height);
             lblAccount.Text = "Account";
 
+            Label lblDisconnect = new Label();
+            lblDisconnect.Font = new Font("Arial", 9);
+            lblDisconnect.Location = new Point(10, lblAccount.Location.Y + lblAccount.Size.Height);
+            lblDisconnect.Text = "Disconnect";
+            lblDisconnect.Click += (s, e) => this.OnClickDisconnect(s, e, nameSite);
+
             this.pnlLeftMid.Location = new Point(5, this.pnlLeftTop.Height);
-            this.pnlLeftMid.Size = new Size(this.pnlLeftMid.Size.Width, lblTitle.Size.Height + cbxNotif.Size.Height + lblAccount.Size.Height);
+            this.pnlLeftMid.Size = new Size(this.pnlLeftMid.Size.Width, lblTitle.Size.Height + cbxNotif.Size.Height + lblAccount.Size.Height + lblDisconnect.Size.Height);
             this.pnlLeftMid.Controls.Add(lblTitle);
             this.pnlLeftMid.Controls.Add(cbxNotif);
             this.pnlLeftMid.Controls.Add(lblAccount);
+            this.pnlLeftMid.Controls.Add(lblDisconnect);
         }
 
         private void DisplayConnexionPage(string siteName)
         {
-            this.pnlContent.Controls.Clear();
-            this.DisplayButtonsSite();
-            this.DisplayLinkCategory();
-            this.DisplayLinkPlaylist();
-
-            WebBrowser connexionPage = new WebBrowser();
-            connexionPage.Dock = DockStyle.Fill;
-            connexionPage.Url = new Uri(this.SitesController.GetLinkConnexionPage(siteName));
-
-            this.pnlContent.Controls.Add(connexionPage);
+            this.pnlContent.Controls.Clear(); 
+            this.wbrConnexion.Navigate(this.SitesController.GetLinkConnexionPage(siteName));
+            this.pnlContent.Controls.Add(this.wbrConnexion);
         }
 
+        private void OnChangeUrl(object sender, WebBrowserNavigatedEventArgs e, string siteName)
+        {
+            if (this.wbrConnexion.Url != null)
+            {
+                string accessToken = this.SitesController.GetAccessTokenInUrl(this.wbrConnexion.Url.ToString());
 
+                if (accessToken != "")
+                {
+                    this.SitesController.Connect(accessToken, siteName);
+                    this.DisplaySitePanel(siteName);
+                    this.DisplayOptionAccount(siteName);
+                    this.DisplaySubscribes(siteName);
+                }
+            }
+        }
+
+        private void ClearCookies()
+        {
+            string[] InterNetCache = System.IO.Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache));
+            foreach (string currentFile in InterNetCache)
+            {
+                try
+                {
+                    System.IO.File.Delete(currentFile);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

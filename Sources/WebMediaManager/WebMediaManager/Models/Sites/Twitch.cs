@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebMediaManager.Structures;
 using WebMediaManager.Structures.STwitch;
 
 namespace WebMediaManager.Models.Sites
@@ -28,7 +29,7 @@ namespace WebMediaManager.Models.Sites
             this.ListLastVideos = new List<SVideo>();
             this.ListChannelsFollowed = new List<SChannel>();
             this.Name = "Twitch";
-            string[] scopes = new string[3] {"user_read", "user_follows_edit", "chat_login" };
+            string[] scopes = new string[4] {"user_read", "user_follows_edit", "chat_login", "channel_read"};
             this.Auth = new Authentification(scopes, URL_AUTH, CLIENT_ID);
 
         }
@@ -310,6 +311,17 @@ namespace WebMediaManager.Models.Sites
             return listVideos;
         }
 
+        public override void Connect(string access_token)
+        {
+            this.Auth.Access_token = access_token;
+            this.Auth.IsConnected = true;
+        }
 
+        public override void Disconnect()
+        {
+            Curl.Deserialize<AuthResponse>(Curl.SendRequest("https://api.twitch.tv/kraken/oauth2/authorization/"+this.Auth.Client_id, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));
+            this.Auth.IsConnected = false;
+            this.Auth.Access_token = "";
+        }
     }
 }

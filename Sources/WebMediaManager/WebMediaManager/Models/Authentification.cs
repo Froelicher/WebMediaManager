@@ -88,36 +88,6 @@ namespace WebMediaManager.Models
             return resultUrl;
         }
 
-         /// <summary>
-         /// Get the access token in Url
-         /// </summary>
-         /// <returns></returns>
-        public string GetAccessToken(string urlWithAccessToken)
-        {
-            bool inToken = false;
-            StringBuilder result = new StringBuilder();
-
-            for (int i = 0; i < urlWithAccessToken.Length; i++)
-            {
-                if(inToken)
-                {
-                    if(urlWithAccessToken[i] != '&')
-                    {
-                        result.Append(urlWithAccessToken[i]);
-                    }else{
-                        break;
-                    }
-
-                    if(urlWithAccessToken[i] == '=')
-                    {
-                        inToken = true;
-                    }
-                }
-            }
-            this.IsConnected = true;
-            return result.ToString();
-        }
-
         /// <summary>
         /// Get the code
         /// </summary>
@@ -146,12 +116,5 @@ namespace WebMediaManager.Models
 
             return builder.ToString();
         }
-
-        public void timer_tick(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

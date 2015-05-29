@@ -233,5 +233,32 @@ namespace WebMediaManager.Controllers
 
             return false;
         }
+
+        public string GetAccessTokenInUrl(string url)
+        {
+            return this.Model.GetAccessTokenInUrl(url);
+        }
+
+        public void Connect(string accessToken, string nameSite)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if (nameSite == this.Model.ListSite[i].Name)
+                {
+                    this.Model.ListSite[i].Connect(accessToken);
+                }
+            }
+        }
+
+        public void Disconnect(string nameSite)
+        {
+            for (int i = 0; i < this.Model.ListSite.Count; i++)
+            {
+                if (nameSite == this.Model.ListSite[i].Name)
+                {
+                    this.Model.ListSite[i].Disconnect();
+                }
+            }
+        }
     }
 }

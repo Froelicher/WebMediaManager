@@ -35,9 +35,11 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.wbrConnexion = new System.Windows.Forms.WebBrowser();
             this.pnlLeftBot = new System.Windows.Forms.Panel();
             this.pnlLeft.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -98,10 +100,20 @@
             // 
             this.pnlContent.AutoScroll = true;
             this.pnlContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContent.Controls.Add(this.wbrConnexion);
             this.pnlContent.Location = new System.Drawing.Point(202, 54);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(893, 659);
             this.pnlContent.TabIndex = 0;
+            // 
+            // wbrConnexion
+            // 
+            this.wbrConnexion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbrConnexion.Location = new System.Drawing.Point(0, 0);
+            this.wbrConnexion.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbrConnexion.Name = "wbrConnexion";
+            this.wbrConnexion.Size = new System.Drawing.Size(891, 657);
+            this.wbrConnexion.TabIndex = 0;
             // 
             // pnlLeftBot
             // 
@@ -129,6 +141,7 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.pnlContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -143,6 +156,7 @@
         private System.Windows.Forms.Panel pnlLeftMid;
         private System.Windows.Forms.Panel pnlLeftTop;
         private System.Windows.Forms.Panel pnlLeftBot;
+        private System.Windows.Forms.WebBrowser wbrConnexion;
     }
 }
 
