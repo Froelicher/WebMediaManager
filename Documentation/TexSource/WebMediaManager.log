@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  1 JUN 2015 14:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  1 JUN 2015 15:48
 entering extended mode
 **WebMediaManager.tex
 
@@ -1004,20 +1004,20 @@ File: lstlang1.sty 2014/09/06 1.5e listings language file
 ))
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1074,7 +1074,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box42
-Package hyperref Info: Link coloring OFF on input line 104.
+Package hyperref Info: Link coloring OFF on input line 109.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1084,37 +1084,37 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count167
 )
-LaTeX Info: Redefining \ref on input line 104.
-LaTeX Info: Redefining \pageref on input line 104.
-LaTeX Info: Redefining \nameref on input line 104.
+LaTeX Info: Redefining \ref on input line 109.
+LaTeX Info: Redefining \pageref on input line 109.
+LaTeX Info: Redefining \nameref on input line 109.
 
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.out)
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.out)
 \@outlinefile=\write4
-LaTeX Info: Redefining \degres on input line 104.
+LaTeX Info: Redefining \degres on input line 109.
 
 
 Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
 (frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 104.
+(frenchb.ldf)                reported on input line 109.
 
-LaTeX Info: Redefining \dots on input line 104.
-LaTeX Info: Redefining \up on input line 104.
+LaTeX Info: Redefining \dots on input line 109.
+LaTeX Info: Redefining \up on input line 109.
 \c@lstlisting=\count168
-<../img/logoWebMediaManager.png, id=326, 602.25pt x 602.25pt>
+<../img/logoWebMediaManager.png, id=330, 602.25pt x 602.25pt>
 File: ../img/logoWebMediaManager.png Graphic file (type png)
 
 <use ../img/logoWebMediaManager.png>
-Package pdftex.def Info: ../img/logoWebMediaManager.png used on input line 105.
+Package pdftex.def Info: ../img/logoWebMediaManager.png used on input line 110.
 
 (pdftex.def)             Requested size: 376.42575pt x 376.44208pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Froelicher/Docum
 ents/GitHub/WebMediaManager/Documentation/img/logoWebMediaManager.png>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 110.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 115.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
@@ -1156,52 +1156,57 @@ Chapitre 3.
 Chapitre 4.
 [11
 
-] [12] <../img/rest.png, id=481, 816.04875pt x 427.5975pt>
+] [12] <../img/rest.png, id=486, 816.04875pt x 427.5975pt>
 File: ../img/rest.png Graphic file (type png)
 
 <use ../img/rest.png>
-Package pdftex.def Info: ../img/rest.png used on input line 310.
+Package pdftex.def Info: ../img/rest.png used on input line 315.
 (pdftex.def)             Requested size: 376.42575pt x 197.23877pt.
- [13 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/re
-st.png>] [14] [15]
-<../img/SchemaOAuth2.png, id=516, 493.845pt x 409.53pt>
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 324.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [13 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/r
+est.png>] [14]
+[15] <../img/SchemaOAuth2.png, id=526, 493.845pt x 409.53pt>
 File: ../img/SchemaOAuth2.png Graphic file (type png)
 
 <use ../img/SchemaOAuth2.png>
-Package pdftex.def Info: ../img/SchemaOAuth2.png used on input line 392.
+Package pdftex.def Info: ../img/SchemaOAuth2.png used on input line 397.
 (pdftex.def)             Requested size: 418.25368pt x 346.83986pt.
  [16 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Sc
 hemaOAuth2.png>]
-<../img/Miniature.png, id=523, 175.40532pt x 184.43906pt>
+<../img/Miniature.png, id=533, 175.40532pt x 184.43906pt>
 File: ../img/Miniature.png Graphic file (type png)
 
 <use ../img/Miniature.png>
-Package pdftex.def Info: ../img/Miniature.png used on input line 404.
+Package pdftex.def Info: ../img/Miniature.png used on input line 409.
 (pdftex.def)             Requested size: 83.64944pt x 87.95842pt.
 
-<../img/NotificationInterface.png, id=525, 322.95656pt x 129.48375pt>
+<../img/NotificationInterface.png, id=535, 322.95656pt x 129.48375pt>
 File: ../img/NotificationInterface.png Graphic file (type png)
 
 <use ../img/NotificationInterface.png>
 Package pdftex.def Info: ../img/NotificationInterface.png used on input line 41
-3.
+8.
 (pdftex.def)             Requested size: 167.2989pt x 67.07507pt.
  [17 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Mi
 niature.png> <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentatio
 n/img/NotificationInterface.png>]
-<../img/navigation.png, id=535, 616.3025pt x 508.90125pt>
+<../img/navigation.png, id=545, 616.3025pt x 508.90125pt>
 File: ../img/navigation.png Graphic file (type png)
 
 <use ../img/navigation.png>
-Package pdftex.def Info: ../img/navigation.png used on input line 424.
+Package pdftex.def Info: ../img/navigation.png used on input line 429.
 (pdftex.def)             Requested size: 334.60422pt x 276.30127pt.
 
-<../img/personnalInterfacenum.png, id=537, 703.87968pt x 509.65407pt>
+<../img/personnalInterfacenum.png, id=547, 703.87968pt x 509.65407pt>
 File: ../img/personnalInterfacenum.png Graphic file (type png)
 
 <use ../img/personnalInterfacenum.png>
 Package pdftex.def Info: ../img/personnalInterfacenum.png used on input line 43
-3.
+8.
 (pdftex.def)             Requested size: 418.25368pt x 302.83965pt.
 
 
@@ -1209,11 +1214,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [18 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/nav
 igation.png>]
-<../img/serviceInterfacenum.png, id=551, 719.68875pt x 418.56375pt>
+<../img/serviceInterfacenum.png, id=561, 719.68875pt x 418.56375pt>
 File: ../img/serviceInterfacenum.png Graphic file (type png)
 
 <use ../img/serviceInterfacenum.png>
-Package pdftex.def Info: ../img/serviceInterfacenum.png used on input line 452.
+Package pdftex.def Info: ../img/serviceInterfacenum.png used on input line 457.
 
 (pdftex.def)             Requested size: 418.25368pt x 243.25891pt.
 
@@ -1222,11 +1227,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/per
 sonnalInterfacenum.png>]
-<../img/videoInterfacenum.png, id=565, 743.77875pt x 544.28343pt>
+<../img/videoInterfacenum.png, id=575, 743.77875pt x 544.28343pt>
 File: ../img/videoInterfacenum.png Graphic file (type png)
 
 <use ../img/videoInterfacenum.png>
-Package pdftex.def Info: ../img/videoInterfacenum.png used on input line 471.
+Package pdftex.def Info: ../img/videoInterfacenum.png used on input line 476.
 (pdftex.def)             Requested size: 418.25368pt x 306.07562pt.
 
 
@@ -1234,11 +1239,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [20 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/ser
 viceInterfacenum.png>]
-<../img/channelInterfacenum.png, id=581, 731.73375pt x 552.56438pt>
+<../img/channelInterfacenum.png, id=591, 731.73375pt x 552.56438pt>
 File: ../img/channelInterfacenum.png Graphic file (type png)
 
 <use ../img/channelInterfacenum.png>
-Package pdftex.def Info: ../img/channelInterfacenum.png used on input line 492.
+Package pdftex.def Info: ../img/channelInterfacenum.png used on input line 497.
 
 (pdftex.def)             Requested size: 418.25368pt x 315.84183pt.
 
@@ -1247,11 +1252,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/vid
 eoInterfacenum.png>]
-<../img/connexionInterface.png, id=594, 631.60968pt x 490.83376pt>
+<../img/connexionInterface.png, id=604, 631.60968pt x 490.83376pt>
 File: ../img/connexionInterface.png Graphic file (type png)
 
 <use ../img/connexionInterface.png>
-Package pdftex.def Info: ../img/connexionInterface.png used on input line 509.
+Package pdftex.def Info: ../img/connexionInterface.png used on input line 514.
 (pdftex.def)             Requested size: 418.25368pt x 325.03725pt.
 
 
@@ -1261,166 +1266,161 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 nnelInterfacenum.png>] [23 <C:/Users/Froelicher/Documents/GitHub/WebMediaManage
 r/Documentation/img/connexionInterface.png>]
 Chapitre 5.
-<../img/inifile.png, id=607, 328.22626pt x 77.53969pt>
+<../img/inifile.png, id=617, 328.22626pt x 77.53969pt>
 File: ../img/inifile.png Graphic file (type png)
 
 <use ../img/inifile.png>
-Package pdftex.def Info: ../img/inifile.png used on input line 526.
+Package pdftex.def Info: ../img/inifile.png used on input line 531.
 (pdftex.def)             Requested size: 292.77629pt x 69.16626pt.
  [24
 
  <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/inifil
 e.png>]
-<../img/SVideo.png, id=616, 187.45032pt x 196.48407pt>
+<../img/SVideo.png, id=626, 187.45032pt x 196.48407pt>
 File: ../img/SVideo.png Graphic file (type png)
  <use ../img/SVideo.png>
-Package pdftex.def Info: ../img/SVideo.png used on input line 542.
+Package pdftex.def Info: ../img/SVideo.png used on input line 547.
 (pdftex.def)             Requested size: 167.2989pt x 175.37094pt.
 
-<../img/SChannel.png, id=618, 171.64125pt x 147.55125pt>
+<../img/SChannel.png, id=628, 171.64125pt x 147.55125pt>
 File: ../img/SChannel.png Graphic file (type png)
 
 <use ../img/SChannel.png>
-Package pdftex.def Info: ../img/SChannel.png used on input line 551.
+Package pdftex.def Info: ../img/SChannel.png used on input line 556.
 (pdftex.def)             Requested size: 167.2989pt x 143.81796pt.
  [25 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/SV
 ideo.png> <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/i
 mg/SChannel.png>]
-<../img/streamingsiteuml.png, id=629, 363.3575pt x 428.60126pt>
+<../img/streamingsiteuml.png, id=639, 363.3575pt x 428.60126pt>
 File: ../img/streamingsiteuml.png Graphic file (type png)
 
 <use ../img/streamingsiteuml.png>
-Package pdftex.def Info: ../img/streamingsiteuml.png used on input line 565.
+Package pdftex.def Info: ../img/streamingsiteuml.png used on input line 570.
 (pdftex.def)             Requested size: 167.2989pt x 197.34209pt.
 
-<../img/StreamingSite.png, id=631, 574.145pt x 164.615pt>
+<../img/StreamingSite.png, id=641, 574.145pt x 164.615pt>
 File: ../img/StreamingSite.png Graphic file (type png)
 
 <use ../img/StreamingSite.png>
-Package pdftex.def Info: ../img/StreamingSite.png used on input line 575.
+Package pdftex.def Info: ../img/StreamingSite.png used on input line 580.
 (pdftex.def)             Requested size: 418.25368pt x 119.92178pt.
  [26 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/st
 reamingsiteuml.png> <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Docum
 entation/img/StreamingSite.png>]
-<../img/Container.png, id=643, 232.87pt x 465.74pt>
+<../img/Container.png, id=653, 232.87pt x 465.74pt>
 File: ../img/Container.png Graphic file (type png)
  <use ../img/Container.png>
-Package pdftex.def Info: ../img/Container.png used on input line 588.
+Package pdftex.def Info: ../img/Container.png used on input line 593.
 (pdftex.def)             Requested size: 125.47737pt x 250.95575pt.
 
 [27 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Con
-tainer.png>] <../img/authuml.png, id=652, 523.9575pt x 368.37625pt>
+tainer.png>] <../img/authuml.png, id=662, 523.9575pt x 368.37625pt>
 File: ../img/authuml.png Graphic file (type png)
 
 <use ../img/authuml.png>
-Package pdftex.def Info: ../img/authuml.png used on input line 600.
+Package pdftex.def Info: ../img/authuml.png used on input line 605.
 (pdftex.def)             Requested size: 292.77629pt x 205.84523pt.
  [28 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/au
 thuml.png>]
-<../img/Model.png, id=660, 520.94624pt x 403.5075pt>
+<../img/Model.png, id=670, 520.94624pt x 403.5075pt>
 File: ../img/Model.png Graphic file (type png)
  <use ../img/Model.png>
-Package pdftex.def Info: ../img/Model.png used on input line 611.
+Package pdftex.def Info: ../img/Model.png used on input line 616.
 (pdftex.def)             Requested size: 418.25368pt x 323.96396pt.
 
 [29 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Mod
 el.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 620--622
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
 
  []
 
-<../img/IrcChat.png, id=670, 541.02126pt x 351.3125pt>
+<../img/IrcChat.png, id=680, 541.02126pt x 351.3125pt>
 File: ../img/IrcChat.png Graphic file (type png)
 
 <use ../img/IrcChat.png>
-Package pdftex.def Info: ../img/IrcChat.png used on input line 627.
+Package pdftex.def Info: ../img/IrcChat.png used on input line 632.
 (pdftex.def)             Requested size: 334.60422pt x 217.28079pt.
  [30 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/Ir
 cChat.png>]
-<../img/STwitch.png, id=679, 173.14688pt x 315.42844pt>
+<../img/STwitch.png, id=689, 173.14688pt x 315.42844pt>
 File: ../img/STwitch.png Graphic file (type png)
 
 <use ../img/STwitch.png>
-Package pdftex.def Info: ../img/STwitch.png used on input line 643.
+Package pdftex.def Info: ../img/STwitch.png used on input line 648.
 (pdftex.def)             Requested size: 125.47737pt x 228.59071pt.
  [31 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/ST
 witch.png>]
-<../img/curl.png, id=688, 532.23843pt x 33.12375pt>
+<../img/curl.png, id=698, 532.23843pt x 33.12375pt>
 File: ../img/curl.png Graphic file (type png)
  <use ../img/curl.png>
-Package pdftex.def Info: ../img/curl.png used on input line 656.
+Package pdftex.def Info: ../img/curl.png used on input line 661.
 (pdftex.def)             Requested size: 418.25368pt x 26.03049pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 661--662
+Underfull \hbox (badness 10000) in paragraph at lines 666--667
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 674.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 675.
+(Font)              <9> on input line 680.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 675.
- [32 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/cu
-rl.png>] [33]
-<../img/auth.png, id=753, 523.9575pt x 273.02pt>
+(Font)              <5> on input line 680.
+[32 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/cur
+l.png>] [33] <../img/auth.png, id=763, 523.9575pt x 273.02pt>
 File: ../img/auth.png Graphic file (type png)
- <use ../img/auth.png>
-Package pdftex.def Info: ../img/auth.png used on input line 738.
+
+<use ../img/auth.png>
+Package pdftex.def Info: ../img/auth.png used on input line 743.
 (pdftex.def)             Requested size: 292.77629pt x 152.56104pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 744--746
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 747--748
+Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
 [34 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/aut
 h.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 760--761
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 767--768
 
  []
 
-[35] <../img/notification.png, id=769, 633.36626pt x 506.89375pt>
+[35] <../img/notification.png, id=778, 633.36626pt x 506.89375pt>
 File: ../img/notification.png Graphic file (type png)
 
 <use ../img/notification.png>
-Package pdftex.def Info: ../img/notification.png used on input line 773.
+Package pdftex.def Info: ../img/notification.png used on input line 778.
 (pdftex.def)             Requested size: 334.60422pt x 267.79387pt.
  [36 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/no
 tification.png>] [37]
-<../img/notificationview.png, id=798, 297.36093pt x 76.03406pt>
+<../img/notificationview.png, id=807, 297.36093pt x 76.03406pt>
 File: ../img/notificationview.png Graphic file (type png)
 
 <use ../img/notificationview.png>
-Package pdftex.def Info: ../img/notificationview.png used on input line 815.
+Package pdftex.def Info: ../img/notificationview.png used on input line 820.
 (pdftex.def)             Requested size: 334.60422pt x 85.5613pt.
  [38 <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Documentation/img/no
 tificationview.png>]
 Chapitre 6.
-<../img/TestsConnect.png, id=806, 1075.01625pt x 450.9347pt>
+<../img/TestsConnect.png, id=815, 1075.01625pt x 450.9347pt>
 File: ../img/TestsConnect.png Graphic file (type png)
 
 <use ../img/TestsConnect.png>
-Package pdftex.def Info: ../img/TestsConnect.png used on input line 832.
+Package pdftex.def Info: ../img/TestsConnect.png used on input line 837.
 (pdftex.def)             Requested size: 418.25368pt x 175.44409pt.
 
-<../img/TestsDisconnect.png, id=808, 1075.76906pt x 541.27219pt>
+<../img/TestsDisconnect.png, id=817, 1075.76906pt x 541.27219pt>
 File: ../img/TestsDisconnect.png Graphic file (type png)
 
 <use ../img/TestsDisconnect.png>
-Package pdftex.def Info: ../img/TestsDisconnect.png used on input line 840.
+Package pdftex.def Info: ../img/TestsDisconnect.png used on input line 845.
 (pdftex.def)             Requested size: 418.25368pt x 210.44283pt.
 
 
@@ -1438,59 +1438,88 @@ Chapitre 7.
 Chapitre 8.
 [43
 
-] [44]
+]
+Overfull \hbox (10.63307pt too wide) in paragraph at lines 918--926
+\T1/cmr/m/n/10.95 Documentation API Twitch , \T1/cmr/m/it/10.95 Gi-thub Twitch\
+T1/cmr/m/n/10.95 , []$\T1/cmtt/m/n/10.95 https : / / github . com / justintv / 
+Twitch-[]API$[]\T1/cmr/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (2.493pt too wide) in paragraph at lines 918--926
+\T1/cmr/m/n/10.95 Documentation API You-tube, \T1/cmr/m/it/10.95 Api You-tube\T
+1/cmr/m/n/10.95 , []$\T1/cmtt/m/n/10.95 https : / / developers . google . com /
+ youtube /$
+ []
+
+
+Overfull \hbox (22.09567pt too wide) in paragraph at lines 918--926
+\T1/cmr/m/n/10.95 Code Pro-ject No-ti-fi-ca-tion-Win-dows, \T1/cmr/m/it/10.95 S
+ource pro-ject\T1/cmr/m/n/10.95 ,[]$\T1/cmtt/m/n/10.95 http : / / www . codepro
+ject . com / Articles /$
+ []
+
+
+Overfull \hbox (49.2387pt too wide) in paragraph at lines 918--926
+\T1/cmr/m/n/10.95 WebMediaManager Gi-tHub, \T1/cmr/m/it/10.95 Gi-tHub pro-ject\
+T1/cmr/m/n/10.95 , []$\T1/cmtt/m/n/10.95 https : / / github . com / Froelicher 
+/ WebMediaManager$[]\T1/cmr/m/n/10.95 ,
+ []
+
+[44]
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.lof)
 \tf@lof=\write6
  [45
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 914.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 914.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 931.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 931.
 
 (C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Documentation\TexSource\W
 ebMediaManager.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 914.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 914.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 931.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 931.
 Package rerunfilecheck Info: File `WebMediaManager.out' has not changed.
-(rerunfilecheck)             Checksum: 8FE0EE9723B4B67424518EB59FB2DF9A;5508.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 914.
+(rerunfilecheck)             Checksum: E18FDCCE581F850F332261424E88B206;5572.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 931.
  ) 
 Here is how much of TeX's memory you used:
- 23264 strings out of 493921
- 433226 string characters out of 3144861
- 560360 words of memory out of 3000000
- 25860 multiletter control sequences out of 15000+200000
- 28569 words of font info for 55 fonts, out of 3000000 for 9000
+ 23268 strings out of 493921
+ 433286 string characters out of 3144861
+ 560419 words of memory out of 3000000
+ 25862 multiletter control sequences out of 15000+200000
+ 29396 words of font info for 56 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,13n,66p,965b,1918s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
 i600\ecrm1000.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Froelicher\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Froeli
-cher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <
+fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Froelicher\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\Froeli
+cher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <
 C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecrm0900.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecrm0800.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Froelicher\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> <C:\Users\Froelicher
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\U
+\eccc1095.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi600\ecrm0900.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Froelicher\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\Froelicher
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> <C:\U
 sers\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecs
-s1440.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecss2074.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Froelicher\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Froelicher\App
-Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss2488.pk> <C:\Users
-\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm109
-5.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecrm1200.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm2488.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy9.pfb>
-Output written on WebMediaManager.pdf (45 pages, 1033544 bytes).
+s1200.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecss1440.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecss2074.pk> <C:\Users\Froelicher\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\Froelicher\App
+Data\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users
+\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss248
+8.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecrm1095.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2488.pk><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on WebMediaManager.pdf (45 pages, 1046725 bytes).
 PDF statistics:
- 1576 PDF objects out of 1728 (max. 8388607)
- 258 named destinations out of 1000 (max. 500000)
- 788 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1624 PDF objects out of 1728 (max. 8388607)
+ 259 named destinations out of 1000 (max. 500000)
+ 796 words of extra memory for PDF output out of 10000 (max. 10000000)
 

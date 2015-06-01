@@ -66,7 +66,7 @@
 	\vskip 1cm
 	\begin{center}
 		\Huge \strut \@title \par
-		\large \strut Mêmoire
+		\large \strut Mémoire
 	\end{center}
 	\ifhmode\par\fi
 	\hbox to \hsize{\hfill
@@ -78,6 +78,11 @@
 		\normalfont T.IS-E2A
 	\end{center}
 	%IMG A METTRE ICI
+	
+	\begin{center}
+		\normalfont\large Superviseur : Christophe Maréchal
+	\end{center}
+	
 	\begin{center}
 		\normalfont\large 2014 - 2015
 	\end{center}
@@ -316,9 +321,9 @@
 		Les ressources sont accessibles via les liens que l'API met à disposition :
 
 		\begin{itemize}
-		\item https://api.dailymotion.com : pour le site Dailymotion
-		\item https://api.twitch.tv : pour le site Twitch
-		\item https://api.vimeo.com : pour le site Vimeo
+		\item \url{https://api.dailymotion.com} : pour le site Dailymotion
+		\item \url{https://api.twitch.tv} : pour le site Twitch
+		\item \url{https://api.vimeo.com} : pour le site Vimeo
 		\end{itemize}
 		
 		Toutes ses API mettent à disposition des URL qui servent à récupérer des ressources précises. 
@@ -335,7 +340,7 @@
 		Un nouveau format de lecteur vidéo est apparu sur le web depuis peu, il s'agit du lecteur HTML5. Ce lecteur utilise un autre codec (VP9), le codec libre de Google qui compresse la vidéo. Ce codec a été mis en place surtout pour accélérer l'accession au contenu HD 4k à 60 fps\footnote{Frame Per Second}.
 		Le fait d'utiliser le lecteur HTML5 est un plus dans le multi-plateforme.
 	
-	\section{Outil communautaire}
+	\section{Outils communautaires}
 	Les différents sites de vidéos mettent à disposition des utilisateurs des outils afin de pouvoir communiquer avec d'autre membre du site ou directement s'adresser à l'auteur de la vidéo.
 		\subsection{Chat IRC}
 		\label{chat}
@@ -354,7 +359,7 @@
 		
 	\newpage
 	\section{Connexion}
-	Afin de se connecter aux différents services avec un compte personnel, ils utilisent le protocole OAuth2.
+	Afin de se connecter aux différents services avec un compte personnel, les API utilisent le protocole OAuth2.
 		\subsection{OAuth2}
 		\label{sectionOauth2}
 		La plus part des grands sites utilisent le protocole OAuth2 pour l'authentification au compte personnel, en effet, ce protocole permet d'obtenir un accès limité à un service via HTTP par le biais d'une autorisation. 
@@ -362,19 +367,19 @@
 		(cf. figure \ref{oauth2})\\
 		OAuth2 définit 4 rôles :
 		\begin{itemize}
-			\item Détenteur des données (L'utilisateur)
+			\item Détenteur des données (l'utilisateur)
 			\item Serveur de ressources (Twitch, Youtube, Dailymotion ...)
 			\item Client (WebMedia Manager)
 			\item Serveur d'autorisation (Twitch, Youtube, Dailymotion ...)
 		\end{itemize}
 		
-			\subsubsection{Token (jeton)}
+			\subsubsection{\textit{Token} (jeton)}
 			\label{token}
-			Lorsque le client fait une demande d'authentification, le serveur d'autorisation délivre un token. Un token permet au serveur de ressources d'autoriser la mise à disposition des données d'un utilisateur. Il a une durée de vie limité qui est définie par le serveur qui délivre les tokens.
-			Un token doit rester le plus confidentiel possible, même l'utilisateur ne voit pas son token attribué.
+			Lorsque le client fait une demande d'authentification, le serveur d'autorisation délivre un \textit{token}. Un \textit{token} permet au serveur de ressources d'autoriser la mise à disposition des données d'un utilisateur. Il a une durée de vie limité qui est définie par le serveur qui délivre les \textit{tokens}.
+			Il doit rester le plus confidentiel possible, même l'utilisateur ne voit pas son \textit{token} attribué.
 			
-			\subsubsection{Scope (portée)}
-			Le scope est un paramètre qui sert à définir les droits sur un token. En effet, le serveur d'autorisation propose une liste de scope et lors de l'authentification, attribut ses droits sur le token.
+			\subsubsection{\textit{Scope} (portée)}
+			Le \textit{scope} est un paramètre qui sert à définir les droits sur un \textit{token}. En effet, le serveur d'autorisation propose une liste de \textit{scope} et lors de l'authentification, attribut ses droits sur le token.
 			
 			\subsubsection{Type d'autorisation}
 			Il existe deux types d'autorisation : Flux de code d'autorisation(\textit{Autorization Code Flow}) et l'autorisation implicite(\textit{Implicit Grant Flow}). L'autorisation implicite s'utilise quand l'application se trouve côté client. La demande d'authentification se fait de la sorte :
@@ -813,7 +818,7 @@
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.8\textwidth]{../img/notificationview.png}
-			\caption{Notification}
+			\caption{Exemple de notification}
 			\label{vue notification}
 		\end{figure}
 		
@@ -907,6 +912,18 @@
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Conclusions/Bilan}{17}{18}\ganttnewline
 		\ganttmilestone{Rendu final}{18}
 	\end{ganttchart}
+	
+	
+	\subsection{Sources}
+	\noindent
+	Documentation API Twitch , \textit{Github Twitch}, \url{https://github.com/justintv/Twitch-API}, Mai 2015\\
+	Documentation API Youtube, \textit{Api Youtube}, \url{https://developers.google.com/youtube/v3/docs/}, Mai 2015\\
+	Documentation API Vimeo,  \textit{Api Dailymotion}, \url{https://developer.dailymotion.com/documentation}, Mai 2015\\
+	Documentation API Dailymotion,  \textit{Api Vimeo}, \url{https://developer.vimeo.com/api}, Mai 2015\\
+	Source IRC chat, \textit{GitHub ChatSharp}, \url{https://github.com/SirCmpwn/ChatSharp}, Mai 2015\\
+	Code Project NotificationWindows, \textit{Source project},\url{http://www.codeproject.com/Articles/277584/Notification-Window}, Mai 2015\\
+	WebMediaManager GitHub, \textit{GitHub project}, \url{https://github.com/Froelicher/WebMediaManager}, Mai 2015
+	
 	
 	
 \listoffigures
