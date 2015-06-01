@@ -1,11 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : cURL library class
+ * Date : 16/04/2015
+ */ 
+
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {

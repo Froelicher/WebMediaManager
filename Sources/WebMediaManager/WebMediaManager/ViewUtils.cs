@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Viewutils
+ * Date : 16/04/2015
+ */
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebMediaManager.Models;
 
@@ -11,6 +12,15 @@ namespace WebMediaManager.Views
 {
     static class ViewUtils
     {
+        /// <summary>
+        /// Create preview videos
+        /// </summary>
+        /// <param name="mainPanel">panel</param>
+        /// <param name="video">video</param>
+        /// <param name="id_video_line">video in line</param>
+        /// <param name="counter_for_line">nb of line</param>
+        /// <param name="model">model</param>
+        /// <returns>Panel preview</returns>
         public static Panel CreatePreview(Panel mainPanel, StreamingSite.SVideo video, int id_video_line, int counter_for_line, Model model)
         {
             Panel gPanel = new Panel();
@@ -59,11 +69,23 @@ namespace WebMediaManager.Views
             return mainPanel;
         }
 
+        /// <summary>
+        /// On click preview video
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="video"></param>
+        /// <param name="model"></param>
         private static void OnClickVideo(object sender, EventArgs e, StreamingSite.SVideo video, Model model)
         {
             CreateFormVideo(video, model);
         }
 
+        /// <summary>
+        /// Create form video
+        /// </summary>
+        /// <param name="video"></param>
+        /// <param name="model"></param>
         public static void CreateFormVideo(StreamingSite.SVideo video, Model model)
         {
             VidForm videoForm = new VidForm(video, model);

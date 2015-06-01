@@ -1,9 +1,10 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : StreamingSite class
+ * Date : 29/05/2015
+ */ 
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebMediaManager.Structures.STwitch;
 
 namespace WebMediaManager.Models
 {
@@ -89,11 +90,19 @@ namespace WebMediaManager.Models
 
         #endregion
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public StreamingSite()
         {
             this.ListLastVideos = new List<SVideo>();
         }
 
+        /// <summary>
+        /// Get video by id
+        /// </summary>
+        /// <param name="id">id video</param>
+        /// <returns></returns>
         public virtual SVideo GetVideoById(string id)
         {
             throw new NotImplementedException();
@@ -118,6 +127,9 @@ namespace WebMediaManager.Models
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Upload the online streams
+        /// </summary>
         public virtual void UpdateOnlineStream()
         {
             throw new NotImplementedException();
@@ -158,11 +170,21 @@ namespace WebMediaManager.Models
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Get video by channel
+        /// </summary>
+        /// <param name="channelName">name of channel</param>
+        /// <returns></returns>
         public virtual List<SVideo> GetVideosByChannel(string channelName)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Get stream by channel
+        /// </summary>
+        /// <param name="channelName">name of channel</param>
+        /// <returns></returns>
         public virtual List<SVideo> GetStreamsByChannel(string channelName)
         {
             throw new NotImplementedException();

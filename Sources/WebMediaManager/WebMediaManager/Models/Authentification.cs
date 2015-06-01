@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Authentification class
+ * Date : 20/05/2015
+ */ 
 using System.Text;
-using System.Threading.Tasks;
 using WebMediaManager.Structures;
 
 namespace WebMediaManager.Models
@@ -69,6 +70,14 @@ namespace WebMediaManager.Models
             //no code ...
         }
 
+        /// <summary>
+        /// Designated constructor
+        /// </summary>
+        /// <param name="scopes"></param>
+        /// <param name="url_auth"></param>
+        /// <param name="client_id"></param>
+        /// <param name="client_secret"></param>
+        /// <param name="state"></param>
         public Authentification(string[] scopes, string url_auth, string client_id, string client_secret, string state)
         {
             this.Scopes = scopes;

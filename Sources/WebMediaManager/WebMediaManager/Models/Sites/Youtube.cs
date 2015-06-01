@@ -1,8 +1,11 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Youtube class
+ * Date : 20/04/2015
+ */ 
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using WebMediaManager.Structures.SYoutube;
 
 namespace WebMediaManager.Models.Sites
@@ -19,6 +22,11 @@ namespace WebMediaManager.Models.Sites
             this.Name = "Youtube";
         }
 
+        /// <summary>
+        /// Create a video
+        /// </summary>
+        /// <param name="videos">videos youtube</param>
+        /// <returns>video</returns>
         private SVideo CreateVideo(Video videos)
         {
             SVideo video = new SVideo();
@@ -36,7 +44,11 @@ namespace WebMediaManager.Models.Sites
             return video;
         }
 
-
+        /// <summary>
+        /// Create a channel
+        /// </summary>
+        /// <param name="channels">channel youtube</param>
+        /// <returns>channel</returns>
         private SChannel CreateChannel(Channels channels)
         {
             SChannel channel = new SChannel();
@@ -52,6 +64,11 @@ namespace WebMediaManager.Models.Sites
             return channel;
         }
 
+        /// <summary>
+        /// Get video by id
+        /// </summary>
+        /// <param name="id">id video</param>
+        /// <returns>video</returns>
         public override SVideo GetVideoById(string id)
         {
             Videos videos = Curl.Deserialize<Videos>(Curl.SendRequest(URL_API + "videos?part=snippet,statistics&id="+id+"&key="+this.Auth.Client_secret , "GET", ACCEPT_HTTP_HEADER));

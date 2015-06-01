@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Image
+ * Date : 16/04/2015
+ */
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebMediaManager.Structures.STwitch
 {

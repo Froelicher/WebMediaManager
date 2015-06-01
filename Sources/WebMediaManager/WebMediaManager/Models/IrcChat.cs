@@ -1,11 +1,13 @@
-﻿using ChatSharp;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Class of manage irc chat
+ * Date : 22/05/2015
+ */ 
+using ChatSharp;
 using ChatSharp.Events;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WebMediaManager.Models
@@ -31,7 +33,6 @@ namespace WebMediaManager.Models
             get { return _client; }
             set { _client = value; }
         }
-
 
         public StreamingSite.SVideo Video
         {
@@ -63,6 +64,14 @@ namespace WebMediaManager.Models
             set { _tbxChat = value; }
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="textbox">textbox of chat</param>
+        /// <param name="username">username</param>
+        /// <param name="nickname">nickname</param>
+        /// <param name="token">token</param>
+        /// <param name="video">video</param>
         public IrcChat(TextBox textbox, string username, string nickname, string token, StreamingSite.SVideo video)
         {
             this.TbxChat = textbox;
@@ -72,6 +81,10 @@ namespace WebMediaManager.Models
             this.Video = video;
         }
 
+        /// <summary>
+        /// Build message and filter
+        /// </summary>
+        /// <param name="message">msg</param>
         public void BuildMessage(string message)
         {
             StringBuilder result = new StringBuilder();
@@ -89,6 +102,11 @@ namespace WebMediaManager.Models
             }
         }
 
+        /// <summary>
+        /// Event error
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NetWorkError(object sender, SocketErrorEventArgs e)
         {
             try { 
@@ -99,6 +117,11 @@ namespace WebMediaManager.Models
             { }
         }
 
+        /// <summary>
+        /// Event message received
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RawMessageReceived(object sender, RawMessageEventArgs e)
         {
             try{
@@ -108,6 +131,11 @@ namespace WebMediaManager.Models
             { }
         }
 
+        /// <summary>
+        /// Event message sent
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RawMessageSent(object sender, RawMessageEventArgs e)
         {
             try
@@ -121,6 +149,11 @@ namespace WebMediaManager.Models
             { }
         }
 
+        /// <summary>
+        /// Event channel message received
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChannelMessageReceived(object sender, PrivateMessageEventArgs e)
         {
             try
@@ -132,6 +165,11 @@ namespace WebMediaManager.Models
             { }
         }
 
+        /// <summary>
+        /// Event channel topic received
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChannelTopicReceived(object sender, ChannelTopicEventArgs e)
         {
             try
@@ -144,6 +182,9 @@ namespace WebMediaManager.Models
 
         }
 
+        /// <summary>
+        /// Connect to chat IRC
+        /// </summary>
         public void ConnectIrc()
         {  
             this.User = new IrcUser(this.Username, this.Nickname, "oauth:" + this.Token);
@@ -209,6 +250,9 @@ namespace WebMediaManager.Models
             }
         }
 
+        /// <summary>
+        /// Quit the IRC chat
+        /// </summary>
         public void Quit()
         {
             //Unsubscribes client from three chat events
@@ -221,6 +265,10 @@ namespace WebMediaManager.Models
             this.TbxChat = null;
         }
 
+        /// <summary>
+        /// Send message
+        /// </summary>
+        /// <param name="msg"></param>
         public void SendMessage(string msg)
         {
             this.Client.SendRawMessage(msg);

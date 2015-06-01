@@ -112,17 +112,13 @@
 \chapter{Résumés}
 	\section{Français}
 		Web Media Manager est une application qui centralise les services des sites de vidéos tels que :
-		"Twitch"; "Youtube"; "Dailymotion"; "Vimeo" etc. L'application doit en grande partie pouvoir
-		remplacer les différents sites. L'application doit également pouvoir être évolutive et donc pouvoir
+		"Twitch"; "Youtube"; "Dailymotion"; "Vimeo" etc. L'application doit en grande partie pouvoir remplacer les différents sites. L'application doit également pouvoir être évolutive et donc pouvoir
 		centraliser n'importe quel site vidéo qui propose une API.
 		L'application est codée en C\#, il y a une interface principale qui regroupe toutes les diffusions de
-		flux vidéo en direct et toutes les dernières vidéos sorties. L'application offre également la possibilité
-		de pouvoir naviguer dans le contenu de chaque site séparément. Toutes les fonctionnalités
-		principales qu'offrent les sites sont présentes dans l'application.
-		Afin d'obtenir les informations des différents sites, j'utilise les API qu'ils proposent. En effet, tous
-		ses sites proposent une API REST qui me permet donc de récupérer les données de la même
+		flux vidéo en direct et toutes les dernières vidéos sorties. L'application offre également la possibilité de pouvoir naviguer dans le contenu de chaque site séparément. Toutes les fonctionnalités principales qu'offrent les sites sont présentes dans l'application.
+		Afin d'obtenir les informations des différents sites, j'utilise les API qu'ils proposent. En effet, tous ces sites proposent une API REST qui me permet donc de récupérer les données de la même
 		manière pour tous les sites. Afin d'avoir un format générique, j'ai créé une structure qui regroupe
-		toutes les informations communes de tous les sites
+		toutes les informations communes de tous les sites.
 	
 	\section{English}
 		Web Media Manager is an application that centralizes services of video sites such as: "Twitch";
@@ -143,36 +139,36 @@
 
 	\section{Objectifs du projet}
 	Création d’une application permettant l’utilisation des différents services proposés par les sites de vidéos et de diffusion de flux vidéo en direct.
-	Les fonctions de bases liées au services en question sont intégrées génériquement dans l’application.
+	Les fonctions de bases liées aux services en question sont intégrées génériquement dans l’application.
 	Des fonctions ajoutées par moi-même y sont également ajoutées.
 	L’application a pour but de faciliter l’utilisation de ses services pour les utilisateurs ayant une fréquentation régulière de ceux-ci.
 
 	\section{Description détaillée}
-	L’application propose un certains nombre de service lié à la plateforme d’hébergement et de diffusion des vidéos. En effet, plusieurs sites vidéo comme Youtube, Dailymotion, Twitch etc. propose des services de bases pour leurs utilisateurs.
-	Elle reprend si possible dynamiquement les différentes fonctions de chaque site et les proposes dans une interface crée à cet effet.
+	L’application propose un certains nombre de service lié à la plateforme d’hébergement et de diffusion des vidéos. En effet, plusieurs sites vidéo comme Youtube, Dailymotion, Twitch etc. proposent des services de bases pour leurs utilisateurs.
+	Elle reprend si possible dynamiquement les différentes fonctions de chaque site et les proposes dans une interface créée à cet effet.
 
 	Les fonctions de bases que l’application propose pour chaque site :
 	\begin{itemize}
 		\item Connexion avec un compte lié au site, donc créer auparavant ;
 		\item Modification des différents paramètres de comptes ;
-		\item Recherches de flux vidéos suivant différents critères : Nom d’un flux vidéo, nom du jeux, nom d’une chaîne, nom d’un utilisateur etc ;
+		\item Recherches de flux vidéos suivant différents critères : nom d’un flux vidéo, nom du jeux, nom d’une chaîne, nom d’un utilisateur, etc ;
 		\item Affichage d’une vidéo ou d’une diffusion en direct ;
 		\item La fonction "Suivre" ou "S’abonner" qui consiste à être mis au courant des nouvelles vidéos / diffusion ;
-		\item Affichage détaillé d’un utilisateur : Accès à ses informations publique, ses vidéos etc ;
+		\item Affichage détaillé d’un utilisateur : accès à ses informations publique, ses vidéos etc ;
 		\item Affichage des vidéos / diffusions en direct les plus populaires ;
-		\item Affichage de l’espace communautaire : Commentaire vidéos, Chat sur une diffusion en direct
+		\item Affichage de l’espace communautaire : commentaire vidéos, Chat sur une diffusion en direct
 	\end{itemize}
 	
-	Les fonctions ci-dessus sont celle de base pour chaque sites à quelques exception près.
+	Les fonctions ci-dessus sont celle de base pour chaque site à quelques exceptions près.
 	
-	Ci-dessous, les fonctions ajoutée par moi-même dans l’application :
+	Ci-dessous, les fonctions ajoutées par moi-même dans l’application :
 	\begin{itemize}
 		\item Système de notification lorsqu’une vidéo sort ou qu’une diffusion en direct commence ;
 		\item Création de catégorie pour organiser les différents flux vidéos suivis, les catégories sont inter-services, c'est-à-dire que l’on peut mélanger les différents contenu des sites.
-		\item Création de playlist pour lire plusieurs vidéos à la suite, également inter-services. Par contre cela ne s'applique uniquement sur les vidéos, on ne peut pas créer de playlist de diffusion en direct.
+		\item Création de playlist pour lire plusieurs vidéos à la suite, également inter-services. Par contre, cela ne s'applique uniquement sur les vidéos, on ne peut pas créer de playlist de diffusion en direct.
 	\end{itemize}
 
-	Pour la réalisation de cette application j’utilise le langage C\#.
+	Pour la réalisation de cette application, j’utilise le langage C\#.
 
 	\section{Inventaire des étapes}
 	Début : Lundi 13/04/2015 \\
@@ -204,41 +200,41 @@
 
 \chapter{Étude d'opportunité}
 	\section{Introduction au projet}
-	Le but de ce projet est de réaliser une application permettant l'utilisation des différents services proposé par les sites de vidéos et de diffusion de flux vidéo en direct.
+	Le but de ce projet est de réaliser une application permettant l'utilisation des différents services proposés par les sites de vidéos et de diffusion de flux vidéo en direct.
 		\subsection{Médias vidéo web}
 		 Aujourd'hui, les sites comme Youtube, Dailymotion, Twitch qui propose du contenu vidéos sont de plus en plus visités. Ses sites, ont tous un point commun, d'autres personnes mettent des vidéos en ligne pour divertir les spectateurs. \\
-		 Le phénomène a prit une tel ampleur que certain "créateur de contenu audiovisuel" sont même payé par ses sites par rapport à leur popularité. De plus en plus de personnes, surtout les jeunes, passent leurs temps devant des vidéos et délaisse de plus en plus la télévision.
+		 Le phénomène a pris une telle ampleur que certain "créateur de contenu audiovisuel" sont même payé par ses sites par rapport à leur popularité. De plus en plus de personnes, surtout les jeunes, passent leurs temps devant des vidéos et délaissent de plus en plus la télévision.
 			\subsubsection{Direct}
-			Les vidéos en direct sont de plus en plus présent sur le web. En effet, grâce en grande partie aux jeux vidéos, le phénomène des personnes créant du contenu audiovisuel c'est également répandu sur du contenu en direct. Des sites comme Twitch ou Dailymotion propose à ses utilisateurs de diffuser du flux vidéo en direct. \\ 
-			La plus part du temps c'est pour les jeux vidéos, les diffuseurs jouent sur leurs ordinateurs / consoles puis, retransmet l'image sur le site. Ainsi, des personnes du monde entier ont la possibilité de regarder la partie de jeu d'une personne. Les spectateurs ont même la possibilité de discuter avec les autres spectateurs et même des fois avec le diffuseur de contenu.\\
-			Les diffuseurs sont payés grâce aux dons de leurs communauté, certain font ça à plein temps et donc sont contraint à entretenir une grande communauté.
+			Les vidéos en direct sont de plus en plus présentes sur le web. En effet, grâce en grande partie aux jeux vidéos, le phénomène des personnes créant du contenu audiovisuel s'est également répandu sur du contenu en direct. Des sites comme Twitch ou Dailymotion proposent à ses utilisateurs de diffuser du flux vidéo en direct. \\ 
+			La plupart du temps, c'est pour les jeux vidéos, les diffuseurs jouent sur leurs ordinateurs / consoles puis, retransmet l'image sur le site. Ainsi, des personnes du monde entier ont la possibilité de regarder la partie de jeu d'une personne. Les spectateurs ont même la possibilité de discuter avec les autres spectateurs, et même des fois avec le diffuseur de contenu.\\
+			Les diffuseurs sont payés grâce aux dons de leurs communautés, certains font ça à plein temps et donc sont contraint à entretenir une grande communauté.
 			\subsubsection{Différé}
-			Les vidéos "différé" sont depuis un petit moment déjà présente sur le web. En effet, le phénomène des vidéos sur le web n'est pas tout nouveau mais, ce n'est que depuis peu que le phénomène à prit une grande ampleur. \\
-			Si un créateur de contenu à atteint une certaine popularité, il peut enfin prétendre à faire de l'argent avec ses vidéos. En effet, le premier site de vidéos du monde Youtube rémunère les créateurs de contenu.
+			Les vidéos "différées" sont depuis un petit moment déjà présentent sur le web. En effet, le phénomène des vidéos sur le web n'est pas tout nouveau, mais, ce n'est que depuis peu que le phénomène à prit une grande ampleur. \\
+			Si un créateur de contenu a atteint une certaine popularité, il peut enfin prétendre à faire de l'argent avec ses vidéos. En effet, le premier site de vidéos du monde Youtube rémunère les créateurs de contenu.
 
 		\subsection{Pourquoi avoir choisi ce sujet ?}
-		J'ai choisi ce sujet car je porte un réel intérêt au monde audiovisuel sur le web. En effet, je fais parti des jeunes qui a délaissé la télévision pour les vidéos sur internet. Il y a plusieurs site de vidéos et souvent il est difficile de s'y retrouver, l'application que j'ai pensé a pour but de faciliter la vie des personnes comme moi qui utilise ses sites régulièrement. Le fait que le monde de l'audiovisuel est en plein boum sur le web me stimule encore plus à l'idée de créer une application dans ce domaine. \\
-		On retrouve également de plus en plus de site proposant à ses utilisateurs de pouvoir diffuser du flux vidéo en direct, ce qui consolide l'intérêt de mon application.
+		J'ai choisi ce sujet, car je porte un réel intérêt au monde audiovisuel sur le web. En effet, je fais partie des jeunes qui a délaissé la télévision pour les vidéos sur internet. Il y a plusieurs sites de vidéos et souvent, il est difficile de s'y retrouver, l'application que j'ai pensée a pour but de faciliter la vie des personnes comme moi qui utilise ses sites régulièrement. Le fait que le monde de l'audiovisuel est en plein boum sur le web me stimule encore plus à l'idée de créer une application dans ce domaine. \\
+		On retrouve également de plus en plus de sites proposant à ses utilisateurs de pouvoir diffuser du flux vidéo en direct, ce qui consolide l'intérêt de mon application.
 
 	\section{Analyse de l'existant}
-	Il n'y a pas d'application similaire à celle que je vais réaliser. Tout de même, les différentes fonctions que je veux y intégrée sont déjà présente sur les différents sites.
+	Il n'y a pas d'application similaire à celle que je vais réaliser. Tout de même, les différentes fonctions que je veux y intégrer sont déjà présentes sur les différents sites.
 		\subsection{Existant}
 		\begin{itemize}
 			\item Twitch now : Application Google Chrome
 			\item Dailymotion Games : Application Android
 		\end{itemize}			
 		\subsection{Critique de l'existant}	
-		\textbf{Twitch now} : Cette application permet à l'utilisateur de naviguer dans les différentes diffusion de flux vidéo en direct de Twitch. C'est une application Google Chrome, elle permet de naviguer sur Twitch sans aller sur le site. Le système de "suivis" est celui de Twitch, c'est-à-dire qu'il faut se connecter avec son propre compte Twitch.
+		\textbf{Twitch now} : Cette application permet à l'utilisateur de naviguer dans les différentes diffusions de flux vidéo en direct de Twitch. C'est une application Google Chrome, elle permet de naviguer sur Twitch sans aller sur le site. Le système de "suivis" est celui de Twitch, c'est-à-dire qu'il faut se connecter avec son propre compte Twitch.
 		
-		\textbf{Dailymotion Games} : Cette application permet aux utilisateurs de Dailymotion de naviguer entre les différentes diffusion de flux vidéo en direct. Par contre, on ne peut pas se connecter à son compte personnel pour avoir uniquement que les diffusions que l'on est abonné. Les différentes diffusion sont classé soit par vues, soit par jeux. Évidemment, les diffusions de flux vidéo peuvent être visionnée depuis l'application.
-		Dailymotion Games est une application officiel de Dailymotion.
+		\textbf{Dailymotion Games} : Cette application permet aux utilisateurs de Dailymotion de naviguer entre les différentes diffusions de flux vidéo en direct. Par contre, on ne peut pas se connecter à son compte personnel pour avoir uniquement que les diffusions que l'on est abonné. Les différentes diffusions sont classées soit par vues, soit par jeux. Évidemment, les diffusions de flux vidéo peuvent être visionnée depuis l'application.
+		Dailymotion Games est une application officielle de Dailymotion.
 		
 		
 \chapter{Analyse fonctionnelle}
 	\section{Description du fonctionnement}
 		\subsection{Fonctions des sites}
 			\subsubsection{Générique}
-			Tout les sites proposent des fonctions "commune" de base qui sont intégrée à WebMedia Manager:
+			Tous les sites proposent des fonctions "communes" de base qui sont intégrées à WebMedia Manager:
 			\begin{itemize}
 				\item Affichage des dernières vidéos / diffusion en direct
 				\item Recherche une vidéo / diffusion en direct
@@ -252,12 +248,12 @@
 			\end{itemize}
 			
 			\subsubsection{Diffusion en direct}
-			Les fonctions spécifique aux sites qui proposes des diffusions en direct :
+			Les fonctions spécifiques aux sites qui proposent des diffusions en direct :
 			\begin{itemize}
 				\item \textit{Chat} : Discuter avec les autres spectateurs
 				\item Abonnement payant\footnote{Offre des avantages à l'abonné}
 			\end{itemize}
-			Les utilisateurs ont le la possibilité de faire des donations mais pas par le biais des sites de diffusions.
+			Les utilisateurs ont le la possibilité de faire des donations, mais pas par le biais des sites de diffusions.
 			
 			\subsubsection{Vidéo en différé}
 			Les fonctions spécifique aux sites qui proposes des vidéos en différé :
@@ -266,7 +262,7 @@
 			\end{itemize}
 	
 		\subsection{Gestion des catégories}
-		Les catégories servent à rassembler plusieurs vidéos de différents sites. En effet, grâce aux catégories, les vidéos peuvent être organiser même si elles ne viennent pas du même site.
+		Les catégories servent à rassembler plusieurs vidéos de différents sites. En effet, grâce aux catégories, les vidéos peuvent être organisées, c'est-à-dire qu'on peut les retrouver facilement au même endroit, même si elles ne viennent pas du même site.
 		
 		Action possible sur une catégorie :
 		\begin{itemize}
@@ -278,7 +274,7 @@
 		La seule action possible sur une vidéo est de la supprimer.
 		
 		\subsection{Gestion des listes de lecture}
-		Les listes de lecture servent à lire un certain nombre de vidéo à la suite. Les listes de lectures sont également inter-site.
+		Les listes de lecture servent à lire un certain nombre de vidéos à la suite. Les listes de lectures sont également inter-site.
 		
 		Action possible sur une liste de lecture :
 		\begin{itemize}
@@ -287,7 +283,7 @@
 			\item Supprimer
 		\end{itemize}
 		
-		Actions possible sur une vidéo :
+		Actions possibles sur une vidéo :
 		\begin{itemize}
 			\item Supprimer
 			\item Monter (dans la liste)
@@ -296,18 +292,18 @@
 		\end{itemize}
 		
 		\subsection{Notifications}
-		Les notification servent à être tenu au courant lors de nouvelle diffusion en direct ou lorsqu'une nouvelle vidéo sort.
+		Les notifications servent à être tenues au courant lors de nouvelle diffusion en direct ou lorsqu'une nouvelle vidéo sort.
 		Lorsque un utilisateur suit un auteur de vidéo, il sera de toute façon notifié.
-		L'application donne la possibilité à l'utilisateur d'activé ou de désactiver les notifications.
+		L'application donne la possibilité à l'utilisateur d'activer ou de désactiver les notifications.
 		
 		
 	\newpage
-	\section{API}
+	\section{API (Application Programming Interface)}
 	\label{api}
-	Les API des différents site permettent de faire des interrogations entre les bases de données et l'application.
+	Les API des différents sites permettent de faire des interrogations entre les bases de données et l'application.
 		\subsection{API REST}
-		Les API\footnote{Application Programming Interface} REST\footnote{Representational State Transfer} servent à accéder a une ressource par son URI grâce au protocole HTML pour procéder à diverses opérations : GET; POST; PUT; DELETE. \\		
-		Le format de représentation des données est libre, dans le cas des API que l'on utilise, le format est en JSON\footnote{JavaScript Object Notation}.
+		Les API REST\footnote{Representational State Transfer} servent à accéder à une ressource par son URI grâce au protocole HTML pour procéder à diverses opérations : GET; POST; PUT; DELETE. \\		
+		Le format de représentation des données est libre, dans le cas des API que l'on utilise, le format est en JSON\footnote{JavaScript Object Notation}. (cf. figure \ref{rest})
 		
 		\begin{figure}[h]
 			\center
@@ -317,7 +313,7 @@
 		\end{figure}
 		
 		\noindent
-		Les ressources sont accessible via les liens que l'API met à disposition :
+		Les ressources sont accessibles via les liens que l'API met à disposition :
 
 		\begin{itemize}
 		\item https://api.dailymotion.com : pour le site Dailymotion
@@ -329,7 +325,7 @@
 		
 		
 	\section{Lecteur vidéo}
-	Afin d'afficher le flux vidéo des différentes vidéos ou des différente diffusion en direct, les sites ont leurs propre lecteur vidéo.
+	Afin d'afficher le flux vidéo des différentes vidéos ou des différentes diffusions en direct, les sites ont leur propre lecteur vidéo.
 	Ils se présentent généralement sous un format \textit{Flash player} ou HTML5.
 	
 		\subsection{Flash player}
@@ -343,14 +339,14 @@
 	Les différents sites de vidéos mettent à disposition des utilisateurs des outils afin de pouvoir communiquer avec d'autre membre du site ou directement s'adresser à l'auteur de la vidéo.
 		\subsection{Chat IRC}
 		\label{chat}
-		Le \textit{chat} est utilisé le plus souvent lors de diffusion de flux vidéo en direct. Afin d'avoir un contact direct avec le diffuseur il faut avoir un support sur lequel le diffuseur peut lire rapidement.
+		Le \textit{chat} est utilisé le plus souvent lors de diffusion de flux vidéo en direct. Afin d'avoir un contact direct avec le diffuseur, il faut avoir un support sur lequel le diffuseur peut lire rapidement.
 		
-		La plus part des \textit{chat} utilisé pour les diffusions de flux vidéo en direct sont des \textit{chats} IRC\footnote{Internet Relay Chat}.
+		La plupart des \textit{chat} utilisé pour les diffusions de flux vidéo en direct sont des \textit{chats} IRC\footnote{Internet Relay Chat}.
 		
-		IRC est un protocole de communication textuelle, il sert à la communication instantanée sous la forme de discussions de groupe par l'intermédiaire de canaux de discussion. Il peut également être utilisé pour communiquer de un à un.
-		Le principe est que chaque utilisateur est connecté à un serveur IRC qui eux-même sont relié avec d'autres serveurs IRC. Ainsi toutes les personnes peuvent discuter sur des forums publics ou privé.
+		IRC est un protocole de communication textuelle, il sert à la communication instantanée sous la forme de discussions de groupe par l'intermédiaire de canaux de discussion. Il peut également être utilisé pour communiquer d'un à un.
+		Le principe est que chaque utilisateur est connecté à un serveur IRC qui eux-mêmes sont relié avec d'autres serveurs IRC. Ainsi, toutes les personnes peuvent discuter sur des forums publics ou privés.
 		
-		Les différents site de diffusion en direct utilise le client IRC "Kiwiirc" conçue spécialement pour le web, cela ajoute au chat IRC plein de caractéristiques qui améliore l'utilisation du chat.
+		Les différents sites de diffusions en direct utilise le client IRC "Kiwiirc" conçue spécialement pour le web, cela ajoute au chat IRC plein de caractéristiques qui améliore l'utilisation du chat.
 		
 		\subsection{Commentaires}
 		Les commentaires servent à discuter avec d'autre personne sur la vidéo en question. Ils servent également à communiquer avec l'auteur de la vidéo.
@@ -363,7 +359,7 @@
 		\label{sectionOauth2}
 		La plus part des grands sites utilisent le protocole OAuth2 pour l'authentification au compte personnel, en effet, ce protocole permet d'obtenir un accès limité à un service via HTTP par le biais d'une autorisation. 
 		La demande d'accès est demandée par le client, en l'occurrence WebMedia Manager.
-		cf. figure \ref{oauth2}\\
+		(cf. figure \ref{oauth2})\\
 		OAuth2 définit 4 rôles :
 		\begin{itemize}
 			\item Détenteur des données (L'utilisateur)
@@ -402,7 +398,7 @@
 	
 	\section{Interface homme-machine}
 		\subsection{Miniature}
-		Les miniatures des vidéos sont affiché sous cette forme
+		Les miniatures des vidéos sont affichées sous cette forme. (cf. figure \ref{Miniature})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.2\textwidth]{../img/Miniature.png}
@@ -411,7 +407,7 @@
 		\end{figure}
 		
 		\subsection{Notification}
-		Les notifications sont affichée sous cette forme
+		Les notifications sont affichées sous cette forme. (cf. figure \ref{notification})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.4\textwidth]{../img/NotificationInterface.png}
@@ -419,8 +415,9 @@
 			\label{notification}
 		\end{figure}
 		
+		\newpage
 		\subsection{Navigation}
-		Les couleurs représentent les différentes fenêtres de l'application. Les flèches rouges marque le changement du menu de gauche dans l'interface graphique.
+		Les couleurs représentent les différentes fenêtres de l'application. Les flèches rouges marquent le changement du menu de gauche dans l'interface graphique. (cf. figure \ref{navigation})
 		
 		\begin{figure}[h]
 			\center
@@ -430,7 +427,7 @@
 		\end{figure}
 		
 		\subsection{Interface personnelle}
-		Si l'utilisateur de l'application n'est connecté à aucun compte, le contenu de cette interface ce désactive sauf la partie 1 qui permet à l'utilisateur de se connecter avec ses différents comptes.
+		Si l'utilisateur de l'application n'est connecté à aucun compte, le contenu de cette interface se désactive sauf la partie 1 qui permet à l'utilisateur de se connecter avec ses différents comptes. (cf. figure \ref{interfacepersonnel})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/personnalInterfacenum.png}
@@ -449,7 +446,7 @@
 		\newpage		
 		
 		\subsection{Interface des sites}
-		L'interface des sites est commune pour tous les sites. Chaque site à une interface générique. 
+		L'interface des sites est commune pour tous les sites. Chaque site à une interface générique. (cf. figure \ref{interfacesites})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/serviceInterfacenum.png}
@@ -468,7 +465,7 @@
 		\newpage
 
 		\subsection{Interface vidéo}
-		L'interface vidéo est générique, pour chaque vidéo de chaque site c'est la même interface. 
+		L'interface vidéo est générique, pour chaque vidéo de chaque site, c'est la même interface. (cf. figure \ref{interfacevideo})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/videoInterfacenum.png}
@@ -489,7 +486,7 @@
 		\newpage
 		
 		\subsection{Interface d'une chaîne}
-		
+		(cf. figure \ref{interfacechannel})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/channelInterfacenum.png}
@@ -506,11 +503,12 @@
 		\end{enumerate}
 		\newpage
 		\subsection{Interface de connexion}
+		(cf. figure \ref{interfaceconnexion})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/connexionInterface.png}
 			\caption{Interface de connexion}
-			\label{interfacechannel}
+			\label{interfaceconnexion}
 		\end{figure}
 		
 		La page de connexion est affichée lorsque l'utilisateur clique sur le bouton d'un site sur lequel il n'est pas encore connecté. La page web se charge suivant sur quel site l'utilisateur se connecte.
@@ -521,7 +519,7 @@
 		L'application est développée en C\# sur Microsoft Visual Studio 2013. 
 		
 		\subsection{Format des fichiers et enregistrements}
-		L'application stocke sa configuration sous forme de fichier. En effet, l'application a besoin d'enregistrer les catégories, listes de lecture ainsi que tout leurs contenu. Elle à également besoin d'enregistrer quelques configurations. C'est pour ça que j'utilise le format de fichier INI\footnote{Fichier de configuration} car il est très facile à manipuler. 
+		L'application stocke sa configuration sous forme de fichier. En effet, l'application a besoin d'enregistrer les catégories, listes de lecture ainsi que tout leurs contenus. Elle a également besoin d'enregistrer quelques configurations. C'est pour cela que j'utilise le format de fichier INI\footnote{Fichier de configuration} car il est très facile à manipuler. (cf. figure \ref{inifile})
 		
 		\begin{figure}[h]
 			\center
@@ -530,14 +528,14 @@
 			\label{inifile}
 		\end{figure}
 		
-		Pour plus de facilitée dans l'enregistrement des données, je crée deux fichiers INI : Category.ini et Playlist.ini
+		Pour plus de faciliter dans l'enregistrement des données, je crée deux fichiers INI : Category.ini et Playlist.ini
 			
 		\newpage
 		
 		\subsection{SVideo \& SChannel}
-			Afin d'avoir un type générique pour traiter les vidéos de touts les sites de la même manière, j'ai créé deux structures. Elles contiennent toutes les informations commune de touts sites.
+			Afin d'avoir un type générique pour traiter les vidéos de tous les sites de la même manière, j'ai créé deux structures. Elles contiennent toutes les informations commune de touts sites.
 			
-			SVideo : Structures pour les vidéos et vidéos en direct
+			SVideo : structures pour les vidéos et vidéos en direct. (cf. figure \ref{SVideo})
 			
 			\begin{figure}[h]
 				\center
@@ -546,7 +544,7 @@
 				\label{SVideo}
 			\end{figure}
 			
-			SChannel : Structure pour les chaînes
+			SChannel : structure pour les chaînes. (cf. figure \ref{SChanel})
 			
 			\begin{figure}[h]
 				\center
@@ -560,17 +558,7 @@
 		\subsection{Modèle}
 			\subsubsection{StreamingSite}
 			Pour pouvoir traiter les différents sites de la même manière, j'ai créer une classe de base qui sert de "modèle" aux classes des sites.
-			Les classes de sites doivent contenir les mêmes méthodes que la classe de base.
-			
-			\begin{figure}[h]
-				\center
-				\includegraphics[width=1\textwidth]{../img/StreamingSite.png}
-				\caption{Diagramme StreamingSite}
-				\label{streaming site}
-			\end{figure}
-			
-			Pour ajouter d'autres sites il faut juste créer une classe qui respecte la classe de base.
-			Les méthodes commune à touts les sites sont virtuelles, en effet, étant donnée que pour chaque site les traitements ne sont pas les mêmes, il faut réécrire la méthode pour chaque site dans leurs classe respéctive.
+			Les classes de sites doivent contenir les mêmes méthodes que la classe de base. (cf. figure \ref{streaming site uml})
 			
 			\begin{figure}[h]
 				\center
@@ -579,11 +567,21 @@
 				\label{streaming site uml}
 			\end{figure}
 			
-			\subsection{Catégorie et liste de lectures}
-			Pour différencier les catégories et les liste de lectures j'ai créer une classe de base \textit{Container} qui contient toute les méthodes concernant les deux types de containeur.
-			Étant donné que les liste de lectures sont des catégories avec une gestion de lecture en plus, j'ai crée une classe \textit{Playlist} qui contient uniquement les méthodes concernant les listes de lectures.
+			Pour ajouter d'autres sites, il faut juste créé une classe qui respecte la classe de base.
+			Les méthodes communes à touts les sites sont virtuelles, en effet, étant donné que pour chaque site les traitements ne sont pas les mêmes, il faut réécrire la méthode pour chaque site dans leurs classes respective. (cf. figure \ref{streaming site})
 			
-			Les vidéos sont stockée sous forme de liens, cela me permet de reconnaître de quel site est la vidéo. Ainsi, je peux récupérer les informations d'une vidéo grâce à l'id de la vidéo qui se trouve dans son lien.
+			\begin{figure}[h]
+				\center
+				\includegraphics[width=1\textwidth]{../img/StreamingSite.png}
+				\caption{Diagramme StreamingSite}
+				\label{streaming site}
+			\end{figure}
+			
+			\subsection{Catégorie et liste de lectures}
+			Pour différencier les catégories et les listes de lectures, j'ai créé une classe de base \textit{Container} qui contient toutes les méthodes concernant les deux types de container.
+			Étant donné que les listes de lectures sont des catégories avec une gestion de lecture en plus, j'ai créé une classe \textit{Playlist} qui contient uniquement les méthodes concernant les listes de lectures. (cf. figure \ref{Container})
+			
+			Les vidéos sont stockées sous forme de liens, cela me permet de reconnaître de quel site est la vidéo (cf. figure \ref{inifile}). Ainsi, je peux récupérer les informations d'une vidéo grâce à l'id de la vidéo qui se trouve dans son lien.
 				
 			\begin{figure}[h]
 				\center
@@ -594,8 +592,8 @@
 			
 			\newpage 
 			\subsection{Authentification}
-			L'authentification se fait au niveau du site, elle est différente pour chaque site.
-			Cette classe contient toutes les informations indispensable pour la connexion OAuth2. cf. \ref{sectionOauth2}
+			L'authentification se fait au niveau du site, elle est différente pour chaque site. (cf. figure \ref{authuml})
+			Cette classe contient toutes les informations indispensables pour la connexion OAuth2. (cf. \ref{sectionOauth2})
 			
 			\begin{figure}[h]
 				\center
@@ -607,6 +605,7 @@
 			
 	\newpage
 	\subsection{Global}
+	Cette application est MVC. (cf. figure \ref{Global})
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/Model.png}
@@ -617,11 +616,11 @@
 	\newpage
 	\section{Outil communautaire}
 		\subsection{IRC}
-		Le chat IRC cf. \ref{chat} a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
+		\label{IRC}
+		Le chat IRC (cf. \ref{chat}) a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
 		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. \\
 		
-		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès cf.\ref{token} qui permet de se connecter aux chats depuis l'extérieur.\\
-		Ci-dessous les étapes d'une connexion à un chat IRC :
+		Afin de créer une connexion IRC, il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je mets le nom d'utilisateur. Il faut également un jeton d'accès (cf.\ref{token}) qui permet de se connecter aux chats depuis l'extérieur. (cf. figure \ref{IrcChat})
 		
 		\begin{figure}[h]
 			\center
@@ -630,14 +629,14 @@
 			\label{IrcChat}
 		\end{figure}
 		
-		Les messages reçuent des événements sont affiché dans un TextBox.
+		Les messages reçues des événements sont affiché dans un TextBox.
 
 	\newpage
 	\section{Récupération des données}
 		\subsection{Classes structure}
-		Afin de récupérer les données reçues grâce aux API \ref{api}, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
+		Afin de récupérer les données reçues grâce aux API \ref{api}, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée. (cf. figure \ref{Twitch class})
 		
-		Pour spécifié que se sont des classes "structures" il faut spécifié la classe en \textit{[DataContract]} et les propriétés en \textit{[DataMember]}.
+		Pour spécifier que se sont des classes "structures" il faut spécifier la classe en \textit{[DataContract]} et les propriétés en \textit{[DataMember]}.
 		
 		\begin{figure}[h]
 			\center
@@ -650,7 +649,7 @@
 		
 		\newpage
 		\subsection{Curl}
-		\textbf{C}lient \textbf{U}RL \textbf{R}equest \textbf{L}ibrary est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
+		\textbf{C}lient \textbf{U}RL \textbf{R}equest \textbf{L}ibrary est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL. (cf. figure \ref{cURL command})
 		
 		\begin{figure}[h]
 			\center
@@ -661,7 +660,7 @@
 		
 		Ci-dessus, un exemple de récupération de données sur le site Twitch. La ressource désignée est "https://api.twitch.tv/kraken/channel".\\
 		
-		Il y a plusieurs type de requêtes :
+		Il y a plusieurs types de requêtes :
 		\begin{itemize}
 			\item GET
 			\item POST
@@ -727,13 +726,12 @@
 		
 	\newpage
 	\section{Authentification}
-	L'authentification se fait grâce au protocole OAuth2 cf. \ref{sectionOauth2}. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.\\
+	L'authentification se fait grâce au protocole OAuth2 (cf. \ref{sectionOauth2}). Pour rendre l'authentification générique, il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tous les sites utilisent le type d'autorisation implicite.\\
 	C'est pour cela que j'ai créé une classe permettant la connexion implicite ainsi que la connexion par autorisation de flux.
 	
 	\subsection{Générique}
 	Je rencontre un problème pour la connexion générique, en effet, afin de pouvoir utiliser le protocole OAuth2, il faut que j'utilise ASP.NET\footnote{ensemble de technologies de programmation Web}. 
-	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API. cf. \ref{api}\\
-	Je procède de cette manière :
+	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi-même le protocole OAuth2 mais je le sous-traite aux API. (cf. \ref{api}) (cf. figure \ref{authentification})
 	
 			\begin{figure}[h]
 				\center
@@ -748,16 +746,16 @@
 	
 	\textit{https://[url de l'api]?response\_type=token\&client\_id="[id de l'application]"\& redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"}\\
 	
-	Le client\_id est l'id que donne le service chez qui j'ai enregistrer mon application, il varie pour chaque site. 
-	La page de redirection sert uniquement à récupérer le jeton d'accès dans le lien, en effet si l'utilisateur saisi correctement ses identifiants il sera redirigé sur cette page. Il doit également accepter l'utilisation de son compte sur mon application.
+	Le client\_id est l'id que donne le service chez qui j'ai enregistré mon application, il varie pour chaque site. 
+	La page de redirection sert uniquement à récupérer le jeton d'accès dans le lien, en effet si l'utilisateur saisi correctement ses identifiants, il sera redirigé sur cette page. Il doit également accepter l'utilisation de son compte sur mon application.
 
 	\subsection{Connexion automatique}
-	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le faits de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
+	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le fait de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
 	
-	Le navigateur intégrer dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique mais l'utilisateur passe moins de temps à se connecter car les identifiants sont déjà enregistré, il suffit juste de cliquer sur un bouton pour valider la connexion.
+	Le navigateur intégré dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique, mais l'utilisateur passe moins de temps à se connecter, car les identifiants sont déjà enregistrés, il suffit juste de cliquer sur un bouton pour valider la connexion.
 	
 	\subsection{Page web de connexion et d'autorisation}
-	Lorsqu'un utilisateur veut se connecter et ainsi autoriser un compte à utiliser mon application, celui-ci est redirigé vers un site internet. Ce site internet que l'on a acces via : \url{http://froelicher.github.io/WebMediaManager/}(Page vide) a été mis en ligne par moi-même.
+	Lorsqu'un utilisateur veut se connecter et ainsi autoriser un compte à utiliser mon application, celui-ci est redirigé vers un site internet. Ce site internet que l'on a accès via : \url{http://froelicher.github.io/WebMediaManager/}(Page vide) a été mis en ligne par moi-même.
 	
 	C'est également sur ce site que l'on récupère le token dans l'URL. cf. \ref{authentification}\\
 	
@@ -767,8 +765,8 @@
 	
 	\section{Notification}
 	
-	Afin d'être notifié lorsqu'une vidéo sort ou lorsque une diffusion de flux vidéo en direct commence, je compare deux listes. La première contient les vidéos ACTUELLEMENT sorties et les diffusions en direct, la deuxième va récupérer depuis une requête la liste des vidéos sorties. \\
-	Chaque X secondes on compare les deux listes pour voir si il y a eu une vidéo qui est en plus dans la deuxième liste.
+	Afin d'être notifié lorsqu'une vidéo sort ou lorsque une diffusion de flux vidéo en direct commence, je compare deux listes. La première contient les vidéos actuellement sorties et les diffusions en direct, la deuxième va récupérer depuis une requête la liste des vidéos sorties. \\
+	Chaque X secondes, on compare les deux listes pour voir s'il y a eu une vidéo qui est en plus dans la deuxième liste. (cf. figure \ref{checkNotif})
 	
 	\begin{figure}[h]
 		\center
@@ -777,9 +775,9 @@
 		\label{checkNotif}
 	\end{figure}
 	
-	J'utilise cette méthode pour détecter les nouvelles vidéos ainsi que les nouvelle diffusion de flux vidéo en direct.
+	J'utilise cette méthode pour détecter les nouvelles vidéos ainsi que les nouvelles diffusions de flux vidéo en direct.
 	
-	Afin d'avoir une détection automatique qui ne ralentisse pas la vue lors de la vérification, j'appel cette méthode depuis un processus différent de celui de la vue.
+	Afin d'avoir une détection automatique qui ne ralentit pas la vue lors de la vérification, j'appelle cette méthode depuis un processus différent de celui de la vue.
 	
 	\begin{lstlisting}
 		List<List<StreamingSite.SVideo>> newVideos = this.SitesController.CheckNotificationsOnlineStreams();
@@ -800,17 +798,17 @@
 	\newpage
 	\section{Affichage}	
 		\subsection{Flux vidéo}
-		Les flux vidéos sont affiché grâce au composant de base proposé par .NET : WebBrowser. En effet, tout les sites proposent un lien afin d'avoir uniquement le lecteur vidéo.
-		J'ai choisi cette solution car chaque lecteur est différent et ont donc certaine fonctionnalités le sont aussi.
+		Les flux vidéos sont affiché grâce au composant de base proposé par .NET : WebBrowser. En effet, tous les sites proposent un lien afin d'avoir uniquement le lecteur vidéo.
+		J'ai choisi cette, solution car chaque lecteur est différent et ont donc certaine fonctionnalités le sont aussi.
 		
 		\subsection{Chat IRC}
-		Comme dis plus haut, les messages du chat sont affichés dans un TextBox. Afin de pouvoir y afficher depuis un événements j'ai du créer un autre processus.
+		Comme dis plus haut (cf. \ref{IRC}), les messages du chat sont affichés dans un TextBox. Afin de pouvoir y afficher depuis un événement, j'ai dû créer un autre processus.
 		
 		
 		\subsection{Notification}
 		Le composant externe "PopopNotifier" a été utilisé pour afficher un pop-up lorsqu’une nouvelle
-		diffusion commence. Ce composant vient du web : http://www.codeproject.com/Articles/
-		277584/Notification-Window.
+		diffusion commence. (cf. figure \ref{vue notification})  Ce composant vient du web : \url{http://www.codeproject.com/Articles/
+		277584/Notification-Window}.
 		
 		\begin{figure}[h]
 			\center
@@ -821,14 +819,14 @@
 		
 		Pour rendre le composant plus attrayant et adapté à mon interface homme-machine, j’ai modifié
 		certains éléments graphiques à l'interne du composant.
-		Les différentes informations affichées : Nom de la vidéo ; nom de la chaîne ; nombre de vues; description de la vidéo
+		Les différentes informations affichées : nom de la vidéo ; nom de la chaîne ; nombre de vues ; description de la vidéo
 		
-		Lorsque c'est une notification de nouvelle diffusion de flux vidéo em direct la description n'est pas affichée.
+		Lorsque c'est une notification de nouvelle diffusion de flux vidéo en direct la description n'est pas affichée.
 		
 	
 \chapter{Tests}
 	\section{Tests fonctionnel}
-	Cette série de tests a été effectué lorsque l'utilisateur est connecté à au moins un compte.
+	Cette série de tests a été effectuée lorsque l'utilisateur est connecté à au moins un compte. (cf. figure \ref{tests connect})
 	\begin{figure}[h]
 		\center
 		\includegraphics[width=1\textwidth]{../img/TestsConnect.png}
@@ -836,7 +834,7 @@
 		\label{tests connect}
 	\end{figure}
 	
-	Cette série de tests a été effectué lorsque l'utilisateur n'est connecté à aucun compte.
+	Cette série de tests a été effectuée lorsque l'utilisateur n'est connecté à aucun compte. (cf. figure \ref{tests disconnect})
 	\begin{figure}[h]
 		\center
 		\includegraphics[width=1\textwidth]{../img/TestsDisconnect.png}
@@ -847,24 +845,24 @@
 \chapter{Conclusions}
 \section{Apport personnel}
 	L'estimation de l'apport personnel apporté sur ce projet est :
-	La création de la vue est 80\% de moi-même, l'affiche du lecteur vidéo est fait grâce au composant WebBrowser. La vue de notification est un composant externe où les propriétés graphique ont été modifiées par moi.\\
-	La méthodes cURL a été faite 100\% par moi.\\
+	La création de la vue est 80\% de moi-même, l'affiche du lecteur vidéo est fait grâce au composant WebBrowser. La vue de notification est un composant externe où les propriétés graphiques ont été modifiées par moi.\\
+	La méthode cURL a été faite 100\% par moi.\\
 	Le chat IRC a été prit sur le Web, mais mis en place 100\% par moi-même.\\
-	L'authentification est faites à 50\% par moi, j'affiche la page de connexion et récupère les informations, le serveur lui s'occupe de me donner le jeton d'accès. 
+	L'authentification est faite à 50\% par moi, j'affiche la page de connexion et récupère les informations, le serveur lui s'occupe de me donner le jeton d'accès. 
 \section{Conclusion personnel}
-	J'ai eu plaisir de travailler sur ce projet, en effet le thème des vidéos est un thème que j'affectionne tout particulièrement. C'est une application que moi-même peut utiliser mais pas que, beaucoup de mes amis également.\\
-	La gestion du temps a encore posé problème, bien que le travail a été effectué tout au long du diplôme, je n'ai pas sû me concentrer au bon moment afin de finir tranquillement.\\ 
-	Le plus long et dur pour moi est la conception de l'application, en effet je passe beaucoup de temps à concevoir l'application par rapport à la réalisation.
+	J'ai eu plaisir de travailler sur ce projet, en effet le thème des vidéos est un thème que j'affectionne tout particulièrement. C'est une application que moi-même peut utiliser, mais pas que, beaucoup de mes amis également.\\
+	La gestion du temps a encore posé problème, bien que le travail a été effectué tout au long du diplôme, je n'ai pas su me concentrer au bon moment afin de finir tranquillement.\\ 
+	Le plus long et dur pour moi est la conception de l'application, en effet, je passe beaucoup de temps à concevoir l'application par rapport à la réalisation.
 	Malgré tout, je suis tout de même satisfait de l'application réalisée même si elle ne remplit pas entièrement le cahier des charges.
 	
 \section{Conclusion technique}
 \subsection{Bilan de réalisation}
-	Au niveau de la réalisation, l'application ne remplit malheuresement pas le cahier des charges dans son intégralité. Je pense avoir mis trop de fonctionnalités, même si elle ne sont pas dure à réaliser. Toutes les fonctionnalités qui ne sont pas intégrées sont celles que l'utilisateur utilise le moins.
+	Au niveau de la réalisation, l'application ne remplit malheureusement pas le cahier des charges dans son intégralité. Je pense avoir mis trop de fonctionnalités, même si elles ne sont pas dure à réaliser. Toutes les fonctionnalités qui ne sont pas intégrées sont celles que l'utilisateur utilise le moins.
 	L'application est tout de même fonctionnelle.
 \subsection{Améliorations et perspectives}
-	Tout d'abord finir l'application avec toutes les fonctionnalités prévus initialement.
-	Puis, ajouter du contenu, c'est-à-dire intégrer d'autres site vidéos à mon application, étant donné qu'elle est conçue pour l'évolution justement.
-	Afin de rendre l'utilisation plus agréable, faire une meilleur interface graphique ainsi qu'optimiser l'application.
+	Tout d'abord finir l'application avec toutes les fonctionnalités prévues initialement.
+	Puis, ajouter du contenu, c'est-à-dire intégrer d'autre site vidéos à mon application, étant donné qu'elle est conçue pour l'évolution justement.
+	Afin de rendre l'utilisation plus agréable, faire une meilleure interface graphique ainsi qu'optimiser l'application.
 	Afin d'avoir une connexion complètement à l'interne, utiliser ASP.NET.
 
 \chapter{Annexes}
@@ -877,7 +875,8 @@
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Étude d'opportunité}{1}{1}\ganttnewline
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Analyse fonctionnelle}{2}{4}\ganttnewline
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Analyse organique}{5}{8}\ganttnewline
-		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=red}]{Développement}{9}{14}
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=red}]{Développement}{9}{14}\ganttnewline
+		\ganttmilestone{Rapport intermédiaire}{14}
 	\end{ganttchart}
 	
 	\begin{ganttchart}[hgrid,vgrid,x unit=5mm,y unit chart=6mm,group left shift=0,group right shift=0,group peaks tip position=0,group peaks height=.4]{1}{18}
@@ -885,11 +884,31 @@
 		\gantttitlelist{4,5,6,7,8,11,12,13,15,18,19,20,21,22,26,27,28,29}{1}\ganttnewline
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=red}]{Développement}{1}{14}\ganttnewline
 		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=yellow}]{Tests}{15}{16}\ganttnewline
-		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Conclusions/Bilan}{17}{18}
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Conclusions/Bilan}{17}{18}\ganttnewline
+		\ganttmilestone{Rendu final}{18}
 	\end{ganttchart}
 	
 	\subsection{Final}
-
+	\begin{ganttchart}[hgrid,vgrid,x unit=6mm,y unit chart=6mm,group left shift=0,group right shift=0,group peaks tip position=0,group peaks height=.4]{1}{14}
+		\gantttitle{\textbf{Avril}}{14}\ganttnewline
+		\gantttitlelist{13,14,15,16,17,20,21,22,23,24,27,28,29,30}{1}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Étude d'opportunité}{1}{1}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Analyse fonctionnelle}{2}{4}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Analyse organique}{5}{13}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=red}]{Développement}{9}{14}\ganttnewline
+		\ganttmilestone{Rapport intermédiaire}{14}
+	\end{ganttchart}
+	
+	\begin{ganttchart}[hgrid,vgrid,x unit=5mm,y unit chart=6mm,group left shift=0,group right shift=0,group peaks tip position=0,group peaks height=.4]{1}{18}
+		\gantttitle{\textbf{Mai}}{18}\ganttnewline
+		\gantttitlelist{4,5,6,7,8,11,12,13,15,18,19,20,21,22,26,27,28,29}{1}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=red}]{Développement}{1}{16}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=yellow}]{Tests}{17}{18}\ganttnewline
+		\ganttbar[bar height=.6, bar top shift=.2, bar/.append style={fill=green}]{Conclusions/Bilan}{17}{18}\ganttnewline
+		\ganttmilestone{Rendu final}{18}
+	\end{ganttchart}
+	
+	
 \listoffigures
 
 \end{document}

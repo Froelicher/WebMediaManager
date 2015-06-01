@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Channel
+ * Date : 16/04/2015
+ */
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 

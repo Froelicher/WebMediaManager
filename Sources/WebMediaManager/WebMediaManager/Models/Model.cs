@@ -1,9 +1,13 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Model class
+ * Date : 29/05/2015
+ */ 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using WebMediaManager.Models.Sites;
 
 namespace WebMediaManager.Models
@@ -237,6 +241,11 @@ namespace WebMediaManager.Models
             }
         }
 
+        /// <summary>
+        /// Add a container
+        /// </summary>
+        /// <param name="name">container name</param>
+        /// <param name="t_playlist">if is a playlist</param>
         public void AddContainer(string name, bool t_playlist)
         {
             if (t_playlist)
@@ -257,7 +266,7 @@ namespace WebMediaManager.Models
         }
 
         /// <summary>
-        /// 
+        /// Check and get the new videos
         /// </summary>
         /// <returns></returns>
         public List<List<StreamingSite.SVideo>> CheckNotificationsLastVideos()
@@ -303,6 +312,10 @@ namespace WebMediaManager.Models
             return listDiff;
         }
 
+        /// <summary>
+        /// Check and get new online streams
+        /// </summary>
+        /// <returns></returns>
         public List<List<StreamingSite.SVideo>> CheckNotificationsOnlineStreams()
         {
             List<List<StreamingSite.SVideo>> listDiff = new List<List<StreamingSite.SVideo>>();
@@ -347,7 +360,10 @@ namespace WebMediaManager.Models
         }
 
 
-
+        /// <summary>
+        /// Get the name site
+        /// </summary>
+        /// <returns>array name</returns>
         public string[] GetNameSites()
         {
             string[] nameSites = new string[this.ListSite.Count];
@@ -360,6 +376,11 @@ namespace WebMediaManager.Models
             return nameSites;
         }
 
+        /// <summary>
+        /// Get username from site
+        /// </summary>
+        /// <param name="nameSite">name site</param>
+        /// <returns>username</returns>
         public string GetUserName(string nameSite)
         {
             for (int i = 0; i < this.ListSite.Count; i++)
@@ -373,6 +394,11 @@ namespace WebMediaManager.Models
             return null;
         }
 
+        /// <summary>
+        /// Get the accesstoken from a website
+        /// </summary>
+        /// <param name="nameSite">name site</param>
+        /// <returns>access token</returns>
         public string GetAccessToken(string nameSite)
         {
             for (int i = 0; i < this.ListSite.Count; i++)
@@ -386,6 +412,12 @@ namespace WebMediaManager.Models
             return null;
         }
 
+        /// <summary>
+        /// Search videos
+        /// </summary>
+        /// <param name="request">request</param>
+        /// <param name="limit">limit of result</param>
+        /// <returns></returns>
         public List<StreamingSite.SVideo> SearchVideos(string request, int limit)
         {
             List<StreamingSite.SVideo> result = new List<StreamingSite.SVideo>();
@@ -402,6 +434,10 @@ namespace WebMediaManager.Models
             return result;
         }
 
+        /// <summary>
+        /// Get channels followed
+        /// </summary>
+        /// <returns></returns>
         public List<StreamingSite.SChannel> GetChannelsFollowed()
         {
             List<StreamingSite.SChannel> listChannelsSite = null;

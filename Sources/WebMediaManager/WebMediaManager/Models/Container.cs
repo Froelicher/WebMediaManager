@@ -1,9 +1,12 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Container class
+ * Date : 29/05/2015
+ */ 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WebMediaManager.Models
 {
@@ -38,22 +41,35 @@ namespace WebMediaManager.Models
 
         #endregion
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="name">constructor name</param>
         public Container(string name)
         {
             this.Name = name;
         }
 
+        /// <summary>
+        /// Set the path of category
+        /// </summary>
         public void SetPathCategory()
         {
             this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Category.ini");
         }
 
+        /// <summary>
+        /// Set the path of playlist
+        /// </summary>
         public void SetPathPlaylist()
         {
             this.FilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WebMediaManager/Playlist.ini");
         }
         
-
+        /// <summary>
+        /// Fill the list videos
+        /// </summary>
+        /// <param name="videos">List videos</param>
         public void FillListVideos(List<StreamingSite.SVideo> videos)
         {
             this.ListVideos = videos;

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Vimeo class
+ * Date : 20/04/2015
+ */ 
 namespace WebMediaManager.Models.Sites
 {
     class Vimeo : StreamingSite

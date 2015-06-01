@@ -178,7 +178,7 @@ namespace WebMediaManager
 
         public void DisplayOnlineStreamsBySite(Panel pnl, string siteName)
         {
-            List<StreamingSite.SVideo> onlineStreams = this.SitesController.GetOnlineStreamBySite(siteName);
+            List<StreamingSite.SVideo> onlineStreams = this.SitesController.GetOnlineStreamFromSite(siteName);
 
             if (onlineStreams != null)
             {
@@ -314,7 +314,7 @@ namespace WebMediaManager
 
         private void DisplayLastVideosBySite(Panel pnl, string siteName)
         {
-            List<StreamingSite.SVideo> lastVideos = this.SitesController.GetLastVideosBySite(siteName);
+            List<StreamingSite.SVideo> lastVideos = this.SitesController.GetLastVideosFromSite(siteName);
             int j = 0;
             int counter_for_line = 0;
             for (int i = 0; i < lastVideos.Count; i++)
@@ -350,7 +350,7 @@ namespace WebMediaManager
                 newPanel.Location = new Point(10, lblRequest.Height + lblRequest.Location.Y + 50);
 
                 this.pnlContent.Controls.Add(lblRequest);
-                List<List<StreamingSite.SVideo>> videosSort = this.SitesController.GetVideosBySite(resultSearch);
+                List<List<StreamingSite.SVideo>> videosSort = this.SitesController.GetVideosFromSite(resultSearch);
 
                 if (videosSort != null)
                 {

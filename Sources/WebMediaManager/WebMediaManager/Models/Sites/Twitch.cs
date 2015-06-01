@@ -1,9 +1,12 @@
-﻿using System;
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Twitch class
+ * Date : 30/05/2015
+ */ 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using WebMediaManager.Structures;
 using WebMediaManager.Structures.STwitch;
 
 namespace WebMediaManager.Models.Sites
@@ -35,10 +38,10 @@ namespace WebMediaManager.Models.Sites
         }
 
         /// <summary>
-        /// 
+        /// Create a video stream
         /// </summary>
-        /// <param name="stream"></param>
-        /// <returns></returns>
+        /// <param name="stream">stream twitch</param>
+        /// <returns>SVideo</returns>
         private SVideo CreateVideoStream
             (Stream stream)
         {
@@ -59,6 +62,11 @@ namespace WebMediaManager.Models.Sites
             return video;
         }
 
+        /// <summary>
+        /// Create a video
+        /// </summary>
+        /// <param name="video">video twitch</param>
+        /// <returns>SVideo</returns>
         private SVideo CreateVideo(Video video)
         {
             SVideo sVideo = new SVideo();
@@ -79,10 +87,10 @@ namespace WebMediaManager.Models.Sites
         }
 
         /// <summary>
-        /// 
+        /// Create a channel
         /// </summary>
-        /// <param name="channelFollowed"></param>
-        /// <returns></returns>
+        /// <param name="channelFollowed">channel twitch</param>
+        /// <returns>channel</returns>
         private SChannel CreateChannel(WebMediaManager.Structures.STwitch.Channel channelFollowed)
         {
             SChannel channel = new SChannel();
@@ -119,7 +127,11 @@ namespace WebMediaManager.Models.Sites
             return result.ToString();
         }
 
-
+        /// <summary>
+        /// Get video by id
+        /// </summary>
+        /// <param name="id">id video</param>
+        /// <returns>video</returns>
         public override SVideo GetVideoById(string id)
         {
             Video video = Curl.Deserialize<Video>(Curl.SendRequest(URL_API+"videos/"+id, "GET", ACCEPT_HTTP_HEADER));
@@ -311,6 +323,10 @@ namespace WebMediaManager.Models.Sites
             return listVideos;
         }
 
+        /// <summary>
+        /// Connnect to twitch
+        /// </summary>
+        /// <param name="access_token">access token</param>
         public override void Connect(string access_token)
         {
             this.Auth.Access_token = access_token;
@@ -321,6 +337,9 @@ namespace WebMediaManager.Models.Sites
             this.UserName = user.name;
         }
 
+        /// <summary>
+        /// Disconnect
+        /// </summary>
         public override void Disconnect()
         {
             //Curl.Deserialize<AuthResponse>(Curl.SendRequest("https://api.twitch.tv/kraken/oauth2/authorization/"+this.Auth.Client_id, "DELETE", this.Auth.Access_token, ACCEPT_HTTP_HEADER));

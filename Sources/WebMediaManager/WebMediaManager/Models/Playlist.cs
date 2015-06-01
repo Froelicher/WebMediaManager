@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/*
+ * Author : JP. Froelicher
+ * Description : Playlist class
+ * Date : 29/05/2015
+ */ 
 namespace WebMediaManager.Models
 {
     class Playlist : Container
@@ -16,7 +15,10 @@ namespace WebMediaManager.Models
             set { _indexCurrentVideo = value; }
         }
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="name">playlist name</param>
         public Playlist(string name) : base(name)
         {
             this.IndexCurrentVideo = 0;
