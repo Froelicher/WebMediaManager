@@ -179,19 +179,24 @@ namespace WebMediaManager
         public void DisplayOnlineStreamsBySite(Panel pnl, string siteName)
         {
             List<StreamingSite.SVideo> onlineStreams = this.SitesController.GetOnlineStreamBySite(siteName);
-            int j = 0;
-            int counter_for_line = 0;
 
-            for (int i = 0; i < onlineStreams.Count; i++)
+            if (onlineStreams != null)
             {
-                if (j % 4 == 0 && j != 0)
+
+                int j = 0;
+                int counter_for_line = 0;
+
+                for (int i = 0; i < onlineStreams.Count; i++)
                 {
-                    j = 0;
-                    counter_for_line++;
-                    pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
+                    if (j % 4 == 0 && j != 0)
+                    {
+                        j = 0;
+                        counter_for_line++;
+                        pnl.Size = new Size(pnl.Size.Width, pnl.Size.Height + 200);
+                    }
+                    ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line, this.Model);
+                    j++;
                 }
-                ViewUtils.CreatePreview(pnl, onlineStreams[i], j, counter_for_line, this.Model);
-                j++;
             }
         }
 

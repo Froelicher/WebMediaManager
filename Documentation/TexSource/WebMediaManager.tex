@@ -31,6 +31,7 @@
 \usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
 \usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
 \usepackage{pgfgantt} % diagram of gantt
+\usepackage[hidelinks]{hyperref}
 \usepackage[francais]{babel}
 % These packages are all incorporated in the memoir class to one degree or another...
 
@@ -57,29 +58,85 @@
 \renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
 \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\def\maketitle{%
+	\null
+	\thispagestyle{empty}%
+	\vskip 1cm
+	\begin{center}
+		\Huge \strut \@title \par
+		\large \strut Mêmoire
+	\end{center}
+	\ifhmode\par\fi
+	\hbox to \hsize{\hfill
+		\vrule height 2pt width.5\hsize
+		\hfill}%
+	\begin{center}
+		\normalfont\large CFPT Informatique\par
+		\normalfont\large\@author\par
+		\normalfont T.IS-E2A
+	\end{center}
+	%IMG A METTRE ICI
+	\begin{center}
+		\normalfont\large 2014 - 2015
+	\end{center}
+	\par
+	\vfil
+	\vfil
+	\null
+	\cleardoublepage
+}
+
 \input{./inc_lst_csharp.tex}
 
 
 %%% END Article customizations
 
 %%% The "real" document content comes below...
+\makeatother
 
 \title{Web Media Manager}
-\author{The Author}
-%\date{} % Activate to display a given date or no date (if empty),
+\author{Jean-Philippe Froelicher}
+\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
 \begin{document}
-	
+\includegraphics[width=0.9\textwidth]{../img/logoWebMediaManager.png}
 \maketitle
+
 \newpage
 
 \tableofcontents
 
 \chapter{Résumés}
-
-\chapter{Introduction}
-
+	\section{Français}
+		Web Media Manager est une application qui centralise les services des sites de vidéos tels que :
+		"Twitch"; "Youtube"; "Dailymotion"; "Vimeo" etc. L'application doit en grande partie pouvoir
+		remplacer les différents sites. L'application doit également pouvoir être évolutive et donc pouvoir
+		centraliser n'importe quel site vidéo qui propose une API.
+		L'application est codée en C\#, il y a une interface principale qui regroupe toutes les diffusions de
+		flux vidéo en direct et toutes les dernières vidéos sorties. L'application offre également la possibilité
+		de pouvoir naviguer dans le contenu de chaque site séparément. Toutes les fonctionnalités
+		principales qu'offrent les sites sont présentes dans l'application.
+		Afin d'obtenir les informations des différents sites, j'utilise les API qu'ils proposent. En effet, tous
+		ses sites proposent une API REST qui me permet donc de récupérer les données de la même
+		manière pour tous les sites. Afin d'avoir un format générique, j'ai créé une structure qui regroupe
+		toutes les informations communes de tous les sites
+	
+	\section{English}
+		Web Media Manager is an application that centralizes services of video sites such as: "Twitch";
+		"Youtube"; "Dailymotion"; "Vimeo" etc. She must largely be able to replace the
+		different sites. The application must be scalable and therefore be able to centralize any video site
+		that offers an API.
+		It is coded in C \#, there is a main interface that brings together all the live streams videos
+		and all the latest video outputs. The application give the possibility to navigate
+		through the content of each site separately. All the main features offered by the website are present in
+		the application.
+		In order to obtain the information from the different sites, I use the API they offer. Indeed, all websites
+		offer a REST API that allows me to retrieve data in the same way for all sites. In order to have a
+		generic format, I created a structure which includes all common information from all the sites.
+		
 \chapter{Cahier des charges}
 	\section{Titre du projet}
 	WebMedia Manager
@@ -150,7 +207,7 @@
 	Le but de ce projet est de réaliser une application permettant l'utilisation des différents services proposé par les sites de vidéos et de diffusion de flux vidéo en direct.
 		\subsection{Médias vidéo web}
 		 Aujourd'hui, les sites comme Youtube, Dailymotion, Twitch qui propose du contenu vidéos sont de plus en plus visités. Ses sites, ont tous un point commun, d'autres personnes mettent des vidéos en ligne pour divertir les spectateurs. \\
-		 Le phénomène a prit une tel ampleur que certain "créateur de contenu audiovisuel" sont même payé par ses sites par rapport à leur popularité. De plus en plus de personnes, surtout les jeunes, passent leurs temps devant des vidéos sur le web que sur la télévision.
+		 Le phénomène a prit une tel ampleur que certain "créateur de contenu audiovisuel" sont même payé par ses sites par rapport à leur popularité. De plus en plus de personnes, surtout les jeunes, passent leurs temps devant des vidéos et délaisse de plus en plus la télévision.
 			\subsubsection{Direct}
 			Les vidéos en direct sont de plus en plus présent sur le web. En effet, grâce en grande partie aux jeux vidéos, le phénomène des personnes créant du contenu audiovisuel c'est également répandu sur du contenu en direct. Des sites comme Twitch ou Dailymotion propose à ses utilisateurs de diffuser du flux vidéo en direct. \\ 
 			La plus part du temps c'est pour les jeux vidéos, les diffuseurs jouent sur leurs ordinateurs / consoles puis, retransmet l'image sur le site. Ainsi, des personnes du monde entier ont la possibilité de regarder la partie de jeu d'une personne. Les spectateurs ont même la possibilité de discuter avec les autres spectateurs et même des fois avec le diffuseur de contenu.\\
@@ -198,7 +255,7 @@
 			Les fonctions spécifique aux sites qui proposes des diffusions en direct :
 			\begin{itemize}
 				\item \textit{Chat} : Discuter avec les autres spectateurs
-				\item Abonnement payant
+				\item Abonnement payant\footnote{Offre des avantages à l'abonné}
 			\end{itemize}
 			Les utilisateurs ont le la possibilité de faire des donations mais pas par le biais des sites de diffusions.
 			
@@ -244,8 +301,9 @@
 		L'application donne la possibilité à l'utilisateur d'activé ou de désactiver les notifications.
 		
 		
-		
+	\newpage
 	\section{API}
+	\label{api}
 	Les API des différents site permettent de faire des interrogations entre les bases de données et l'application.
 		\subsection{API REST}
 		Les API\footnote{Application Programming Interface} REST\footnote{Representational State Transfer} servent à accéder a une ressource par son URI grâce au protocole HTML pour procéder à diverses opérations : GET; POST; PUT; DELETE. \\		
@@ -284,6 +342,7 @@
 	\section{Outil communautaire}
 	Les différents sites de vidéos mettent à disposition des utilisateurs des outils afin de pouvoir communiquer avec d'autre membre du site ou directement s'adresser à l'auteur de la vidéo.
 		\subsection{Chat IRC}
+		\label{chat}
 		Le \textit{chat} est utilisé le plus souvent lors de diffusion de flux vidéo en direct. Afin d'avoir un contact direct avec le diffuseur il faut avoir un support sur lequel le diffuseur peut lire rapidement.
 		
 		La plus part des \textit{chat} utilisé pour les diffusions de flux vidéo en direct sont des \textit{chats} IRC\footnote{Internet Relay Chat}.
@@ -301,9 +360,10 @@
 	\section{Connexion}
 	Afin de se connecter aux différents services avec un compte personnel, ils utilisent le protocole OAuth2.
 		\subsection{OAuth2}
+		\label{sectionOauth2}
 		La plus part des grands sites utilisent le protocole OAuth2 pour l'authentification au compte personnel, en effet, ce protocole permet d'obtenir un accès limité à un service via HTTP par le biais d'une autorisation. 
 		La demande d'accès est demandée par le client, en l'occurrence WebMedia Manager.
-	
+		cf. figure \ref{oauth2}\\
 		OAuth2 définit 4 rôles :
 		\begin{itemize}
 			\item Détenteur des données (L'utilisateur)
@@ -313,6 +373,7 @@
 		\end{itemize}
 		
 			\subsubsection{Token (jeton)}
+			\label{token}
 			Lorsque le client fait une demande d'authentification, le serveur d'autorisation délivre un token. Un token permet au serveur de ressources d'autoriser la mise à disposition des données d'un utilisateur. Il a une durée de vie limité qui est définie par le serveur qui délivre les tokens.
 			Un token doit rester le plus confidentiel possible, même l'utilisateur ne voit pas son token attribué.
 			
@@ -359,7 +420,7 @@
 		\end{figure}
 		
 		\subsection{Navigation}
-		Les couleurs représentent les différentes fenêtres de l'application.
+		Les couleurs représentent les différentes fenêtres de l'application. Les flèches rouges marque le changement du menu de gauche dans l'interface graphique.
 		
 		\begin{figure}[h]
 			\center
@@ -421,13 +482,13 @@
 			\item Ajouter le flux vidéo à une catégorie ou liste de lecture
 			\item S'abonner à l'auteur de la vidéo
 			\item Informations concernant la vidéo
-			\item \textit{Chat} ou espace commentaires
+			\item \textit{Chat} cf. \ref{chat} ou espace commentaires
 			\item Nombre de vues de la vidéo
 		\end{enumerate}
 		
 		\newpage
 		
-		\subsection{Interface détail d'un compte}
+		\subsection{Interface d'une chaîne}
 		
 		\begin{figure}[h]
 			\center
@@ -443,9 +504,16 @@
 			\item Liste des flux vidéos
 			\item Diverses informations concernant la chaîne
 		\end{enumerate}
-		
+		\newpage
 		\subsection{Interface de connexion}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=1\textwidth]{../img/connexionInterface.png}
+			\caption{Interface de connexion}
+			\label{interfacechannel}
+		\end{figure}
 		
+		La page de connexion est affichée lorsque l'utilisateur clique sur le bouton d'un site sur lequel il n'est pas encore connecté. La page web se charge suivant sur quel site l'utilisateur se connecte.
 		
 \chapter{Analyse organique}
 	\section{Généralité}
@@ -523,9 +591,11 @@
 				\caption{Diagramme Container}
 				\label{Container}
 			\end{figure}
-		
+			
+			\newpage 
 			\subsection{Authentification}
 			L'authentification se fait au niveau du site, elle est différente pour chaque site.
+			Cette classe contient toutes les informations indispensable pour la connexion OAuth2. cf. \ref{sectionOauth2}
 			
 			\begin{figure}[h]
 				\center
@@ -537,7 +607,6 @@
 			
 	\newpage
 	\subsection{Global}
-	
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=1\textwidth]{../img/Model.png}
@@ -548,10 +617,10 @@
 	\newpage
 	\section{Outil communautaire}
 		\subsection{IRC}
-		Le chat IRC a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
+		Le chat IRC cf. \ref{chat} a été réalisé grâce à la librairie mise à disposition sur GitHub "ChatSharp". Cette librairie sert à se connecter a un chat IRC ainsi que de recevoir les données envoyé sur le chat.
 		La librairie "ChatSharp" offre des classes permettant de créer un utilisateur IRC ainsi qu'un client IRC. \\
 		
-		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès qui permet de se connecter aux chats depuis l'extérieur.\\
+		Afin de créer une connexion IRC il faut un nom d'utilisateur, celui du compte connecté. Un pseudonyme, je met le nom d'utilisateur. Il faut également un jeton d'accès cf.\ref{token} qui permet de se connecter aux chats depuis l'extérieur.\\
 		Ci-dessous les étapes d'une connexion à un chat IRC :
 		
 		\begin{figure}[h]
@@ -566,7 +635,7 @@
 	\newpage
 	\section{Récupération des données}
 		\subsection{Classes structure}
-		Afin de récupérer les données reçues grâce aux API, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
+		Afin de récupérer les données reçues grâce aux API \ref{api}, j'ai créé des classes structures. En effet, ces classes ne sont composées que de propriétés et n'ont pas de méthodes. Chaque propriété est une donnée reçue suivant la demande envoyée.
 		
 		Pour spécifié que se sont des classes "structures" il faut spécifié la classe en \textit{[DataContract]} et les propriétés en \textit{[DataMember]}.
 		
@@ -581,7 +650,7 @@
 		
 		\newpage
 		\subsection{Curl}
-		Client URL Request Library est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
+		\textbf{C}lient \textbf{U}RL \textbf{R}equest \textbf{L}ibrary est une interface en ligne de commande. Elle permet de récupérer des données d'une ressource accessible par réseau. On désigne la ressource à partir d'une URL.
 		
 		\begin{figure}[h]
 			\center
@@ -658,12 +727,12 @@
 		
 	\newpage
 	\section{Authentification}
-	L'authentification se fait grâce au protocole OAuth2[AJOUTER REFERENCE]. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.\\
+	L'authentification se fait grâce au protocole OAuth2 cf. \ref{sectionOauth2}. Pour rendre l'authentification générique il faut utiliser le même type d'autorisation. Dans notre cas, le problème est que pas tout les sites utilisent le type d'autorisation implicite.\\
 	C'est pour cela que j'ai créé une classe permettant la connexion implicite ainsi que la connexion par autorisation de flux.
 	
 	\subsection{Générique}
-	Je rencontre un problème pour la connexion générique, en effet, afin de pouvoir utiliser le protocole OAuth2, il faut que j'utilise ASP.NET. 
-	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API.\\
+	Je rencontre un problème pour la connexion générique, en effet, afin de pouvoir utiliser le protocole OAuth2, il faut que j'utilise ASP.NET\footnote{ensemble de technologies de programmation Web}. 
+	Afin d'éviter l'utilisation d'ASP.NET, je n'utilise pas moi même le protocole OAuth2 mais je le sous-traitre aux API. cf. \ref{api}\\
 	Je procède de cette manière :
 	
 			\begin{figure}[h]
@@ -686,7 +755,14 @@
 	La connexion automatique est la connexion aux différents comptes de l'utilisateur lors de l'ouverture de l'application. Malheureusement, c'est techniquement impossible, en effet, le faits de devoir passer de toute façon par une page web fais que l'on ne peut pas remplir automatiquement les champs d'identifiants.
 	
 	Le navigateur intégrer dans Visual Studio utilise Internet Explorer, et donc prends en compte les cookies. Cela ne remplace pas la connexion automatique mais l'utilisateur passe moins de temps à se connecter car les identifiants sont déjà enregistré, il suffit juste de cliquer sur un bouton pour valider la connexion.
-
+	
+	\subsection{Page web de connexion et d'autorisation}
+	Lorsqu'un utilisateur veut se connecter et ainsi autoriser un compte à utiliser mon application, celui-ci est redirigé vers un site internet. Ce site internet que l'on a acces via : \url{http://froelicher.github.io/WebMediaManager/}(Page vide) a été mis en ligne par moi-même.
+	
+	C'est également sur ce site que l'on récupère le token dans l'URL. cf. \ref{authentification}\\
+	
+	Pour la mise en ligne du site, je me suis servi du service proposé par GitHub : GitHub Pages. Ce service permet d'héberger un site Web sur un dépôt Github et automatiquement, votre site web est en ligne.\\
+	
 	\newpage
 	
 	\section{Notification}
@@ -700,6 +776,26 @@
 		\caption{Notification}
 		\label{checkNotif}
 	\end{figure}
+	
+	J'utilise cette méthode pour détecter les nouvelles vidéos ainsi que les nouvelle diffusion de flux vidéo en direct.
+	
+	Afin d'avoir une détection automatique qui ne ralentisse pas la vue lors de la vérification, j'appel cette méthode depuis un processus différent de celui de la vue.
+	
+	\begin{lstlisting}
+		List<List<StreamingSite.SVideo>> newVideos = this.SitesController.CheckNotificationsOnlineStreams();
+		
+		for (int i = 0; i < newVideos.Count; i++)
+		{
+			this.Invoke((MethodInvoker)delegate
+			{
+				if (newVideos[i].Count > 0)
+				{
+					//Affichage de la notification
+				}	
+			}
+			);
+		}
+	\end{lstlisting}
 	
 	\newpage
 	\section{Affichage}	
@@ -716,18 +812,60 @@
 		diffusion commence. Ce composant vient du web : http://www.codeproject.com/Articles/
 		277584/Notification-Window.
 		
-		TODO : METTRE IMAGE
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{../img/notificationview.png}
+			\caption{Notification}
+			\label{vue notification}
+		\end{figure}
 		
 		Pour rendre le composant plus attrayant et adapté à mon interface homme-machine, j’ai modifié
 		certains éléments graphiques à l'interne du composant.
-		Les différentes informations affichées : Nom de la vidéo ; nom de la chaîne ; nombre de vues	
+		Les différentes informations affichées : Nom de la vidéo ; nom de la chaîne ; nombre de vues; description de la vidéo
+		
+		Lorsque c'est une notification de nouvelle diffusion de flux vidéo em direct la description n'est pas affichée.
 		
 	
 \chapter{Tests}
 	\section{Tests fonctionnel}
-	\section{Tests unitaire}
+	Cette série de tests a été effectué lorsque l'utilisateur est connecté à au moins un compte.
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=1\textwidth]{../img/TestsConnect.png}
+		\caption{Tests en étant connecté}
+		\label{tests connect}
+	\end{figure}
+	
+	Cette série de tests a été effectué lorsque l'utilisateur n'est connecté à aucun compte.
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=1\textwidth]{../img/TestsDisconnect.png}
+		\caption{Tests en étant déconnecté}
+		\label{tests disconnect}
+	\end{figure}
 	
 \chapter{Conclusions}
+\section{Apport personnel}
+	L'estimation de l'apport personnel apporté sur ce projet est :
+	La création de la vue est 80\% de moi-même, l'affiche du lecteur vidéo est fait grâce au composant WebBrowser. La vue de notification est un composant externe où les propriétés graphique ont été modifiées par moi.\\
+	La méthodes cURL a été faite 100\% par moi.\\
+	Le chat IRC a été prit sur le Web, mais mis en place 100\% par moi-même.\\
+	L'authentification est faites à 50\% par moi, j'affiche la page de connexion et récupère les informations, le serveur lui s'occupe de me donner le jeton d'accès. 
+\section{Conclusion personnel}
+	J'ai eu plaisir de travailler sur ce projet, en effet le thème des vidéos est un thème que j'affectionne tout particulièrement. C'est une application que moi-même peut utiliser mais pas que, beaucoup de mes amis également.\\
+	La gestion du temps a encore posé problème, bien que le travail a été effectué tout au long du diplôme, je n'ai pas sû me concentrer au bon moment afin de finir tranquillement.\\ 
+	Le plus long et dur pour moi est la conception de l'application, en effet je passe beaucoup de temps à concevoir l'application par rapport à la réalisation.
+	Malgré tout, je suis tout de même satisfait de l'application réalisée même si elle ne remplit pas entièrement le cahier des charges.
+	
+\section{Conclusion technique}
+\subsection{Bilan de réalisation}
+	Au niveau de la réalisation, l'application ne remplit malheuresement pas le cahier des charges dans son intégralité. Je pense avoir mis trop de fonctionnalités, même si elle ne sont pas dure à réaliser. Toutes les fonctionnalités qui ne sont pas intégrées sont celles que l'utilisateur utilise le moins.
+	L'application est tout de même fonctionnelle.
+\subsection{Améliorations et perspectives}
+	Tout d'abord finir l'application avec toutes les fonctionnalités prévus initialement.
+	Puis, ajouter du contenu, c'est-à-dire intégrer d'autres site vidéos à mon application, étant donné qu'elle est conçue pour l'évolution justement.
+	Afin de rendre l'utilisation plus agréable, faire une meilleur interface graphique ainsi qu'optimiser l'application.
+	Afin d'avoir une connexion complètement à l'interne, utiliser ASP.NET.
 
 \chapter{Annexes}
 	\section{Planning}

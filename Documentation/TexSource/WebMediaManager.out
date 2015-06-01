@@ -1,0 +1,80 @@
+\BOOKMARK [0][-]{chapter.1}{R\351sum\351s}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Fran\347ais}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{English}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Cahier des charges}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Titre du projet}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Objectifs du projet}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Description d\351taill\351e}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{Inventaire des \351tapes}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Inventaire du mat\351riel}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.6}{Inventaire des logiciels}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.7}{D\351livrables \(documents \340 restituer\)}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.8}{\311l\351ments mesurables \(servant \340 l'\351valuation\)}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{\311tude d'opportunit\351}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Introduction au projet}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{M\351dias vid\351o web}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Pourquoi avoir choisi ce sujet ?}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{Analyse de l'existant}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Existant}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Critique de l'existant}{section.3.2}% 19
+\BOOKMARK [0][-]{chapter.4}{Analyse fonctionnelle}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Description du fonctionnement}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.1.1}{Fonctions des sites}{section.4.1}% 22
+\BOOKMARK [2][-]{subsection.4.1.2}{Gestion des cat\351gories}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.3}{Gestion des listes de lecture}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.4}{Notifications}{section.4.1}% 25
+\BOOKMARK [1][-]{section.4.2}{API}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.2.1}{API REST}{section.4.2}% 27
+\BOOKMARK [1][-]{section.4.3}{Lecteur vid\351o}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.3.1}{Flash player}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.2}{HTML5}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Outil communautaire}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.4.1}{Chat IRC}{section.4.4}% 32
+\BOOKMARK [2][-]{subsection.4.4.2}{Commentaires}{section.4.4}% 33
+\BOOKMARK [1][-]{section.4.5}{Connexion}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.5.1}{OAuth2}{section.4.5}% 35
+\BOOKMARK [1][-]{section.4.6}{Interface homme-machine}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.6.1}{Miniature}{section.4.6}% 37
+\BOOKMARK [2][-]{subsection.4.6.2}{Notification}{section.4.6}% 38
+\BOOKMARK [2][-]{subsection.4.6.3}{Navigation}{section.4.6}% 39
+\BOOKMARK [2][-]{subsection.4.6.4}{Interface personnelle}{section.4.6}% 40
+\BOOKMARK [2][-]{subsection.4.6.5}{Interface des sites}{section.4.6}% 41
+\BOOKMARK [2][-]{subsection.4.6.6}{Interface vid\351o}{section.4.6}% 42
+\BOOKMARK [2][-]{subsection.4.6.7}{Interface d'une cha\356ne}{section.4.6}% 43
+\BOOKMARK [2][-]{subsection.4.6.8}{Interface de connexion}{section.4.6}% 44
+\BOOKMARK [0][-]{chapter.5}{Analyse organique}{}% 45
+\BOOKMARK [1][-]{section.5.1}{G\351n\351ralit\351}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.1.1}{Langage en environnement de d\351veloppement}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.2}{Format des fichiers et enregistrements}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.3}{SVideo \046 SChannel}{section.5.1}% 49
+\BOOKMARK [1][-]{section.5.2}{Conception}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.2.1}{Mod\350le}{section.5.2}% 51
+\BOOKMARK [2][-]{subsection.5.2.2}{Cat\351gorie et liste de lectures}{section.5.2}% 52
+\BOOKMARK [2][-]{subsection.5.2.3}{Authentification}{section.5.2}% 53
+\BOOKMARK [2][-]{subsection.5.2.4}{Global}{section.5.2}% 54
+\BOOKMARK [1][-]{section.5.3}{Outil communautaire}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.3.1}{IRC}{section.5.3}% 56
+\BOOKMARK [1][-]{section.5.4}{R\351cup\351ration des donn\351es}{chapter.5}% 57
+\BOOKMARK [2][-]{subsection.5.4.1}{Classes structure}{section.5.4}% 58
+\BOOKMARK [2][-]{subsection.5.4.2}{Curl}{section.5.4}% 59
+\BOOKMARK [1][-]{section.5.5}{Authentification}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.5.1}{G\351n\351rique}{section.5.5}% 61
+\BOOKMARK [2][-]{subsection.5.5.2}{Connexion automatique}{section.5.5}% 62
+\BOOKMARK [2][-]{subsection.5.5.3}{Page web de connexion et d'autorisation}{section.5.5}% 63
+\BOOKMARK [1][-]{section.5.6}{Notification}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.7}{Affichage}{chapter.5}% 65
+\BOOKMARK [2][-]{subsection.5.7.1}{Flux vid\351o}{section.5.7}% 66
+\BOOKMARK [2][-]{subsection.5.7.2}{Chat IRC}{section.5.7}% 67
+\BOOKMARK [2][-]{subsection.5.7.3}{Notification}{section.5.7}% 68
+\BOOKMARK [0][-]{chapter.6}{Tests}{}% 69
+\BOOKMARK [1][-]{section.6.1}{Tests fonctionnel}{chapter.6}% 70
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 71
+\BOOKMARK [1][-]{section.7.1}{Apport personnel}{chapter.7}% 72
+\BOOKMARK [1][-]{section.7.2}{Conclusion personnel}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.3}{Conclusion technique}{chapter.7}% 74
+\BOOKMARK [2][-]{subsection.7.3.1}{Bilan de r\351alisation}{section.7.3}% 75
+\BOOKMARK [2][-]{subsection.7.3.2}{Am\351liorations et perspectives}{section.7.3}% 76
+\BOOKMARK [0][-]{chapter.8}{Annexes}{}% 77
+\BOOKMARK [1][-]{section.8.1}{Planning}{chapter.8}% 78
+\BOOKMARK [2][-]{subsection.8.1.1}{Initial}{section.8.1}% 79
+\BOOKMARK [2][-]{subsection.8.1.2}{Final}{section.8.1}% 80

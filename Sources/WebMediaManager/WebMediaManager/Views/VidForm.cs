@@ -62,7 +62,6 @@ namespace WebMediaManager.Views
         public VidForm(StreamingSite.SVideo video, Model model)
         {
             InitializeComponent();
-            Thread.Sleep(200);
             this.SiteController = new SitesController(this, model);
             this.ContainerController = new ContainersController(this, model);
             this.Video = video;
@@ -120,18 +119,24 @@ namespace WebMediaManager.Views
 
         private void btnFollow(object sender, EventArgs e)
         {
-            Button newbtn = (Button)sender;
-            newbtn.Text = "Désabonner";
-            newbtn.BackColor = Color.Red;
-            this.SiteController.Follow(this.Video.channelName, this.Video.siteName);
+            this.Invoke((MethodInvoker)delegate
+            {
+                Button newbtn = (Button)sender;
+                newbtn.Text = "Désabonner";
+                newbtn.BackColor = Color.Red;
+                this.SiteController.Follow(this.Video.channelName, this.Video.siteName);
+            });
         }
 
         private void btnUnFollow(object sender, EventArgs e)
         {
-            Button newbtn = (Button)sender;
-            newbtn.Text = "S'abonner";
-            newbtn.BackColor = Color.DarkGreen;
-            this.SiteController.UnFollow(this.Video.channelName, this.Video.siteName);
+            this.Invoke((MethodInvoker)delegate
+            {
+                Button newbtn = (Button)sender;
+                newbtn.Text = "S'abonner";
+                newbtn.BackColor = Color.DarkGreen;
+                this.SiteController.UnFollow(this.Video.channelName, this.Video.siteName);
+            });
         }
 
         private void SetContainersList()

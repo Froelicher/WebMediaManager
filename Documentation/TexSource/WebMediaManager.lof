@@ -3,30 +3,33 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces REST\relax }}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sch\IeC {\'e}ma OAuth2 : Droit implicite\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Miniature\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Interface notification\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Navigation de l'application\relax }}{18}{figure.caption.14}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Interface personnel\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Interface des sites\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Interface d'une vid\IeC {\'e}o\relax }}{21}{figure.caption.17}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Interface d'une cha\IeC {\^\i }ne / utilisateur\relax }}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Interface de connexion\relax }}{23}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces REST\relax }}{13}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Sch\IeC {\'e}ma OAuth2 : Droit implicite\relax }}{16}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Miniature\relax }}{17}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Interface notification\relax }}{17}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Navigation de l'application\relax }}{17}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Interface personnel\relax }}{18}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Interface des sites\relax }}{19}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Interface d'une vid\IeC {\'e}o\relax }}{20}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Interface d'une cha\IeC {\^\i }ne / utilisateur\relax }}{21}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemple de fichier INI\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Structure SVideo\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Structure SChannel\relax }}{25}{figure.caption.22}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagramme StreamingSite\relax }}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces StreamingSite table UML\relax }}{26}{figure.caption.25}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Diagramme Container\relax }}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Authentification table uml\relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Diagramme global\relax }}{29}{figure.caption.28}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \IeC {\'E}tape de connexion \IeC {\`a} un chat IRC\relax }}{30}{figure.caption.29}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Classes Twitch\relax }}{31}{figure.caption.30}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Exemple de commande cURL\relax }}{32}{figure.caption.31}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Authentification\relax }}{34}{figure.caption.32}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Notification\relax }}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Notification\relax }}{38}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Exemple de fichier INI\relax }}{22}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Structure SVideo\relax }}{23}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Structure SChannel\relax }}{23}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Diagramme StreamingSite\relax }}{24}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces StreamingSite table UML\relax }}{24}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Diagramme Container\relax }}{25}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Authentification table uml\relax }}{26}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Diagramme global\relax }}{27}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces \IeC {\'E}tape de connexion \IeC {\`a} un chat IRC\relax }}{28}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Classes Twitch\relax }}{29}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Exemple de commande cURL\relax }}{29}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Authentification\relax }}{31}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Notification\relax }}{33}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Tests en \IeC {\'e}tant connect\IeC {\'e}\relax }}{39}{figure.caption.35}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Tests en \IeC {\'e}tant d\IeC {\'e}connect\IeC {\'e}\relax }}{40}{figure.caption.36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

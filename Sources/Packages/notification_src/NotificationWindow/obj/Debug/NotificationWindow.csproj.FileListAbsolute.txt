@@ -5,3 +5,10 @@ C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notificati
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.csproj.GenerateResource.Cache
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.dll
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\bin\Debug\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\bin\Debug\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.csprojResolveAssemblyReference.cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.Properties.Resources.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.csproj.GenerateResource.Cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Debug\NotificationWindow.pdb

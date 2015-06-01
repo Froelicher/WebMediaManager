@@ -9,3 +9,14 @@ C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notificati
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.csproj.GenerateResource.Cache
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.exe
 C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.exe.config
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.exe
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\TestNotif.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\bin\Debug\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.csprojResolveAssemblyReference.cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.Form1.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.Properties.Resources.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.csproj.GenerateResource.Cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.exe
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\TestNotif\obj\Debug\TestNotif.pdb

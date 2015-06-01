@@ -265,16 +265,16 @@ namespace NotificationWindow
             rcForm = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
 
             //COULEUR DE FOND
-            brushBody = new LinearGradientBrush(rcBody, System.Drawing.ColorTranslator.FromHtml("#6441a5"), System.Drawing.ColorTranslator.FromHtml("#6441a5"), LinearGradientMode.Vertical);
+            brushBody = new LinearGradientBrush(rcBody, System.Drawing.ColorTranslator.FromHtml("#FFFFFF"), System.Drawing.ColorTranslator.FromHtml("#FFFFFF"), LinearGradientMode.Vertical);
             brushHeader = new LinearGradientBrush(rcHeader, System.Drawing.ColorTranslator.FromHtml("#19191f"), System.Drawing.ColorTranslator.FromHtml("#19191f"), LinearGradientMode.Vertical);
-            brushButtonHover = new SolidBrush(Color.White);
+            brushButtonHover = new SolidBrush(Color.Black);
             penButtonBorder = new Pen(Parent.ButtonBorderColor);
             penContent = new Pen(Parent.ContentColor, 2);
-            penBorder = new Pen(System.Drawing.ColorTranslator.FromHtml("#6441a5"));
+            penBorder = new Pen(System.Drawing.ColorTranslator.FromHtml("#FFFFFF"));
             brushForeColor = new SolidBrush(ForeColor);
             brushLinkHover = new SolidBrush(Color.Gray);
-            brushContent = new SolidBrush(Color.White);
-            brushTitle = new SolidBrush(Color.White);
+            brushContent = new SolidBrush(Color.Black);
+            brushTitle = new SolidBrush(Color.Black);
             
 
             gdiInitialized = true;

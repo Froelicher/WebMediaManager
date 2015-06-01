@@ -20,3 +20,5 @@ C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMedia
 C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.csprojResolveAssemblyReference.cache
 C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.dll
 C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Debug\WebMediaManagerTests.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Debug\NotificationWindow.pdb
