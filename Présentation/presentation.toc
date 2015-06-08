@@ -12,10 +12,10 @@
 \beamer@subsectionintoc {3}{1}{Conception}{10}{0}{3}
 \beamer@subsectionintoc {3}{2}{SVideo \& SChannel}{11}{0}{3}
 \beamer@subsectionintoc {3}{3}{R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{12}{0}{3}
-\beamer@subsectionintoc {3}{4}{Connexion}{14}{0}{3}
-\beamer@subsectionintoc {3}{5}{Notifications}{15}{0}{3}
-\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{16}{0}{3}
-\beamer@sectionintoc {4}{Conclusion \& perspectives}{17}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusions}{17}{0}{4}
-\beamer@sectionintoc {5}{D\IeC {\'e}monstration}{18}{0}{5}
-\beamer@sectionintoc {6}{Questions}{19}{0}{6}
+\beamer@subsectionintoc {3}{4}{Connexion}{15}{0}{3}
+\beamer@subsectionintoc {3}{5}{Notifications}{16}{0}{3}
+\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{17}{0}{3}
+\beamer@sectionintoc {4}{Conclusion \& perspectives}{18}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusions}{18}{0}{4}
+\beamer@sectionintoc {5}{D\IeC {\'e}monstration}{19}{0}{5}
+\beamer@sectionintoc {6}{Questions}{20}{0}{6}

@@ -70,17 +70,24 @@
 	\begin{itemize}
 		\item Pop-up qui apparaît avec les informations de la vidéo.
 	\end{itemize}
+	Les notifications servent à être mis au courant le plus rapidement possible.
 }
 \subsection{Chat IRC}
 \frame{\frametitle{Chat IRC} 
 	Internet Relay Chat, Protocole de communication textuelle.
 	Uniquement sur les vidéos en direct.
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.2\textwidth]{chatIrc.png}
+		\caption{Chat Irc}
+	\end{figure}
 	
 }
 \subsection{Catégorie \& Liste de lectures}
 \frame{\frametitle{Catégorie \& Liste de lectures} 
 	Les catégories servent à rassembler un certain nombre de vidéos de sites différents.
 	
+	Les listes de lectures servent à lire à la suite les vidéos quelle contient.
 }
 
 
@@ -88,14 +95,26 @@
 
 \subsection{Conception}
 \frame{\frametitle{Conception} 
-	Site générique
+	Site générique \\
 	Classe de base
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.7\textwidth]{StreamingSite.png}
+		\caption{Diagramme}
+	\end{figure}
 }
 
 \subsection{SVideo \& SChannel}
 \frame{\frametitle{SVideo \& SChannel} 
 	Structures rassemblant les informations communes de toutes les vidéos et chaînes des différents sites.\\
 	Toutes les vidéos et les chaînes de l'application sont transtypés en cette structure ainsi je peux faire tout les traitements de la même manière.
+	
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.25\textwidth]{SVideo.png}
+		\caption{Commande cURL}
+	\end{figure}
+	
 }
 
 \subsection{Récupération des données}
@@ -104,10 +123,31 @@
 	Données reçuent en JSON 
 	
 	Librarie cURL utilisé : GET, POST, PUT, DELETE
+	
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=1\textwidth]{curl.png}
+		\caption{Commande cURL}
+	\end{figure}
 }
 
 \frame{\frametitle{Classes structures} 
 	Afin de reçevoir les données dans un bon type, il faut créer les classes structures pour chaque sites.
+	
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.2\textwidth]{STwitch.png}
+		\caption{Classes Twitch}
+	\end{figure}
+}
+
+\frame{\frametitle{Désérialisation} 
+	Type générique et lors de lappel de la methode on indique une classe structure.
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.7\textwidth]{deserialize.png}
+		\caption{Classes Twitch}
+	\end{figure}
 }
 
 \subsection{Connexion}
