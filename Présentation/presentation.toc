@@ -1,21 +1,21 @@
 \beamer@endinputifotherversion {3.36pt}
+\select@language {french}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Sujet}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Pourquoi ce sujet ?}{4}{0}{1}
-\beamer@subsectionintoc {1}{3}{M\IeC {\'e}dia vid\IeC {\'e}o du Web}{5}{0}{1}
-\beamer@sectionintoc {2}{Principales fonctionnalit\IeC {\'e}s}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{Fonctions de bases}{6}{0}{2}
-\beamer@subsectionintoc {2}{2}{Notifications}{7}{0}{2}
-\beamer@subsectionintoc {2}{3}{Chat IRC}{8}{0}{2}
-\beamer@subsectionintoc {2}{4}{Cat\IeC {\'e}gorie \& Liste de lectures}{9}{0}{2}
-\beamer@sectionintoc {3}{Mise en oeuvre}{10}{0}{3}
-\beamer@subsectionintoc {3}{1}{Conception}{10}{0}{3}
-\beamer@subsectionintoc {3}{2}{SVideo \& SChannel}{12}{0}{3}
-\beamer@subsectionintoc {3}{3}{R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{13}{0}{3}
-\beamer@subsectionintoc {3}{4}{Connexion}{16}{0}{3}
-\beamer@subsectionintoc {3}{5}{Notifications}{17}{0}{3}
-\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{18}{0}{3}
-\beamer@sectionintoc {4}{Conclusion \& perspectives}{19}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusions}{19}{0}{4}
-\beamer@sectionintoc {5}{D\IeC {\'e}monstration}{20}{0}{5}
-\beamer@sectionintoc {6}{Questions}{21}{0}{6}
+\beamer@subsectionintoc {1}{1}{M\IeC {\'e}dia vid\IeC {\'e}o du Web}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Sujet}{4}{0}{1}
+\beamer@sectionintoc {2}{Principales fonctionnalit\IeC {\'e}s}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Fonctions de bases}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Notifications}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{Chat IRC}{7}{0}{2}
+\beamer@subsectionintoc {2}{4}{Cat\IeC {\'e}gorie \& Liste de lectures}{8}{0}{2}
+\beamer@sectionintoc {3}{Mise en oeuvre}{9}{0}{3}
+\beamer@subsectionintoc {3}{1}{Conception}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{SVideo \& SChannel}{11}{0}{3}
+\beamer@subsectionintoc {3}{3}{R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{12}{0}{3}
+\beamer@subsectionintoc {3}{4}{Connexion}{15}{0}{3}
+\beamer@subsectionintoc {3}{5}{Notifications}{16}{0}{3}
+\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{17}{0}{3}
+\beamer@sectionintoc {4}{Conclusion \& perspectives}{18}{0}{4}
+\beamer@subsectionintoc {4}{1}{Conclusions}{18}{0}{4}
+\beamer@sectionintoc {5}{D\IeC {\'e}monstration}{19}{0}{5}
+\beamer@sectionintoc {6}{Questions}{20}{0}{6}

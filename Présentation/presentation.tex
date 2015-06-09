@@ -2,6 +2,7 @@
 \usepackage{beamerthemeshadow}
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
 
 % ---- PAGE NUMBER ----
 \setbeamertemplate{footline}%{miniframes theme}
@@ -28,34 +29,7 @@
 
 \frame{\frametitle{Sommaire}\tableofcontents[hideallsubsections]} 
 
-
 \section{Introduction} 
-\subsection{Sujet}
-\frame{\frametitle{Sujet} 
-\begin{itemize}
-	\item Projet de diplôme
-	\item Application facilitant l'utilisation des médias vidéos du Web
-	\begin{itemize}
-		\item Évolutive et souple
-	\end{itemize}
-	\item Utilisation des API REST
-	\begin{itemize}
-		\item Style d'architecture
-	\end{itemize}
-\end{itemize}
-}
-
-
-
-\subsection{Pourquoi ce sujet ?}
-\frame{\frametitle{Pourquoi ce sujet ?} 
-	\begin{itemize}
-		\item Passionné par le monde de l'audiovisuel sur le Web
-		\item Continuité du travail de semestre
-		\item 
-	\end{itemize}
-}
-
 \subsection{Média vidéo du Web}
 \frame{\frametitle{Média vidéo du Web} 
 	\begin{itemize}
@@ -69,28 +43,38 @@
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.8\textwidth]{youtube.png}
-			\caption{Youtube}
 		\end{figure}
 		\column{0.3\textwidth}
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.8\textwidth]{twitch.png}
-			\caption{Twitch}
 		\end{figure}
 		\column{0.3\textwidth}
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.8\textwidth]{dailymotion.png}
-			\caption{Dailymotion}
 		\end{figure}
 	\end{columns}
 }
 
-
+\subsection{Sujet}
+\frame{\frametitle{Sujet} 
+\begin{itemize}
+	\item Projet de diplôme
+	\item Agrégateur de sites
+		\begin{itemize}
+			\item Reproduis les mêmes fonctions
+			\item Ajout de fonctions
+			\item Évolutive et souple
+		\end{itemize}
+	\item Langage C\#
+\end{itemize}
+}
 
 \section{Principales fonctionnalités} 
 \subsection{Fonctions de bases}
-\frame{\frametitle{Fonctions communes} 
+\frame{\frametitle{Fonctions de bases} 
+	Chaque site intègre ces fonctions :
 	\begin{itemize}
 		\item Connexion à un compte
 		\item Visionnage d'une vidéo / vidéo en direct
