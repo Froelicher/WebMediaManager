@@ -1,17 +1,23 @@
-% This text is proprietary.
-% It's a part of presentation made by myself.
-% It may not used commercial.
-% The noncommercial use such as private and study is free
-% Sep. 2005 
-% Author: Sascha Frank 
-% University Freiburg 
-% www.informatik.uni-freiburg.de/~frank/
-%
-% additional usepackage{beamerthemeshadow} is used
 \documentclass{beamer}
 \usepackage{beamerthemeshadow}
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[T1]{fontenc}
+
+% ---- PAGE NUMBER ----
+\setbeamertemplate{footline}%{miniframes theme}
+{%
+	\begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+	\end{beamercolorbox}
+	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+		leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+		\leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+		\hfill%
+		{\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+		{\usebeamerfont{title in head/foot}\insertshorttitle} \hfill     \insertframenumber%
+	\end{beamercolorbox}%
+	\begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+	\end{beamercolorbox}
+}
 
 \begin{document}
 \title{Web Media Manager}  
@@ -28,15 +34,26 @@
 \frame{\frametitle{Sujet} 
 \begin{itemize}
 	\item Projet de diplôme
-	\item Réalisation d'une application
-	\item Application évolutive et souple
+	\item Application facilitant l'utilisation des médias vidéos du Web
+	\begin{itemize}
+		\item Évolutive et souple
+	\end{itemize}
 	\item Utilisation des API REST
+	\begin{itemize}
+		\item Style d'architecture
+	\end{itemize}
 \end{itemize}
 }
 
-\subsection{Glossaire}
-\frame{\frametitle{Glossaire} 
-	Each frame should have a title.
+
+
+\subsection{Pourquoi ce sujet ?}
+\frame{\frametitle{Pourquoi ce sujet ?} 
+	\begin{itemize}
+		\item Passionné par le monde de l'audiovisuel sur le Web
+		\item Continuité du travail de semestre
+		\item 
+	\end{itemize}
 }
 
 \subsection{Média vidéo du Web}
@@ -47,6 +64,26 @@
 		\item Vidéo à la demande (VOD) ; Diffusion de flux vidéo. en direct.
 		\item Rémunération suivant le nombres de vues ; Dons.
 	\end{itemize}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{youtube.png}
+			\caption{Youtube}
+		\end{figure}
+		\column{0.3\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{twitch.png}
+			\caption{Twitch}
+		\end{figure}
+		\column{0.3\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{dailymotion.png}
+			\caption{Dailymotion}
+		\end{figure}
+	\end{columns}
 }
 
 
@@ -74,14 +111,18 @@
 }
 \subsection{Chat IRC}
 \frame{\frametitle{Chat IRC} 
-	Internet Relay Chat, Protocole de communication textuelle.
-	Uniquement sur les vidéos en direct.
-	\begin{figure}[h]
-		\center
-		\includegraphics[width=0.2\textwidth]{chatIrc.png}
-		\caption{Chat Irc}
-	\end{figure}
-	
+	\begin{columns}
+		\column{0.5\textwidth}
+		Internet Relay Chat, Protocole de communication textuelle.
+		Uniquement sur les vidéos en direct.
+
+		\column{0.5\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{chatIrc.png}
+			\caption{Chat Irc}
+		\end{figure}
+	\end{columns}	
 }
 \subsection{Catégorie \& Liste de lectures}
 \frame{\frametitle{Catégorie \& Liste de lectures} 
@@ -95,25 +136,40 @@
 
 \subsection{Conception}
 \frame{\frametitle{Conception} 
-	Site générique \\
-	Classe de base
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=0.7\textwidth]{StreamingSite.png}
+		\includegraphics[width=0.6\textwidth]{Model.png}
 		\caption{Diagramme}
 	\end{figure}
 }
-
-\subsection{SVideo \& SChannel}
-\frame{\frametitle{SVideo \& SChannel} 
-	Structures rassemblant les informations communes de toutes les vidéos et chaînes des différents sites.\\
-	Toutes les vidéos et les chaînes de l'application sont transtypés en cette structure ainsi je peux faire tout les traitements de la même manière.
-	
+\frame{\frametitle{Conception} 
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=0.25\textwidth]{SVideo.png}
-		\caption{Commande cURL}
+		\includegraphics[width=1\textwidth]{StreamingSite.png}
+		\caption{Diagramme}
 	\end{figure}
+}
+\subsection{SVideo \& SChannel}
+\frame{\frametitle{SVideo \& SChannel}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item Structure
+				\begin{itemize}
+					\item Informations communes
+				\end{itemize}
+			\item Vidéo et chaîne
+			\item Type générique
+		\end{itemize}
+		
+		\column{0.5\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.8\textwidth]{SVideo.png}
+			\caption{Structure vidéo}
+		\end{figure}
+	\end{columns}
+	
 	
 }
 
@@ -131,33 +187,43 @@
 	\end{figure}
 }
 
-\frame{\frametitle{Classes structures} 
-	Afin de reçevoir les données dans un bon type, il faut créer les classes structures pour chaque sites.
-	
-	\begin{figure}[h]
-		\center
-		\includegraphics[width=0.2\textwidth]{STwitch.png}
-		\caption{Classes Twitch}
-	\end{figure}
+\frame{\frametitle{Classes structures}
+	\begin{columns}
+		\column{0.5\textwidth}
+		Afin de recevoir les données dans un bon type, il faut créer les classes structures pour chaque sites.
+		
+		\column{0.5\textwidth}
+		\begin{figure}[h]
+			\center
+			\includegraphics[width=0.5\textwidth]{STwitch.png}
+			\caption{Classes Twitch}
+		\end{figure}
+	\end{columns}
 }
 
 \frame{\frametitle{Désérialisation} 
 	Type générique et lors de lappel de la methode on indique une classe structure.
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=0.7\textwidth]{deserialize.png}
+		\includegraphics[width=0.9\textwidth]{deserialize.png}
 		\caption{Classes Twitch}
 	\end{figure}
 }
 
 \subsection{Connexion}
 \frame{\frametitle{Connexion} 
-	Connexion grâce au protocole OAuth2.\\
-	Utilisation du lien API de connexion.\\
-	Récupération du jeton d'accès dans l'url.
 	\begin{itemize}
-		\item Création d'un GitHub Page
+		\item Connexion grâce au protocole OAuth2
+		\item Utilisation du lien API de connexion
+		\begin{itemize}
+			\item https ://[url de l'api] ?response\_type=token\&client\_id="[id de l'application]"\& redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"
+		\end{itemize}
+		\item Récupération du jeton d'accès dans l'url
+		\begin{itemize}
+			\item Création d'un GitHub Page
+		\end{itemize}
 	\end{itemize}
+	
 }
 
 \subsection{Notifications}
@@ -187,7 +253,7 @@
 	Les vidéos sont stockés sous forme de liens.
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=0.7\textwidth]{inifile.png}
+		\includegraphics[width=1\textwidth]{inifile.png}
 		\caption{Exemple du fichier INI}
 	\end{figure}
 	
