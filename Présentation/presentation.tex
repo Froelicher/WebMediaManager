@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
+\usepackage{listings}
+
 
 % ---- PAGE NUMBER ----
 \setbeamertemplate{footline}%{miniframes theme}
@@ -20,12 +22,14 @@
 	\end{beamercolorbox}
 }
 
+\input{inc_lst_csharp.tex}
+
 \begin{document}
 \title{Web Media Manager}  
 \author{Jean-Philippe Froelicher}
 \date{\today} 
 
-\frame{\titlepage} 
+\frame{\titlepage \centering Centre de Formation Professionnel Technique} 
 
 \frame{\frametitle{Sommaire}\tableofcontents[hideallsubsections]} 
 
@@ -35,8 +39,8 @@
 	\begin{itemize}
 		\item Plate-forme d'hébergement vidéo.
 		\item Twitch ; Youtube ; Dailymotion ; Vimeo ; Ustream etc.
-		\item Vidéo à la demande (VOD) ; Diffusion de flux vidéo. en direct.
-		\item Rémunération suivant le nombres de vues ; Dons.
+		\item Vidéo à la demande (VOD) ; diffusion de flux vidéo en direct.
+		\item Rémunération suivant le nombres de vues ; dons.
 	\end{itemize}
 	\begin{columns}
 		\column{0.3\textwidth}
@@ -81,17 +85,21 @@
 		\item S'abonner à une chaîne
 		\item Chat IRC pour les vidéos en direct
 		\item Recherche de vidéos
-		\item Vidéos actuellement en direct ; Dernières vidéos
+		\item Vidéos actuellement en direct ; dernières vidéos
 		\item Chaînes abonnées
 	\end{itemize}
 }
 \subsection{Notifications}
 \frame{\frametitle{Notifications} 
-	Lorsqu'une nouvelle diffusion en direct commence ou qu'une vidéo sort.
+	Une notification apparaît lorsqu'une vidéo sort ou qu'une nouvelle diffusion en direct commence
 	\begin{itemize}
 		\item Pop-up qui apparaît avec les informations de la vidéo.
 	\end{itemize}
-	Les notifications servent à être mis au courant le plus rapidement possible.
+	Les notifications sont activées uniquement pour les chaînes que l'utilisateur suit.
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.7\textwidth]{notificationview.png}
+	\end{figure}
 }
 \subsection{Chat IRC}
 \frame{\frametitle{Chat IRC} 
@@ -104,37 +112,34 @@
 		\begin{figure}[h]
 			\center
 			\includegraphics[width=0.8\textwidth]{chatIrc.png}
-			\caption{Chat Irc}
 		\end{figure}
 	\end{columns}	
 }
-\subsection{Catégorie \& Liste de lectures}
-\frame{\frametitle{Catégorie \& Liste de lectures} 
-	Les catégories servent à rassembler un certain nombre de vidéos de sites différents.
-	
-	Les listes de lectures servent à lire à la suite les vidéos quelle contient.
+\subsection{Catégorie \& Liste de lecture}
+\frame{\frametitle{Catégorie \& Liste de lecture} 
+	Une catégorie sert à rassembler des vidéos de différents sites au même endroit.\\
+	Une liste de lecture lit les vidéos qu'elle contient à la suite.
+
 }
 
 
 \section{Mise en oeuvre}
-
 \subsection{Conception}
 \frame{\frametitle{Conception} 
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=0.6\textwidth]{Model.png}
-		\caption{Diagramme}
+		\includegraphics[width=0.8\textwidth]{mvc.png}
 	\end{figure}
 }
 \frame{\frametitle{Conception} 
 	\begin{figure}[h]
 		\center
 		\includegraphics[width=1\textwidth]{StreamingSite.png}
-		\caption{Diagramme}
 	\end{figure}
 }
 \subsection{SVideo \& SChannel}
-\frame{\frametitle{SVideo \& SChannel}
+\begin{frame}
+	\frametitle{SVideo \& SChannel}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\begin{itemize}
@@ -149,60 +154,69 @@
 		\column{0.5\textwidth}
 		\begin{figure}[h]
 			\center
-			\includegraphics[width=0.8\textwidth]{SVideo.png}
-			\caption{Structure vidéo}
+			\includegraphics[width=0.9\textwidth]{SVideo.png}
 		\end{figure}
-	\end{columns}
-	
-	
-}
+	\end{columns}	
+\end{frame}
 
 \subsection{Récupération des données}
 \frame{\frametitle{Récupération des données} 
-	API des différents sites.
-	Données reçuent en JSON 
-	
-	Librarie cURL utilisé : GET, POST, PUT, DELETE
-	
 	\begin{figure}[h]
 		\center
-		\includegraphics[width=1\textwidth]{curl.png}
-		\caption{Commande cURL}
-	\end{figure}
+		\includegraphics[width=1\textwidth]{rest.png}
+	\end{figure}	
+}
+
+\frame{\frametitle{Json} 
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=1\textwidth]{json.png}
+	\end{figure}	
+	Exemple de données formaté en Json.
 }
 
 \frame{\frametitle{Classes structures}
 	\begin{columns}
 		\column{0.5\textwidth}
-		Afin de recevoir les données dans un bon type, il faut créer les classes structures pour chaque sites.
+		Afin de recevoir les données dans un bon type, il faut créer des classes structures pour chaque site.
 		
 		\column{0.5\textwidth}
 		\begin{figure}[h]
 			\center
-			\includegraphics[width=0.5\textwidth]{STwitch.png}
-			\caption{Classes Twitch}
+			\includegraphics[width=1\textwidth]{ChannelTwitch.png}
 		\end{figure}
 	\end{columns}
 }
 
 \frame{\frametitle{Désérialisation} 
-	Type générique et lors de lappel de la methode on indique une classe structure.
+	Un objet est créé depuis les données formaté en Json.\\
+	Type générique et lors de l'appel de la méthode, on indique une classe structure.
 	\begin{figure}[h]
 		\center
 		\includegraphics[width=0.9\textwidth]{deserialize.png}
-		\caption{Classes Twitch}
+	\end{figure}
+}
+
+\frame{\frametitle{Cycle d'un accès} 
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.9\textwidth]{cycle.png}
 	\end{figure}
 }
 
 \subsection{Connexion}
 \frame{\frametitle{Connexion} 
 	\begin{itemize}
+		\item Avoir un compte existant sur le site
 		\item Connexion grâce au protocole OAuth2
-		\item Utilisation du lien API de connexion
+		\item Utilisation du lien de connexion de l'API
 		\begin{itemize}
-			\item https ://[url de l'api] ?response\_type=token\&client\_id="[id de l'application]"\& redirect\_uri="[page de redirection]"\&scope="[Liste des droits]"
+			\item \textcolor{blue}{api.twitch.tv/kraken/oauth2/authorize}?\textcolor{red}{response\_type=token}
+			\&\textcolor{darkgreen}{client\_id= 9jfbie2pedk3xzoj3s53268v7fb4zds}
+			\&\textcolor{orange}{redirect\_uri= https://froelicher.github.io/WebMediaManager/WebSite}
+			\&\textcolor{violet}{scope=user\_read+channel\_read}
 		\end{itemize}
-		\item Récupération du jeton d'accès dans l'url
+		\item Récupération du jeton d'accès dans l'url de redirection
 		\begin{itemize}
 			\item Création d'un GitHub Page
 		\end{itemize}
@@ -223,48 +237,55 @@
 		\item NotificationWindow
 	\end{itemize}
 	
-	\begin{figure}[h]
-		\center
-		\includegraphics[width=0.7\textwidth]{notificationview.png}
-		\caption{Exemple d'une notification}
-	\end{figure}
 }
 
 \subsection{Catégorie \& liste de lectures}
 \frame{\frametitle{Catégorie \& Liste de lectures} 
 	Stockage dans un fichier de type INI dans le dossier appdata de l'utilisateur.
 	
-	Les vidéos sont stockés sous forme de liens.
+	Les vidéos sont stockées sous forme de liens.
 	\begin{figure}[h]
 		\center
 		\includegraphics[width=1\textwidth]{inifile.png}
-		\caption{Exemple du fichier INI}
 	\end{figure}
 	
+	
+}
+
+\section{Démonstration} 
+\frame{\frametitle{Démonstration}
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.6\textwidth]{play.png}
+	\end{figure} 
 	
 }
 
 \section{Conclusion \& perspectives}
 \subsection{Conclusions}
 \frame{\frametitle{Conclusions} 
-	Conclusion technique : 
 	\begin{itemize}
 		\item Application fonctionnelle
-		\item Cahier des charges pas remplit
+		\item Certaines fonctions non implémentée
+	\end{itemize}
+
+}
+\subsection{Perspectives}
+\frame{\frametitle{Perspectives} 
+	\begin{itemize}
+		\item Compléter les fonctions manquante
+		\item Implémenter un bon nombre de sites
+		\item Changer de langage
 	\end{itemize}
 	
-	Conclusion personnelle :
-	\begin{itemize}
-		\item Plaisant de travailler sur un gros projet
-	\end{itemize}	
-}
-
-\section{Démonstration} 
-\frame{\frametitle{Démonstration} 
 }
 	
 \section{Questions} 
 \frame{\frametitle{Questions} 
+	\begin{figure}[h]
+		\center
+		\includegraphics[width=0.4\textwidth]{Questions.png}
+	\end{figure} 
 }
 \end{document}
 

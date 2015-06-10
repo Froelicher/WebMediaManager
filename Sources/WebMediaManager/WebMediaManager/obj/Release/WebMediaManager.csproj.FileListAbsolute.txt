@@ -1,0 +1,15 @@
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\WebMediaManager.exe.config
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.PersonalInterface.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.Properties.Resources.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.Views.VidForm.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.csproj.GenerateResource.Cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\WebMediaManager.exe
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\WebMediaManager.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\Newtonsoft.Json.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\ChatSharp.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\Newtonsoft.Json.xml
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\bin\Release\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.csprojResolveAssemblyReference.cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.exe
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManager\obj\Release\WebMediaManager.pdb

@@ -1,0 +1,13 @@
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Release\WebMediaManagerTests.csprojResolveAssemblyReference.cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\WebMediaManagerTests.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\WebMediaManagerTests.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\Newtonsoft.Json.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\WebMediaManager.exe
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\ChatSharp.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\WebMediaManager.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\Newtonsoft.Json.xml
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\ChatSharp.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\bin\Release\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Release\WebMediaManagerTests.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\WebMediaManager\WebMediaManagerTests\obj\Release\WebMediaManagerTests.pdb

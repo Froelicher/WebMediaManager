@@ -1,0 +1,7 @@
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\bin\Release\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\bin\Release\NotificationWindow.pdb
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Release\NotificationWindow.csprojResolveAssemblyReference.cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Release\NotificationWindow.Properties.Resources.resources
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Release\NotificationWindow.csproj.GenerateResource.Cache
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Release\NotificationWindow.dll
+C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Sources\Packages\notification_src\NotificationWindow\obj\Release\NotificationWindow.pdb

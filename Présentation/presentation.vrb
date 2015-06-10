@@ -1,0 +1,34 @@
+\frametitle{SVideo \& SChannel}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item Structure
+				\begin{itemize}
+					\item Informations communes
+				\end{itemize}
+			\item Vidéo et chaîne
+			\item Type générique
+		\end{itemize}
+
+		\column{0.5\textwidth}
+		\begin{lstlisting}
+
+			public struct SVideo
+			{
+				public string id;
+				public string videoName;
+				public string channelName;
+				public int nbViews;
+				public string description;
+				public string preview;
+				public string playerLink;
+				public DateTime createdAt;
+				public string link;
+				public bool live;
+				public string siteName;
+				public string url_irc;
+				public bool channelIsFollowed;
+			}
+
+		\end{lstlisting}
+	\end{columns}

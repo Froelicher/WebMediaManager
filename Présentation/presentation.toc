@@ -7,15 +7,16 @@
 \beamer@subsectionintoc {2}{1}{Fonctions de bases}{5}{0}{2}
 \beamer@subsectionintoc {2}{2}{Notifications}{6}{0}{2}
 \beamer@subsectionintoc {2}{3}{Chat IRC}{7}{0}{2}
-\beamer@subsectionintoc {2}{4}{Cat\IeC {\'e}gorie \& Liste de lectures}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{Cat\IeC {\'e}gorie \& Liste de lecture}{8}{0}{2}
 \beamer@sectionintoc {3}{Mise en oeuvre}{9}{0}{3}
 \beamer@subsectionintoc {3}{1}{Conception}{9}{0}{3}
 \beamer@subsectionintoc {3}{2}{SVideo \& SChannel}{11}{0}{3}
 \beamer@subsectionintoc {3}{3}{R\IeC {\'e}cup\IeC {\'e}ration des donn\IeC {\'e}es}{12}{0}{3}
-\beamer@subsectionintoc {3}{4}{Connexion}{15}{0}{3}
-\beamer@subsectionintoc {3}{5}{Notifications}{16}{0}{3}
-\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{17}{0}{3}
-\beamer@sectionintoc {4}{Conclusion \& perspectives}{18}{0}{4}
-\beamer@subsectionintoc {4}{1}{Conclusions}{18}{0}{4}
-\beamer@sectionintoc {5}{D\IeC {\'e}monstration}{19}{0}{5}
-\beamer@sectionintoc {6}{Questions}{20}{0}{6}
+\beamer@subsectionintoc {3}{4}{Connexion}{17}{0}{3}
+\beamer@subsectionintoc {3}{5}{Notifications}{18}{0}{3}
+\beamer@subsectionintoc {3}{6}{Cat\IeC {\'e}gorie \& liste de lectures}{19}{0}{3}
+\beamer@sectionintoc {4}{D\IeC {\'e}monstration}{20}{0}{4}
+\beamer@sectionintoc {5}{Conclusion \& perspectives}{21}{0}{5}
+\beamer@subsectionintoc {5}{1}{Conclusions}{21}{0}{5}
+\beamer@subsectionintoc {5}{2}{Perspectives}{22}{0}{5}
+\beamer@sectionintoc {6}{Questions}{23}{0}{6}

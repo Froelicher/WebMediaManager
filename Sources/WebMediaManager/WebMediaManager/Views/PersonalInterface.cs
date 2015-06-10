@@ -706,7 +706,7 @@ namespace WebMediaManager
             {
                 string accessToken = this.SitesController.GetAccessTokenInUrl(this.wbrConnexion.Url.ToString());
 
-                if (accessToken != "")
+                if ((accessToken != "")&&(accessToken != "token"))
                 {
                     this.SitesController.Connect(accessToken, siteName);
                     this.DisplaySitePanel(siteName);

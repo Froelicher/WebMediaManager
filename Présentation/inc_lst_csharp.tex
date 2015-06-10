@@ -1,0 +1,120 @@
+%$HeadURL: https://subversion.assembla.com/svn/cfpt-courses/trunk/_inc/inc_lst_csharp.tex $
+%$LastChangedDate: 2014-01-22 11:03:53 +0100 (mer., 22 janv. 2014) $
+%$LastChangedRevision: 5197 $
+%$LastChangedBy: marechal $
+
+% lstlisting configuration for C#
+%-------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{accsupp}
+
+% color
+\definecolor{lightgreen}{rgb}	{0.200, 0.980, 0.200}
+\definecolor{darkgreen}{rgb}	{0.000, 0.400, 0.000}
+\definecolor{lightgray}{gray}	{0.98}
+\definecolor{darkred}{rgb}		{0.545, 0.000, 0.000}
+
+% CSharp colors
+\definecolor{class}{rgb}		{0.200, 0.600, 0.600}	% Cyan Visual Studio
+\definecolor{keyword}{rgb}		{0.000, 0.000, 1.000}	% blue
+
+% code to avoid line number copy during copy-paste from PDF
+\newcommand{\noncopynumber}[1]{%
+    \BeginAccSupp{method=escape,ActualText={}}%
+    {\scriptsize#1}%
+    \EndAccSupp{}%
+}
+
+% lstlisting parameters
+\lstset {	
+  language=[Sharp]C
+, captionpos=b
+, frame=shadowbox
+, rulesepcolor=\color{gray}
+% syntaxic coloration
+, basicstyle=\footnotesize\ttfamily
+, keywordstyle=\color{blue}
+, commentstyle=\color{darkgreen}
+, stringstyle=\color{darkred}
+, backgroundcolor=\color{lightgray}
+, identifierstyle=\color{black}
+% lines numbering
+, numbers=left
+, numberstyle=\noncopynumber
+, stepnumber=1
+, numbersep=5pt
+%
+, breaklines=true
+, tabsize=2
+, showstringspaces=false
+, lineskip={-1.5pt} % single line spacing
+, escapeinside={/*(*@}{@*)*/}
+, rangeprefix=\{\  % curly left brace plus space
+, rangesuffix=\ \} % space plus curly right brace
+}
+
+% Csharp : additional keywords
+\lstset{
+	morekeywords={var,get,set,string,value},
+	otherkeywords={\#region,\#endregion,\#define,\#if,\#endif,\#else}, %morekeyword does not support # chararacter then we must use otherkeywords
+	emph={[1]Application,
+		Char,Color,Console,Convert,
+		DialogResult,
+		Environment,EventArgs,
+		Form,
+		Object,String,
+		SByte,Int16,Int32,Int64,
+		Byte,UInt16,UInt32,UInt64,
+		Single,Double,
+		Keys,KeyPressEventArgs,
+		MessageBox,MessageBoxButtons},
+	emphstyle={[1]\color{class}}
+}
+
+\lstset{prebreak=\raisebox{0ex}[0ex][0ex]
+        {\ensuremath{\hookleftarrow}}}
+%\lstset{postbreak=\raisebox{0ex}[0ex][0ex]
+%        {\ensuremath{\hookrightarrow\space}}}
+\lstset{breaklines=true, breakatwhitespace=true}
+
+% replace sequence of char by another sequence of char
+% see http://stackoverflow.com/questions/1116266/listings-in-latex-with-utf-8-or-at-least-german-umlauts
+\lstset{literate=%
+{ä}{{\"a}}1
+{â}{{\^a}}1
+{à}{{\`a}}1
+{Ä}{{\"A}}1
+{Â}{{\^A}}1
+{À}{{\`A}}1
+{ë}{{\"e}}1
+{ê}{{\^e}}1
+{é}{{\'e}}1
+{è}{{\`e}}1
+{Ë}{{\"E}}1
+{Ê}{{\^E}}1
+{É}{{\'E}}1
+{È}{{\`E}}1
+{ï}{{\"i}}1
+{î}{{\^i}}1
+{Ï}{{\"I}}1
+{Î}{{\^I}}1
+{ö}{{\"o}}1
+{ô}{{\^o}}1
+{Ö}{{\"O}}1
+{Ô}{{\^O}}1
+{ü}{{\"u}}1
+{û}{{\^u}}1
+{ù}{{\`u}}1
+{Ü}{{\"U}}1
+{Û}{{\^U}}1
+{Ù}{{\`U}}1
+{ç}{{\c c}}1
+{Ç}{{\c C}}1
+{°}{{\textsuperscript{o}}}1
+% suppress BOM (Byte Order Mark) characters at the beginning of Visual Studio source
+% see http://tex.stackexchange.com/questions/5935/how-to-suppress-bom-effect-in-the-output
+{�}{}0
+{�}{}0
+{�}{}0
+}

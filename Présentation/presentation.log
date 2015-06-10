@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.13)  9 JUN 2015 15:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.12)  10 JUN 2015 09:32
 entering extended mode
 **presentation.tex
 
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.tex
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1021,22 +1020,57 @@ Package babel Info: Making ? an active character on input line 123.
 *
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\frenchb.cfg")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count156
+\lst@gtempboxa=\box53
+\lst@token=\toks45
+\lst@length=\count157
+\lst@currlwidth=\dimen191
+\lst@column=\count158
+\lst@pos=\count159
+\lst@lostspace=\dimen192
+\lst@width=\dimen193
+\lst@newlines=\count160
+\lst@lineno=\count161
+\lst@maxwidth=\dimen194
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count162
+\lst@skipnumbers=\count163
+\lst@framebox=\box54
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\inc_lst_csharp.t
+ex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\accsupp.sty"
+Package: accsupp 2010/01/16 v0.3 Accessibility support by marked content (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\accsupp-pdftex.def"
+File: accsupp-pdftex.def 2010/01/16 v0.3 accsupp driver for pdfTeX (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+))
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.aux
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1074,20 +1108,20 @@ LaTeX Font Info:    ... okay on input line 23.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen191
-\scratchbox=\box53
-\nofMPsegments=\count157
-\nofMParguments=\count158
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen192
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count164
+\scratchdimen=\dimen195
+\scratchbox=\box55
+\nofMPsegments=\count165
+\nofMParguments=\count166
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count167
+\MPscratchDim=\dimen196
+\MPnumerator=\count168
+\makeMPintoPDFobject=\count169
+\everyMPtoPDFconversion=\toks47
 ) ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 23.
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 27.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1095,74 +1129,74 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count162
+\c@section@level=\count170
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.out)
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.out)
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.out
+)
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.out
+)
 \@outlinefile=\write5
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 23.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 23.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 27.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 23.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 23.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 23.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 23.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 23.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/bx/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 23.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 23.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 23.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 23.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 23.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 23.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 23.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 23.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 23.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 23.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 23.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 23.
+(Font)                  T1/cmss/bx/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 23.
+(Font)                  T1/cmss/m/n --> T1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 23.
+(Font)                  T1/cmss/m/it --> T1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 23.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 23.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 27.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 27.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 23
+(Font)              `pureletters' in the math version `normal' on input line 27
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 23
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 27
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 23.
+(Font)              `pureletters' in the math version `bold' on input line 27.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  T1/cmss/bx/it --> OT1/mathkerncmss/m/sl on input line 2
-3.
+7.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 23.
+ut line 27.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\translator\dicts\tran
 slator-basic-dictionary\translator-basic-dictionary-English.dict"
@@ -1188,212 +1222,238 @@ Dictionary: translator-numbers-dictionary, Language: English
 slator-theorem-dictionary\translator-theorem-dictionary-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 23.
-LaTeX Info: Redefining \degres on input line 23.
-LaTeX Info: Redefining \dots on input line 23.
-LaTeX Info: Redefining \up on input line 23.
+LaTeX Info: Redefining \includegraphics on input line 27.
+LaTeX Info: Redefining \degres on input line 27.
+LaTeX Info: Redefining \dots on input line 27.
+LaTeX Info: Redefining \up on input line 27.
+\c@lstlisting=\count171
 
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.nav)
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.nav
+)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 25.
+(hyperref)                setting the option has no effect on input line 29.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/bx/n' in size <4> not available
-(Font)              size <5> substituted on input line 28.
+(Font)              size <5> substituted on input line 32.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 28.
+(Font)              size <5> substituted on input line 32.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.toc) [2
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.toc
+) [2
 
-] <youtube.png, id=190, 240.9pt x 96.36pt>
+] <youtube.png, id=194, 240.9pt x 96.36pt>
 File: youtube.png Graphic file (type png)
  <use youtube.png>
-Package pdftex.def Info: youtube.png used on input line 58.
+Package pdftex.def Info: youtube.png used on input line 62.
 (pdftex.def)             Requested size: 73.7506pt x 29.49928pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 58.
+LaTeX Font Info:    Try loading font information for U+msa on input line 62.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 58.
+LaTeX Font Info:    Try loading font information for U+msb on input line 62.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 58.
+line 62.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sansmathaccent\ot1mathkerncmss.fd
 "
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-) <twitch.png, id=192, 531.9875pt x 135.50626pt>
+) <twitch.png, id=196, 531.9875pt x 135.50626pt>
 File: twitch.png Graphic file (type png)
  <use twitch.png>
-Package pdftex.def Info: twitch.png used on input line 58.
+Package pdftex.def Info: twitch.png used on input line 62.
 (pdftex.def)             Requested size: 73.7506pt x 18.78465pt.
 
-<dailymotion.png, id=193, 1003.75pt x 264.99pt>
+<dailymotion.png, id=197, 1003.75pt x 264.99pt>
 File: dailymotion.png Graphic file (type png)
  <use dailymotion.png>
-Package pdftex.def Info: dailymotion.png used on input line 58.
+Package pdftex.def Info: dailymotion.png used on input line 62.
 (pdftex.def)             Requested size: 73.7506pt x 19.46904pt.
  [3
 
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/youtube.pn
-g> <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/twitch.p
-ng (PNG copy)> <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentat
-ion/dailymotion.png>] [4
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/youtube.png> <C
+:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/twitch.png (PNG co
+py)> <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/dailymotion
+.png>]
+[4
 
 ] [5
 
-] [6
-
-] <chatIrc.png, id=339, 234.8775pt x 261.97874pt>
-File: chatIrc.png Graphic file (type png)
-
-<use chatIrc.png>
-Package pdftex.def Info: chatIrc.png used on input line 110.
-(pdftex.def)             Requested size: 122.9164pt x 137.09718pt.
-
-
-LaTeX Font Warning: Font shape `T1/cmss/m/sc' undefined
-(Font)              using `T1/cmss/m/n' instead on input line 110.
-
-[7
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/chatIrc.pn
-g>] [8
-
-] <Model.png, id=411, 520.94624pt x 403.5075pt>
-File: Model.png Graphic file (type png)
- <use Model.png>
-Package pdftex.def Info: Model.png used on input line 128.
-(pdftex.def)             Requested size: 184.3758pt x 142.81209pt.
-
-[9
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/Model.png>
-] <StreamingSite.png, id=456, 574.145pt x 164.615pt>
-File: StreamingSite.png Graphic file (type png)
- <use StreamingSite.png>
-Package pdftex.def Info: StreamingSite.png used on input line 135.
-(pdftex.def)             Requested size: 307.28987pt x 88.10457pt.
-
-[10
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/StreamingS
-ite.png>] <SVideo.png, id=495, 187.45032pt x 196.48407pt>
-File: SVideo.png Graphic file (type png)
- <use SVideo.png>
-Package pdftex.def Info: SVideo.png used on input line 158.
-(pdftex.def)             Requested size: 122.9164pt x 128.84041pt.
-
-[11
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/SVideo.png
->] <curl.png, id=534, 532.23843pt x 33.12375pt>
-File: curl.png Graphic file (type png)
- <use curl.png>
-Package pdftex.def Info: curl.png used on input line 172.
-(pdftex.def)             Requested size: 307.28987pt x 19.12433pt.
- [12
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/curl.png>]
-
-<STwitch.png, id=575, 173.14688pt x 315.42844pt>
-File: STwitch.png Graphic file (type png)
- <use STwitch.png>
-Package pdftex.def Info: STwitch.png used on input line 186.
-(pdftex.def)             Requested size: 76.82246pt x 139.95369pt.
- [13
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/STwitch.pn
-g>]
-<deserialize.png, id=615, 621.82312pt x 276.28218pt>
-File: deserialize.png Graphic file (type png)
- <use deserialize.png>
-Package pdftex.def Info: deserialize.png used on input line 195.
-(pdftex.def)             Requested size: 276.559pt x 122.87561pt.
-
-[14
-
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/deserializ
-e.png>] [15
-
-] <notificationview.png, id=691, 297.36093pt x 76.03406pt>
+] <notificationview.png, id=308, 297.36093pt x 76.03406pt>
 File: notificationview.png Graphic file (type png)
 
 <use notificationview.png>
-Package pdftex.def Info: notificationview.png used on input line 231.
+Package pdftex.def Info: notificationview.png used on input line 103.
 (pdftex.def)             Requested size: 215.10196pt x 55.00087pt.
- [16
+ [6
 
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/notificati
-onview.png>]
-<inifile.png, id=729, 328.22626pt x 77.53969pt>
-File: inifile.png Graphic file (type png)
- <use inifile.png>
-Package pdftex.def Info: inifile.png used on input line 245.
-(pdftex.def)             Requested size: 307.28987pt x 72.59505pt.
- [17
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/notificationvie
+w.png>]
+<chatIrc.png, id=344, 234.8775pt x 261.97874pt>
+File: chatIrc.png Graphic file (type png)
+ <use chatIrc.png>
+Package pdftex.def Info: chatIrc.png used on input line 117.
+(pdftex.def)             Requested size: 122.9164pt x 137.09718pt.
+ [7
 
- <C:/Users/Froelicher/Documents/GitHub/WebMediaManager/Présentation/inifile.pn
-g>]
-[18
-
-] [19
-
-] [20
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/chatIrc.png>] [
+8
 
 ]
+<mvc.png, id=416, 455.7025pt x 218.8175pt>
+File: mvc.png Graphic file (type png)
+ <use mvc.png>
+Package pdftex.def Info: mvc.png used on input line 133.
+(pdftex.def)             Requested size: 245.83282pt x 118.04616pt.
+ [9
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/mvc.png>]
+<StreamingSite.png, id=461, 574.145pt x 266.9975pt>
+File: StreamingSite.png Graphic file (type png)
+ <use StreamingSite.png>
+Package pdftex.def Info: StreamingSite.png used on input line 139.
+(pdftex.def)             Requested size: 307.28987pt x 142.9013pt.
+
+[10
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/StreamingSite.p
+ng>] <SVideo.png, id=500, 187.45032pt x 196.48407pt>
+File: SVideo.png Graphic file (type png)
+ <use SVideo.png>
+Package pdftex.def Info: SVideo.png used on input line 160.
+(pdftex.def)             Requested size: 138.2795pt x 144.95221pt.
+
+[11
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/SVideo.png>] <r
+est.png, id=539, 816.04875pt x 427.5975pt>
+File: rest.png Graphic file (type png)
+ <use rest.png>
+Package pdftex.def Info: rest.png used on input line 168.
+(pdftex.def)             Requested size: 307.28987pt x 161.01418pt.
+ [12
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/rest.png>]
+<json.png, id=580, 681.29532pt x 258.21469pt>
+File: json.png Graphic file (type png)
+ <use json.png>
+Package pdftex.def Info: json.png used on input line 176.
+(pdftex.def)             Requested size: 307.28987pt x 116.46346pt.
+ [13
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/json.png>]
+<ChannelTwitch.png, id=621, 277.78781pt x 137.01187pt>
+File: ChannelTwitch.png Graphic file (type png)
+ <use ChannelTwitch.png>
+Package pdftex.def Info: ChannelTwitch.png used on input line 189.
+(pdftex.def)             Requested size: 153.64493pt x 75.78116pt.
+
+[14
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/ChannelTwitch.p
+ng>] <deserialize.png, id=661, 621.82312pt x 276.28218pt>
+File: deserialize.png Graphic file (type png)
+
+<use deserialize.png>
+Package pdftex.def Info: deserialize.png used on input line 198.
+(pdftex.def)             Requested size: 276.559pt x 122.87561pt.
+ [15
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/deserialize.png
+>] <cycle.png, id=700, 704.6325pt x 218.8175pt>
+File: cycle.png Graphic file (type png)
+
+<use cycle.png>
+Package pdftex.def Info: cycle.png used on input line 205.
+(pdftex.def)             Requested size: 276.559pt x 85.8827pt.
+ [16
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/cycle.png>] [17
+
+] [18
+
+] <inifile.png, id=813, 559.33969pt x 81.30376pt>
+File: inifile.png Graphic file (type png)
+
+<use inifile.png>
+Package pdftex.def Info: inifile.png used on input line 253.
+(pdftex.def)             Requested size: 307.28987pt x 44.66757pt.
+ [19
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/inifile.png>] <
+play.png, id=853, 513.92pt x 513.92pt>
+File: play.png Graphic file (type png)
+ <use play.png>
+Package pdftex.def Info: play.png used on input line 262.
+(pdftex.def)             Requested size: 184.3758pt x 184.37587pt.
+
+Overfull \vbox (2.73172pt too high) detected at line 262
+ []
+
+[20
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/play.png>]
+[21
+
+] [22
+
+] <Questions.png, id=953, 464.73625pt x 601.24625pt>
+File: Questions.png Graphic file (type png)
+
+<use Questions.png>
+Package pdftex.def Info: Questions.png used on input line 289.
+(pdftex.def)             Requested size: 122.91406pt x 159.01756pt.
+ [23
+
+ <C:/Users/Jey-P/Documents/GitHub/WebMediaManager/Présentation/Questions.png>]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
 
-(C:\Users\Froelicher\Documents\GitHub\WebMediaManager\Présentation\presentatio
-n.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
+(C:\Users\Jey-P\Documents\GitHub\WebMediaManager\Présentation\presentation.aux
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: F00E49A4CF6A19012D158345F67FBB3C;1225.
+(rerunfilecheck)             Checksum: D2CB0ABC697C2192D9686D1C257B547E;1288.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 17874 strings out of 493921
- 340167 string characters out of 3144861
- 407822 words of memory out of 3000000
- 20652 multiletter control sequences out of 15000+200000
+ 19355 strings out of 493921
+ 361529 string characters out of 3144876
+ 449468 words of memory out of 3000000
+ 22097 multiletter control sequences out of 15000+200000
  16698 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  56i,19n,60p,423b,718s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecss1000.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecsx0800.pk> <C:\Users\Froelicher\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk> <C:\Users\Froelicher\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:\Users\Froeli
-cher\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx0600.pk>
-Output written on presentation.pdf (20 pages, 408728 bytes).
+ <C:\Users\Jey-P\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecss1000.pk> <C:\Users\Jey-P\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecsx0800.pk> <C:\Users\Jey-P\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecss1095.pk> <C:\Users\Jey-P\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:\Users\Jey-P\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx0600.pk>
+Output written on presentation.pdf (23 pages, 613448 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1240 PDF objects out of 1440 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 331 words of extra memory for PDF output out of 10000 (max. 10000000)
 
